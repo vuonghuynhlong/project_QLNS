@@ -68,7 +68,31 @@
   <ItemGroup>
     <Compile Include="DAO\DAO_CONNECT.cs" />
     <Compile Include="DAO\DAO_DIC_DEGREE.cs" />
+    <Compile Include="DAO\DAO_DIC_EDUCATION.cs" />
+    <Compile Include="DAO\DAO_DIC_ETHNIC.cs" />
+    <Compile Include="DAO\DAO_DIC_INFORMATIC.cs" />
+    <Compile Include="DAO\DAO_DIC_LANGUAGE.cs" />
+    <Compile Include="DAO\DAO_DIC_NATIONALITY.cs" />
+    <Compile Include="DAO\DAO_DIC_POSITION.cs" />
+    <Compile Include="DAO\DAO_DIC_PROFESSIONAL.cs" />
+    <Compile Include="DAO\DAO_DIC_RELIGION.cs" />
+    <Compile Include="DAO\DAO_DIC_SALARY_RANK.cs" />
+    <Compile Include="DAO\DAO_DIC_SALARY_STEP.cs" />
+    <Compile Include="DAO\DAO_DIC_SCHOOL.cs" />
+    <Compile Include="DAO\DAO_HRM_EMPLOYEE.cs" />
     <Compile Include="ENTITY\DIC_DEGREE.cs" />
+    <Compile Include="ENTITY\DIC_EDUCATION.cs" />
+    <Compile Include="ENTITY\DIC_ETHNIC.cs" />
+    <Compile Include="ENTITY\DIC_INFORMATIC.cs" />
+    <Compile Include="ENTITY\DIC_LANGUAGE.cs" />
+    <Compile Include="ENTITY\DIC_NATIONALITY.cs" />
+    <Compile Include="ENTITY\DIC_POSITION.cs" />
+    <Compile Include="ENTITY\DIC_PROFESSIONAL.cs" />
+    <Compile Include="ENTITY\DIC_RELIGION.cs" />
+    <Compile Include="ENTITY\DIC_SALARY_RANK.cs" />
+    <Compile Include="ENTITY\DIC_SALARY_STEP.cs" />
+    <Compile Include="ENTITY\DIC_SCHOOL.cs" />
+    <Compile Include="ENTITY\HRM_EMPLOYEE.cs" />
     <Compile Include="frm_SQL_TEST.cs">
       <SubType>Form</SubType>
     </Compile>
