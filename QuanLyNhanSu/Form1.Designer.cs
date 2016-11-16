@@ -33,6 +33,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Location = new System.Drawing.Point(24, 24);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
@@ -94,6 +96,15 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "<b> in dam </b> html string\r\n";
             // 
+            // labelControl2
+            // 
+            this.labelControl2.AllowHtmlString = true;
+            this.labelControl2.Location = new System.Drawing.Point(478, 327);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(192, 25);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "<b> in dam </b> html string\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -121,6 +132,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
 
