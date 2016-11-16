@@ -51,9 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\BASE.cs" />
-    <Compile Include="DAO\DAO_DIC_ALLOWANCE.cs" />
-    <Compile Include="ENTITY\DIC_ALLOWANCE.cs" />
+    <Compile Include="DAO\DAO_CONNECT.cs" />
+    <Compile Include="DAO\DAO_DIC_DEGREE.cs" />
+    <Compile Include="ENTITY\DIC_DEGREE.cs" />
     <Compile Include="frm_SQL_TEST.cs">
       <SubType>Form</SubType>
     </Compile>
