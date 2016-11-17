@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbPAGE = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rb_PAGE_GROUP_DANH_MUC = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.bar_HOC_VAN = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,26 +40,28 @@
             // 
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbon.ExpandCollapseItem});
+            this.ribbon.ExpandCollapseItem,
+            this.bar_HOC_VAN});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 1;
+            this.ribbon.MaxItemId = 2;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.rbPAGE});
             this.ribbon.Size = new System.Drawing.Size(858, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
-            // ribbonPage1
+            // rbPAGE
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.rbPAGE.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rb_PAGE_GROUP_DANH_MUC});
+            this.rbPAGE.Name = "rbPAGE";
+            this.rbPAGE.Text = "Danh Sach Chuc Nang";
             // 
-            // ribbonPageGroup1
+            // rb_PAGE_GROUP_DANH_MUC
             // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_HOC_VAN);
+            this.rb_PAGE_GROUP_DANH_MUC.Name = "rb_PAGE_GROUP_DANH_MUC";
+            this.rb_PAGE_GROUP_DANH_MUC.Text = "Danh Muc";
             // 
             // ribbonStatusBar
             // 
@@ -66,6 +69,13 @@
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(858, 32);
+            // 
+            // bar_HOC_VAN
+            // 
+            this.bar_HOC_VAN.Caption = "Hoc Van";
+            this.bar_HOC_VAN.Id = 1;
+            this.bar_HOC_VAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.HOC_VAN;
+            this.bar_HOC_VAN.Name = "bar_HOC_VAN";
             // 
             // frm_MAIN
             // 
@@ -87,8 +97,9 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbPAGE;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_PAGE_GROUP_DANH_MUC;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        private DevExpress.XtraBars.BarButtonItem bar_HOC_VAN;
     }
 }
