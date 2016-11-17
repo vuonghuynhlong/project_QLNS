@@ -291,6 +291,18 @@ namespace QuanLyNhanSu.DAO
         public string Description { get; set; }
 
         public bool? Active { get; set; }
+
+        public static DataTable Get_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [EducationCode] AS [Mã Học Vấn]  ";
+            sql = sql + "    ,[EducationName] AS [Tên Học Vấn] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_EDUCATION ";
+            return Select_Table(sql);
+        }
     }
 
 

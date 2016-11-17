@@ -244,6 +244,19 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+
+        public static DataTable Get_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [RankCode] AS [Mã Ngạch]  ";
+            sql = sql + "    ,[RankName] AS [Tên Ngạch] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "FROM DIC_SALARY_RANK ";
+            return Select_Table(sql);
+
+        }
     }
 
 }

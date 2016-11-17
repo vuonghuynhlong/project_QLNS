@@ -283,6 +283,18 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+
+        public static DataTable Get_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [DegreeCode] AS [Mã Bằng Cấp]  ";
+            sql = sql + "    ,[DegreeName] AS [Tên Bằng Cấp] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_DEGREE ";
+            return Select_Table(sql);
+        }
     }
 
 }

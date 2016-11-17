@@ -283,6 +283,17 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+        public static DataTable Get_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [NationalityCode] AS [Mã Quốc Tịch]  ";
+            sql = sql + "    ,[NationalityName] AS [Tên Quốc Tịch] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_NATIONALITY ";
+            return Select_Table(sql);
+        }
     }
 
 }

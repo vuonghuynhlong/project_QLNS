@@ -283,6 +283,20 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+
+        public static DataTable Get_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [ReligionCode] AS [Mã Tôn Giáo]  ";
+            sql = sql + "    ,[ReligionName] AS [Tên Tôn Giáo] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_PROFESSIONAL ";
+            return Select_Table(sql);
+
+        }
     }
 
 }

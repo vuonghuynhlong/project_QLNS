@@ -2623,6 +2623,79 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+        public static DataTable Get_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [EmployeeCode] AS [Mã Nhân Viên]";
+            sql = sql + "     ,[DepartmentCode] AS [Mã Phòng Ban]";
+            sql = sql + "     ,[EnrollNumber] AS [STT Nhân Viên]";
+            sql = sql + "     ,[FirstName] AS [Họ Lót]";
+            sql = sql + "     ,[LastName] AS [Tên]";
+            sql = sql + "     ,[Alias] AS [Tên Thường Gọi]";
+            sql = sql + "     ,[Sex] AS [Giới Tính]";
+            sql = sql + "     ,[Marriage] AS [Tình Trạng Hôn Nhân]";
+            sql = sql + "     ,[Birthday] AS [Ngày Sinh]";
+            sql = sql + "     ,[BirthPlace] AS [Nơi Sinh]";
+            sql = sql + "     ,[MainAddress] AS [Đại Chỉ]";
+            sql = sql + "     ,[ContactAddress] AS [Thường Trú]";
+            sql = sql + "     ,[CellPhone] AS [SĐT]";
+            sql = sql + "     ,[Email] AS [Email]";
+            sql = sql + "     ,[Photo] AS [Ảnh]";
+            sql = sql + "     ,[Nationality] AS [Quốc Tịch]";
+            sql = sql + "     ,[Ethnic] AS [Dân Tộc]";
+            sql = sql + "     ,[Religion] AS [Tôn Giáo]";
+            sql = sql + "     ,[Education] AS [Học Vấn]";
+            sql = sql + "     ,[Language] AS [Ngôn Ngữ]";
+            sql = sql + "     ,[Informatic] AS [Tin Học]";
+            sql = sql + "     ,[Professional] AS [Chuyên Môn]";
+            sql = sql + "     ,[School] AS [Trường]";
+            sql = sql + "     ,[IDCard] AS [CMND]";
+            sql = sql + "     ,[IDCardDate] AS [Ngày Cấp]";
+            sql = sql + "     ,[IDCardPlace] AS [Nơi Cấp]";
+            sql = sql + "     ,[BeginDate] AS [Ngày Vào Làm]";
+            sql = sql + "     ,[IsOffWork] AS [Đã Thôi Việc]";
+            sql = sql + "     ,[EndDate] AS [Ngày Thôi Việc]";
+            sql = sql + "     ,[PayForm] AS [Hình Thức Trả Lương]";
+            sql = sql + "     ,[PayMoney] AS [Trả Tiền]";
+            sql = sql + "     ,[MinimumSalary] AS [Lương Tối Thiểu]";
+            sql = sql + "     ,[RankSalary] AS [Ngạch Lương]";
+            sql = sql + "     ,[StepSalary] AS [Bậc Lương]";
+            sql = sql + "     ,[CoefficientSalary] AS [Hệ Số Lương]";
+            sql = sql + "     ,[DateSalary] AS [Ngày Trả Lương]";
+            sql = sql + "     ,[BasicSalary] AS [Lương Cơ Bản]";
+            sql = sql + "     ,[InsuranceSalary] AS [Tiền Bảo Hiểm]";
+            sql = sql + "     ,[Allowance1] AS [Phụ Cấp 1]";
+            sql = sql + "     ,[Allowance2] AS [Phụ Cấp 2]";
+            sql = sql + "     ,[Allowance3] AS [Phụ Cấp 3]";
+            sql = sql + "     ,[Allowance] AS [Phụ Cấp 4]";
+            sql = sql + "     ,[IsSocialInsurance] AS [BHXH]";
+            sql = sql + "     ,[IsHealthInsurance] AS [BHYT]";
+            sql = sql + "     ,[IsUnemploymentInsurance] AS [Bảo Hiểm Thất Nghiệp]";
+            sql = sql + "     ,[IsUnionMoney] AS [Tiền Công Đoàn]";
+            sql = sql + "     ,[IsUnion] AS [Đoàn Viên]";
+            sql = sql + "     ,[UnionCode] AS [Mã Đoàn Viên]";
+            sql = sql + "     ,[UnionDate] AS [Ngày Vào Đoàn]";
+            sql = sql + "     ,[UnionPlace] AS [Nơi Vào Đoàn]";
+            sql = sql + "     ,[IsParty] AS [Đảng Viên]";
+            sql = sql + "     ,[PartyCode] AS [Mã Đảng Viên]";
+            sql = sql + "     ,[PartyDate] AS [Ngày Vào Đảng]";
+            sql = sql + "     ,[PartyPlace] AS [Nơi Vào Đảng]";
+            sql = sql + "     ,[InsuranceCode] AS [Mã Bảo Hiểm]";
+            sql = sql + "     ,[InsuranceDate] AS [Ngày Cấp]";
+            sql = sql + "     ,[HealthInsuranceCode] AS [Mã BHYT]";
+            sql = sql + "     ,[HealthInsuranceFromDate] AS [Ngày Bắt Đầu]";
+            sql = sql + "     ,[HealthInsuranceToDate] AS [Ngày Kết Thúc]";
+            sql = sql + "     ,[ContractCode] AS [Mã Hợp Đồng LĐ]";
+            sql = sql + "     ,[ContractType] AS [Kiểu Hợp Đồng]";
+            sql = sql + "     ,[ContractSignDate] AS [Ngày Ký]";
+            sql = sql + "     ,[ContractFromDate] AS [Kể Từ Ngày]";
+            sql = sql + "     ,[ContractToDate] AS [Đến Ngày]";            
+            sql = sql + "FROM DIC_EMPLOYEE ";
+            return Select_Table(sql);
+
+        }
     }
 
 }

@@ -296,6 +296,20 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+        public static DataTable Get_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [StepCode] AS [Mã Bậc]  ";
+            sql = sql + "    ,[RankCode] AS [Mã Ngạch] ";
+            sql = sql + "    ,[StepName] AS [Tên Bậc]";
+            sql = sql + "    ,[Coefficient] AS [Hệ Số]";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "FROM DIC_SALARY_STEP ";
+            return Select_Table(sql);
+
+        }
     }
 
 }

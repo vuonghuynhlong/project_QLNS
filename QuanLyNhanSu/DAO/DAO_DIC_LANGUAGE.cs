@@ -283,6 +283,18 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+
+        public static DataTable Get_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [LanguageCode] AS [Mã Ngôn Ngữ]  ";
+            sql = sql + "    ,[LanguageName] AS [Tên Ngôn Ngữ] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_LANGUAGE ";
+            return Select_Table(sql);
+        }
     }
 
 }

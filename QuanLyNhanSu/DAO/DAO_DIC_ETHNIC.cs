@@ -283,6 +283,17 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+        public static DataTable Get_Data()
+        {
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [EthnicCode] AS [Mã Dân Tộc]  ";
+            sql = sql + "    ,[EthnicName] AS [Tên Dân Tộc] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_ETHNIC ";
+            return Select_Table(sql);
+        }
     }
 
 }

@@ -288,10 +288,10 @@ namespace QuanLyNhanSu.DAO
 
             String sql = "";
             sql = sql + "SELECT ";
-            sql = sql + "     [ProfessionalCode] AS [Ma Chuyen Mon]  ";
-            sql = sql + "    ,[ProfessionalName] AS [Ten Chuyen Mon] ";
-            sql = sql + "    ,[Description]      AS [Mo Ta]          ";
-            sql = sql + "    ,[Active]           AS [Con Su Dung]    ";
+            sql = sql + "     [ProfessionalCode] AS [Mã Chuyên Môn]  ";
+            sql = sql + "    ,[ProfessionalName] AS [Tên Chuyên Môn] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
             sql = sql + "FROM DIC_PROFESSIONAL ";
             return Select_Table(sql);
 

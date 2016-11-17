@@ -326,11 +326,11 @@ namespace QuanLyNhanSu.DAO
         public static DataTable Get_Data() {
             String sql = "";
             sql = sql + "SELECT ";
-            sql = sql + "     [PositionCode] AS [Ma Chuc Vu]  ";
-            sql = sql + "    ,[PositionName] AS [Ten Chuc Vu] ";
-            sql = sql + "    ,[IsManager]    AS [La Quan Ly]  ";
-            sql = sql + "    ,[Description]  AS [Mo Ta]       ";
-            sql = sql + "    ,[Active]       AS [Con Su Dung] ";
+            sql = sql + "     [PositionCode] AS [Mã Chức Vụ]  ";
+            sql = sql + "    ,[PositionName] AS [Tên Chức Vụ] ";
+            sql = sql + "    ,[IsManager]    AS [Là Quản Lý]  ";
+            sql = sql + "    ,[Description]  AS [Mô Tả]       ";
+            sql = sql + "    ,[Active]       AS [Còn Sử Dụng] ";
             sql = sql + "FROM DIC_POSITION ";
             return Select_Table(sql);
         

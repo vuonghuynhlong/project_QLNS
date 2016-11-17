@@ -282,7 +282,19 @@ namespace QuanLyNhanSu.DAO
                 connection.Close();
             }
         }
+        public static DataTable Get_Data()
+        {
 
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [SchoolCode] AS [Mã Trường]  ";
+            sql = sql + "    ,[SchoolName] AS [Tên Trường] ";
+            sql = sql + "    ,[Description]      AS [Mô Tả]          ";
+            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
+            sql = sql + "FROM DIC_PROFESSIONAL ";
+            return Select_Table(sql);
+
+        }
     }
 
 }
