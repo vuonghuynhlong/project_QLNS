@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhanSu.DAO
 {
-    public class DAO_DIC_EDUCATION
+    public class DAO_DIC_EDUCATION : DAO_BASE
     {
         public static DIC_EDUCATION Select_Record(DIC_EDUCATION clsDIC_EDUCATIONPara)
         {
             DIC_EDUCATION clsDIC_EDUCATION = new DIC_EDUCATION();
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [EducationCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_EDUCATION clsDIC_EDUCATION)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_EDUCATION] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_EDUCATION oldDIC_EDUCATION,
                DIC_EDUCATION newDIC_EDUCATION)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_EDUCATION] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_EDUCATION clsDIC_EDUCATION)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_EDUCATION] "

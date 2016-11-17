@@ -53,11 +53,14 @@
     <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -71,7 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DAO_CONNECT.cs" />
+    <Compile Include="DAO\DAO_BASE.cs" />
     <Compile Include="DAO\DAO_DIC_DEGREE.cs" />
     <Compile Include="DAO\DAO_DIC_EDUCATION.cs" />
     <Compile Include="DAO\DAO_DIC_ETHNIC.cs" />
@@ -158,6 +161,18 @@
     <Compile Include="frm_SQL_TEST.Designer.cs">
       <DependentUpon>frm_SQL_TEST.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TEMPLATE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_TEMPLATE.Designer.cs">
+      <DependentUpon>frm_TEMPLATE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TEST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_TEST.Designer.cs">
+      <DependentUpon>frm_TEST.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TIN_HOC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SQL_TEST.resx">
       <DependentUpon>frm_SQL_TEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TEMPLATE.resx">
+      <DependentUpon>frm_TEMPLATE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TEST.resx">
+      <DependentUpon>frm_TEST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TIN_HOC.resx">
       <DependentUpon>frm_TIN_HOC.cs</DependentUpon>
@@ -255,6 +276,12 @@
     <None Include="Resources\EMPLOYEEE.png" />
     <None Include="Resources\PEOPLE.png" />
     <None Include="Resources\PAPER.png" />
+    <None Include="Resources\NEW_241.png" />
+    <None Include="Resources\INSERT.png" />
+    <None Include="Resources\UPDATE.png" />
+    <None Include="Resources\DELETE.png" />
+    <None Include="Resources\EXPORT.png" />
+    <None Include="Resources\REFRESH.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

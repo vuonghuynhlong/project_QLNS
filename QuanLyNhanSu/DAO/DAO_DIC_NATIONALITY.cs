@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhanSu.DAO
 {
-    public class DAO_DIC_NATIONALITY
+    public class DAO_DIC_NATIONALITY : DAO_BASE
     {
         public static DIC_NATIONALITY Select_Record(DIC_NATIONALITY clsDIC_NATIONALITYPara)
         {
             DIC_NATIONALITY clsDIC_NATIONALITY = new DIC_NATIONALITY();
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [NationalityCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_NATIONALITY clsDIC_NATIONALITY)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_NATIONALITY] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_NATIONALITY oldDIC_NATIONALITY,
                DIC_NATIONALITY newDIC_NATIONALITY)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_NATIONALITY] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_NATIONALITY clsDIC_NATIONALITY)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_NATIONALITY] "

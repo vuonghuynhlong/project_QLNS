@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhanSu.DAO
 {
-    public class DAO_HRM_EMPLOYEE
+    public class DAO_HRM_EMPLOYEE : DAO_BASE
     {
         public static HRM_EMPLOYEE Select_Record(HRM_EMPLOYEE clsHRM_EMPLOYEEPara)
         {
             HRM_EMPLOYEE clsHRM_EMPLOYEE = new HRM_EMPLOYEE();
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [EmployeeCode] "
@@ -180,7 +180,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(HRM_EMPLOYEE clsHRM_EMPLOYEE)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [HRM_EMPLOYEE] "
@@ -851,7 +851,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(HRM_EMPLOYEE oldHRM_EMPLOYEE,
                HRM_EMPLOYEE newHRM_EMPLOYEE)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [HRM_EMPLOYEE] "
@@ -2023,7 +2023,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(HRM_EMPLOYEE clsHRM_EMPLOYEE)
         {
-            SqlConnection connection = DAO_CONNECT.Get_Connection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [HRM_EMPLOYEE] "

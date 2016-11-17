@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhanSu
 {
-    partial class frm_CHUC_VU
+    partial class frm_TEST
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frm_CHUC_VU
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "frm_CHUC_VU";
-            this.Size = new System.Drawing.Size(137, 105);
-            this.Load += new System.EventHandler(this.frm_CHUC_VU_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
-
     }
 }

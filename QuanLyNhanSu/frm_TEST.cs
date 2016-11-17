@@ -8,24 +8,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
-using QuanLyNhanSu.DAO;
+
 namespace QuanLyNhanSu
 {
-    public partial class frm_CHUC_VU : frm_TEMPLATE
+    public partial class frm_TEST : frm_CHUC_VU
     {
-        public frm_CHUC_VU()
+        public frm_TEST()
         {
             InitializeComponent();
-            this.Load += frm_CHUC_VU_Load;
         }
-
-        void frm_CHUC_VU_Load(object sender, EventArgs e)
-        {
-            dg_DATA.DataSource = DAO_DIC_POSITION.Get_Data();
-        }
-
-        
-
-       
     }
 }
