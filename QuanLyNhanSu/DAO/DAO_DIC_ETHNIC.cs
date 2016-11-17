@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_ETHNIC Select_Record(DIC_ETHNIC clsDIC_ETHNICPara)
         {
             DIC_ETHNIC clsDIC_ETHNIC = new DIC_ETHNIC();
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [EthnicCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_ETHNIC clsDIC_ETHNIC)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_ETHNIC] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_ETHNIC oldDIC_ETHNIC,
                DIC_ETHNIC newDIC_ETHNIC)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_ETHNIC] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_ETHNIC clsDIC_ETHNIC)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_ETHNIC] "

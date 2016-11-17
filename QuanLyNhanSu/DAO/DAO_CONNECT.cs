@@ -10,7 +10,7 @@ namespace QuanLyNhanSu.DAO
    
     public class DAO_CONNECT
     {
-        public static SqlConnection GetConnection()
+        public static SqlConnection Get_Connection()
         {
             string connectionString
                     = "Data Source=.\\sqlexpress;Initial Catalog=EMP_MANAGEMENT;Integrated Security=SSPI;";

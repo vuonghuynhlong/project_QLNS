@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_PROFESSIONAL Select_Record(DIC_PROFESSIONAL clsDIC_PROFESSIONALPara)
         {
             DIC_PROFESSIONAL clsDIC_PROFESSIONAL = new DIC_PROFESSIONAL();
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [ProfessionalCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_PROFESSIONAL clsDIC_PROFESSIONAL)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_PROFESSIONAL] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_PROFESSIONAL oldDIC_PROFESSIONAL,
                DIC_PROFESSIONAL newDIC_PROFESSIONAL)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_PROFESSIONAL] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_PROFESSIONAL clsDIC_PROFESSIONAL)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_PROFESSIONAL] "

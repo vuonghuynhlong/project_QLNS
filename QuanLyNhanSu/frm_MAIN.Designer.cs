@@ -43,7 +43,9 @@
             this.rb_PAGE_GROUP_DANH_MUC = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rb_QUAN_LY_NHAN_SU = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.tab_MANAGER = new DevExpress.XtraTab.XtraTabControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tab_MANAGER)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -66,7 +68,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPAGE});
-            this.ribbon.Size = new System.Drawing.Size(858, 143);
+            this.ribbon.Size = new System.Drawing.Size(858, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // bar_HOC_VAN
@@ -75,6 +77,7 @@
             this.bar_HOC_VAN.Id = 1;
             this.bar_HOC_VAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.HOC_VAN;
             this.bar_HOC_VAN.Name = "bar_HOC_VAN";
+            this.bar_HOC_VAN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_NGOAI_NGU
             // 
@@ -82,6 +85,7 @@
             this.bar_NGOAI_NGU.Id = 2;
             this.bar_NGOAI_NGU.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.LANGUAGE;
             this.bar_NGOAI_NGU.Name = "bar_NGOAI_NGU";
+            this.bar_NGOAI_NGU.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_TIN_HOC
             // 
@@ -89,6 +93,7 @@
             this.bar_TIN_HOC.Id = 3;
             this.bar_TIN_HOC.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.Computer_icon;
             this.bar_TIN_HOC.Name = "bar_TIN_HOC";
+            this.bar_TIN_HOC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_CHUC_VU
             // 
@@ -96,6 +101,7 @@
             this.bar_CHUC_VU.Id = 4;
             this.bar_CHUC_VU.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.POSITION;
             this.bar_CHUC_VU.Name = "bar_CHUC_VU";
+            this.bar_CHUC_VU.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_CHUYEN_MON
             // 
@@ -103,6 +109,7 @@
             this.bar_CHUYEN_MON.Id = 5;
             this.bar_CHUYEN_MON.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.WORK;
             this.bar_CHUYEN_MON.Name = "bar_CHUYEN_MON";
+            this.bar_CHUYEN_MON.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_QUOC_TICH
             // 
@@ -166,23 +173,35 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 531);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 530);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 32);
+            // 
+            // tab_MANAGER
+            // 
+            this.tab_MANAGER.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_MANAGER.Location = new System.Drawing.Point(0, 144);
+            this.tab_MANAGER.Name = "tab_MANAGER";
+            this.tab_MANAGER.Size = new System.Drawing.Size(858, 386);
+            this.tab_MANAGER.TabIndex = 2;
+            this.tab_MANAGER.CloseButtonClick += new System.EventHandler(this.tab_MANAGER_CloseButtonClick);
             // 
             // frm_MAIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 562);
+            this.Controls.Add(this.tab_MANAGER);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Name = "frm_MAIN";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "QUẢN LÝ NHÂN SỰ";
+            this.Load += new System.EventHandler(this.frm_MAIN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tab_MANAGER)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +224,6 @@
         private DevExpress.XtraBars.BarButtonItem bar_DANH_SACH_NHAN_VIEN;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_QUAN_LY_NHAN_SU;
         private DevExpress.XtraBars.BarButtonItem bar_HOP_DONG_LAO_DONG;
+        private DevExpress.XtraTab.XtraTabControl tab_MANAGER;
     }
 }

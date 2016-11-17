@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_POSITION Select_Record(DIC_POSITION clsDIC_POSITIONPara)
         {
             DIC_POSITION clsDIC_POSITION = new DIC_POSITION();
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [PositionCode] "
@@ -62,7 +62,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_POSITION clsDIC_POSITION)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_POSITION] "
@@ -143,7 +143,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_POSITION oldDIC_POSITION,
                DIC_POSITION newDIC_POSITION)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_POSITION] "
@@ -253,7 +253,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_POSITION clsDIC_POSITION)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_POSITION] "

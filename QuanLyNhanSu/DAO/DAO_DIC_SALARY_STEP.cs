@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_SALARY_STEP Select_Record(DIC_SALARY_STEP clsDIC_SALARY_STEPPara)
         {
             DIC_SALARY_STEP clsDIC_SALARY_STEP = new DIC_SALARY_STEP();
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [StepCode] "
@@ -64,7 +64,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_SALARY_STEP clsDIC_SALARY_STEP)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_SALARY_STEP] "
@@ -138,7 +138,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_SALARY_STEP oldDIC_SALARY_STEP,
                DIC_SALARY_STEP newDIC_SALARY_STEP)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_SALARY_STEP] "
@@ -234,7 +234,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_SALARY_STEP clsDIC_SALARY_STEP)
         {
-            SqlConnection connection = DAO_CONNECT.GetConnection();
+            SqlConnection connection = DAO_CONNECT.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_SALARY_STEP] "
