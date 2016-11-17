@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.LookAndFeel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,13 @@ namespace QuanLyNhanSu
         [STAThread]
         static void Main()
         {
+         
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_SQL_TEST());
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+
+            Application.Run(new frm_MAIN());
         }
     }
 }
