@@ -163,6 +163,16 @@
     <None Include="Resources\HOC_VAN.png" />
     <Content Include="PROJECT_ICON.ico" />
     <None Include="Resources\HUMAN_RESOURCE.png" />
+    <None Include="Resources\LANGUAGE.png" />
+    <None Include="Resources\Computer-icon.png" />
+    <None Include="Resources\RELIGION.png" />
+    <None Include="Resources\NATION.png" />
+    <None Include="Resources\POSITION.png" />
+    <None Include="Resources\WORK.png" />
+    <None Include="Resources\COOL.png" />
+    <None Include="Resources\EMPLOYEEE.png" />
+    <None Include="Resources\PEOPLE.png" />
+    <None Include="Resources\PAPER.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

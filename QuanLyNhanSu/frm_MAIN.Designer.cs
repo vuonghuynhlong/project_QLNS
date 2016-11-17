@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.bar_HOC_VAN = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_NGOAI_NGU = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_TIN_HOC = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_CHUC_VU = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_CHUYEN_MON = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_QUOC_TICH = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_DAN_TOC = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_TON_GIAO = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_DANH_SACH_NHAN_VIEN = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_HOP_DONG_LAO_DONG = new DevExpress.XtraBars.BarButtonItem();
             this.rbPAGE = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rb_PAGE_GROUP_DANH_MUC = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rb_QUAN_LY_NHAN_SU = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.bar_HOC_VAN = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,41 +51,125 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.bar_HOC_VAN});
+            this.bar_HOC_VAN,
+            this.bar_NGOAI_NGU,
+            this.bar_TIN_HOC,
+            this.bar_CHUC_VU,
+            this.bar_CHUYEN_MON,
+            this.bar_QUOC_TICH,
+            this.bar_DAN_TOC,
+            this.bar_TON_GIAO,
+            this.bar_DANH_SACH_NHAN_VIEN,
+            this.bar_HOP_DONG_LAO_DONG});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 2;
+            this.ribbon.MaxItemId = 11;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPAGE});
-            this.ribbon.Size = new System.Drawing.Size(858, 144);
+            this.ribbon.Size = new System.Drawing.Size(858, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            // 
+            // bar_HOC_VAN
+            // 
+            this.bar_HOC_VAN.Caption = "Học Vấn";
+            this.bar_HOC_VAN.Id = 1;
+            this.bar_HOC_VAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.HOC_VAN;
+            this.bar_HOC_VAN.Name = "bar_HOC_VAN";
+            // 
+            // bar_NGOAI_NGU
+            // 
+            this.bar_NGOAI_NGU.Caption = "Ngoại Ngữ";
+            this.bar_NGOAI_NGU.Id = 2;
+            this.bar_NGOAI_NGU.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.LANGUAGE;
+            this.bar_NGOAI_NGU.Name = "bar_NGOAI_NGU";
+            // 
+            // bar_TIN_HOC
+            // 
+            this.bar_TIN_HOC.Caption = "Tin Học";
+            this.bar_TIN_HOC.Id = 3;
+            this.bar_TIN_HOC.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.Computer_icon;
+            this.bar_TIN_HOC.Name = "bar_TIN_HOC";
+            // 
+            // bar_CHUC_VU
+            // 
+            this.bar_CHUC_VU.Caption = "Chức Vụ";
+            this.bar_CHUC_VU.Id = 4;
+            this.bar_CHUC_VU.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.POSITION;
+            this.bar_CHUC_VU.Name = "bar_CHUC_VU";
+            // 
+            // bar_CHUYEN_MON
+            // 
+            this.bar_CHUYEN_MON.Caption = "Chuyên Môn";
+            this.bar_CHUYEN_MON.Id = 5;
+            this.bar_CHUYEN_MON.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.WORK;
+            this.bar_CHUYEN_MON.Name = "bar_CHUYEN_MON";
+            // 
+            // bar_QUOC_TICH
+            // 
+            this.bar_QUOC_TICH.Caption = "Quốc Tịch";
+            this.bar_QUOC_TICH.Id = 6;
+            this.bar_QUOC_TICH.Name = "bar_QUOC_TICH";
+            // 
+            // bar_DAN_TOC
+            // 
+            this.bar_DAN_TOC.Caption = "Dân Tộc";
+            this.bar_DAN_TOC.Id = 7;
+            this.bar_DAN_TOC.Name = "bar_DAN_TOC";
+            // 
+            // bar_TON_GIAO
+            // 
+            this.bar_TON_GIAO.Caption = "Tôn Giáo";
+            this.bar_TON_GIAO.Id = 8;
+            this.bar_TON_GIAO.Name = "bar_TON_GIAO";
+            // 
+            // bar_DANH_SACH_NHAN_VIEN
+            // 
+            this.bar_DANH_SACH_NHAN_VIEN.Caption = "Danh Sách Nhân Viên";
+            this.bar_DANH_SACH_NHAN_VIEN.Id = 9;
+            this.bar_DANH_SACH_NHAN_VIEN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PEOPLE;
+            this.bar_DANH_SACH_NHAN_VIEN.Name = "bar_DANH_SACH_NHAN_VIEN";
+            // 
+            // bar_HOP_DONG_LAO_DONG
+            // 
+            this.bar_HOP_DONG_LAO_DONG.Caption = "Hợp Đồng Lao Động";
+            this.bar_HOP_DONG_LAO_DONG.Id = 10;
+            this.bar_HOP_DONG_LAO_DONG.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PAPER;
+            this.bar_HOP_DONG_LAO_DONG.Name = "bar_HOP_DONG_LAO_DONG";
             // 
             // rbPAGE
             // 
             this.rbPAGE.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rb_PAGE_GROUP_DANH_MUC});
+            this.rb_PAGE_GROUP_DANH_MUC,
+            this.rb_QUAN_LY_NHAN_SU});
             this.rbPAGE.Name = "rbPAGE";
-            this.rbPAGE.Text = "Danh Sach Chuc Nang";
+            this.rbPAGE.Text = "Danh Sách Chức Năng";
             // 
             // rb_PAGE_GROUP_DANH_MUC
             // 
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_HOC_VAN);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_NGOAI_NGU);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_TIN_HOC);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_CHUC_VU, true);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_CHUYEN_MON, true);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_QUOC_TICH, true);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_DAN_TOC);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_TON_GIAO);
             this.rb_PAGE_GROUP_DANH_MUC.Name = "rb_PAGE_GROUP_DANH_MUC";
-            this.rb_PAGE_GROUP_DANH_MUC.Text = "Danh Muc";
+            this.rb_PAGE_GROUP_DANH_MUC.Text = "Danh Mục";
+            // 
+            // rb_QUAN_LY_NHAN_SU
+            // 
+            this.rb_QUAN_LY_NHAN_SU.ItemLinks.Add(this.bar_DANH_SACH_NHAN_VIEN);
+            this.rb_QUAN_LY_NHAN_SU.ItemLinks.Add(this.bar_HOP_DONG_LAO_DONG, true);
+            this.rb_QUAN_LY_NHAN_SU.Name = "rb_QUAN_LY_NHAN_SU";
+            this.rb_QUAN_LY_NHAN_SU.Text = "Nghiệp Vụ";
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 530);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 531);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 32);
-            // 
-            // bar_HOC_VAN
-            // 
-            this.bar_HOC_VAN.Caption = "Hoc Van";
-            this.bar_HOC_VAN.Id = 1;
-            this.bar_HOC_VAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.HOC_VAN;
-            this.bar_HOC_VAN.Name = "bar_HOC_VAN";
+            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 31);
             // 
             // frm_MAIN
             // 
@@ -87,7 +181,7 @@
             this.Name = "frm_MAIN";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "frm_MAIN";
+            this.Text = "QUẢN LÝ NHÂN SỰ";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,5 +195,15 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_PAGE_GROUP_DANH_MUC;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem bar_HOC_VAN;
+        private DevExpress.XtraBars.BarButtonItem bar_NGOAI_NGU;
+        private DevExpress.XtraBars.BarButtonItem bar_TIN_HOC;
+        private DevExpress.XtraBars.BarButtonItem bar_CHUC_VU;
+        private DevExpress.XtraBars.BarButtonItem bar_CHUYEN_MON;
+        private DevExpress.XtraBars.BarButtonItem bar_QUOC_TICH;
+        private DevExpress.XtraBars.BarButtonItem bar_DAN_TOC;
+        private DevExpress.XtraBars.BarButtonItem bar_TON_GIAO;
+        private DevExpress.XtraBars.BarButtonItem bar_DANH_SACH_NHAN_VIEN;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_QUAN_LY_NHAN_SU;
+        private DevExpress.XtraBars.BarButtonItem bar_HOP_DONG_LAO_DONG;
     }
 }
