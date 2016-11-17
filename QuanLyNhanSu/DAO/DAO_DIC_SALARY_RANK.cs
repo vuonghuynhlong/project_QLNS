@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_SALARY_RANK Select_Record(DIC_SALARY_RANK clsDIC_SALARY_RANKPara)
         {
             DIC_SALARY_RANK clsDIC_SALARY_RANK = new DIC_SALARY_RANK();
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string selectStatement
                 = "SELECT "
                 + "     [RankCode] "
@@ -58,7 +58,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_SALARY_RANK clsDIC_SALARY_RANK)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_SALARY_RANK] "
@@ -119,7 +119,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_SALARY_RANK oldDIC_SALARY_RANK,
                DIC_SALARY_RANK newDIC_SALARY_RANK)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_SALARY_RANK] "
@@ -193,7 +193,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_SALARY_RANK clsDIC_SALARY_RANK)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_SALARY_RANK] "

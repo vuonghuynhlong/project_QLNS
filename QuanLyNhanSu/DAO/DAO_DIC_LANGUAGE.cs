@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_LANGUAGE Select_Record(DIC_LANGUAGE clsDIC_LANGUAGEPara)
         {
             DIC_LANGUAGE clsDIC_LANGUAGE = new DIC_LANGUAGE();
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string selectStatement
                 = "SELECT "
                 + "     [LanguageCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_LANGUAGE clsDIC_LANGUAGE)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_LANGUAGE] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_LANGUAGE oldDIC_LANGUAGE,
                DIC_LANGUAGE newDIC_LANGUAGE)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_LANGUAGE] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_LANGUAGE clsDIC_LANGUAGE)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_LANGUAGE] "

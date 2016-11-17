@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_INFORMATIC Select_Record(DIC_INFORMATIC clsDIC_INFORMATICPara)
         {
             DIC_INFORMATIC clsDIC_INFORMATIC = new DIC_INFORMATIC();
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string selectStatement
                 = "SELECT "
                 + "     [InformaticCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_INFORMATIC clsDIC_INFORMATIC)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_INFORMATIC] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_INFORMATIC oldDIC_INFORMATIC,
                DIC_INFORMATIC newDIC_INFORMATIC)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_INFORMATIC] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_INFORMATIC clsDIC_INFORMATIC)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_INFORMATIC] "

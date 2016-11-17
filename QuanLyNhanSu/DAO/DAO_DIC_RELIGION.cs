@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_RELIGION Select_Record(DIC_RELIGION clsDIC_RELIGIONPara)
         {
             DIC_RELIGION clsDIC_RELIGION = new DIC_RELIGION();
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string selectStatement
                 = "SELECT "
                 + "     [ReligionCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_RELIGION clsDIC_RELIGION)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_RELIGION] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_RELIGION oldDIC_RELIGION,
                DIC_RELIGION newDIC_RELIGION)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_RELIGION] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_RELIGION clsDIC_RELIGION)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_RELIGION] "

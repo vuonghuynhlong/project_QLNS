@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_SCHOOL Select_Record(DIC_SCHOOL clsDIC_SCHOOLPara)
         {
             DIC_SCHOOL clsDIC_SCHOOL = new DIC_SCHOOL();
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string selectStatement
                 = "SELECT "
                 + "     [SchoolCode] "
@@ -60,7 +60,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_SCHOOL clsDIC_SCHOOL)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_SCHOOL] "
@@ -131,7 +131,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_SCHOOL oldDIC_SCHOOL,
                DIC_SCHOOL newDIC_SCHOOL)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_SCHOOL] "
@@ -223,7 +223,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_SCHOOL clsDIC_SCHOOL)
         {
-            SqlConnection connection = EMP_MANAGEMENTData.GetConnection();
+            SqlConnection connection = DAO_CONNECT.GetConnection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_SCHOOL] "

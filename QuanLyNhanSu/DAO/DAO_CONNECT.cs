@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace QuanLyNhanSu.DAO
 {
    
-    public class EMP_MANAGEMENTData
+    public class DAO_CONNECT
     {
         public static SqlConnection GetConnection()
         {
