@@ -68,7 +68,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPAGE});
-            this.ribbon.Size = new System.Drawing.Size(858, 144);
+            this.ribbon.Size = new System.Drawing.Size(858, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // bar_HOC_VAN
@@ -116,18 +116,21 @@
             this.bar_QUOC_TICH.Caption = "Quốc Tịch";
             this.bar_QUOC_TICH.Id = 6;
             this.bar_QUOC_TICH.Name = "bar_QUOC_TICH";
+            this.bar_QUOC_TICH.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_DAN_TOC
             // 
             this.bar_DAN_TOC.Caption = "Dân Tộc";
             this.bar_DAN_TOC.Id = 7;
             this.bar_DAN_TOC.Name = "bar_DAN_TOC";
+            this.bar_DAN_TOC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_TON_GIAO
             // 
             this.bar_TON_GIAO.Caption = "Tôn Giáo";
             this.bar_TON_GIAO.Id = 8;
             this.bar_TON_GIAO.Name = "bar_TON_GIAO";
+            this.bar_TON_GIAO.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_DANH_SACH_NHAN_VIEN
             // 
@@ -135,6 +138,7 @@
             this.bar_DANH_SACH_NHAN_VIEN.Id = 9;
             this.bar_DANH_SACH_NHAN_VIEN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PEOPLE;
             this.bar_DANH_SACH_NHAN_VIEN.Name = "bar_DANH_SACH_NHAN_VIEN";
+            this.bar_DANH_SACH_NHAN_VIEN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_HOP_DONG_LAO_DONG
             // 
@@ -142,6 +146,7 @@
             this.bar_HOP_DONG_LAO_DONG.Id = 10;
             this.bar_HOP_DONG_LAO_DONG.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PAPER;
             this.bar_HOP_DONG_LAO_DONG.Name = "bar_HOP_DONG_LAO_DONG";
+            this.bar_HOP_DONG_LAO_DONG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // rbPAGE
             // 
@@ -173,17 +178,17 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 530);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 531);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 32);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(858, 31);
             // 
             // tab_MANAGER
             // 
             this.tab_MANAGER.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_MANAGER.Location = new System.Drawing.Point(0, 144);
+            this.tab_MANAGER.Location = new System.Drawing.Point(0, 143);
             this.tab_MANAGER.Name = "tab_MANAGER";
-            this.tab_MANAGER.Size = new System.Drawing.Size(858, 386);
+            this.tab_MANAGER.Size = new System.Drawing.Size(858, 388);
             this.tab_MANAGER.TabIndex = 2;
             this.tab_MANAGER.CloseButtonClick += new System.EventHandler(this.tab_MANAGER_CloseButtonClick);
             // 

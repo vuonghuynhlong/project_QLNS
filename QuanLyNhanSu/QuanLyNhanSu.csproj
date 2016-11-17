@@ -98,6 +98,42 @@
     <Compile Include="ENTITY\DIC_SALARY_STEP.cs" />
     <Compile Include="ENTITY\DIC_SCHOOL.cs" />
     <Compile Include="ENTITY\HRM_EMPLOYEE.cs" />
+    <Compile Include="frm_CHUC_VU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_CHUC_VU.Designer.cs">
+      <DependentUpon>frm_CHUC_VU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CHUYEN_MON.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_CHUYEN_MON.Designer.cs">
+      <DependentUpon>frm_CHUYEN_MON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DANH_SACH_NHAN_VIEN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_DANH_SACH_NHAN_VIEN.Designer.cs">
+      <DependentUpon>frm_DANH_SACH_NHAN_VIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DAN_TOC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_DAN_TOC.Designer.cs">
+      <DependentUpon>frm_DAN_TOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HOC_VAN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_HOC_VAN.Designer.cs">
+      <DependentUpon>frm_HOC_VAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HOP_DONG_LAO_DONG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_HOP_DONG_LAO_DONG.Designer.cs">
+      <DependentUpon>frm_HOP_DONG_LAO_DONG.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_MAIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +145,12 @@
     </Compile>
     <Compile Include="frm_NGOAI_NGU.Designer.cs">
       <DependentUpon>frm_NGOAI_NGU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QUOC_TICH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_QUOC_TICH.Designer.cs">
+      <DependentUpon>frm_QUOC_TICH.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SQL_TEST.cs">
       <SubType>Form</SubType>
@@ -122,20 +164,41 @@
     <Compile Include="frm_TIN_HOC.Designer.cs">
       <DependentUpon>frm_TIN_HOC.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TON_GIAO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_TON_GIAO.Designer.cs">
+      <DependentUpon>frm_TON_GIAO.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOGIC\LOGIC_COMMON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_CHUC_VU.resx">
+      <DependentUpon>frm_CHUC_VU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CHUYEN_MON.resx">
+      <DependentUpon>frm_CHUYEN_MON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HOC_VAN.resx">
+      <DependentUpon>frm_HOC_VAN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_MAIN.resx">
       <DependentUpon>frm_MAIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NGOAI_NGU.resx">
       <DependentUpon>frm_NGOAI_NGU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_QUOC_TICH.resx">
+      <DependentUpon>frm_QUOC_TICH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_SQL_TEST.resx">
       <DependentUpon>frm_SQL_TEST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TIN_HOC.resx">
       <DependentUpon>frm_TIN_HOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TON_GIAO.resx">
+      <DependentUpon>frm_TON_GIAO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

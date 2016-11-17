@@ -14,6 +14,14 @@ namespace QuanLyNhanSu.LOGIC
         private static  Dictionary<String, XtraUserControl> dict = new Dictionary<string, XtraUserControl>(){
            {"bar_NGOAI_NGU", new frm_NGOAI_NGU()},
            {"bar_TIN_HOC", new frm_TIN_HOC()},
+           {"bar_HOC_VAN", new frm_HOC_VAN()},
+           {"bar_CHUC_VU", new frm_CHUC_VU()},
+           {"bar_CHUYEN_MON", new frm_CHUYEN_MON()},
+           {"bar_QUOC_TICH", new frm_QUOC_TICH()},
+           {"bar_DAN_TOC", new frm_DAN_TOC()},
+           {"bar_TON_GIAO", new frm_TON_GIAO()},
+           {"bar_DANH_SACH_NHAN_VIEN", new frm_DANH_SACH_NHAN_VIEN()},
+           {"bar_HOP_DONG_LAO_DONG", new frm_HOP_DONG_LAO_DONG()},
         };
          
 
