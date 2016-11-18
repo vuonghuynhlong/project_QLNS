@@ -293,7 +293,7 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "    ,[ReligionName] AS [Tên Tôn Giáo] ";
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
             sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
-            sql = sql + "FROM DIC_PROFESSIONAL ";
+            sql = sql + "FROM DIC_RELIGION ";
             return Select_Table(sql);
 
         }
