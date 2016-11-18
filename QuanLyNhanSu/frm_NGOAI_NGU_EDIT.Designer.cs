@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.chk_IS_MANAGER = new DevExpress.XtraEditors.CheckEdit();
             this.txt_DESCRIPTION = new DevExpress.XtraEditors.TextEdit();
             this.txt_LANGUAGE_NAME = new DevExpress.XtraEditors.TextEdit();
             this.txt_LANGUAGE_CODE = new DevExpress.XtraEditors.TextEdit();
@@ -37,7 +36,6 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.group_PARENT)).BeginInit();
             this.group_PARENT.SuspendLayout();
@@ -49,7 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LANGUAGE_NAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LANGUAGE_CODE.Properties)).BeginInit();
@@ -57,7 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +90,6 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.chk_IS_MANAGER);
             this.layoutControl1.Controls.Add(this.txt_DESCRIPTION);
             this.layoutControl1.Controls.Add(this.txt_LANGUAGE_NAME);
             this.layoutControl1.Controls.Add(this.txt_LANGUAGE_CODE);
@@ -106,15 +101,6 @@
             this.layoutControl1.Size = new System.Drawing.Size(300, 120);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
-            // 
-            // chk_IS_MANAGER
-            // 
-            this.chk_IS_MANAGER.Location = new System.Drawing.Point(78, 76);
-            this.chk_IS_MANAGER.Name = "chk_IS_MANAGER";
-            this.chk_IS_MANAGER.Properties.Caption = "";
-            this.chk_IS_MANAGER.Size = new System.Drawing.Size(218, 19);
-            this.chk_IS_MANAGER.StyleController = this.layoutControl1;
-            this.chk_IS_MANAGER.TabIndex = 7;
             // 
             // txt_DESCRIPTION
             // 
@@ -148,7 +134,6 @@
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.layoutControlItem5,
             this.emptySpaceItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
@@ -183,21 +168,12 @@
             this.layoutControlItem4.Text = "Mô Tả\r\n";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(71, 13);
             // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.chk_IS_MANAGER;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(296, 23);
-            this.layoutControlItem5.Text = "Là Quản Lý";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(71, 13);
-            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 95);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 72);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 21);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 44);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frm_NGOAI_NGU_EDIT
@@ -217,7 +193,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LANGUAGE_NAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_LANGUAGE_CODE.Properties)).EndInit();
@@ -225,7 +200,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -234,7 +208,6 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.CheckEdit chk_IS_MANAGER;
         private DevExpress.XtraEditors.TextEdit txt_DESCRIPTION;
         private DevExpress.XtraEditors.TextEdit txt_LANGUAGE_NAME;
         private DevExpress.XtraEditors.TextEdit txt_LANGUAGE_CODE;
@@ -242,7 +215,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }
