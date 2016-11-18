@@ -17,5 +17,10 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
+
+        private void frm_TEMPLATE_EDIT_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -107,6 +107,12 @@
     <Compile Include="frm_CHUC_VU.Designer.cs">
       <DependentUpon>frm_CHUC_VU.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_CHUC_VU_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CHUC_VU_EDIT.Designer.cs">
+      <DependentUpon>frm_CHUC_VU_EDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CHUYEN_MON.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_CHUC_VU.resx">
       <DependentUpon>frm_CHUC_VU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CHUC_VU_EDIT.resx">
+      <DependentUpon>frm_CHUC_VU_EDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CHUYEN_MON.resx">
       <DependentUpon>frm_CHUYEN_MON.cs</DependentUpon>
