@@ -194,6 +194,12 @@
     <EmbeddedResource Include="frm_CHUYEN_MON.resx">
       <DependentUpon>frm_CHUYEN_MON.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_DANH_SACH_NHAN_VIEN.resx">
+      <DependentUpon>frm_DANH_SACH_NHAN_VIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DAN_TOC.resx">
+      <DependentUpon>frm_DAN_TOC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_HOC_VAN.resx">
       <DependentUpon>frm_HOC_VAN.cs</DependentUpon>
     </EmbeddedResource>

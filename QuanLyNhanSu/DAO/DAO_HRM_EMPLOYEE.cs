@@ -2669,7 +2669,7 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     ,[Allowance1] AS [Phụ Cấp 1]";
             sql = sql + "     ,[Allowance2] AS [Phụ Cấp 2]";
             sql = sql + "     ,[Allowance3] AS [Phụ Cấp 3]";
-            sql = sql + "     ,[Allowance] AS [Phụ Cấp 4]";
+            sql = sql + "     ,[Allowance4] AS [Phụ Cấp 4]";
             sql = sql + "     ,[IsSocialInsurance] AS [BHXH]";
             sql = sql + "     ,[IsHealthInsurance] AS [BHYT]";
             sql = sql + "     ,[IsUnemploymentInsurance] AS [Bảo Hiểm Thất Nghiệp]";
@@ -2692,7 +2692,7 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     ,[ContractSignDate] AS [Ngày Ký]";
             sql = sql + "     ,[ContractFromDate] AS [Kể Từ Ngày]";
             sql = sql + "     ,[ContractToDate] AS [Đến Ngày]";            
-            sql = sql + "FROM DIC_EMPLOYEE ";
+            sql = sql + "FROM HRM_EMPLOYEE";
             return Select_Table(sql);
 
         }
