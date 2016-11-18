@@ -26,7 +26,8 @@ namespace QuanLyNhanSu
             DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();
             string row_code = current_row.Row.ItemArray[0].ToString();
             frm_CHUC_VU_EDIT frm_edit = new frm_CHUC_VU_EDIT(row_code);
-            if (frm_edit.ShowDialog() == DialogResult.OK) {
+            if (frm_edit.ShowDialog() == DialogResult.OK)
+            {
                 dg_DATA.DataSource = DAO_DIC_POSITION.Get_Data();
                 int rowHandle = gv_DATA.LocateByValue(column_code, row_code);
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)

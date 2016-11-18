@@ -11,12 +11,12 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 namespace QuanLyNhanSu
 {
-    public partial class frm_CHUC_VU_EDIT : QuanLyNhanSu.frm_TEMPLATE_EDIT
+    public partial class frm_HOC_VAN_EDIT : frm_TEMPLATE_EDIT
     {
-        string CODE;
-        DIC_POSITION old_entity;
-        DIC_POSITION new_entity;
-        public frm_CHUC_VU_EDIT(string code)
+         string CODE;
+        DIC_EDUCATION old_entity;
+        DIC_EDUCATION new_entity;
+        public frm_HOC_VAN_EDIT(string code)
         {
             InitializeComponent();
             this.Load += frm_EDIT_Load;
@@ -26,33 +26,28 @@ namespace QuanLyNhanSu
         }
         private void frm_EDIT_Load(object sender, EventArgs e)
         {
-            old_entity = new DIC_POSITION();
+            old_entity = new DIC_EDUCATION();
 
-            old_entity.PositionCode = CODE;
-            old_entity = DAO_DIC_POSITION.Select_Record(old_entity);
+            old_entity.EducationCode = CODE;
+            old_entity = DAO_DIC_EDUCATION.Select_Record(old_entity);
 
 
-            txt_POSITION_CODE.Text = old_entity.PositionCode;
-            txt_POSITION_NAME.Text = old_entity.PositionName;
+            txt_EDUCATION_CODE.Text = old_entity.EducationCode;
+            txt_EDUCATION_NAME.Text = old_entity.EducationName;
             txt_DESCRIPTION.Text = old_entity.Description;
-            if (old_entity.IsManager != null)
-                chk_IS_MANAGER.Checked = (bool)old_entity.IsManager;
-
-
-
+          
         }
 
         private void btn_SAVE_Click(object sender, EventArgs e)
         {
-            new_entity = new DIC_POSITION();
+            new_entity = new DIC_EDUCATION();
 
 
-            new_entity.PositionCode = txt_POSITION_CODE.Text;
-            new_entity.PositionName = txt_POSITION_NAME.Text;
+            new_entity.EducationCode = txt_EDUCATION_CODE.Text;
+            new_entity.EducationName = txt_EDUCATION_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
-            new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = old_entity.Active;
-            DAO_DIC_POSITION.Update(old_entity, new_entity);
+            DAO_DIC_EDUCATION.Update(old_entity, new_entity);
 
 
             this.DialogResult = DialogResult.OK;
