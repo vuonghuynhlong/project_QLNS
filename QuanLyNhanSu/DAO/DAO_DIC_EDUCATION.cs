@@ -283,6 +283,43 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
+        public static bool Delete(string code)
+        {
+            SqlConnection connection = DAO_BASE.Get_Connection();
+            string deleteStatement
+                = "UPDATE "
+                + "     [DIC_EDUCATION] "
+                + "SET "
+                + "     [ACTIVE] = 0 "
+                + "WHERE [EducationCode] = @OldEducationCode";
+
+       
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection);
+            deleteCommand.CommandType = CommandType.Text;
+            deleteCommand.Parameters.AddWithValue("@OldEducationCode", code);
+            try
+            {
+                connection.Open();
+                int count = deleteCommand.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
 
         public string EducationCode { get; set; }
 
@@ -299,8 +336,9 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     [EducationCode] AS [Mã Học Vấn]  ";
             sql = sql + "    ,[EducationName] AS [Tên Học Vấn] ";
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
-            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
             sql = sql + "FROM DIC_EDUCATION ";
+            sql = sql + "WHERE [Active] = 1 ";
+
             return Select_Table(sql);
         }
     }
