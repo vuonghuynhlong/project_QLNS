@@ -291,10 +291,13 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     [ProfessionalCode] AS [Mã Chuyên Môn]  ";
             sql = sql + "    ,[ProfessionalName] AS [Tên Chuyên Môn] ";
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
-            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
             sql = sql + "FROM DIC_PROFESSIONAL ";
+            sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
-
+        }
+        public static bool Delete(string code)
+        {
+            return Delete("DIC_PROFESSIONAL", "ProfessionalCode", code);
         }
     }
 

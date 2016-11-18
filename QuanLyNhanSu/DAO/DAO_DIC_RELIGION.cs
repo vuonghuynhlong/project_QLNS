@@ -292,10 +292,13 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     [ReligionCode] AS [Mã Tôn Giáo]  ";
             sql = sql + "    ,[ReligionName] AS [Tên Tôn Giáo] ";
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
-            sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
             sql = sql + "FROM DIC_RELIGION ";
+            sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
-
+        }
+        public static bool Delete(string code)
+        {
+            return Delete("DIC_RELIGION", "ReligionCode", code);
         }
     }
 
