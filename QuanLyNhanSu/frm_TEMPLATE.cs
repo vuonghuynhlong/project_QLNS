@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace QuanLyNhanSu
 {
-    public partial class frm_TEMPLATE : DevExpress.XtraEditors.XtraUserControl
+    public partial class frm_TEMPLATE : DevExpress.XtraEditors.XtraUserControl 
     {
         public frm_TEMPLATE()
         {

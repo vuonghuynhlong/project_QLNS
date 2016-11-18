@@ -78,6 +78,35 @@ namespace QuanLyNhanSu.DAO
                 connection.Close();
             }
         }
+
+        public static string Generate_Code(string table) {
+
+            SqlConnection connection = DAO_BASE.Get_Connection();
+
+            string column_code = table.Substring(4) + "Code";
+            
+            string sql =" SELECT MAX(" + column_code + ")";
+            sql  = sql + " FROM "+ table ;
+
+            SqlCommand cmd = new SqlCommand(sql, connection);
+            try
+            {
+                connection.Open();
+                string code   = cmd.ExecuteScalar().ToString();
+                int number    = int.Parse(code.Substring(2)) + 1;
+                code = "000000" + number;
+                code = code.Substring(code.Length - 6, 6);
+                return code;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 
 }

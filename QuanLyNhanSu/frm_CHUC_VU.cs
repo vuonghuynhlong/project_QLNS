@@ -20,7 +20,10 @@ namespace QuanLyNhanSu
             this.gv_DATA.DoubleClick += edit_record;
             this.pic_UPDATE.Click += edit_record;
             this.pic_DELETE.Click += delete_record;
+            this.pic_INSERT.Click += insert_record;
         }
+
+       
 
         string column_code = "Mã Chức Vụ";
         void edit_record(object sender, EventArgs e)
@@ -57,12 +60,17 @@ namespace QuanLyNhanSu
 
                 DAO_DIC_POSITION.Delete(row_code);
                 dg_DATA.DataSource = DAO_DIC_POSITION.Get_Data();
-
+              
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
-                    gv_DATA.FocusedRowHandle = rowHandle;
+                    gv_DATA.FocusedRowHandle = Math.Min(rowHandle, gv_DATA.DataRowCount - 1);
             }
         }
 
+        void insert_record(object sender, EventArgs e)
+        {
+            frm_CHUC_VU_EDIT frm_edit = new frm_CHUC_VU_EDIT(this,true);
+            frm_edit.ShowDialog();
+        }
        
     }
 }

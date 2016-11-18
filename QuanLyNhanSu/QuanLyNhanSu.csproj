@@ -101,6 +101,12 @@
     <Compile Include="ENTITY\DIC_SALARY_STEP.cs" />
     <Compile Include="ENTITY\DIC_SCHOOL.cs" />
     <Compile Include="ENTITY\HRM_EMPLOYEE.cs" />
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_CHUC_VU.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <Compile Include="LOGIC\LOGIC_COMMON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_CHUC_VU.resx">
       <DependentUpon>frm_CHUC_VU.cs</DependentUpon>
     </EmbeddedResource>

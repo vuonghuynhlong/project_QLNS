@@ -288,7 +288,6 @@
 
         #endregion
 
-        protected DevExpress.XtraGrid.GridControl dg_DATA;
         protected DevExpress.XtraGrid.Views.Grid.GridView gv_DATA;
         protected DevExpress.XtraEditors.PictureEdit pic_INSERT;
         protected DevExpress.XtraLayout.LayoutControlGroup layout_GROUP;
@@ -304,5 +303,6 @@
         protected DevExpress.XtraLayout.LayoutControlItem layout_REFRESH;
         protected DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         protected DevExpress.XtraLayout.LayoutControl layout_CONTROL;
+        public DevExpress.XtraGrid.GridControl dg_DATA;
     }
 }
