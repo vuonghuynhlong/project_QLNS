@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
+using QuanLyNhanSu.LOGIC;
+using DevExpress.XtraLayout;
+
 namespace QuanLyNhanSu
 {
-    public partial class frm_CHUC_VU_EDIT : QuanLyNhanSu.frm_TEMPLATE_EDIT
+    public partial class frm_CHUC_VU_EDIT : frm_TEMPLATE_EDIT
     {
         string CODE;
         DIC_POSITION old_entity;
@@ -21,9 +24,16 @@ namespace QuanLyNhanSu
             InitializeComponent();
             this.Load += frm_EDIT_Load;
             this.btn_SAVE.Click += btn_SAVE_Click;
-            this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
+
+            // BEGIN EDIT BEGIN EDIT BEGIN EDIT BEGIN EDIT
+            LayoutControlItem item_insert_continue = layout_CONTROL.GetItemByControl(btn_INSERT_CONTINUE);
+            LayoutControlItem item_insert = layout_CONTROL.GetItemByControl(btn_INSERT);
+            item_insert_continue.Parent.Remove(item_insert_continue);
+            item_insert.Parent.Remove(item_insert);
+            // END EDIT END EDIT END EDIT END EDIT END EDIT END EDIT
         }
+
         private void frm_EDIT_Load(object sender, EventArgs e)
         {
             old_entity = new DIC_POSITION();
@@ -57,5 +67,59 @@ namespace QuanLyNhanSu
 
             this.DialogResult = DialogResult.OK;
         }
+
+        // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
+
+        frm_CHUC_VU parent = null;
+        public frm_CHUC_VU_EDIT(frm_CHUC_VU parent_frm, bool is_insert) : base(is_insert)
+        {
+            InitializeComponent();
+
+            Init_Data();
+
+            this.btn_INSERT_CONTINUE.Click += insert_record_continue;
+            this.btn_INSERT.Click          += insert_record;
+
+            parent = parent_frm;
+
+
+        }
+
+    
+        private void Init_Data()
+        {
+            txt_POSITION_CODE.Text = LOGIC_COMMON.Generate_Code("CV");
+            txt_POSITION_NAME.Text = string.Empty;
+            txt_DESCRIPTION.Text = string.Empty;
+            chk_IS_MANAGER.Checked = false;
+            
+        }
+        private void Insert()
+        {
+            new_entity = new DIC_POSITION();
+            new_entity.PositionCode = txt_POSITION_CODE.Text;
+            new_entity.PositionName = txt_POSITION_NAME.Text;
+            new_entity.Description = txt_DESCRIPTION.Text;
+            new_entity.IsManager = chk_IS_MANAGER.Checked;
+            new_entity.Active = true;
+            DAO_DIC_POSITION.Add(new_entity);
+            parent.dg_DATA.DataSource = DAO_DIC_POSITION.Get_Data();
+
+        }
+        private void insert_record(object sender, EventArgs e)
+        {
+            Insert();
+            this.Close();
+        }
+
+        private void insert_record_continue(object sender, EventArgs e)
+        {
+            Insert();
+            Init_Data();
+
+        }
+       
+
+        // END INSERT END INSERT END INSERT END INSERT END INSERT END INSERT
     }
 }

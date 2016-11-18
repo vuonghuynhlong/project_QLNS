@@ -37,7 +37,7 @@ namespace QuanLyNhanSu
         private void tab_MANAGER_CloseButtonClick(object sender, EventArgs e)
         {
             ClosePageButtonEventArgs arg = e as ClosePageButtonEventArgs;
-            (arg.Page as XtraTabPage).Dispose();
+            (arg.Page as XtraTabPage).PageVisible = false;
         }
 
     

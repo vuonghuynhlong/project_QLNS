@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhanSu.DAO;
+
 namespace QuanLyNhanSu.LOGIC
 {
     public class LOGIC_COMMON
@@ -23,11 +25,12 @@ namespace QuanLyNhanSu.LOGIC
            {"bar_DANH_SACH_NHAN_VIEN", new frm_DANH_SACH_NHAN_VIEN()},
            {"bar_HOP_DONG_LAO_DONG", new frm_HOP_DONG_LAO_DONG()},
         };
-         
 
-        /// <summary>
-        /// Them mot tab moi vao trong frm_MAIN
-        /// </summary>
+        private static Dictionary<String, String> dict_code = new Dictionary<String, String>(){
+           {"CV", "DIC_POSITION"},
+         
+        };
+        
         public static void Add_Tab_Page(XtraTabControl tab_manager, String tab_page_name, String tab_page_text) {
             var find_tab = tab_manager.TabPages.Where(p => p.Name == tab_page_name);
             XtraTabPage tab = null;
@@ -43,6 +46,9 @@ namespace QuanLyNhanSu.LOGIC
             {
                 tab = find_tab.First();
             }
+
+            tab.PageVisible = true;
+
             tab_manager.SelectedTabPage = tab;
         }
         private static void Add_Control(XtraTabPage tab_page) {
@@ -50,5 +56,13 @@ namespace QuanLyNhanSu.LOGIC
             frm.Dock = DockStyle.Fill;
             tab_page.Controls.Add(frm);
         }
+
+
+
+        public static string Generate_Code(string prefix) {
+            string table_name = dict_code[prefix];
+            return prefix + DAO_BASE.Generate_Code(table_name);
+        }
+
     }
 }

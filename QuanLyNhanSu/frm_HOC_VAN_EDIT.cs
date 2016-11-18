@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
+using DevExpress.XtraLayout;
 namespace QuanLyNhanSu
 {
     public partial class frm_HOC_VAN_EDIT : frm_TEMPLATE_EDIT
@@ -23,6 +24,8 @@ namespace QuanLyNhanSu
             this.btn_SAVE.Click += btn_SAVE_Click;
             this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
+
+            
         }
         private void frm_EDIT_Load(object sender, EventArgs e)
         {
