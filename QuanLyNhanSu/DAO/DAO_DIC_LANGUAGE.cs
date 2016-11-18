@@ -293,7 +293,46 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
             sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
             sql = sql + "FROM DIC_LANGUAGE ";
+            sql = sql + "WHERE [Active] = 1";
             return Select_Table(sql);
+        }
+
+        public static bool Delete(string code)
+        {
+            SqlConnection connection = DAO_BASE.Get_Connection();
+            string deleteStatement
+                = "UPDATE "
+                + "     [DIC_LANGUAGE] "
+                + "SET "
+                + "     [ACTIVE] = 0 "
+                + "WHERE [LanguageCode] = @OldCode";
+
+
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection);
+            deleteCommand.CommandType = CommandType.Text;
+            deleteCommand.Parameters.AddWithValue("@OldCode", code);
+            try
+            {
+                connection.Open();
+                int count = deleteCommand.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
         }
     }
 

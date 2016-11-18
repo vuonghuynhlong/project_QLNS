@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txt_POSITION_CODE = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txt_POSITION_NAME = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txt_DESCRIPTION = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.chk_IS_MANAGER = new DevExpress.XtraEditors.CheckEdit();
+            this.txt_DESCRIPTION = new DevExpress.XtraEditors.TextEdit();
+            this.txt_POSITION_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.txt_POSITION_CODE = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.group_PARENT)).BeginInit();
@@ -49,14 +49,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +107,39 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // chk_IS_MANAGER
+            // 
+            this.chk_IS_MANAGER.Location = new System.Drawing.Point(68, 76);
+            this.chk_IS_MANAGER.Name = "chk_IS_MANAGER";
+            this.chk_IS_MANAGER.Properties.Caption = "";
+            this.chk_IS_MANAGER.Size = new System.Drawing.Size(228, 19);
+            this.chk_IS_MANAGER.StyleController = this.layoutControl1;
+            this.chk_IS_MANAGER.TabIndex = 7;
+            // 
+            // txt_DESCRIPTION
+            // 
+            this.txt_DESCRIPTION.Location = new System.Drawing.Point(68, 52);
+            this.txt_DESCRIPTION.Name = "txt_DESCRIPTION";
+            this.txt_DESCRIPTION.Size = new System.Drawing.Size(228, 20);
+            this.txt_DESCRIPTION.StyleController = this.layoutControl1;
+            this.txt_DESCRIPTION.TabIndex = 6;
+            // 
+            // txt_POSITION_NAME
+            // 
+            this.txt_POSITION_NAME.Location = new System.Drawing.Point(68, 28);
+            this.txt_POSITION_NAME.Name = "txt_POSITION_NAME";
+            this.txt_POSITION_NAME.Size = new System.Drawing.Size(228, 20);
+            this.txt_POSITION_NAME.StyleController = this.layoutControl1;
+            this.txt_POSITION_NAME.TabIndex = 5;
+            // 
+            // txt_POSITION_CODE
+            // 
+            this.txt_POSITION_CODE.Location = new System.Drawing.Point(68, 4);
+            this.txt_POSITION_CODE.Name = "txt_POSITION_CODE";
+            this.txt_POSITION_CODE.Size = new System.Drawing.Size(228, 20);
+            this.txt_POSITION_CODE.StyleController = this.layoutControl1;
+            this.txt_POSITION_CODE.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -123,14 +156,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(300, 120);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // txt_POSITION_CODE
-            // 
-            this.txt_POSITION_CODE.Location = new System.Drawing.Point(69, 4);
-            this.txt_POSITION_CODE.Name = "txt_POSITION_CODE";
-            this.txt_POSITION_CODE.Size = new System.Drawing.Size(227, 20);
-            this.txt_POSITION_CODE.StyleController = this.layoutControl1;
-            this.txt_POSITION_CODE.TabIndex = 4;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txt_POSITION_CODE;
@@ -139,14 +164,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem2.Text = "Mã Chức Vụ";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(61, 13);
-            // 
-            // txt_POSITION_NAME
-            // 
-            this.txt_POSITION_NAME.Location = new System.Drawing.Point(69, 28);
-            this.txt_POSITION_NAME.Name = "txt_POSITION_NAME";
-            this.txt_POSITION_NAME.Size = new System.Drawing.Size(227, 20);
-            this.txt_POSITION_NAME.StyleController = this.layoutControl1;
-            this.txt_POSITION_NAME.TabIndex = 5;
             // 
             // layoutControlItem3
             // 
@@ -157,14 +174,6 @@
             this.layoutControlItem3.Text = "Tên Chức Vụ\r\n";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(61, 13);
             // 
-            // txt_DESCRIPTION
-            // 
-            this.txt_DESCRIPTION.Location = new System.Drawing.Point(69, 52);
-            this.txt_DESCRIPTION.Name = "txt_DESCRIPTION";
-            this.txt_DESCRIPTION.Size = new System.Drawing.Size(227, 20);
-            this.txt_DESCRIPTION.StyleController = this.layoutControl1;
-            this.txt_DESCRIPTION.TabIndex = 6;
-            // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txt_DESCRIPTION;
@@ -173,15 +182,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem4.Text = "Mô Tả\r\n";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(61, 13);
-            // 
-            // chk_IS_MANAGER
-            // 
-            this.chk_IS_MANAGER.Location = new System.Drawing.Point(69, 76);
-            this.chk_IS_MANAGER.Name = "chk_IS_MANAGER";
-            this.chk_IS_MANAGER.Properties.Caption = "";
-            this.chk_IS_MANAGER.Size = new System.Drawing.Size(227, 19);
-            this.chk_IS_MANAGER.StyleController = this.layoutControl1;
-            this.chk_IS_MANAGER.TabIndex = 7;
             // 
             // layoutControlItem5
             // 
@@ -217,14 +217,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
