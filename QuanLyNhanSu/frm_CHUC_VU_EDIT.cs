@@ -19,18 +19,25 @@ namespace QuanLyNhanSu
         public frm_CHUC_VU_EDIT(string code)
         {
             InitializeComponent();
+            this.Load += frm_EDIT_Load;
+            this.btn_SAVE.Click+=btn_SAVE_Click;
+            this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
         }
 
-        private void frm_CHUC_VU_EDIT_Load(object sender, EventArgs e)
+        private void frm_EDIT_Load(object sender, EventArgs e)
         {
             old_entity = new DIC_POSITION();
+
             old_entity.PositionCode = CODE;
             old_entity = DAO_DIC_POSITION.Select_Record(old_entity);
-            textEdit1.Text = old_entity.PositionCode;
-            textEdit2.Text = old_entity.PositionName;
-            textEdit3.Text = old_entity.Description;
-            checkEdit1.Checked = (bool) old_entity.Active;
+
+
+            txt_POSITION_CODE.Text = old_entity.PositionCode;
+            txt_POSITION_NAME.Text = old_entity.PositionName;
+            txt_DESCRIPTION.Text = old_entity.Description;
+            if (old_entity.IsManager != null)
+                chk_IS_MANAGER.Checked = (bool)old_entity.IsManager;
 
 
 
@@ -39,11 +46,15 @@ namespace QuanLyNhanSu
         private void btn_SAVE_Click(object sender, EventArgs e)
         {
             new_entity = new DIC_POSITION();
-            new_entity.PositionCode  = textEdit1.Text;
-            new_entity.PositionName = textEdit2.Text;
-            new_entity.Description = textEdit3.Text;
-            new_entity.Active = checkEdit1.Checked;
+
+
+            new_entity.PositionCode  = txt_POSITION_CODE.Text;
+            new_entity.PositionName = txt_POSITION_NAME.Text;
+            new_entity.Description = txt_DESCRIPTION.Text;
+            new_entity.IsManager = chk_IS_MANAGER.Checked;
             DAO_DIC_POSITION.Update(old_entity, new_entity);
+
+
             this.DialogResult = DialogResult.OK;
         }
     }

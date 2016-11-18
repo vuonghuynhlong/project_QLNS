@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.chk_IS_MANAGER = new DevExpress.XtraEditors.CheckEdit();
+            this.txt_DESCRIPTION = new DevExpress.XtraEditors.TextEdit();
+            this.txt_POSITION_NAME = new DevExpress.XtraEditors.TextEdit();
+            this.txt_POSITION_CODE = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -52,10 +52,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -73,8 +73,8 @@
             // layout_CONTROL
             // 
             this.layout_CONTROL.Size = new System.Drawing.Size(382, 195);
-            this.layout_CONTROL.Controls.SetChildIndex(this.panel_CONTROLS, 0);
             this.layout_CONTROL.Controls.SetChildIndex(this.panelControl2, 0);
+            this.layout_CONTROL.Controls.SetChildIndex(this.panel_CONTROLS, 0);
             // 
             // layout_GROUP
             // 
@@ -104,15 +104,14 @@
             // 
             this.btn_SAVE.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btn_SAVE.Appearance.Options.UseFont = true;
-            this.btn_SAVE.Location = new System.Drawing.Point(274, 7);
-            this.btn_SAVE.Click += new System.EventHandler(this.btn_SAVE_Click);
+            this.btn_SAVE.Location = new System.Drawing.Point(274, 12);
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.checkEdit1);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.chk_IS_MANAGER);
+            this.layoutControl1.Controls.Add(this.txt_DESCRIPTION);
+            this.layoutControl1.Controls.Add(this.txt_POSITION_NAME);
+            this.layoutControl1.Controls.Add(this.txt_POSITION_CODE);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(2, 2);
             this.layoutControl1.Name = "layoutControl1";
@@ -122,42 +121,42 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // checkEdit1
+            // chk_IS_MANAGER
             // 
-            this.checkEdit1.EnterMoveNextControl = true;
-            this.checkEdit1.Location = new System.Drawing.Point(108, 84);
-            this.checkEdit1.Name = "checkEdit1";
-            this.checkEdit1.Properties.Caption = "checkEdit1";
-            this.checkEdit1.Size = new System.Drawing.Size(252, 19);
-            this.checkEdit1.StyleController = this.layoutControl1;
-            this.checkEdit1.TabIndex = 3;
+            this.chk_IS_MANAGER.EnterMoveNextControl = true;
+            this.chk_IS_MANAGER.Location = new System.Drawing.Point(76, 84);
+            this.chk_IS_MANAGER.Name = "chk_IS_MANAGER";
+            this.chk_IS_MANAGER.Properties.Caption = "";
+            this.chk_IS_MANAGER.Size = new System.Drawing.Size(284, 19);
+            this.chk_IS_MANAGER.StyleController = this.layoutControl1;
+            this.chk_IS_MANAGER.TabIndex = 3;
             // 
-            // textEdit3
+            // txt_DESCRIPTION
             // 
-            this.textEdit3.EnterMoveNextControl = true;
-            this.textEdit3.Location = new System.Drawing.Point(108, 60);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(252, 20);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 2;
+            this.txt_DESCRIPTION.EnterMoveNextControl = true;
+            this.txt_DESCRIPTION.Location = new System.Drawing.Point(76, 60);
+            this.txt_DESCRIPTION.Name = "txt_DESCRIPTION";
+            this.txt_DESCRIPTION.Size = new System.Drawing.Size(284, 20);
+            this.txt_DESCRIPTION.StyleController = this.layoutControl1;
+            this.txt_DESCRIPTION.TabIndex = 2;
             // 
-            // textEdit2
+            // txt_POSITION_NAME
             // 
-            this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(108, 36);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(252, 20);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 1;
+            this.txt_POSITION_NAME.EnterMoveNextControl = true;
+            this.txt_POSITION_NAME.Location = new System.Drawing.Point(76, 36);
+            this.txt_POSITION_NAME.Name = "txt_POSITION_NAME";
+            this.txt_POSITION_NAME.Size = new System.Drawing.Size(284, 20);
+            this.txt_POSITION_NAME.StyleController = this.layoutControl1;
+            this.txt_POSITION_NAME.TabIndex = 1;
             // 
-            // textEdit1
+            // txt_POSITION_CODE
             // 
-            this.textEdit1.Location = new System.Drawing.Point(108, 12);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.ReadOnly = true;
-            this.textEdit1.Size = new System.Drawing.Size(252, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 0;
+            this.txt_POSITION_CODE.Location = new System.Drawing.Point(76, 12);
+            this.txt_POSITION_CODE.Name = "txt_POSITION_CODE";
+            this.txt_POSITION_CODE.Properties.ReadOnly = true;
+            this.txt_POSITION_CODE.Size = new System.Drawing.Size(284, 20);
+            this.txt_POSITION_CODE.StyleController = this.layoutControl1;
+            this.txt_POSITION_CODE.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -176,35 +175,39 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.textEdit1;
+            this.layoutControlItem3.Control = this.txt_POSITION_CODE;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(352, 24);
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem3.Text = "Mã Chức Vụ";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(61, 13);
             // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.textEdit2;
+            this.layoutControlItem4.Control = this.txt_POSITION_NAME;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(352, 24);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem4.Text = "Tên Chức Vụ";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(61, 13);
             // 
             // layoutControlItem5
             // 
-            this.layoutControlItem5.Control = this.textEdit3;
+            this.layoutControlItem5.Control = this.txt_DESCRIPTION;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.Size = new System.Drawing.Size(352, 24);
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem5.Text = "Mô Tả";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(61, 13);
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.checkEdit1;
+            this.layoutControlItem6.Control = this.chk_IS_MANAGER;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(352, 23);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(93, 13);
+            this.layoutControlItem6.Text = "Là Quản Lý";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(61, 13);
             // 
             // emptySpaceItem1
             // 
@@ -220,8 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 217);
             this.Name = "frm_CHUC_VU_EDIT";
-            this.Text = "frm_CHUC_VU_EDIT";
-            this.Load += new System.EventHandler(this.frm_CHUC_VU_EDIT_Load);
+            this.Text = "CẬP NHẬT CHỨC VỤ";
             ((System.ComponentModel.ISupportInitialize)(this.group_PARENT)).EndInit();
             this.group_PARENT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).EndInit();
@@ -235,10 +237,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chk_IS_MANAGER.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_NAME.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_POSITION_CODE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -253,10 +255,10 @@
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraEditors.CheckEdit checkEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.CheckEdit chk_IS_MANAGER;
+        private DevExpress.XtraEditors.TextEdit txt_DESCRIPTION;
+        private DevExpress.XtraEditors.TextEdit txt_POSITION_NAME;
+        private DevExpress.XtraEditors.TextEdit txt_POSITION_CODE;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;

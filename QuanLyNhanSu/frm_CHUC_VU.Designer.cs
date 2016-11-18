@@ -115,7 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "frm_CHUC_VU";
             this.Size = new System.Drawing.Size(137, 105);
-            this.Load += new System.EventHandler(this.frm_CHUC_VU_Load);
+          
             ((System.ComponentModel.ISupportInitialize)(this.pic_INSERT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_GROUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_GRID)).EndInit();
