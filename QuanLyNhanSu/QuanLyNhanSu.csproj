@@ -167,6 +167,12 @@
     <Compile Include="frm_TEMPLATE.Designer.cs">
       <DependentUpon>frm_TEMPLATE.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_TEMPLATE_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TEMPLATE_EDIT.Designer.cs">
+      <DependentUpon>frm_TEMPLATE_EDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_TEST.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TEMPLATE.resx">
       <DependentUpon>frm_TEMPLATE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TEMPLATE_EDIT.resx">
+      <DependentUpon>frm_TEMPLATE_EDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TEST.resx">
       <DependentUpon>frm_TEST.cs</DependentUpon>
@@ -282,6 +291,7 @@
     <None Include="Resources\DELETE.png" />
     <None Include="Resources\EXPORT.png" />
     <None Include="Resources\REFRESH.png" />
+    <None Include="Resources\SAVE.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

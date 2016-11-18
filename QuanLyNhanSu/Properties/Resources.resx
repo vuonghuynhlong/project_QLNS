@@ -124,8 +124,8 @@
   <data name="WORK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WORK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EXPORT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EXPORT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PAPER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PAPER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Computer-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Computer-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,14 +145,17 @@
   <data name="PEOPLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PEOPLE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="REFRESH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\REFRESH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HOC_VAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HOC_VAN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UPDATE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UPDATE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PAPER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PAPER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EXPORT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EXPORT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NATION.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +172,7 @@
   <data name="HUMAN_RESOURCE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HUMAN_RESOURCE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="REFRESH" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\REFRESH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SAVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SAVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

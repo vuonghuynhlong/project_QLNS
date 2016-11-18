@@ -17,6 +17,14 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
             this.Load += frm_CHUC_VU_Load;
+            this.gv_DATA.DoubleClick += gv_DATA_DoubleClick;
+        }
+
+        void gv_DATA_DoubleClick(object sender, EventArgs e)
+        {
+            DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();
+            string row_code = current_row.Row.ItemArray[0].ToString();
+            
         }
 
         void frm_CHUC_VU_Load(object sender, EventArgs e)

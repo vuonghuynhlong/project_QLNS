@@ -21,7 +21,7 @@ namespace QuanLyNhanSu
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
-            Application.Run(new frm_MAIN());
+            Application.Run(new frm_TEMPLATE_EDIT());
         }
     }
 }

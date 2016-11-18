@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dg_DATA = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gv_DATA = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layout_CONTROL = new DevExpress.XtraLayout.LayoutControl();
             this.pic_REFRESH = new DevExpress.XtraEditors.PictureEdit();
             this.pic_EXPORT = new DevExpress.XtraEditors.PictureEdit();
@@ -45,7 +45,7 @@
             this.layout_REFRESH = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DATA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).BeginInit();
             this.layout_CONTROL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).BeginInit();
@@ -66,21 +66,21 @@
             // dg_DATA
             // 
             this.dg_DATA.Location = new System.Drawing.Point(12, 72);
-            this.dg_DATA.MainView = this.gridView1;
+            this.dg_DATA.MainView = this.gv_DATA;
             this.dg_DATA.Name = "dg_DATA";
             this.dg_DATA.Size = new System.Drawing.Size(660, 377);
             this.dg_DATA.TabIndex = 0;
             this.dg_DATA.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gv_DATA});
             // 
-            // gridView1
+            // gv_DATA
             // 
-            this.gridView1.GridControl = this.dg_DATA;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.Editable = false;
-            this.gridView1.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gv_DATA.GridControl = this.dg_DATA;
+            this.gv_DATA.Name = "gv_DATA";
+            this.gv_DATA.OptionsBehavior.Editable = false;
+            this.gv_DATA.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
+            this.gv_DATA.OptionsView.ShowAutoFilterRow = true;
+            this.gv_DATA.OptionsView.ShowGroupPanel = false;
             // 
             // layout_CONTROL
             // 
@@ -194,7 +194,7 @@
             // 
             this.layout_INSERT.Control = this.pic_INSERT;
             this.layout_INSERT.Location = new System.Drawing.Point(0, 0);
-            this.layout_INSERT.MaxSize = new System.Drawing.Size(0, 60);
+            this.layout_INSERT.MaxSize = new System.Drawing.Size(121, 60);
             this.layout_INSERT.MinSize = new System.Drawing.Size(121, 60);
             this.layout_INSERT.Name = "layout_INSERT";
             this.layout_INSERT.Size = new System.Drawing.Size(121, 60);
@@ -206,8 +206,11 @@
             // 
             this.layout_EXPORT.Control = this.pic_EXPORT;
             this.layout_EXPORT.Location = new System.Drawing.Point(373, 0);
+            this.layout_EXPORT.MaxSize = new System.Drawing.Size(121, 60);
+            this.layout_EXPORT.MinSize = new System.Drawing.Size(121, 60);
             this.layout_EXPORT.Name = "layout_EXPORT";
             this.layout_EXPORT.Size = new System.Drawing.Size(121, 60);
+            this.layout_EXPORT.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layout_EXPORT.TextSize = new System.Drawing.Size(0, 0);
             this.layout_EXPORT.TextVisible = false;
             // 
@@ -215,8 +218,11 @@
             // 
             this.layout_UPDATE.Control = this.pic_UPDATE;
             this.layout_UPDATE.Location = new System.Drawing.Point(121, 0);
+            this.layout_UPDATE.MaxSize = new System.Drawing.Size(128, 60);
+            this.layout_UPDATE.MinSize = new System.Drawing.Size(128, 60);
             this.layout_UPDATE.Name = "layout_UPDATE";
             this.layout_UPDATE.Size = new System.Drawing.Size(128, 60);
+            this.layout_UPDATE.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layout_UPDATE.TextSize = new System.Drawing.Size(0, 0);
             this.layout_UPDATE.TextVisible = false;
             // 
@@ -224,8 +230,11 @@
             // 
             this.layout_DELETE.Control = this.pic_DELETE;
             this.layout_DELETE.Location = new System.Drawing.Point(249, 0);
+            this.layout_DELETE.MaxSize = new System.Drawing.Size(124, 60);
+            this.layout_DELETE.MinSize = new System.Drawing.Size(124, 60);
             this.layout_DELETE.Name = "layout_DELETE";
             this.layout_DELETE.Size = new System.Drawing.Size(124, 60);
+            this.layout_DELETE.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layout_DELETE.TextSize = new System.Drawing.Size(0, 0);
             this.layout_DELETE.TextVisible = false;
             // 
@@ -233,8 +242,11 @@
             // 
             this.layout_REFRESH.Control = this.pic_REFRESH;
             this.layout_REFRESH.Location = new System.Drawing.Point(494, 0);
+            this.layout_REFRESH.MaxSize = new System.Drawing.Size(123, 60);
+            this.layout_REFRESH.MinSize = new System.Drawing.Size(123, 60);
             this.layout_REFRESH.Name = "layout_REFRESH";
             this.layout_REFRESH.Size = new System.Drawing.Size(123, 60);
+            this.layout_REFRESH.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layout_REFRESH.TextSize = new System.Drawing.Size(0, 0);
             this.layout_REFRESH.TextVisible = false;
             // 
@@ -254,7 +266,7 @@
             this.Name = "frm_TEMPLATE";
             this.Size = new System.Drawing.Size(684, 461);
             ((System.ComponentModel.ISupportInitialize)(this.dg_DATA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).EndInit();
             this.layout_CONTROL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).EndInit();
@@ -277,7 +289,7 @@
         #endregion
 
         protected DevExpress.XtraGrid.GridControl dg_DATA;
-        protected DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        protected DevExpress.XtraGrid.Views.Grid.GridView gv_DATA;
         protected DevExpress.XtraEditors.PictureEdit pic_INSERT;
         protected DevExpress.XtraLayout.LayoutControlGroup layout_GROUP;
         protected DevExpress.XtraLayout.LayoutControlItem layout_GRID;
