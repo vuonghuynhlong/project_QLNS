@@ -28,7 +28,7 @@ namespace QuanLyNhanSu.LOGIC
 
         private static Dictionary<String, String> dict_code = new Dictionary<String, String>(){
            {"CV", "DIC_POSITION"},
-         
+           {"CM", "DIC_PROFESSIONAL"},
         };
         
         public static void Add_Tab_Page(XtraTabControl tab_manager, String tab_page_name, String tab_page_text) {

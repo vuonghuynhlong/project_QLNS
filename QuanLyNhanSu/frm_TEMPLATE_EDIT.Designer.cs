@@ -219,9 +219,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empty_2)).EndInit();
-
-
-            
             this.ResumeLayout(false);
 
         }

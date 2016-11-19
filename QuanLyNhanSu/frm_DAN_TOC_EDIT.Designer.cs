@@ -44,7 +44,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_GROUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_CONTROLS)).BeginInit();
             this.panel_CONTROLS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
@@ -78,9 +77,6 @@
             this.panel_CONTROLS.Controls.Add(this.layoutControl1);
             this.panel_CONTROLS.Size = new System.Drawing.Size(304, 124);
             // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Size = new System.Drawing.Size(308, 128);
             // 
             // btn_SAVE
             // 
@@ -190,7 +186,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_GROUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_CONTROLS)).EndInit();
             this.panel_CONTROLS.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();
