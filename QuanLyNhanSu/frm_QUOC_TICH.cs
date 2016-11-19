@@ -20,6 +20,7 @@ namespace QuanLyNhanSu
             this.gv_DATA.DoubleClick += edit_record;
             this.pic_UPDATE.Click += edit_record;
             this.pic_DELETE.Click += delete_record;
+            this.pic_INSERT.Click += insert_record;
         }
 
         string column_code = "Mã Quốc Tịch";
@@ -59,6 +60,11 @@ namespace QuanLyNhanSu
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
                     gv_DATA.FocusedRowHandle = rowHandle;
             }
+        }
+        void insert_record(object sender, EventArgs e)
+        {
+            frm_QUOC_TICH_EDIT frm_edit = new frm_QUOC_TICH_EDIT(this, true);
+            frm_edit.ShowDialog();
         }
     }
 }
