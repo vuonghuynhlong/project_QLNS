@@ -20,6 +20,7 @@ namespace QuanLyNhanSu
             this.gv_DATA.DoubleClick += edit_record;
             this.pic_UPDATE.Click    += edit_record;
             this.pic_DELETE.Click    += delete_record;
+            this.pic_INSERT.Click += insert_record;
         }
 
         
@@ -62,10 +63,14 @@ namespace QuanLyNhanSu
                 dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
                 
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
-                    gv_DATA.FocusedRowHandle = rowHandle;
+                    gv_DATA.FocusedRowHandle = Math.Min(rowHandle, gv_DATA.DataRowCount - 1);
             }
         }
 
-        
+        void insert_record(object sender, EventArgs e)
+        {
+            frm_HOC_VAN_EDIT frm_edit = new frm_HOC_VAN_EDIT(this, true);
+            frm_edit.ShowDialog();
+        }
     }
 }

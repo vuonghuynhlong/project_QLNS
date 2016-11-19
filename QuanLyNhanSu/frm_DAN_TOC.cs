@@ -21,6 +21,7 @@ namespace QuanLyNhanSu
             this.gv_DATA.DoubleClick += edit_record;
             this.pic_UPDATE.Click += edit_record;
             this.pic_DELETE.Click += delete_record;
+            this.pic_INSERT.Click += insert_record;
         }
 
         string column_code = "Mã Dân Tộc";
@@ -58,8 +59,15 @@ namespace QuanLyNhanSu
                 dg_DATA.DataSource = DAO_DIC_ETHNIC.Get_Data();
 
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
-                    gv_DATA.FocusedRowHandle = rowHandle;
+                    gv_DATA.FocusedRowHandle = Math.Min(rowHandle, gv_DATA.DataRowCount - 1);
             }
+        }
+
+        void insert_record(object sender, EventArgs e)
+        {
+            //frm_DAN_TOC_EDIT frm_edit = new frm_DAN_TOC_EDIT(this, true);
+            frm_DAN_TOC_EDIT frm_edit = new frm_DAN_TOC_EDIT(this, true);
+            frm_edit.ShowDialog();
         }
     }
 }

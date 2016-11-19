@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using DevExpress.XtraLayout;
+using QuanLyNhanSu.LOGIC;
 namespace QuanLyNhanSu
 {
     public partial class frm_HOC_VAN_EDIT : frm_TEMPLATE_EDIT
@@ -22,8 +23,14 @@ namespace QuanLyNhanSu
             InitializeComponent();
             this.Load += frm_EDIT_Load;
             this.btn_SAVE.Click += btn_SAVE_Click;
-            this.btn_SAVE.Location = new Point(274, 7);
+            //this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
+            // BEGIN EDIT BEGIN EDIT BEGIN EDIT BEGIN EDIT
+            LayoutControlItem item_insert_continue = layout_CONTROL.GetItemByControl(btn_INSERT_CONTINUE);
+            LayoutControlItem item_insert = layout_CONTROL.GetItemByControl(btn_INSERT);
+            item_insert_continue.Parent.Remove(item_insert_continue);
+            item_insert.Parent.Remove(item_insert);
+            // END EDIT END EDIT END EDIT END EDIT END EDIT END EDIT
 
             
         }
@@ -55,5 +62,60 @@ namespace QuanLyNhanSu
 
             this.DialogResult = DialogResult.OK;
         }
+
+        // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
+
+        frm_HOC_VAN parent = null;
+        public frm_HOC_VAN_EDIT(frm_HOC_VAN parent_frm, bool is_insert)
+            : base(is_insert)
+        {
+            InitializeComponent();
+
+            Init_Data();
+
+            this.btn_INSERT_CONTINUE.Click += insert_record_continue;
+            this.btn_INSERT.Click          += insert_record;
+
+            parent = parent_frm;
+
+
+        }
+
+    
+        private void Init_Data()
+        {
+            txt_EDUCATION_CODE.Text = LOGIC_COMMON.Generate_Code("HV");
+            txt_EDUCATION_NAME.Text = string.Empty;
+            txt_DESCRIPTION.Text = string.Empty;
+            //chk_IS_MANAGER.Checked = false;
+            
+        }
+        private void Insert()
+        {
+            new_entity = new DIC_EDUCATION();
+            new_entity.EducationCode = txt_EDUCATION_CODE.Text;
+            new_entity.EducationName = txt_EDUCATION_NAME.Text;
+            new_entity.Description = txt_DESCRIPTION.Text;
+            //new_entity.IsManager = chk_IS_MANAGER.Checked;
+            new_entity.Active = true;
+            DAO_DIC_EDUCATION.Add(new_entity);
+            parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+
+        }
+        private void insert_record(object sender, EventArgs e)
+        {
+            Insert();
+            this.Close();
+        }
+
+        private void insert_record_continue(object sender, EventArgs e)
+        {
+            Insert();
+            Init_Data();
+
+        }
+       
+
+        // END INSERT END INSERT END INSERT END INSERT END INSERT END INSERT
     }
 }

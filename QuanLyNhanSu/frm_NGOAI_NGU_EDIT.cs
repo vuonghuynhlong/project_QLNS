@@ -1,5 +1,7 @@
-﻿using QuanLyNhanSu.DAO;
+﻿using DevExpress.XtraLayout;
+using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
+using QuanLyNhanSu.LOGIC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +24,14 @@ namespace QuanLyNhanSu
             InitializeComponent();
             this.Load += frm_EDIT_Load;
             this.btn_SAVE.Click += btn_SAVE_Click;
-            this.btn_SAVE.Location = new Point(274, 7);
+            //this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
+            // BEGIN EDIT BEGIN EDIT BEGIN EDIT BEGIN EDIT
+            LayoutControlItem item_insert_continue = layout_CONTROL.GetItemByControl(btn_INSERT_CONTINUE);
+            LayoutControlItem item_insert = layout_CONTROL.GetItemByControl(btn_INSERT);
+            item_insert_continue.Parent.Remove(item_insert_continue);
+            item_insert.Parent.Remove(item_insert);
+            // END EDIT END EDIT END EDIT END EDIT END EDIT END EDIT
         }
 
         private void frm_EDIT_Load(object sender, EventArgs e)
@@ -54,5 +62,59 @@ namespace QuanLyNhanSu
 
             this.DialogResult = DialogResult.OK;
         }
+        // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
+
+        frm_NGOAI_NGU parent = null;
+        public frm_NGOAI_NGU_EDIT(frm_NGOAI_NGU parent_frm, bool is_insert)
+            : base(is_insert)
+        {
+            InitializeComponent();
+
+            Init_Data();
+
+            this.btn_INSERT_CONTINUE.Click += insert_record_continue;
+            this.btn_INSERT.Click          += insert_record;
+
+            parent = parent_frm;
+
+
+        }
+
+    
+        private void Init_Data()
+        {
+            txt_LANGUAGE_CODE.Text = LOGIC_COMMON.Generate_Code("NN");
+            txt_LANGUAGE_NAME.Text = string.Empty;
+            txt_DESCRIPTION.Text = string.Empty;
+           // chk_IS_MANAGER.Checked = false;
+            
+        }
+        private void Insert()
+        {
+            new_entity = new DIC_LANGUAGE();
+            new_entity.LanguageCode = txt_LANGUAGE_CODE.Text;
+            new_entity.LanguageName = txt_LANGUAGE_NAME.Text;
+            new_entity.Description = txt_DESCRIPTION.Text;
+            //new_entity.IsManager = chk_IS_MANAGER.Checked;
+            new_entity.Active = true;
+            DAO_DIC_LANGUAGE.Add(new_entity);
+            parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
+
+        }
+        private void insert_record(object sender, EventArgs e)
+        {
+            Insert();
+            this.Close();
+        }
+
+        private void insert_record_continue(object sender, EventArgs e)
+        {
+            Insert();
+            Init_Data();
+
+        }
+       
+
+        // END INSERT END INSERT END INSERT END INSERT END INSERT END INSERT
     }
 }

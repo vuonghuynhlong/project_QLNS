@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
+using QuanLyNhanSu.LOGIC;
+using DevExpress.XtraLayout;
 
 namespace QuanLyNhanSu
 {
@@ -22,8 +24,12 @@ namespace QuanLyNhanSu
             InitializeComponent();
             this.Load += frm_EDIT_Load;
             this.btn_SAVE.Click += btn_SAVE_Click;
-            this.btn_SAVE.Location = new Point(274, 7);
+            //this.btn_SAVE.Location = new Point(274, 7);
             CODE = code;
+            LayoutControlItem item_insert_continue = layout_CONTROL.GetItemByControl(btn_INSERT_CONTINUE);
+            LayoutControlItem item_insert = layout_CONTROL.GetItemByControl(btn_INSERT);
+            item_insert_continue.Parent.Remove(item_insert_continue);
+            item_insert.Parent.Remove(item_insert);
         }
 
         private void frm_EDIT_Load(object sender, EventArgs e)
@@ -45,6 +51,56 @@ namespace QuanLyNhanSu
             new_entity.Active = old_entity.Active;
             DAO_DIC_RELIGION.Update(old_entity, new_entity);
             this.DialogResult = DialogResult.OK;
+        }
+        
+        frm_TON_GIAO parent = null;
+        public frm_TON_GIAO_EDIT(frm_TON_GIAO parent_frm, bool is_insert)
+            : base(is_insert)
+        {
+            InitializeComponent();
+
+            Init_Data();
+
+            this.btn_INSERT_CONTINUE.Click += insert_record_continue;
+            this.btn_INSERT.Click          += insert_record;
+
+            parent = parent_frm;
+
+
+        }
+
+    
+        private void Init_Data()
+        {
+            txt_RELIGION_CODE.Text = LOGIC_COMMON.Generate_Code("TG");
+            txt_RELIGION_NAME.Text = string.Empty;
+            txt_DESCRIPTION.Text = string.Empty;
+            //chk_IS_MANAGER.Checked = false;
+            
+        }
+        private void Insert()
+        {
+            new_entity = new DIC_RELIGION();
+            new_entity.ReligionCode = txt_RELIGION_CODE.Text;
+            new_entity.ReligionName = txt_RELIGION_NAME.Text;
+            new_entity.Description = txt_DESCRIPTION.Text;
+            //new_entity.IsManager = chk_IS_MANAGER.Checked;
+            new_entity.Active = true;
+            DAO_DIC_RELIGION.Add(new_entity);
+            parent.dg_DATA.DataSource = DAO_DIC_RELIGION.Get_Data();
+
+        }
+        private void insert_record(object sender, EventArgs e)
+        {
+            Insert();
+            this.Close();
+        }
+
+        private void insert_record_continue(object sender, EventArgs e)
+        {
+            Insert();
+            Init_Data();
+
         }
     }
 }
