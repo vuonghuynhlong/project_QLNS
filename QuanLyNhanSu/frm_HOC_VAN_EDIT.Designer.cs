@@ -143,7 +143,7 @@
             // 
             // txt_DESCRIPTION
             // 
-            this.txt_DESCRIPTION.Location = new System.Drawing.Point(67, 52);
+            this.txt_DESCRIPTION.Location = new System.Drawing.Point(67, 28);
             this.txt_DESCRIPTION.Name = "txt_DESCRIPTION";
             this.txt_DESCRIPTION.Size = new System.Drawing.Size(229, 20);
             this.txt_DESCRIPTION.StyleController = this.layoutControl1;
@@ -151,17 +151,18 @@
             // 
             // txt_EDUCATION_NAME
             // 
-            this.txt_EDUCATION_NAME.Location = new System.Drawing.Point(67, 28);
+            this.txt_EDUCATION_NAME.Location = new System.Drawing.Point(67, 4);
             this.txt_EDUCATION_NAME.Name = "txt_EDUCATION_NAME";
-            this.txt_EDUCATION_NAME.Size = new System.Drawing.Size(229, 20);
+            this.txt_EDUCATION_NAME.Size = new System.Drawing.Size(134, 20);
             this.txt_EDUCATION_NAME.StyleController = this.layoutControl1;
             this.txt_EDUCATION_NAME.TabIndex = 5;
             // 
             // txt_EDUCATION_CODE
             // 
-            this.txt_EDUCATION_CODE.Location = new System.Drawing.Point(67, 4);
+            this.txt_EDUCATION_CODE.Location = new System.Drawing.Point(205, 4);
             this.txt_EDUCATION_CODE.Name = "txt_EDUCATION_CODE";
-            this.txt_EDUCATION_CODE.Size = new System.Drawing.Size(229, 20);
+            this.txt_EDUCATION_CODE.Properties.ReadOnly = true;
+            this.txt_EDUCATION_CODE.Size = new System.Drawing.Size(91, 20);
             this.txt_EDUCATION_CODE.StyleController = this.layoutControl1;
             this.txt_EDUCATION_CODE.TabIndex = 4;
             // 
@@ -171,9 +172,9 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
-            this.layoutControlItem3,
             this.layoutControlItem4,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -183,25 +184,26 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txt_EDUCATION_CODE;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(201, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(95, 24);
             this.layoutControlItem2.Text = "Mã Học Vấn";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txt_EDUCATION_NAME;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(201, 24);
             this.layoutControlItem3.Text = "Tên Học Vấn";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txt_DESCRIPTION;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem4.Text = "Mô Tả\r\n";
@@ -210,9 +212,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 72);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 49);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 73);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frm_HOC_VAN_EDIT

@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraLayout;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraLayout;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using QuanLyNhanSu.LOGIC;
@@ -56,17 +57,22 @@ namespace QuanLyNhanSu
             new_entity.LanguageCode = txt_LANGUAGE_CODE.Text;
             new_entity.LanguageName = txt_LANGUAGE_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
-            new_entity.Active = old_entity.Active;
-            DAO_DIC_LANGUAGE.Update(old_entity, new_entity);
-
-
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+                DAO_DIC_LANGUAGE.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+            }
             this.DialogResult = DialogResult.OK;
         }
         // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
 
         frm_NGOAI_NGU parent = null;
-        public frm_NGOAI_NGU_EDIT(frm_NGOAI_NGU parent_frm, bool is_insert)
-            : base(is_insert)
+        public frm_NGOAI_NGU_EDIT(frm_NGOAI_NGU parent_frm, bool is_insert): base(is_insert)
         {
             InitializeComponent();
 
@@ -97,8 +103,16 @@ namespace QuanLyNhanSu
             new_entity.Description = txt_DESCRIPTION.Text;
             //new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = true;
-            DAO_DIC_LANGUAGE.Add(new_entity);
-            parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if(validate.Status)
+            {
+                DAO_DIC_LANGUAGE.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+            }
 
         }
         private void insert_record(object sender, EventArgs e)

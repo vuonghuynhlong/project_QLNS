@@ -11,6 +11,7 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using QuanLyNhanSu.LOGIC;
 using DevExpress.XtraLayout;
+using DevExpress.XtraEditors;
 
 namespace QuanLyNhanSu
 {
@@ -40,11 +41,8 @@ namespace QuanLyNhanSu
         private void frm_EDIT_Load(object sender, EventArgs e)
         {
             old_entity = new DIC_INFORMATIC();
-
             old_entity.InformaticCode = CODE;
             old_entity = DAO_DIC_INFORMATIC.Select_Record(old_entity);
-
-
             txt_INFORMATIC_CODE.Text = old_entity.InformaticCode;
             txt_INFORMATIC_NAME.Text = old_entity.InformaticName;
             txt_DESCRIPTION.Text = old_entity.Description;
@@ -101,8 +99,16 @@ namespace QuanLyNhanSu
             new_entity.Description = txt_DESCRIPTION.Text;
             //new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = true;
-            DAO_DIC_INFORMATIC.Add(new_entity);
-            parent.dg_DATA.DataSource = DAO_DIC_INFORMATIC.Get_Data();
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if(validate.Status)
+            {
+                DAO_DIC_INFORMATIC.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_INFORMATIC.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message,"Lỗi..!!!");
+            }
 
         }
         private void insert_record(object sender, EventArgs e)

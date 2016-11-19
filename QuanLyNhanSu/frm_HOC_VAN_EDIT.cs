@@ -11,6 +11,7 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using DevExpress.XtraLayout;
 using QuanLyNhanSu.LOGIC;
+using DevExpress.XtraEditors;
 namespace QuanLyNhanSu
 {
     public partial class frm_HOC_VAN_EDIT : frm_TEMPLATE_EDIT
@@ -56,10 +57,16 @@ namespace QuanLyNhanSu
             new_entity.EducationCode = txt_EDUCATION_CODE.Text;
             new_entity.EducationName = txt_EDUCATION_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
-            new_entity.Active = old_entity.Active;
-            DAO_DIC_EDUCATION.Update(old_entity, new_entity);
-
-
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+                DAO_DIC_EDUCATION.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi !!");
+            }
             this.DialogResult = DialogResult.OK;
         }
 
@@ -98,8 +105,16 @@ namespace QuanLyNhanSu
             new_entity.Description = txt_DESCRIPTION.Text;
             //new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = true;
-            DAO_DIC_EDUCATION.Add(new_entity);
-            parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if(validate.Status)
+            {
+                DAO_DIC_EDUCATION.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi !!");
+            }
 
         }
         private void insert_record(object sender, EventArgs e)

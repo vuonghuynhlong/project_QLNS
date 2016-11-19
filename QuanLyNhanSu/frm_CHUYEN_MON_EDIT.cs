@@ -11,6 +11,7 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using DevExpress.XtraLayout;
 using QuanLyNhanSu.LOGIC;
+using DevExpress.XtraEditors;
 
 namespace QuanLyNhanSu
 {
@@ -51,8 +52,20 @@ namespace QuanLyNhanSu
             new_entity.ProfessionalName = txt_PROFESSIONAL_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
             new_entity.Active = old_entity.Active;
-            DAO_DIC_PROFESSIONAL.Update(old_entity, new_entity);
-            this.DialogResult = DialogResult.OK;
+
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+
+                DAO_DIC_PROFESSIONAL.Update(old_entity, new_entity);
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Loi");
+            }
+           
+           
         }
 
         // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
@@ -89,8 +102,19 @@ namespace QuanLyNhanSu
             new_entity.ProfessionalName = txt_PROFESSIONAL_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
             new_entity.Active = true;
-            DAO_DIC_PROFESSIONAL.Add(new_entity);
-            parent.dg_DATA.DataSource = DAO_DIC_PROFESSIONAL.Get_Data();
+
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+
+                DAO_DIC_PROFESSIONAL.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_PROFESSIONAL.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Loi");
+            }
+           
 
         }
         private void insert_record(object sender, EventArgs e)

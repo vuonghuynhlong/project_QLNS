@@ -44,6 +44,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_GROUP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_CONTROLS)).BeginInit();
             this.panel_CONTROLS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).BeginInit();
@@ -65,6 +71,8 @@
             // layout_CONTROL
             // 
             this.layout_CONTROL.Size = new System.Drawing.Size(310, 164);
+            this.layout_CONTROL.Controls.SetChildIndex(this.btn_INSERT_CONTINUE, 0);
+            this.layout_CONTROL.Controls.SetChildIndex(this.btn_INSERT, 0);
             this.layout_CONTROL.Controls.SetChildIndex(this.panel_CONTROLS, 0);
             this.layout_CONTROL.Controls.SetChildIndex(this.btn_SAVE, 0);
             // 
@@ -77,14 +85,47 @@
             this.panel_CONTROLS.Controls.Add(this.layoutControl1);
             this.panel_CONTROLS.Size = new System.Drawing.Size(304, 124);
             // 
-            // layoutControlItem1
+            // layout_1
             // 
+            this.layout_1.Size = new System.Drawing.Size(308, 128);
             // 
             // btn_SAVE
             // 
             this.btn_SAVE.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btn_SAVE.Appearance.Options.UseFont = true;
-            this.btn_SAVE.Location = new System.Drawing.Point(230, 131);
+            this.btn_SAVE.Location = new System.Drawing.Point(217, 131);
+            // 
+            // layout_4
+            // 
+            this.layout_4.Location = new System.Drawing.Point(214, 128);
+            // 
+            // empty_1
+            // 
+            this.empty_1.Location = new System.Drawing.Point(192, 128);
+            // 
+            // btn_INSERT
+            // 
+            this.btn_INSERT.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btn_INSERT.Appearance.Options.UseFont = true;
+            this.btn_INSERT.Location = new System.Drawing.Point(106, 131);
+            // 
+            // btn_INSERT_CONTINUE
+            // 
+            this.btn_INSERT_CONTINUE.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btn_INSERT_CONTINUE.Appearance.Options.UseFont = true;
+            this.btn_INSERT_CONTINUE.Location = new System.Drawing.Point(3, 131);
+            // 
+            // layout_2
+            // 
+            this.layout_2.Location = new System.Drawing.Point(0, 128);
+            // 
+            // layout_3
+            // 
+            this.layout_3.Location = new System.Drawing.Point(103, 128);
+            // 
+            // empty_2
+            // 
+            this.empty_2.Location = new System.Drawing.Point(93, 128);
             // 
             // layoutControl1
             // 
@@ -102,7 +143,7 @@
             // 
             // txt_DESCRIPTION
             // 
-            this.txt_DESCRIPTION.Location = new System.Drawing.Point(70, 52);
+            this.txt_DESCRIPTION.Location = new System.Drawing.Point(70, 28);
             this.txt_DESCRIPTION.Name = "txt_DESCRIPTION";
             this.txt_DESCRIPTION.Size = new System.Drawing.Size(226, 20);
             this.txt_DESCRIPTION.StyleController = this.layoutControl1;
@@ -110,17 +151,18 @@
             // 
             // txt_RELIGION_NAME
             // 
-            this.txt_RELIGION_NAME.Location = new System.Drawing.Point(70, 28);
+            this.txt_RELIGION_NAME.Location = new System.Drawing.Point(70, 4);
             this.txt_RELIGION_NAME.Name = "txt_RELIGION_NAME";
-            this.txt_RELIGION_NAME.Size = new System.Drawing.Size(226, 20);
+            this.txt_RELIGION_NAME.Size = new System.Drawing.Size(146, 20);
             this.txt_RELIGION_NAME.StyleController = this.layoutControl1;
             this.txt_RELIGION_NAME.TabIndex = 5;
             // 
             // txt_RELIGION_CODE
             // 
-            this.txt_RELIGION_CODE.Location = new System.Drawing.Point(70, 4);
+            this.txt_RELIGION_CODE.Location = new System.Drawing.Point(220, 4);
             this.txt_RELIGION_CODE.Name = "txt_RELIGION_CODE";
-            this.txt_RELIGION_CODE.Size = new System.Drawing.Size(226, 20);
+            this.txt_RELIGION_CODE.Properties.ReadOnly = true;
+            this.txt_RELIGION_CODE.Size = new System.Drawing.Size(76, 20);
             this.txt_RELIGION_CODE.StyleController = this.layoutControl1;
             this.txt_RELIGION_CODE.TabIndex = 4;
             // 
@@ -130,9 +172,9 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2,
-            this.layoutControlItem3,
             this.layoutControlItem4,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem3});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
@@ -142,25 +184,26 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txt_RELIGION_CODE;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(216, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem2.Size = new System.Drawing.Size(80, 24);
             this.layoutControlItem2.Text = "Mã Tôn Giáo";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(63, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txt_RELIGION_NAME;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 24);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(296, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(216, 24);
             this.layoutControlItem3.Text = "Tên Tôn Giáo";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(63, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txt_DESCRIPTION;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(296, 24);
             this.layoutControlItem4.Text = "Mô Tả\r\n";
@@ -169,9 +212,9 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 72);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 44);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(296, 68);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frm_TON_GIAO_EDIT
@@ -188,6 +231,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_GROUP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_CONTROLS)).EndInit();
             this.panel_CONTROLS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layout_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layout_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txt_DESCRIPTION.Properties)).EndInit();

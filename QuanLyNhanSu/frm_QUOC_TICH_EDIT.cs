@@ -11,6 +11,7 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using QuanLyNhanSu.LOGIC;
 using DevExpress.XtraLayout;
+using DevExpress.XtraEditors;
 
 namespace QuanLyNhanSu
 {
@@ -48,8 +49,16 @@ namespace QuanLyNhanSu
             new_entity.NationalityName = txt_NATIONALITY_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
             new_entity.Active = old_entity.Active;
-            DAO_DIC_NATIONALITY.Update(old_entity, new_entity);
-            this.DialogResult = DialogResult.OK;
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if(validate.Status)
+            {
+                DAO_DIC_NATIONALITY.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
+            }
+            else 
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+            }
         }
 
          frm_QUOC_TICH parent = null;
@@ -84,8 +93,16 @@ namespace QuanLyNhanSu
             new_entity.Description = txt_DESCRIPTION.Text;
             //new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = true;
-            DAO_DIC_NATIONALITY.Add(new_entity);
-            parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if(validate.Status)
+            {
+                DAO_DIC_NATIONALITY.Add(new_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
+            }
+            else 
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+            }
 
         }
         private void insert_record(object sender, EventArgs e)
