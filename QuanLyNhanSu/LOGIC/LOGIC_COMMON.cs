@@ -31,6 +31,7 @@ namespace QuanLyNhanSu.LOGIC
            {"CM", "DIC_PROFESSIONAL"},
         };
         
+
         public static void Add_Tab_Page(XtraTabControl tab_manager, String tab_page_name, String tab_page_text) {
             var find_tab = tab_manager.TabPages.Where(p => p.Name == tab_page_name);
             XtraTabPage tab = null;
@@ -64,5 +65,16 @@ namespace QuanLyNhanSu.LOGIC
             return prefix + DAO_BASE.Generate_Code(table_name);
         }
 
+
+
+
+        public static bool Is_Empty_String(String str)
+        {
+            return (str == null || str.Trim().Length == 0);
+        }
+        public static bool Is_Over_MaxLength(String str, int max_length)
+        {
+            return (str.Length > max_length);
+        }
     }
 }

@@ -100,6 +100,7 @@
     <Compile Include="ENTITY\DIC_SALARY_RANK.cs" />
     <Compile Include="ENTITY\DIC_SALARY_STEP.cs" />
     <Compile Include="ENTITY\DIC_SCHOOL.cs" />
+    <Compile Include="ENTITY\ENT_RETURN.cs" />
     <Compile Include="ENTITY\HRM_EMPLOYEE.cs" />
     <Compile Include="frmTest.cs">
       <SubType>Form</SubType>
@@ -245,6 +246,8 @@
     <Compile Include="frm_TON_GIAO_EDIT.Designer.cs">
       <DependentUpon>frm_TON_GIAO_EDIT.cs</DependentUpon>
     </Compile>
+    <Compile Include="LOGIC\GLOBAL.cs" />
+    <Compile Include="LOGIC\LOGIC_CHECK.cs" />
     <Compile Include="LOGIC\LOGIC_COMMON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,6 +11,7 @@ using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using QuanLyNhanSu.LOGIC;
 using DevExpress.XtraLayout;
+using DevExpress.XtraEditors;
 
 namespace QuanLyNhanSu
 {
@@ -102,7 +103,16 @@ namespace QuanLyNhanSu
             new_entity.Description = txt_DESCRIPTION.Text;
             new_entity.IsManager = chk_IS_MANAGER.Checked;
             new_entity.Active = true;
-            DAO_DIC_POSITION.Add(new_entity);
+
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+                DAO_DIC_POSITION.Add(new_entity);
+            }
+            else {
+                XtraMessageBox.Show(validate.Message, "Loi");
+            }
+            
             parent.dg_DATA.DataSource = DAO_DIC_POSITION.Get_Data();
 
         }
