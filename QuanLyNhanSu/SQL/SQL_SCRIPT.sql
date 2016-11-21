@@ -882,22 +882,22 @@ GO
 -- ----------------------------
 -- Records of DIC_DEPARTMENT
 -- ----------------------------
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000001', , N'Phòng Tư Vấn', N'08.66748561', N'12', N'10', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000001', N'Phòng Tư Vấn', N'08.66748561', N'12', N'10', N'')
 GO
 GO
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000002', , N'Phòng Kinh Doanh', N'08.66748561', N'9', N'9', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000002', N'Phòng Kinh Doanh', N'08.66748561', N'9', N'9', N'')
 GO
 GO
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000003', , N'Ban Giám Đốc', N'08.66748561', N'2', N'2', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000003', N'Ban Giám Đốc', N'08.66748561', N'2', N'2', N'')
 GO
 GO
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000004', , N'Phòng Kinh Doanh', N'', N'1', N'1', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000004', N'Phòng Kinh Doanh', N'', N'1', N'1', N'')
 GO
 GO
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000005', , N'Phòng Kế Toán', N'', N'6', N'6', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000005', N'Phòng Kế Toán', N'', N'6', N'6', N'')
 GO
 GO
-INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000006', , N'Phòng Tài Chính', N'', N'4', N'4', N'')
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000006', N'Phòng Tài Chính', N'', N'4', N'4', N'')
 GO
 GO
 
