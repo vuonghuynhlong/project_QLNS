@@ -864,3 +864,49 @@ ALTER TABLE [dbo].[HRM_EMPLOYEE] ADD FOREIGN KEY ([Religion]) REFERENCES [dbo].[
 GO
 ALTER TABLE [dbo].[HRM_EMPLOYEE] ADD FOREIGN KEY ([School]) REFERENCES [dbo].[DIC_SCHOOL] ([SchoolCode]) ON DELETE NO ACTION ON UPDATE NO ACTION
 GO
+------------------------------------------------------------
+
+
+CREATE TABLE [dbo].[DIC_DEPARTMENT] (
+[DepartmentCode] varchar(20) NOT NULL ,
+[DepartmentName] nvarchar(100) NULL ,
+[Phone] varchar(20) NULL ,
+[Quantity] int NULL ,
+[FactQuantity] int NULL ,
+[Description] nvarchar(255) NULL 
+)
+
+
+GO
+
+-- ----------------------------
+-- Records of DIC_DEPARTMENT
+-- ----------------------------
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000001', , N'Phòng Tư Vấn', N'08.66748561', N'12', N'10', N'')
+GO
+GO
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000002', , N'Phòng Kinh Doanh', N'08.66748561', N'9', N'9', N'')
+GO
+GO
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000003', , N'Ban Giám Đốc', N'08.66748561', N'2', N'2', N'')
+GO
+GO
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000004', , N'Phòng Kinh Doanh', N'', N'1', N'1', N'')
+GO
+GO
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000005', , N'Phòng Kế Toán', N'', N'6', N'6', N'')
+GO
+GO
+INSERT INTO [dbo].[DIC_DEPARTMENT] ([DepartmentCode], [DepartmentName], [Phone], [Quantity], [FactQuantity], [Description]) VALUES (N'PB000006', , N'Phòng Tài Chính', N'', N'4', N'4', N'')
+GO
+GO
+
+-- ----------------------------
+-- Indexes structure for table DIC_DEPARTMENT
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table DIC_DEPARTMENT
+-- ----------------------------
+ALTER TABLE [dbo].[DIC_DEPARTMENT] ADD PRIMARY KEY ([DepartmentCode])
+GO
