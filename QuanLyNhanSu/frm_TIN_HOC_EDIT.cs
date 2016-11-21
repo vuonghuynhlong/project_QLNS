@@ -57,10 +57,16 @@ namespace QuanLyNhanSu
             new_entity.InformaticName = txt_INFORMATIC_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
             new_entity.Active = old_entity.Active;
-            DAO_DIC_INFORMATIC.Update(old_entity, new_entity);
-
-
-            this.DialogResult = DialogResult.OK;
+            ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
+            if (validate.Status)
+            {
+                DAO_DIC_INFORMATIC.Update(new_entity, old_entity);
+                parent.dg_DATA.DataSource = DAO_DIC_INFORMATIC.Get_Data();
+            }
+            else
+            {
+                XtraMessageBox.Show(validate.Message, "Lỗi..!!!");
+            }
         }
         public string code { get; set; }
 

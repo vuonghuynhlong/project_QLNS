@@ -233,5 +233,33 @@ namespace QuanLyNhanSu.LOGIC
             }
             return ret;
         }
+
+        internal static ENT_RETURN Check_Data(DIC_DEPARTMENT e)
+        {
+            //throw new NotImplementedException();
+            ENT_RETURN ret = new ENT_RETURN();
+            string err_msg = string.Empty;
+
+            // BEGIN CHECK
+            if (Is_Empty_String(e.DepartmentName))
+            {
+                err_msg += GLOBAL.err_code["E018"];
+            }
+            if (Is_Over_MaxLength(e.DepartmentName, 100))
+            {
+                err_msg += GLOBAL.err_code["E019"];
+            }
+            if (Is_Over_MaxLength(e.Description, 200))
+            {
+                err_msg += GLOBAL.err_code["E003"];
+            }
+            // END CHECK
+            if (err_msg != string.Empty)
+            {
+                ret.Message = err_msg;
+                ret.Status = false;
+            }
+            return ret;
+        }
     }
 }

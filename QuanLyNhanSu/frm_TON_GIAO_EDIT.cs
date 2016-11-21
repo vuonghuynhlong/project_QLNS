@@ -53,7 +53,7 @@ namespace QuanLyNhanSu
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if (validate.Status)
             {
-                DAO_DIC_RELIGION.Add(new_entity);
+                DAO_DIC_RELIGION.Update(new_entity, old_entity);
                 parent.dg_DATA.DataSource = DAO_DIC_RELIGION.Get_Data();
             }
             else

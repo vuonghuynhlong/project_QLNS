@@ -107,6 +107,11 @@ namespace QuanLyNhanSu.DAO
                 connection.Close();
             }
         }
+
+        protected static SqlConnection GetConnection()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

@@ -295,6 +295,10 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "FROM DIC_DEGREE ";
             return Select_Table(sql);
         }
+        public static bool Delete(string code)
+        {
+            return Delete("DIC_DEGREE", "DegreeCode", code);
+        }
     }
 
 }

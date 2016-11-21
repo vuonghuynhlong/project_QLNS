@@ -93,6 +93,16 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DEPARTMENT {
+            get {
+                object obj = ResourceManager.GetObject("DEPARTMENT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EMPLOYEEE {
             get {
                 object obj = ResourceManager.GetObject("EMPLOYEEE", resourceCulture);

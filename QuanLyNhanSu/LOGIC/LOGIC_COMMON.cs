@@ -17,6 +17,7 @@ namespace QuanLyNhanSu.LOGIC
            {"bar_NGOAI_NGU", new frm_NGOAI_NGU()},
            {"bar_TIN_HOC", new frm_TIN_HOC()},
            {"bar_HOC_VAN", new frm_HOC_VAN()},
+           {"bar_PHONG_BAN", new frm_PHONG_BAN()},
            {"bar_CHUC_VU", new frm_CHUC_VU()},
            {"bar_CHUYEN_MON", new frm_CHUYEN_MON()},
            {"bar_QUOC_TICH", new frm_QUOC_TICH()},
@@ -31,10 +32,12 @@ namespace QuanLyNhanSu.LOGIC
            {"CM", "DIC_PROFESSIONAL"},
            {"DT", "DIC_ETHNIC"},
            {"HV", "DIC_EDUCATION"},
+           {"PB", "DIC_DEPARTMENT"},
            {"NN", "DIC_LANGUAGE"},
            {"TH", "DIC_INFORMATIC"},
            {"QT", "DIC_NATIONALITY"},
-           {"TG", "DIC_RELIGION"}
+           {"TG", "DIC_RELIGION"},
+           
         };
         
 

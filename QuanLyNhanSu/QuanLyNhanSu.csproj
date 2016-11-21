@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="DAO\DAO_BASE.cs" />
     <Compile Include="DAO\DAO_DIC_DEGREE.cs" />
+    <Compile Include="DAO\DAO_DIC_DEPARTMENT.cs" />
     <Compile Include="DAO\DAO_DIC_EDUCATION.cs" />
     <Compile Include="DAO\DAO_DIC_ETHNIC.cs" />
     <Compile Include="DAO\DAO_DIC_INFORMATIC.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="DAO\DAO_DIC_SCHOOL.cs" />
     <Compile Include="DAO\DAO_HRM_EMPLOYEE.cs" />
     <Compile Include="ENTITY\DIC_DEGREE.cs" />
+    <Compile Include="ENTITY\DIC_DEPARTMENT.cs" />
     <Compile Include="ENTITY\DIC_EDUCATION.cs" />
     <Compile Include="ENTITY\DIC_ETHNIC.cs" />
     <Compile Include="ENTITY\DIC_INFORMATIC.cs" />
@@ -185,6 +187,16 @@
     </Compile>
     <Compile Include="frm_NGOAI_NGU_EDIT.Designer.cs">
       <DependentUpon>frm_NGOAI_NGU_EDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PHONG_BAN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_PHONG_BAN.Designer.cs">
+      <DependentUpon>frm_PHONG_BAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PHONG_BAN_EDIT.cs" />
+    <Compile Include="frm_PHONG_BAN_EDIT.Designer.cs">
+      <DependentUpon>frm_PHONG_BAN_EDIT.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_QUOC_TICH.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +302,12 @@
     <EmbeddedResource Include="frm_NGOAI_NGU_EDIT.resx">
       <DependentUpon>frm_NGOAI_NGU_EDIT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_PHONG_BAN.resx">
+      <DependentUpon>frm_PHONG_BAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PHONG_BAN_EDIT.resx">
+      <DependentUpon>frm_PHONG_BAN_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_QUOC_TICH.resx">
       <DependentUpon>frm_QUOC_TICH.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +400,7 @@
     <None Include="Resources\EXPORT.png" />
     <None Include="Resources\REFRESH.png" />
     <None Include="Resources\SAVE.png" />
+    <None Include="Resources\DEPARTMENT.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

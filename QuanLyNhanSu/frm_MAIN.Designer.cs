@@ -39,6 +39,7 @@
             this.bar_TON_GIAO = new DevExpress.XtraBars.BarButtonItem();
             this.bar_DANH_SACH_NHAN_VIEN = new DevExpress.XtraBars.BarButtonItem();
             this.bar_HOP_DONG_LAO_DONG = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_PHONG_BAN = new DevExpress.XtraBars.BarButtonItem();
             this.rbPAGE = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rb_PAGE_GROUP_DANH_MUC = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rb_QUAN_LY_NHAN_SU = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -62,9 +63,10 @@
             this.bar_DAN_TOC,
             this.bar_TON_GIAO,
             this.bar_DANH_SACH_NHAN_VIEN,
-            this.bar_HOP_DONG_LAO_DONG});
+            this.bar_HOP_DONG_LAO_DONG,
+            this.bar_PHONG_BAN});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 11;
+            this.ribbon.MaxItemId = 12;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbPAGE});
@@ -148,6 +150,13 @@
             this.bar_HOP_DONG_LAO_DONG.Name = "bar_HOP_DONG_LAO_DONG";
             this.bar_HOP_DONG_LAO_DONG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
+            // bar_PHONG_BAN
+            // 
+            this.bar_PHONG_BAN.Caption = "Phòng Ban";
+            this.bar_PHONG_BAN.Id = 11;
+            this.bar_PHONG_BAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.DEPARTMENT;
+            this.bar_PHONG_BAN.Name = "bar_PHONG_BAN";
+            // 
             // rbPAGE
             // 
             this.rbPAGE.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -161,6 +170,7 @@
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_HOC_VAN);
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_NGOAI_NGU);
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_TIN_HOC);
+            this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_PHONG_BAN, true);
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_CHUC_VU, true);
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_CHUYEN_MON, true);
             this.rb_PAGE_GROUP_DANH_MUC.ItemLinks.Add(this.bar_QUOC_TICH, true);
@@ -231,5 +241,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_QUAN_LY_NHAN_SU;
         private DevExpress.XtraBars.BarButtonItem bar_HOP_DONG_LAO_DONG;
         private DevExpress.XtraTab.XtraTabControl tab_MANAGER;
+        private DevExpress.XtraBars.BarButtonItem bar_PHONG_BAN;
     }
 }
