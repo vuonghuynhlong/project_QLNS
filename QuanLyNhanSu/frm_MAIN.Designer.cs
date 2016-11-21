@@ -156,6 +156,7 @@
             this.bar_PHONG_BAN.Id = 11;
             this.bar_PHONG_BAN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.DEPARTMENT;
             this.bar_PHONG_BAN.Name = "bar_PHONG_BAN";
+            this.bar_PHONG_BAN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // rbPAGE
             // 

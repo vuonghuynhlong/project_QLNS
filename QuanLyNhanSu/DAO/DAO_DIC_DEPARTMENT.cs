@@ -372,7 +372,7 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "    ,[FactQuantity] AS [Số Lượng Thực Tế]";
             sql = sql + "    ,[Description] AS [Miêu tả]";
             sql = sql + "FROM DIC_DEPARTMENT ";
-            sql = sql + "WHERE [Active] = 1 ";
+            //sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
 
         }
