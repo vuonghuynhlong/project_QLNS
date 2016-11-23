@@ -294,6 +294,19 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
         }
+
+        public static DataTable Get_View_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [NationalityCode] AS [Mã Quốc Tịch]  ";
+            sql = sql + "    ,[NationalityName] AS [Tên Quốc Tịch] ";
+            //sql = sql + "    ,[Description]     AS [Mô Tả]     ";
+            sql = sql + "FROM DIC_NATIONALITY ";
+            sql = sql + "WHERE [Active] = 1 ";
+            return Select_Table(sql);
+        }
+
         public static bool Delete(string code)
         {
             return Delete("DIC_NATIONALITY", "NationalityCode", code);

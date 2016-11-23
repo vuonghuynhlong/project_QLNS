@@ -309,6 +309,19 @@ namespace QuanLyNhanSu.DAO
 
             return Select_Table(sql);
         }
+
+        public static DataTable Get_View_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [EducationCode] AS [Mã Học Vấn]  ";
+            sql = sql + "    ,[EducationName] AS [Tên Học Vấn] ";
+            sql = sql + "FROM DIC_EDUCATION ";
+            sql = sql + "WHERE [Active] = 1 ";
+
+            return Select_Table(sql);
+        }
+
     }
 
 

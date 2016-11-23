@@ -291,10 +291,24 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "    ,[SchoolName] AS [Tên Trường] ";
             sql = sql + "    ,[Description]      AS [Mô Tả]          ";
             sql = sql + "    ,[Active]           AS [Còn Sử Dụng]    ";
-            sql = sql + "FROM DIC_PROFESSIONAL ";
+            sql = sql + "FROM DIC_SCHOOL ";
             return Select_Table(sql);
 
         }
+
+        public static DataTable Get_View_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [SchoolCode] AS [Mã Trường]  ";
+            sql = sql + "    ,[SchoolName] AS [Tên Trường] ";
+            sql = sql + "FROM DIC_SCHOOL ";
+            return Select_Table(sql);
+
+        }
+
+
     }
 
 }

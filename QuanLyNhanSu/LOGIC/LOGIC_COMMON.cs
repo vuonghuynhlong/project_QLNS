@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
+using System.Data;
 
 namespace QuanLyNhanSu.LOGIC
 {
@@ -84,6 +85,15 @@ namespace QuanLyNhanSu.LOGIC
         public static bool Is_Over_MaxLength(String str, int max_length)
         {
             return (str.Length > max_length);
+        }
+
+
+        public static void Init_Lookup_Edit_DataSource(LookUpEdit lookup_edit, DataTable data, String value_member, String display_member) {
+            lookup_edit.Properties.DataSource = data;
+            lookup_edit.Properties.DisplayMember = display_member;
+            lookup_edit.Properties.ValueMember = value_member;
+         
+          
         }
     }
 }

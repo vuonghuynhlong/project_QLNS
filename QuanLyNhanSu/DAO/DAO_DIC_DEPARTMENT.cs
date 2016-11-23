@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.DAO
         public static DIC_DEPARTMENT Select_Record(DIC_DEPARTMENT clsDIC_DEPARTMENTPara)
         {
             DIC_DEPARTMENT clsDIC_DEPARTMENT = new DIC_DEPARTMENT();
-            SqlConnection connection = DAO_BASE.GetConnection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string selectStatement
                 = "SELECT "
                 + "     [DepartmentCode] "
@@ -23,6 +23,7 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[Quantity] "
                 + "    ,[FactQuantity] "
                 + "    ,[Description] "
+                + "    ,[Active] "
                 + "FROM "
                 + "     [DIC_DEPARTMENT] "
                 + "WHERE "
@@ -44,6 +45,8 @@ namespace QuanLyNhanSu.DAO
                     clsDIC_DEPARTMENT.Quantity = reader["Quantity"] is DBNull ? null : (Int32?)reader["Quantity"];
                     clsDIC_DEPARTMENT.FactQuantity = reader["FactQuantity"] is DBNull ? null : (Int32?)reader["FactQuantity"];
                     clsDIC_DEPARTMENT.Description = reader["Description"] is DBNull ? null : reader["Description"].ToString();
+                    clsDIC_DEPARTMENT.Active = reader["Active"] is DBNull ? null : (Boolean?)reader["Active"];
+             
                 }
                 else
                 {
@@ -64,7 +67,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Add(DIC_DEPARTMENT clsDIC_DEPARTMENT)
         {
-            SqlConnection connection = DAO_BASE.GetConnection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string insertStatement
                 = "INSERT "
                 + "     [DIC_DEPARTMENT] "
@@ -75,6 +78,7 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[Quantity] "
                 + "    ,[FactQuantity] "
                 + "    ,[Description] "
+                + "    ,[Active] "
                 + "     ) "
                 + "VALUES "
                 + "     ( "
@@ -84,6 +88,7 @@ namespace QuanLyNhanSu.DAO
                 + "    ,@Quantity "
                 + "    ,@FactQuantity "
                 + "    ,@Description "
+                + "    ,@Active "
                 + "     ) "
                 + "";
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
@@ -129,6 +134,14 @@ namespace QuanLyNhanSu.DAO
             {
                 insertCommand.Parameters.AddWithValue("@Description", DBNull.Value);
             }
+            if (clsDIC_DEPARTMENT.Active.HasValue == true)
+            {
+                insertCommand.Parameters.AddWithValue("@Active", clsDIC_DEPARTMENT.Active);
+            }
+            else
+            {
+                insertCommand.Parameters.AddWithValue("@Active", DBNull.Value);
+            }
             try
             {
                 connection.Open();
@@ -155,7 +168,7 @@ namespace QuanLyNhanSu.DAO
         public static bool Update(DIC_DEPARTMENT oldDIC_DEPARTMENT,
                DIC_DEPARTMENT newDIC_DEPARTMENT)
         {
-            SqlConnection connection = DAO_BASE.GetConnection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string updateStatement
                 = "UPDATE "
                 + "     [DIC_DEPARTMENT] "
@@ -166,6 +179,7 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[Quantity] = @NewQuantity "
                 + "    ,[FactQuantity] = @NewFactQuantity "
                 + "    ,[Description] = @NewDescription "
+                + "    ,[Active] = @NewActive "
                 + "WHERE "
                 + "     [DepartmentCode] = @OldDepartmentCode "
                 + " AND ((@OldDepartmentName IS NULL AND [DepartmentName] IS NULL) OR [DepartmentName] = @OldDepartmentName) "
@@ -173,6 +187,7 @@ namespace QuanLyNhanSu.DAO
                 + " AND ((@OldQuantity IS NULL AND [Quantity] IS NULL) OR [Quantity] = @OldQuantity) "
                 + " AND ((@OldFactQuantity IS NULL AND [FactQuantity] IS NULL) OR [FactQuantity] = @OldFactQuantity) "
                 + " AND ((@OldDescription IS NULL AND [Description] IS NULL) OR [Description] = @OldDescription) "
+                + " AND ((@OldActive IS NULL AND [Active] IS NULL) OR [Active] = @OldActive) "
                 + "";
             SqlCommand updateCommand = new SqlCommand(updateStatement, connection);
             updateCommand.CommandType = CommandType.Text;
@@ -217,7 +232,17 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@NewDescription", DBNull.Value);
             }
+            if (newDIC_DEPARTMENT.Active.HasValue == true)
+            {
+                updateCommand.Parameters.AddWithValue("@NewActive", newDIC_DEPARTMENT.Active);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@NewActive", DBNull.Value);
+            }
+
             updateCommand.Parameters.AddWithValue("@OldDepartmentCode", oldDIC_DEPARTMENT.DepartmentCode);
+            
             if (oldDIC_DEPARTMENT.DepartmentName != null)
             {
                 updateCommand.Parameters.AddWithValue("@OldDepartmentName", oldDIC_DEPARTMENT.DepartmentName);
@@ -258,6 +283,15 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@OldDescription", DBNull.Value);
             }
+            if (oldDIC_DEPARTMENT.Active.HasValue == true)
+            {
+                updateCommand.Parameters.AddWithValue("@OldActive", oldDIC_DEPARTMENT.Active);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@OldActive", DBNull.Value);
+            }
+
             try
             {
                 connection.Open();
@@ -283,7 +317,7 @@ namespace QuanLyNhanSu.DAO
 
         public static bool Delete(DIC_DEPARTMENT clsDIC_DEPARTMENT)
         {
-            SqlConnection connection = DAO_BASE.GetConnection();
+            SqlConnection connection = DAO_BASE.Get_Connection();
             string deleteStatement
                 = "DELETE FROM "
                 + "     [DIC_DEPARTMENT] "
@@ -294,6 +328,7 @@ namespace QuanLyNhanSu.DAO
                 + " AND ((@OldQuantity IS NULL AND [Quantity] IS NULL) OR [Quantity] = @OldQuantity) "
                 + " AND ((@OldFactQuantity IS NULL AND [FactQuantity] IS NULL) OR [FactQuantity] = @OldFactQuantity) "
                 + " AND ((@OldDescription IS NULL AND [Description] IS NULL) OR [Description] = @OldDescription) "
+                + " AND ((@OldActive IS NULL AND [Active] IS NULL) OR [Active] = @OldActive) "
                 + "";
             SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection);
             deleteCommand.CommandType = CommandType.Text;
@@ -338,6 +373,14 @@ namespace QuanLyNhanSu.DAO
             {
                 deleteCommand.Parameters.AddWithValue("@OldDescription", DBNull.Value);
             }
+            if (clsDIC_DEPARTMENT.Active.HasValue == true)
+            {
+                deleteCommand.Parameters.AddWithValue("@OldActive", clsDIC_DEPARTMENT.Active);
+            }
+            else
+            {
+                deleteCommand.Parameters.AddWithValue("@OldActive", DBNull.Value);
+            }
             try
             {
                 connection.Open();
@@ -370,9 +413,9 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "    ,[Phone] AS [SĐT]";
             sql = sql + "    ,[Quantity] AS [Số Lượng]";
             sql = sql + "    ,[FactQuantity] AS [Số Lượng Thực Tế]";
-            sql = sql + "    ,[Description] AS [Miêu tả]";
+            sql = sql + "    ,[Description] AS [Mô Tả]";
             sql = sql + "FROM DIC_DEPARTMENT ";
-            //sql = sql + "WHERE [Active] = 1 ";
+            sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
 
         }
@@ -381,10 +424,7 @@ namespace QuanLyNhanSu.DAO
         {
             return Delete("DIC_DEPARTMENT", "DepartmentCode", code);
         }
-        //internal static object Get_Data()
-        //{
-        //    throw new NotImplementedException();
-        //}
+       
     }
 
 }

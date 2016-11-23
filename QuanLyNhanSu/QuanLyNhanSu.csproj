@@ -188,13 +188,27 @@
     <Compile Include="frm_NGOAI_NGU_EDIT.Designer.cs">
       <DependentUpon>frm_NGOAI_NGU_EDIT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_NHAN_VIEN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm_NHAN_VIEN.Designer.cs">
+      <DependentUpon>frm_NHAN_VIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NHAN_VIEN_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NHAN_VIEN_EDIT.Designer.cs">
+      <DependentUpon>frm_NHAN_VIEN_EDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_PHONG_BAN.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="frm_PHONG_BAN.Designer.cs">
       <DependentUpon>frm_PHONG_BAN.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_PHONG_BAN_EDIT.cs" />
+    <Compile Include="frm_PHONG_BAN_EDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_PHONG_BAN_EDIT.Designer.cs">
       <DependentUpon>frm_PHONG_BAN_EDIT.cs</DependentUpon>
     </Compile>
@@ -302,6 +316,9 @@
     <EmbeddedResource Include="frm_NGOAI_NGU_EDIT.resx">
       <DependentUpon>frm_NGOAI_NGU_EDIT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_NHAN_VIEN_EDIT.resx">
+      <DependentUpon>frm_NHAN_VIEN_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_PHONG_BAN.resx">
       <DependentUpon>frm_PHONG_BAN.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,6 +418,10 @@
     <None Include="Resources\REFRESH.png" />
     <None Include="Resources\SAVE.png" />
     <None Include="Resources\DEPARTMENT.png" />
+    <None Include="Resources\INSERT1.png" />
+    <None Include="Resources\SAVE1.png" />
+    <None Include="Resources\QUIT.png" />
+    <None Include="Resources\PRINT.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

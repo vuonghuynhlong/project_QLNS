@@ -24,6 +24,7 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
             CODE = code;
+            this.Load+=frm_EDIT_Load;
             this.btn_SAVE.Click += btn_SAVE_Click;
             LayoutControlItem item_insert_continue = layout_CONTROL.GetItemByControl(btn_INSERT_CONTINUE);
             LayoutControlItem item_insert = layout_CONTROL.GetItemByControl(btn_INSERT);
@@ -41,6 +42,9 @@ namespace QuanLyNhanSu
             txt_DEPARTMENT_CODE.Text = old_entity.DepartmentCode;
             txt_DEPARTMENT_NAME.Text = old_entity.DepartmentName;
             txt_DESCRIPTION.Text = old_entity.Description;
+            txt_PHONE.Text = old_entity.Phone;
+            txt_QUANLITY.Text = old_entity.Quantity.ToString();
+            txt_FACT_QUANLITY.Text = old_entity.FactQuantity.ToString();
         }
 
         private void btn_SAVE_Click(object sender, EventArgs e)
@@ -51,14 +55,15 @@ namespace QuanLyNhanSu
             new_entity.DepartmentCode = txt_DEPARTMENT_CODE.Text;
             new_entity.DepartmentName = txt_DEPARTMENT_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
+            new_entity.Phone = txt_PHONE.Text;
             new_entity.Quantity = old_entity.Quantity;
             new_entity.FactQuantity = old_entity.FactQuantity;
-            //new_entity.Active = old_entity.Active;
+            new_entity.Active = old_entity.Active;
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if (validate.Status)
             {
                 DAO_DIC_DEPARTMENT.Update(old_entity, new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_DEPARTMENT.Get_Data();
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -82,7 +87,8 @@ namespace QuanLyNhanSu
             txt_DEPARTMENT_CODE.Text = LOGIC_COMMON.Generate_Code("PB");
             txt_DEPARTMENT_NAME.Text = string.Empty;
             txt_DESCRIPTION.Text = string.Empty;
-            chk_IS_MANAGER.Checked = false;
+            txt_QUANLITY.Text = "0";
+            txt_FACT_QUANLITY.Text = "0";
 
         }
         private void Insert()
@@ -91,8 +97,10 @@ namespace QuanLyNhanSu
             new_entity.DepartmentCode = txt_DEPARTMENT_CODE.Text;
             new_entity.DepartmentName = txt_DEPARTMENT_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
+            new_entity.Phone = txt_PHONE.Text;
             new_entity.Quantity = 0;
             new_entity.FactQuantity = 0;
+            new_entity.Active = true;
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if (validate.Status)
             {

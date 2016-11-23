@@ -14,6 +14,7 @@ namespace QuanLyNhanSu.ENTITY
         private Nullable<Int32> m_Quantity;
         private Nullable<Int32> m_FactQuantity;
         private String m_Description;
+        private Nullable<Boolean> m_Active;
 
         public DIC_DEPARTMENT() { }
 
@@ -88,6 +89,17 @@ namespace QuanLyNhanSu.ENTITY
             }
         }
 
+        public Nullable<Boolean> Active
+        {
+            get
+            {
+                return m_Active;
+            }
+            set
+            {
+                m_Active = value;
+            }
+        }
     }
 
 }

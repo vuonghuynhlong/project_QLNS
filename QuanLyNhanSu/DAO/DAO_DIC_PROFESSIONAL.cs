@@ -295,6 +295,18 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
         }
+        public static DataTable Get_View_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [ProfessionalCode] AS [Mã Chuyên Môn]  ";
+            sql = sql + "    ,[ProfessionalName] AS [Tên Chuyên Môn] ";
+            sql = sql + "FROM DIC_PROFESSIONAL ";
+            sql = sql + "WHERE [Active] = 1 ";
+            return Select_Table(sql);
+        }
+
         public static bool Delete(string code)
         {
             return Delete("DIC_PROFESSIONAL", "ProfessionalCode", code);

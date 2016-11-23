@@ -296,6 +296,18 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "WHERE [Active] = 1 ";
             return Select_Table(sql);
         }
+
+        public static DataTable Get_View_Data()
+        {
+
+            String sql = "";
+            sql = sql + "SELECT ";
+            sql = sql + "     [ReligionCode] AS [Mã Tôn Giáo]  ";
+            sql = sql + "    ,[ReligionName] AS [Tên Tôn Giáo] ";
+            sql = sql + "FROM DIC_RELIGION ";
+            sql = sql + "WHERE [Active] = 1 ";
+            return Select_Table(sql);
+        }
         public static bool Delete(string code)
         {
             return Delete("DIC_RELIGION", "ReligionCode", code);

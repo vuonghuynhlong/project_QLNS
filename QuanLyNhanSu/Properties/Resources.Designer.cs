@@ -153,6 +153,16 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap INSERT1 {
+            get {
+                object obj = ResourceManager.GetObject("INSERT1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LANGUAGE {
             get {
                 object obj = ResourceManager.GetObject("LANGUAGE", resourceCulture);
@@ -213,6 +223,26 @@ namespace QuanLyNhanSu.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PRINT {
+            get {
+                object obj = ResourceManager.GetObject("PRINT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QUIT {
+            get {
+                object obj = ResourceManager.GetObject("QUIT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap REFRESH {
             get {
                 object obj = ResourceManager.GetObject("REFRESH", resourceCulture);
@@ -236,6 +266,16 @@ namespace QuanLyNhanSu.Properties {
         internal static System.Drawing.Bitmap SAVE {
             get {
                 object obj = ResourceManager.GetObject("SAVE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SAVE1 {
+            get {
+                object obj = ResourceManager.GetObject("SAVE1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

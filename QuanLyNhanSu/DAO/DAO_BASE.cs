@@ -108,10 +108,7 @@ namespace QuanLyNhanSu.DAO
             }
         }
 
-        protected static SqlConnection GetConnection()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
 }

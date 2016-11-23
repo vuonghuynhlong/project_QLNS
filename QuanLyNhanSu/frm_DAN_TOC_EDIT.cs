@@ -57,7 +57,7 @@ namespace QuanLyNhanSu
             if (validate.Status)
             {
                 DAO_DIC_ETHNIC.Update(old_entity, new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_ETHNIC.Get_Data();
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -68,8 +68,7 @@ namespace QuanLyNhanSu
         // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
 
         frm_DAN_TOC parent = null;
-        private frm_DAN_TOC frm_DAN_TOC;
-        private bool p;
+
         public frm_DAN_TOC_EDIT(frm_DAN_TOC parent_frm, bool is_insert) : base(is_insert)
         {
             InitializeComponent();

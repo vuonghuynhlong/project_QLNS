@@ -57,11 +57,12 @@ namespace QuanLyNhanSu
             new_entity.EducationCode = txt_EDUCATION_CODE.Text;
             new_entity.EducationName = txt_EDUCATION_NAME.Text;
             new_entity.Description = txt_DESCRIPTION.Text;
+            new_entity.Active = old_entity.Active;
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if (validate.Status)
             {
                 DAO_DIC_EDUCATION.Update(old_entity, new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+                this.DialogResult = DialogResult.OK;
             }
             else
             {

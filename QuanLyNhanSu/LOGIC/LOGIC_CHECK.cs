@@ -261,5 +261,10 @@ namespace QuanLyNhanSu.LOGIC
             }
             return ret;
         }
+
+        public static ENT_RETURN Check_Data(HRM_EMPLOYEE new_entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

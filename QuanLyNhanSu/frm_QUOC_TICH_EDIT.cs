@@ -53,7 +53,7 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_NATIONALITY.Update(old_entity, new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
+                this.DialogResult = DialogResult.OK;
             }
             else 
             {

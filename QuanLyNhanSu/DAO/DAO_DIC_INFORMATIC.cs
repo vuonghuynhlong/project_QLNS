@@ -296,6 +296,17 @@ namespace QuanLyNhanSu.DAO
             return Select_Table(sql);
         }
 
+        public static DataTable Get_View_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [InformaticCode] AS [Mã Bằng Tin Học]  ";
+            sql = sql + "    ,[InformaticName] AS [Tên Bằng Tin Học] ";
+            sql = sql + "FROM DIC_INFORMATIC ";
+            sql = sql + "WHERE [Active] = 1 ";
+            return Select_Table(sql);
+        }
+
         public static bool Delete(string code)
         {
             return Delete("DIC_INFORMATIC", "InformaticCode", code);
