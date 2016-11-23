@@ -91,8 +91,28 @@ namespace QuanLyNhanSu
         private void btn_SAVE_Click(object sender, EventArgs e)
         {
             new_entity = new HRM_EMPLOYEE();
-
-
+            new_entity.EmployeeCode = txt_EMPLOYEE_CODE.Text;
+            new_entity.FirstName = txt_FIRST_NAME.Text;
+            new_entity.LastName = txt_LAST_NAME.Text;
+            new_entity.Birthday = date_BIRTHDAY.DateTime;
+            new_entity.BirthPlace = txt_BIRTH_PLACE.Text;
+            new_entity.Alias = txt_ALIAS.Text;
+            new_entity.Marriage = cbo_MARRIAGE.Text;
+            new_entity.IDCard = txt_IDCARD.Text;
+            new_entity.IDCardDate = date_IDCARD.DateTime;
+            new_entity.IDCardPlace = txt_IDCARD_PLACE.Text;
+            new_entity.MainAddress = txt_MAIN_ADDRESS.Text;
+            new_entity.ContactAddress = txt_CONTACT_ADDRESS.Text;
+            new_entity.CellPhone = txt_CELL_PHONE.Text;
+            new_entity.Email = txt_EMAIL.Text;
+            new_entity.Nationality = cbo_NATIONALITY.EditValue.ToString();
+            new_entity.Religion = (cbo_RELIGION.EditValue == null ?  null : cbo_RELIGION.EditValue.ToString());
+            new_entity.Ethnic = cbo_ETHNIC.EditValue.ToString();
+            new_entity.Education = cbo_EDUCATION.EditValue.ToString();
+            new_entity.Language = cbo_LANGUAGE.EditValue.ToString();
+            new_entity.Informatic = (cbo_INFORMATIC.EditValue== null ? null : cbo_INFORMATIC.EditValue.ToString());
+            new_entity.Professional = cbo_PROFESSIONAL.EditValue.ToString();
+            new_entity.School = (cbo_SCHOOL.EditValue == null ? null : cbo_SCHOOL.EditValue.ToString());
             //new_entity.EmployeeCode = txt_LANGUAGE_CODE.Text;
             //new_entity.LanguageName = txt_LANGUAGE_NAME.Text;
             //new_entity.Description = txt_DESCRIPTION.Text;
@@ -166,6 +186,55 @@ namespace QuanLyNhanSu
             Insert();
             Init_Data();
 
+        }
+
+        private void btn_frm_QUOC_TICH_Click(object sender, EventArgs e)
+        {
+            frm_QUOC_TICH_EDIT frm_QT = new frm_QUOC_TICH_EDIT(null,true);
+            frm_QT.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_TON_GIAO_Click(object sender, EventArgs e)
+        {
+            frm_TON_GIAO_EDIT frm_TG = new frm_TON_GIAO_EDIT(null, true);
+            frm_TG.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_NGOAI_NGU_Click(object sender, EventArgs e)
+        {
+            frm_NGOAI_NGU_EDIT frm_NN = new frm_NGOAI_NGU_EDIT(null, true);
+            frm_NN.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_CHUYEN_MON_Click(object sender, EventArgs e)
+        {
+            frm_CHUYEN_MON_EDIT frm_CM = new frm_CHUYEN_MON_EDIT(null, true);
+            frm_CM.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_DAN_TOC_Click(object sender, EventArgs e)
+        {
+            frm_DAN_TOC_EDIT frm_DT = new frm_DAN_TOC_EDIT(null, true);
+            frm_DT.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_HOC_VAN_Click(object sender, EventArgs e)
+        {
+            frm_HOC_VAN_EDIT frm_HV = new frm_HOC_VAN_EDIT(null, true);
+            frm_HV.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_TIN_HOC_Click(object sender, EventArgs e)
+        {
+            frm_TIN_HOC_EDIT frm_TH = new frm_TIN_HOC_EDIT(null, true);
+            frm_TH.ShowDialog();
+            Init_Reference_Data();
         }
        
 

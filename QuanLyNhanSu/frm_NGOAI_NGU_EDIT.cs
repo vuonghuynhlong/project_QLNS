@@ -108,7 +108,8 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_LANGUAGE.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
+                if (parent != null)
+                    parent.dg_DATA.DataSource = DAO_DIC_LANGUAGE.Get_Data();
             }
             else
             {

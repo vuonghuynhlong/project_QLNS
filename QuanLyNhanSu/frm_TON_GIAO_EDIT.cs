@@ -54,7 +54,8 @@ namespace QuanLyNhanSu
             if (validate.Status)
             {
                 DAO_DIC_RELIGION.Update(old_entity, new_entity);
-                this.DialogResult = DialogResult.OK;
+                
+                    this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -99,7 +100,8 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_RELIGION.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_RELIGION.Get_Data();
+                if (parent != null)
+                    parent.dg_DATA.DataSource = DAO_DIC_RELIGION.Get_Data();
             }
             else
             {

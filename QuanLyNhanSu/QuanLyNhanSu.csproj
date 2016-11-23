@@ -134,12 +134,6 @@
     <Compile Include="frm_CHUYEN_MON_EDIT.Designer.cs">
       <DependentUpon>frm_CHUYEN_MON_EDIT.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DANH_SACH_NHAN_VIEN.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="frm_DANH_SACH_NHAN_VIEN.Designer.cs">
-      <DependentUpon>frm_DANH_SACH_NHAN_VIEN.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_DAN_TOC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -292,9 +286,6 @@
     <EmbeddedResource Include="frm_CHUYEN_MON_EDIT.resx">
       <DependentUpon>frm_CHUYEN_MON_EDIT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DANH_SACH_NHAN_VIEN.resx">
-      <DependentUpon>frm_DANH_SACH_NHAN_VIEN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_DAN_TOC.resx">
       <DependentUpon>frm_DAN_TOC.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NGOAI_NGU_EDIT.resx">
       <DependentUpon>frm_NGOAI_NGU_EDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NHAN_VIEN.resx">
+      <DependentUpon>frm_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NHAN_VIEN_EDIT.resx">
       <DependentUpon>frm_NHAN_VIEN_EDIT.cs</DependentUpon>

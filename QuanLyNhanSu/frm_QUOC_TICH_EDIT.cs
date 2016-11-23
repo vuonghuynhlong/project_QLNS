@@ -61,7 +61,7 @@ namespace QuanLyNhanSu
             }
         }
 
-         frm_QUOC_TICH parent = null;
+        frm_QUOC_TICH parent = null;
         public frm_QUOC_TICH_EDIT(frm_QUOC_TICH parent_frm, bool is_insert) : base(is_insert)
         {
             InitializeComponent();
@@ -97,7 +97,8 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_NATIONALITY.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
+                if (parent!=null)
+                    parent.dg_DATA.DataSource = DAO_DIC_NATIONALITY.Get_Data();
             }
             else 
             {

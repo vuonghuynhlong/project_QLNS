@@ -108,7 +108,8 @@ namespace QuanLyNhanSu
             {
 
                 DAO_DIC_PROFESSIONAL.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_PROFESSIONAL.Get_Data();
+                if (parent != null)
+                    parent.dg_DATA.DataSource = DAO_DIC_PROFESSIONAL.Get_Data();
             }
             else
             {

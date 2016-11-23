@@ -110,7 +110,8 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_EDUCATION.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
+                if(parent!=null)
+                    parent.dg_DATA.DataSource = DAO_DIC_EDUCATION.Get_Data();
             }
             else
             {

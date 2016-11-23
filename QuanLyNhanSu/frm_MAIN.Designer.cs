@@ -37,7 +37,7 @@
             this.bar_QUOC_TICH = new DevExpress.XtraBars.BarButtonItem();
             this.bar_DAN_TOC = new DevExpress.XtraBars.BarButtonItem();
             this.bar_TON_GIAO = new DevExpress.XtraBars.BarButtonItem();
-            this.bar_DANH_SACH_NHAN_VIEN = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_NHAN_VIEN = new DevExpress.XtraBars.BarButtonItem();
             this.bar_HOP_DONG_LAO_DONG = new DevExpress.XtraBars.BarButtonItem();
             this.bar_PHONG_BAN = new DevExpress.XtraBars.BarButtonItem();
             this.rbPAGE = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -62,7 +62,7 @@
             this.bar_QUOC_TICH,
             this.bar_DAN_TOC,
             this.bar_TON_GIAO,
-            this.bar_DANH_SACH_NHAN_VIEN,
+            this.bar_NHAN_VIEN,
             this.bar_HOP_DONG_LAO_DONG,
             this.bar_PHONG_BAN});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
@@ -134,13 +134,13 @@
             this.bar_TON_GIAO.Name = "bar_TON_GIAO";
             this.bar_TON_GIAO.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
-            // bar_DANH_SACH_NHAN_VIEN
+            // bar_NHAN_VIEN
             // 
-            this.bar_DANH_SACH_NHAN_VIEN.Caption = "Danh Sách Nhân Viên";
-            this.bar_DANH_SACH_NHAN_VIEN.Id = 9;
-            this.bar_DANH_SACH_NHAN_VIEN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PEOPLE;
-            this.bar_DANH_SACH_NHAN_VIEN.Name = "bar_DANH_SACH_NHAN_VIEN";
-            this.bar_DANH_SACH_NHAN_VIEN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
+            this.bar_NHAN_VIEN.Caption = "Danh Sách Nhân Viên";
+            this.bar_NHAN_VIEN.Id = 9;
+            this.bar_NHAN_VIEN.LargeGlyph = global::QuanLyNhanSu.Properties.Resources.PEOPLE;
+            this.bar_NHAN_VIEN.Name = "bar_NHAN_VIEN";
+            this.bar_NHAN_VIEN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_ItemClick);
             // 
             // bar_HOP_DONG_LAO_DONG
             // 
@@ -182,7 +182,7 @@
             // 
             // rb_QUAN_LY_NHAN_SU
             // 
-            this.rb_QUAN_LY_NHAN_SU.ItemLinks.Add(this.bar_DANH_SACH_NHAN_VIEN);
+            this.rb_QUAN_LY_NHAN_SU.ItemLinks.Add(this.bar_NHAN_VIEN);
             this.rb_QUAN_LY_NHAN_SU.ItemLinks.Add(this.bar_HOP_DONG_LAO_DONG, true);
             this.rb_QUAN_LY_NHAN_SU.Name = "rb_QUAN_LY_NHAN_SU";
             this.rb_QUAN_LY_NHAN_SU.Text = "Nghiệp Vụ";
@@ -238,7 +238,7 @@
         private DevExpress.XtraBars.BarButtonItem bar_QUOC_TICH;
         private DevExpress.XtraBars.BarButtonItem bar_DAN_TOC;
         private DevExpress.XtraBars.BarButtonItem bar_TON_GIAO;
-        private DevExpress.XtraBars.BarButtonItem bar_DANH_SACH_NHAN_VIEN;
+        private DevExpress.XtraBars.BarButtonItem bar_NHAN_VIEN;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rb_QUAN_LY_NHAN_SU;
         private DevExpress.XtraBars.BarButtonItem bar_HOP_DONG_LAO_DONG;
         private DevExpress.XtraTab.XtraTabControl tab_MANAGER;

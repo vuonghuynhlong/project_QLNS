@@ -24,7 +24,7 @@ namespace QuanLyNhanSu.LOGIC
            {"bar_QUOC_TICH", new frm_QUOC_TICH()},
            {"bar_DAN_TOC", new frm_DAN_TOC()},
            {"bar_TON_GIAO", new frm_TON_GIAO()},
-           {"bar_DANH_SACH_NHAN_VIEN", new frm_DANH_SACH_NHAN_VIEN()},
+           {"bar_NHAN_VIEN", new frm_NHAN_VIEN()},
            {"bar_HOP_DONG_LAO_DONG", new frm_HOP_DONG_LAO_DONG()},
         };
 
@@ -38,6 +38,7 @@ namespace QuanLyNhanSu.LOGIC
            {"TH", "DIC_INFORMATIC"},
            {"QT", "DIC_NATIONALITY"},
            {"TG", "DIC_RELIGION"},
+           {"NV", "HRM_EMPLOYEE"},
            
         };
         

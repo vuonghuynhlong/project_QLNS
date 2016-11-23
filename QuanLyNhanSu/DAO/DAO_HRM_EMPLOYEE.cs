@@ -828,6 +828,7 @@ namespace QuanLyNhanSu.DAO
             try
             {
                 connection.Open();
+           
                 int count = insertCommand.ExecuteNonQuery();
                 if (count > 0)
                 {
@@ -2001,6 +2002,13 @@ namespace QuanLyNhanSu.DAO
             try
             {
                 connection.Open();
+                string query = updateCommand.CommandText;
+
+                foreach (SqlParameter p in updateCommand.Parameters)
+                {
+                    query = query.Replace(p.ParameterName, p.Value.ToString());
+                }
+
                 int count = updateCommand.ExecuteNonQuery();
                 if (count > 0)
                 {
@@ -2695,6 +2703,11 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "FROM HRM_EMPLOYEE";
             return Select_Table(sql);
 
+        }
+
+        public static bool Delete(string code)
+        {
+            return Delete("HRM_EMPLOYEE", "EmployeeCode", code);
         }
     }
 

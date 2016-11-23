@@ -111,7 +111,8 @@ namespace QuanLyNhanSu
             if(validate.Status)
             {
                 DAO_DIC_ETHNIC.Add(new_entity);
-                parent.dg_DATA.DataSource = DAO_DIC_ETHNIC.Get_Data();
+                if(parent!=null)
+                    parent.dg_DATA.DataSource = DAO_DIC_ETHNIC.Get_Data();
             }
             else
             {

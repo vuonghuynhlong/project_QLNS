@@ -35,17 +35,17 @@
             this.btn_INSERT = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SAVE = new DevExpress.XtraEditors.SimpleButton();
             this.txt_IDCARD_PLACE = new DevExpress.XtraEditors.TextEdit();
-            this.btn_INSERT_SCHOOL = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_SCHOOL = new DevExpress.XtraEditors.SimpleButton();
             this.date_IDCARD = new DevExpress.XtraEditors.DateEdit();
-            this.btn_INSERT_NATIONALITY = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_QUOC_TICH = new DevExpress.XtraEditors.SimpleButton();
             this.txt_IDCARD = new DevExpress.XtraEditors.TextEdit();
-            this.btn_INSERT_DEGREE = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_EDUCATION = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_INFORMATIC = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_ETHNIC = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_PROFESSIONAL = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_RELIGION = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_INSERT_LANGUAGE = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_BANG_CAP = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_HOC_VAN = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_TIN_HOC = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_DAN_TOC = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_CHUYEN_MON = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_TON_GIAO = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_frm_NGOAI_NGU = new DevExpress.XtraEditors.SimpleButton();
             this.cbo_DEGREE = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_EMAIL = new DevExpress.XtraEditors.TextEdit();
             this.txt_CELL_PHONE = new DevExpress.XtraEditors.TextEdit();
@@ -62,6 +62,12 @@
             this.txt_EMPLOYEE_CODE = new DevExpress.XtraEditors.TextEdit();
             this.cbo_NATIONALITY = new DevExpress.XtraEditors.LookUpEdit();
             this.cbo_RELIGION = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_ETHNIC = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_LANGUAGE = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_INFORMATIC = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_PROFESSIONAL = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_SCHOOL = new DevExpress.XtraEditors.LookUpEdit();
+            this.cbo_EDUCATION = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControl_PAGE_THONG_TIN_NHAN_VIEN = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -112,12 +118,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_PAGE_THONG_TIN_NHAN_VIEN = new System.Windows.Forms.TabPage();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.cbo_ETHNIC = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbo_LANGUAGE = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbo_INFORMATIC = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbo_PROFESSIONAL = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbo_SCHOOL = new DevExpress.XtraEditors.LookUpEdit();
-            this.cbo_EDUCATION = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TRANG_THAI_NHAN_VIEN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).BeginInit();
             this.layout_CONTROL.SuspendLayout();
@@ -142,6 +142,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_EMPLOYEE_CODE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_NATIONALITY.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_RELIGION.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_ETHNIC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_LANGUAGE.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_INFORMATIC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_PROFESSIONAL.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_SCHOOL.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_EDUCATION.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl_PAGE_THONG_TIN_NHAN_VIEN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -191,12 +197,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tab_PAGE_THONG_TIN_NHAN_VIEN.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_ETHNIC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_LANGUAGE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_INFORMATIC.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_PROFESSIONAL.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_SCHOOL.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_EDUCATION.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -228,17 +228,17 @@
             this.layout_CONTROL.Controls.Add(this.btn_SAVE);
             this.layout_CONTROL.Controls.Add(this.cbo_TRANG_THAI_NHAN_VIEN);
             this.layout_CONTROL.Controls.Add(this.txt_IDCARD_PLACE);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_SCHOOL);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_SCHOOL);
             this.layout_CONTROL.Controls.Add(this.date_IDCARD);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_NATIONALITY);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_QUOC_TICH);
             this.layout_CONTROL.Controls.Add(this.txt_IDCARD);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_DEGREE);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_EDUCATION);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_INFORMATIC);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_ETHNIC);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_PROFESSIONAL);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_RELIGION);
-            this.layout_CONTROL.Controls.Add(this.btn_INSERT_LANGUAGE);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_BANG_CAP);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_HOC_VAN);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_TIN_HOC);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_DAN_TOC);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_CHUYEN_MON);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_TON_GIAO);
+            this.layout_CONTROL.Controls.Add(this.btn_frm_NGOAI_NGU);
             this.layout_CONTROL.Controls.Add(this.cbo_DEGREE);
             this.layout_CONTROL.Controls.Add(this.txt_EMAIL);
             this.layout_CONTROL.Controls.Add(this.txt_CELL_PHONE);
@@ -316,14 +316,14 @@
             this.txt_IDCARD_PLACE.StyleController = this.layout_CONTROL;
             this.txt_IDCARD_PLACE.TabIndex = 11;
             // 
-            // btn_INSERT_SCHOOL
+            // btn_frm_SCHOOL
             // 
-            this.btn_INSERT_SCHOOL.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_SCHOOL.Location = new System.Drawing.Point(704, 284);
-            this.btn_INSERT_SCHOOL.Name = "btn_INSERT_SCHOOL";
-            this.btn_INSERT_SCHOOL.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_SCHOOL.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_SCHOOL.TabIndex = 33;
+            this.btn_frm_SCHOOL.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_SCHOOL.Location = new System.Drawing.Point(704, 284);
+            this.btn_frm_SCHOOL.Name = "btn_frm_SCHOOL";
+            this.btn_frm_SCHOOL.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_SCHOOL.StyleController = this.layout_CONTROL;
+            this.btn_frm_SCHOOL.TabIndex = 33;
             // 
             // date_IDCARD
             // 
@@ -338,14 +338,15 @@
             this.date_IDCARD.StyleController = this.layout_CONTROL;
             this.date_IDCARD.TabIndex = 10;
             // 
-            // btn_INSERT_NATIONALITY
+            // btn_frm_QUOC_TICH
             // 
-            this.btn_INSERT_NATIONALITY.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_NATIONALITY.Location = new System.Drawing.Point(372, 180);
-            this.btn_INSERT_NATIONALITY.Name = "btn_INSERT_NATIONALITY";
-            this.btn_INSERT_NATIONALITY.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_NATIONALITY.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_NATIONALITY.TabIndex = 17;
+            this.btn_frm_QUOC_TICH.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_QUOC_TICH.Location = new System.Drawing.Point(372, 180);
+            this.btn_frm_QUOC_TICH.Name = "btn_frm_QUOC_TICH";
+            this.btn_frm_QUOC_TICH.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_QUOC_TICH.StyleController = this.layout_CONTROL;
+            this.btn_frm_QUOC_TICH.TabIndex = 17;
+            this.btn_frm_QUOC_TICH.Click += new System.EventHandler(this.btn_frm_QUOC_TICH_Click);
             // 
             // txt_IDCARD
             // 
@@ -355,68 +356,74 @@
             this.txt_IDCARD.StyleController = this.layout_CONTROL;
             this.txt_IDCARD.TabIndex = 9;
             // 
-            // btn_INSERT_DEGREE
+            // btn_frm_BANG_CAP
             // 
-            this.btn_INSERT_DEGREE.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_DEGREE.Location = new System.Drawing.Point(704, 258);
-            this.btn_INSERT_DEGREE.Name = "btn_INSERT_DEGREE";
-            this.btn_INSERT_DEGREE.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_DEGREE.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_DEGREE.TabIndex = 31;
+            this.btn_frm_BANG_CAP.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_BANG_CAP.Location = new System.Drawing.Point(704, 258);
+            this.btn_frm_BANG_CAP.Name = "btn_frm_BANG_CAP";
+            this.btn_frm_BANG_CAP.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_BANG_CAP.StyleController = this.layout_CONTROL;
+            this.btn_frm_BANG_CAP.TabIndex = 31;
             // 
-            // btn_INSERT_EDUCATION
+            // btn_frm_HOC_VAN
             // 
-            this.btn_INSERT_EDUCATION.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_EDUCATION.Location = new System.Drawing.Point(704, 206);
-            this.btn_INSERT_EDUCATION.Name = "btn_INSERT_EDUCATION";
-            this.btn_INSERT_EDUCATION.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_EDUCATION.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_EDUCATION.TabIndex = 23;
+            this.btn_frm_HOC_VAN.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_HOC_VAN.Location = new System.Drawing.Point(704, 206);
+            this.btn_frm_HOC_VAN.Name = "btn_frm_HOC_VAN";
+            this.btn_frm_HOC_VAN.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_HOC_VAN.StyleController = this.layout_CONTROL;
+            this.btn_frm_HOC_VAN.TabIndex = 23;
+            this.btn_frm_HOC_VAN.Click += new System.EventHandler(this.btn_frm_HOC_VAN_Click);
             // 
-            // btn_INSERT_INFORMATIC
+            // btn_frm_TIN_HOC
             // 
-            this.btn_INSERT_INFORMATIC.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_INFORMATIC.Location = new System.Drawing.Point(704, 232);
-            this.btn_INSERT_INFORMATIC.Name = "btn_INSERT_INFORMATIC";
-            this.btn_INSERT_INFORMATIC.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_INFORMATIC.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_INFORMATIC.TabIndex = 27;
+            this.btn_frm_TIN_HOC.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_TIN_HOC.Location = new System.Drawing.Point(704, 232);
+            this.btn_frm_TIN_HOC.Name = "btn_frm_TIN_HOC";
+            this.btn_frm_TIN_HOC.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_TIN_HOC.StyleController = this.layout_CONTROL;
+            this.btn_frm_TIN_HOC.TabIndex = 27;
+            this.btn_frm_TIN_HOC.Click += new System.EventHandler(this.btn_frm_TIN_HOC_Click);
             // 
-            // btn_INSERT_ETHNIC
+            // btn_frm_DAN_TOC
             // 
-            this.btn_INSERT_ETHNIC.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_ETHNIC.Location = new System.Drawing.Point(704, 180);
-            this.btn_INSERT_ETHNIC.Name = "btn_INSERT_ETHNIC";
-            this.btn_INSERT_ETHNIC.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_ETHNIC.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_ETHNIC.TabIndex = 19;
+            this.btn_frm_DAN_TOC.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_DAN_TOC.Location = new System.Drawing.Point(704, 180);
+            this.btn_frm_DAN_TOC.Name = "btn_frm_DAN_TOC";
+            this.btn_frm_DAN_TOC.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_DAN_TOC.StyleController = this.layout_CONTROL;
+            this.btn_frm_DAN_TOC.TabIndex = 19;
+            this.btn_frm_DAN_TOC.Click += new System.EventHandler(this.btn_frm_DAN_TOC_Click);
             // 
-            // btn_INSERT_PROFESSIONAL
+            // btn_frm_CHUYEN_MON
             // 
-            this.btn_INSERT_PROFESSIONAL.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_PROFESSIONAL.Location = new System.Drawing.Point(372, 258);
-            this.btn_INSERT_PROFESSIONAL.Name = "btn_INSERT_PROFESSIONAL";
-            this.btn_INSERT_PROFESSIONAL.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_PROFESSIONAL.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_PROFESSIONAL.TabIndex = 29;
+            this.btn_frm_CHUYEN_MON.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_CHUYEN_MON.Location = new System.Drawing.Point(372, 258);
+            this.btn_frm_CHUYEN_MON.Name = "btn_frm_CHUYEN_MON";
+            this.btn_frm_CHUYEN_MON.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_CHUYEN_MON.StyleController = this.layout_CONTROL;
+            this.btn_frm_CHUYEN_MON.TabIndex = 29;
+            this.btn_frm_CHUYEN_MON.Click += new System.EventHandler(this.btn_frm_CHUYEN_MON_Click);
             // 
-            // btn_INSERT_RELIGION
+            // btn_frm_TON_GIAO
             // 
-            this.btn_INSERT_RELIGION.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_RELIGION.Location = new System.Drawing.Point(372, 206);
-            this.btn_INSERT_RELIGION.Name = "btn_INSERT_RELIGION";
-            this.btn_INSERT_RELIGION.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_RELIGION.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_RELIGION.TabIndex = 21;
+            this.btn_frm_TON_GIAO.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_TON_GIAO.Location = new System.Drawing.Point(372, 206);
+            this.btn_frm_TON_GIAO.Name = "btn_frm_TON_GIAO";
+            this.btn_frm_TON_GIAO.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_TON_GIAO.StyleController = this.layout_CONTROL;
+            this.btn_frm_TON_GIAO.TabIndex = 21;
+            this.btn_frm_TON_GIAO.Click += new System.EventHandler(this.btn_frm_TON_GIAO_Click);
             // 
-            // btn_INSERT_LANGUAGE
+            // btn_frm_NGOAI_NGU
             // 
-            this.btn_INSERT_LANGUAGE.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
-            this.btn_INSERT_LANGUAGE.Location = new System.Drawing.Point(372, 232);
-            this.btn_INSERT_LANGUAGE.Name = "btn_INSERT_LANGUAGE";
-            this.btn_INSERT_LANGUAGE.Size = new System.Drawing.Size(25, 22);
-            this.btn_INSERT_LANGUAGE.StyleController = this.layout_CONTROL;
-            this.btn_INSERT_LANGUAGE.TabIndex = 25;
+            this.btn_frm_NGOAI_NGU.Image = global::QuanLyNhanSu.Properties.Resources.INSERT1;
+            this.btn_frm_NGOAI_NGU.Location = new System.Drawing.Point(372, 232);
+            this.btn_frm_NGOAI_NGU.Name = "btn_frm_NGOAI_NGU";
+            this.btn_frm_NGOAI_NGU.Size = new System.Drawing.Size(25, 22);
+            this.btn_frm_NGOAI_NGU.StyleController = this.layout_CONTROL;
+            this.btn_frm_NGOAI_NGU.TabIndex = 25;
+            this.btn_frm_NGOAI_NGU.Click += new System.EventHandler(this.btn_frm_NGOAI_NGU_Click);
             // 
             // cbo_DEGREE
             // 
@@ -575,6 +582,84 @@
             this.cbo_RELIGION.Size = new System.Drawing.Size(233, 20);
             this.cbo_RELIGION.StyleController = this.layout_CONTROL;
             this.cbo_RELIGION.TabIndex = 20;
+            // 
+            // cbo_ETHNIC
+            // 
+            this.cbo_ETHNIC.Location = new System.Drawing.Point(524, 180);
+            this.cbo_ETHNIC.Name = "cbo_ETHNIC";
+            this.cbo_ETHNIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_ETHNIC.Properties.NullText = "";
+            this.cbo_ETHNIC.Properties.PopupSizeable = false;
+            this.cbo_ETHNIC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_ETHNIC.Size = new System.Drawing.Size(176, 20);
+            this.cbo_ETHNIC.StyleController = this.layout_CONTROL;
+            this.cbo_ETHNIC.TabIndex = 18;
+            // 
+            // cbo_LANGUAGE
+            // 
+            this.cbo_LANGUAGE.Location = new System.Drawing.Point(135, 232);
+            this.cbo_LANGUAGE.Name = "cbo_LANGUAGE";
+            this.cbo_LANGUAGE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_LANGUAGE.Properties.NullText = "";
+            this.cbo_LANGUAGE.Properties.PopupSizeable = false;
+            this.cbo_LANGUAGE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_LANGUAGE.Size = new System.Drawing.Size(233, 20);
+            this.cbo_LANGUAGE.StyleController = this.layout_CONTROL;
+            this.cbo_LANGUAGE.TabIndex = 24;
+            // 
+            // cbo_INFORMATIC
+            // 
+            this.cbo_INFORMATIC.Location = new System.Drawing.Point(524, 232);
+            this.cbo_INFORMATIC.Name = "cbo_INFORMATIC";
+            this.cbo_INFORMATIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_INFORMATIC.Properties.NullText = "";
+            this.cbo_INFORMATIC.Properties.PopupSizeable = false;
+            this.cbo_INFORMATIC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_INFORMATIC.Size = new System.Drawing.Size(176, 20);
+            this.cbo_INFORMATIC.StyleController = this.layout_CONTROL;
+            this.cbo_INFORMATIC.TabIndex = 26;
+            // 
+            // cbo_PROFESSIONAL
+            // 
+            this.cbo_PROFESSIONAL.Location = new System.Drawing.Point(135, 258);
+            this.cbo_PROFESSIONAL.Name = "cbo_PROFESSIONAL";
+            this.cbo_PROFESSIONAL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_PROFESSIONAL.Properties.NullText = "";
+            this.cbo_PROFESSIONAL.Properties.PopupSizeable = false;
+            this.cbo_PROFESSIONAL.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_PROFESSIONAL.Size = new System.Drawing.Size(233, 20);
+            this.cbo_PROFESSIONAL.StyleController = this.layout_CONTROL;
+            this.cbo_PROFESSIONAL.TabIndex = 28;
+            // 
+            // cbo_SCHOOL
+            // 
+            this.cbo_SCHOOL.Location = new System.Drawing.Point(135, 284);
+            this.cbo_SCHOOL.Name = "cbo_SCHOOL";
+            this.cbo_SCHOOL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_SCHOOL.Properties.NullText = "";
+            this.cbo_SCHOOL.Properties.PopupSizeable = false;
+            this.cbo_SCHOOL.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_SCHOOL.Size = new System.Drawing.Size(565, 20);
+            this.cbo_SCHOOL.StyleController = this.layout_CONTROL;
+            this.cbo_SCHOOL.TabIndex = 32;
+            // 
+            // cbo_EDUCATION
+            // 
+            this.cbo_EDUCATION.Location = new System.Drawing.Point(524, 206);
+            this.cbo_EDUCATION.Name = "cbo_EDUCATION";
+            this.cbo_EDUCATION.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_EDUCATION.Properties.NullText = "";
+            this.cbo_EDUCATION.Properties.PopupSizeable = false;
+            this.cbo_EDUCATION.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbo_EDUCATION.Size = new System.Drawing.Size(176, 20);
+            this.cbo_EDUCATION.StyleController = this.layout_CONTROL;
+            this.cbo_EDUCATION.TabIndex = 22;
             // 
             // layoutControl_PAGE_THONG_TIN_NHAN_VIEN
             // 
@@ -815,7 +900,7 @@
             this.layoutControlItem21.Location = new System.Drawing.Point(389, 246);
             this.layoutControlItem21.Name = "layoutControlItem21";
             this.layoutControlItem21.Size = new System.Drawing.Size(303, 26);
-            this.layoutControlItem21.Text = "Các bằng cấp:";
+            this.layoutControlItem21.Text = "Bằng cấp:";
             this.layoutControlItem21.TextSize = new System.Drawing.Size(120, 13);
             // 
             // layoutControlItem22
@@ -829,7 +914,7 @@
             // 
             // layoutControlItem24
             // 
-            this.layoutControlItem24.Control = this.btn_INSERT_LANGUAGE;
+            this.layoutControlItem24.Control = this.btn_frm_NGOAI_NGU;
             this.layoutControlItem24.Location = new System.Drawing.Point(360, 220);
             this.layoutControlItem24.Name = "layoutControlItem24";
             this.layoutControlItem24.Size = new System.Drawing.Size(29, 26);
@@ -838,7 +923,7 @@
             // 
             // layoutControlItem25
             // 
-            this.layoutControlItem25.Control = this.btn_INSERT_RELIGION;
+            this.layoutControlItem25.Control = this.btn_frm_TON_GIAO;
             this.layoutControlItem25.Location = new System.Drawing.Point(360, 194);
             this.layoutControlItem25.Name = "layoutControlItem25";
             this.layoutControlItem25.Size = new System.Drawing.Size(29, 26);
@@ -847,7 +932,7 @@
             // 
             // layoutControlItem26
             // 
-            this.layoutControlItem26.Control = this.btn_INSERT_PROFESSIONAL;
+            this.layoutControlItem26.Control = this.btn_frm_CHUYEN_MON;
             this.layoutControlItem26.Location = new System.Drawing.Point(360, 246);
             this.layoutControlItem26.Name = "layoutControlItem26";
             this.layoutControlItem26.Size = new System.Drawing.Size(29, 26);
@@ -856,7 +941,7 @@
             // 
             // layoutControlItem27
             // 
-            this.layoutControlItem27.Control = this.btn_INSERT_ETHNIC;
+            this.layoutControlItem27.Control = this.btn_frm_DAN_TOC;
             this.layoutControlItem27.Location = new System.Drawing.Point(692, 168);
             this.layoutControlItem27.Name = "layoutControlItem27";
             this.layoutControlItem27.Size = new System.Drawing.Size(29, 26);
@@ -865,7 +950,7 @@
             // 
             // layoutControlItem29
             // 
-            this.layoutControlItem29.Control = this.btn_INSERT_INFORMATIC;
+            this.layoutControlItem29.Control = this.btn_frm_TIN_HOC;
             this.layoutControlItem29.Location = new System.Drawing.Point(692, 220);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Size = new System.Drawing.Size(29, 26);
@@ -874,7 +959,7 @@
             // 
             // layoutControlItem28
             // 
-            this.layoutControlItem28.Control = this.btn_INSERT_EDUCATION;
+            this.layoutControlItem28.Control = this.btn_frm_HOC_VAN;
             this.layoutControlItem28.Location = new System.Drawing.Point(692, 194);
             this.layoutControlItem28.Name = "layoutControlItem28";
             this.layoutControlItem28.Size = new System.Drawing.Size(29, 26);
@@ -883,7 +968,7 @@
             // 
             // layoutControlItem30
             // 
-            this.layoutControlItem30.Control = this.btn_INSERT_DEGREE;
+            this.layoutControlItem30.Control = this.btn_frm_BANG_CAP;
             this.layoutControlItem30.Location = new System.Drawing.Point(692, 246);
             this.layoutControlItem30.Name = "layoutControlItem30";
             this.layoutControlItem30.Size = new System.Drawing.Size(29, 26);
@@ -900,7 +985,7 @@
             // 
             // layoutControlItem23
             // 
-            this.layoutControlItem23.Control = this.btn_INSERT_NATIONALITY;
+            this.layoutControlItem23.Control = this.btn_frm_QUOC_TICH;
             this.layoutControlItem23.Location = new System.Drawing.Point(360, 168);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(29, 26);
@@ -909,7 +994,7 @@
             // 
             // layoutControlItem35
             // 
-            this.layoutControlItem35.Control = this.btn_INSERT_SCHOOL;
+            this.layoutControlItem35.Control = this.btn_frm_SCHOOL;
             this.layoutControlItem35.Location = new System.Drawing.Point(692, 272);
             this.layoutControlItem35.Name = "layoutControlItem35";
             this.layoutControlItem35.Size = new System.Drawing.Size(29, 26);
@@ -1076,84 +1161,6 @@
             this.simpleButton1.Size = new System.Drawing.Size(32, 30);
             this.simpleButton1.TabIndex = 26;
             // 
-            // cbo_ETHNIC
-            // 
-            this.cbo_ETHNIC.Location = new System.Drawing.Point(524, 180);
-            this.cbo_ETHNIC.Name = "cbo_ETHNIC";
-            this.cbo_ETHNIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_ETHNIC.Properties.NullText = "";
-            this.cbo_ETHNIC.Properties.PopupSizeable = false;
-            this.cbo_ETHNIC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_ETHNIC.Size = new System.Drawing.Size(176, 20);
-            this.cbo_ETHNIC.StyleController = this.layout_CONTROL;
-            this.cbo_ETHNIC.TabIndex = 18;
-            // 
-            // cbo_LANGUAGE
-            // 
-            this.cbo_LANGUAGE.Location = new System.Drawing.Point(135, 232);
-            this.cbo_LANGUAGE.Name = "cbo_LANGUAGE";
-            this.cbo_LANGUAGE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_LANGUAGE.Properties.NullText = "";
-            this.cbo_LANGUAGE.Properties.PopupSizeable = false;
-            this.cbo_LANGUAGE.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_LANGUAGE.Size = new System.Drawing.Size(233, 20);
-            this.cbo_LANGUAGE.StyleController = this.layout_CONTROL;
-            this.cbo_LANGUAGE.TabIndex = 24;
-            // 
-            // cbo_INFORMATIC
-            // 
-            this.cbo_INFORMATIC.Location = new System.Drawing.Point(524, 232);
-            this.cbo_INFORMATIC.Name = "cbo_INFORMATIC";
-            this.cbo_INFORMATIC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_INFORMATIC.Properties.NullText = "";
-            this.cbo_INFORMATIC.Properties.PopupSizeable = false;
-            this.cbo_INFORMATIC.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_INFORMATIC.Size = new System.Drawing.Size(176, 20);
-            this.cbo_INFORMATIC.StyleController = this.layout_CONTROL;
-            this.cbo_INFORMATIC.TabIndex = 26;
-            // 
-            // cbo_PROFESSIONAL
-            // 
-            this.cbo_PROFESSIONAL.Location = new System.Drawing.Point(135, 258);
-            this.cbo_PROFESSIONAL.Name = "cbo_PROFESSIONAL";
-            this.cbo_PROFESSIONAL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_PROFESSIONAL.Properties.NullText = "";
-            this.cbo_PROFESSIONAL.Properties.PopupSizeable = false;
-            this.cbo_PROFESSIONAL.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_PROFESSIONAL.Size = new System.Drawing.Size(233, 20);
-            this.cbo_PROFESSIONAL.StyleController = this.layout_CONTROL;
-            this.cbo_PROFESSIONAL.TabIndex = 28;
-            // 
-            // cbo_SCHOOL
-            // 
-            this.cbo_SCHOOL.Location = new System.Drawing.Point(135, 284);
-            this.cbo_SCHOOL.Name = "cbo_SCHOOL";
-            this.cbo_SCHOOL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_SCHOOL.Properties.NullText = "";
-            this.cbo_SCHOOL.Properties.PopupSizeable = false;
-            this.cbo_SCHOOL.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_SCHOOL.Size = new System.Drawing.Size(565, 20);
-            this.cbo_SCHOOL.StyleController = this.layout_CONTROL;
-            this.cbo_SCHOOL.TabIndex = 32;
-            // 
-            // cbo_EDUCATION
-            // 
-            this.cbo_EDUCATION.Location = new System.Drawing.Point(524, 206);
-            this.cbo_EDUCATION.Name = "cbo_EDUCATION";
-            this.cbo_EDUCATION.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_EDUCATION.Properties.NullText = "";
-            this.cbo_EDUCATION.Properties.PopupSizeable = false;
-            this.cbo_EDUCATION.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cbo_EDUCATION.Size = new System.Drawing.Size(176, 20);
-            this.cbo_EDUCATION.StyleController = this.layout_CONTROL;
-            this.cbo_EDUCATION.TabIndex = 22;
-            // 
             // frm_NHAN_VIEN_EDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1188,6 +1195,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_EMPLOYEE_CODE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_NATIONALITY.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_RELIGION.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_ETHNIC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_LANGUAGE.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_INFORMATIC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_PROFESSIONAL.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_SCHOOL.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbo_EDUCATION.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl_PAGE_THONG_TIN_NHAN_VIEN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -1237,12 +1250,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tab_PAGE_THONG_TIN_NHAN_VIEN.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_ETHNIC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_LANGUAGE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_INFORMATIC.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_PROFESSIONAL.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_SCHOOL.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_EDUCATION.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1270,17 +1277,17 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_NATIONALITY;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_QUOC_TICH;
         private DevExpress.XtraEditors.TextEdit txt_IDCARD_PLACE;
         private DevExpress.XtraEditors.DateEdit date_IDCARD;
         private DevExpress.XtraEditors.TextEdit txt_IDCARD;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_DEGREE;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_EDUCATION;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_INFORMATIC;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_ETHNIC;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_PROFESSIONAL;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_RELIGION;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_LANGUAGE;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_BANG_CAP;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_HOC_VAN;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_TIN_HOC;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_DAN_TOC;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_CHUYEN_MON;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_TON_GIAO;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_NGOAI_NGU;
         private DevExpress.XtraEditors.ComboBoxEdit cbo_DEGREE;
         private DevExpress.XtraEditors.TextEdit txt_EMAIL;
         private DevExpress.XtraEditors.TextEdit txt_CELL_PHONE;
@@ -1313,7 +1320,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem30;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btn_INSERT_SCHOOL;
+        private DevExpress.XtraEditors.SimpleButton btn_frm_SCHOOL;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem32;
