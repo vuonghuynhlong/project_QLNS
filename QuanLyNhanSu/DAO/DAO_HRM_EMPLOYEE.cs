@@ -102,7 +102,8 @@ namespace QuanLyNhanSu.DAO
                     clsHRM_EMPLOYEE.FirstName = reader["FirstName"] is DBNull ? null : reader["FirstName"].ToString();
                     clsHRM_EMPLOYEE.LastName = reader["LastName"] is DBNull ? null : reader["LastName"].ToString();
                     clsHRM_EMPLOYEE.Alias = reader["Alias"] is DBNull ? null : reader["Alias"].ToString();
-                    clsHRM_EMPLOYEE.Sex = reader["Sex"] is DBNull ? null : (Boolean?)reader["Sex"];
+                 
+                    clsHRM_EMPLOYEE.Sex = (bool)reader["Sex"];
                     clsHRM_EMPLOYEE.Marriage = reader["Marriage"] is DBNull ? null : reader["Marriage"].ToString();
                     clsHRM_EMPLOYEE.Birthday = reader["Birthday"] is DBNull ? null : (DateTime?)reader["Birthday"];
                     clsHRM_EMPLOYEE.BirthPlace = reader["BirthPlace"] is DBNull ? null : reader["BirthPlace"].ToString();
@@ -361,14 +362,9 @@ namespace QuanLyNhanSu.DAO
             {
                 insertCommand.Parameters.AddWithValue("@Alias", DBNull.Value);
             }
-            if (clsHRM_EMPLOYEE.Sex.HasValue == true)
-            {
-                insertCommand.Parameters.AddWithValue("@Sex", clsHRM_EMPLOYEE.Sex);
-            }
-            else
-            {
-                insertCommand.Parameters.AddWithValue("@Sex", DBNull.Value);
-            }
+
+            insertCommand.Parameters.AddWithValue("@Sex", clsHRM_EMPLOYEE.Sex);
+            
             if (clsHRM_EMPLOYEE.Marriage != null)
             {
                 insertCommand.Parameters.AddWithValue("@Marriage", clsHRM_EMPLOYEE.Marriage);
@@ -1030,14 +1026,9 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@NewAlias", DBNull.Value);
             }
-            if (newHRM_EMPLOYEE.Sex.HasValue == true)
-            {
-                updateCommand.Parameters.AddWithValue("@NewSex", newHRM_EMPLOYEE.Sex);
-            }
-            else
-            {
-                updateCommand.Parameters.AddWithValue("@NewSex", DBNull.Value);
-            }
+
+            updateCommand.Parameters.AddWithValue("@NewSex", newHRM_EMPLOYEE.Sex);
+            
             if (newHRM_EMPLOYEE.Marriage != null)
             {
                 updateCommand.Parameters.AddWithValue("@NewMarriage", newHRM_EMPLOYEE.Marriage);
@@ -1535,14 +1526,8 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@OldAlias", DBNull.Value);
             }
-            if (oldHRM_EMPLOYEE.Sex.HasValue == true)
-            {
-                updateCommand.Parameters.AddWithValue("@OldSex", oldHRM_EMPLOYEE.Sex);
-            }
-            else
-            {
-                updateCommand.Parameters.AddWithValue("@OldSex", DBNull.Value);
-            }
+            updateCommand.Parameters.AddWithValue("@OldSex", oldHRM_EMPLOYEE.Sex);
+            
             if (oldHRM_EMPLOYEE.Marriage != null)
             {
                 updateCommand.Parameters.AddWithValue("@OldMarriage", oldHRM_EMPLOYEE.Marriage);
@@ -2144,14 +2129,8 @@ namespace QuanLyNhanSu.DAO
             {
                 deleteCommand.Parameters.AddWithValue("@OldAlias", DBNull.Value);
             }
-            if (clsHRM_EMPLOYEE.Sex.HasValue == true)
-            {
-                deleteCommand.Parameters.AddWithValue("@OldSex", clsHRM_EMPLOYEE.Sex);
-            }
-            else
-            {
-                deleteCommand.Parameters.AddWithValue("@OldSex", DBNull.Value);
-            }
+             deleteCommand.Parameters.AddWithValue("@OldSex", clsHRM_EMPLOYEE.Sex);
+           
             if (clsHRM_EMPLOYEE.Marriage != null)
             {
                 deleteCommand.Parameters.AddWithValue("@OldMarriage", clsHRM_EMPLOYEE.Marriage);

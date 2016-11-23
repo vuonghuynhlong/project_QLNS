@@ -57,7 +57,9 @@ namespace QuanLyNhanSu
             txt_FIRST_NAME.Text = old_entity.FirstName;
             txt_LAST_NAME.Text = old_entity.LastName;
             txt_ALIAS.Text = old_entity.Alias;
-            chk_SEX.Checked = (bool)old_entity.Sex;
+            bool sex = (bool) old_entity.Sex;
+
+            chk_SEX.Checked = sex;
             date_BIRTHDAY.DateTime =(DateTime) old_entity.Birthday;
             txt_BIRTH_PLACE.Text = old_entity.BirthPlace;
             txt_ALIAS.Text = old_entity.Alias;
@@ -94,11 +96,13 @@ namespace QuanLyNhanSu
             new_entity.EmployeeCode = txt_EMPLOYEE_CODE.Text;
             new_entity.FirstName = txt_FIRST_NAME.Text;
             new_entity.LastName = txt_LAST_NAME.Text;
+            new_entity.Sex = chk_SEX.Checked;
             new_entity.Birthday = date_BIRTHDAY.DateTime;
             new_entity.BirthPlace = txt_BIRTH_PLACE.Text;
             new_entity.Alias = txt_ALIAS.Text;
             new_entity.Marriage = cbo_MARRIAGE.Text;
             new_entity.IDCard = txt_IDCARD.Text;
+
             new_entity.IDCardDate = date_IDCARD.DateTime;
             new_entity.IDCardPlace = txt_IDCARD_PLACE.Text;
             new_entity.MainAddress = txt_MAIN_ADDRESS.Text;

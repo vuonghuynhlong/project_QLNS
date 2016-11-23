@@ -14,7 +14,7 @@ namespace QuanLyNhanSu.ENTITY
         private String m_FirstName;
         private String m_LastName;
         private String m_Alias;
-        private Nullable<Boolean> m_Sex;
+        private bool m_Sex;
         private String m_Marriage;
         private Nullable<DateTime> m_Birthday;
         private String m_BirthPlace;
@@ -146,7 +146,7 @@ namespace QuanLyNhanSu.ENTITY
             }
         }
 
-        public Nullable<Boolean> Sex
+        public bool Sex
         {
             get
             {
@@ -361,6 +361,7 @@ namespace QuanLyNhanSu.ENTITY
                 m_IDCard = value;
             }
         }
+     
 
         public Nullable<DateTime> IDCardDate
         {
