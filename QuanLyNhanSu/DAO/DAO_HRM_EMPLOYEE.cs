@@ -81,6 +81,9 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[ContractSignDate] "
                 + "    ,[ContractFromDate] "
                 + "    ,[ContractToDate] "
+                + "    ,[Photo] "
+                + "    ,[WorkStateCode] "
+                
                 + "FROM "
                 + "     [HRM_EMPLOYEE] "
                 + "WHERE "
@@ -161,6 +164,8 @@ namespace QuanLyNhanSu.DAO
                     clsHRM_EMPLOYEE.ContractSignDate = reader["ContractSignDate"] is DBNull ? null : (DateTime?)reader["ContractSignDate"];
                     clsHRM_EMPLOYEE.ContractFromDate = reader["ContractFromDate"] is DBNull ? null : (DateTime?)reader["ContractFromDate"];
                     clsHRM_EMPLOYEE.ContractToDate = reader["ContractToDate"] is DBNull ? null : (DateTime?)reader["ContractToDate"];
+                    clsHRM_EMPLOYEE.Photo = reader["Photo"] is DBNull ? null : (byte[])reader["Photo"];
+                    clsHRM_EMPLOYEE.WorkStateCode = reader["WorkStateCode"] is DBNull ? null : reader["WorkStateCode"].ToString();
                 }
                 else
                 {
@@ -250,6 +255,8 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[ContractSignDate] "
                 + "    ,[ContractFromDate] "
                 + "    ,[ContractToDate] "
+                + "    ,[WorkStateCode] "
+                + "    ,[Photo] "
                 + "     ) "
                 + "VALUES "
                 + "     ( "
@@ -317,6 +324,10 @@ namespace QuanLyNhanSu.DAO
                 + "    ,@ContractSignDate "
                 + "    ,@ContractFromDate "
                 + "    ,@ContractToDate "
+                + "    ,@WorkStateCode "
+                + "    ,@Photo"
+
+                
                 + "     ) "
                 + "";
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
@@ -821,10 +832,33 @@ namespace QuanLyNhanSu.DAO
             {
                 insertCommand.Parameters.AddWithValue("@ContractToDate", DBNull.Value);
             }
+            
+            if (clsHRM_EMPLOYEE.WorkStateCode != null)
+            {
+                insertCommand.Parameters.AddWithValue("@WorkStateCode", clsHRM_EMPLOYEE.WorkStateCode);
+            }
+            else
+            {
+                insertCommand.Parameters.AddWithValue("@WorkStateCode", DBNull.Value);
+            }
+
+            if (clsHRM_EMPLOYEE.Photo != null)
+            {
+                insertCommand.Parameters.AddWithValue("@Photo", clsHRM_EMPLOYEE.Photo);
+            }
+            else
+            {
+                insertCommand.Parameters.AddWithValue("@Photo", DBNull.Value);
+            }
             try
             {
                 connection.Open();
-           
+                string query = insertCommand.CommandText;
+
+                foreach (SqlParameter p in insertCommand.Parameters)
+                {
+                    query = query.Replace(p.ParameterName, p.Value.ToString());
+                }
                 int count = insertCommand.ExecuteNonQuery();
                 if (count > 0)
                 {
@@ -917,6 +951,8 @@ namespace QuanLyNhanSu.DAO
                 + "    ,[ContractSignDate] = @NewContractSignDate "
                 + "    ,[ContractFromDate] = @NewContractFromDate "
                 + "    ,[ContractToDate] = @NewContractToDate "
+                + "    ,[Photo] = @NewPhoto "
+                + "    ,[WorkStateCode] = @NewWorkStateCode "
                 + "WHERE "
                 + "     [EmployeeCode] = @OldEmployeeCode "
                 + " AND ((@OldDepartmentCode IS NULL AND [DepartmentCode] IS NULL) OR [DepartmentCode] = @OldDepartmentCode) "
@@ -982,6 +1018,9 @@ namespace QuanLyNhanSu.DAO
                 + " AND ((@OldContractSignDate IS NULL AND [ContractSignDate] IS NULL) OR [ContractSignDate] = @OldContractSignDate) "
                 + " AND ((@OldContractFromDate IS NULL AND [ContractFromDate] IS NULL) OR [ContractFromDate] = @OldContractFromDate) "
                 + " AND ((@OldContractToDate IS NULL AND [ContractToDate] IS NULL) OR [ContractToDate] = @OldContractToDate) "
+                + " AND ((@OldPHOTO IS NULL AND [Photo] IS NULL) OR [Photo] = @OldPhoto) "
+                + " AND ((@OldWorkStateCode IS NULL AND [WorkStateCode] IS NULL) OR [WorkStateCode] = @OldWorkStateCode) "
+                
                 + "";
             SqlCommand updateCommand = new SqlCommand(updateStatement, connection);
             updateCommand.CommandType = CommandType.Text;
@@ -1485,7 +1524,28 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@NewContractToDate", DBNull.Value);
             }
+            
+            if (newHRM_EMPLOYEE.Photo != null)
+            {
+                updateCommand.Parameters.AddWithValue("@NewPhoto", newHRM_EMPLOYEE.Photo);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@NewPhoto", DBNull.Value);
+            }
+            if (newHRM_EMPLOYEE.WorkStateCode != null)
+            {
+                updateCommand.Parameters.AddWithValue("@NewWorkStateCode", newHRM_EMPLOYEE.WorkStateCode);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@NewWorkStateCode", DBNull.Value);
+            }
+
+
             updateCommand.Parameters.AddWithValue("@OldEmployeeCode", oldHRM_EMPLOYEE.EmployeeCode);
+            
+            
             if (oldHRM_EMPLOYEE.DepartmentCode != null)
             {
                 updateCommand.Parameters.AddWithValue("@OldDepartmentCode", oldHRM_EMPLOYEE.DepartmentCode);
@@ -1526,6 +1586,7 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@OldAlias", DBNull.Value);
             }
+
             updateCommand.Parameters.AddWithValue("@OldSex", oldHRM_EMPLOYEE.Sex);
             
             if (oldHRM_EMPLOYEE.Marriage != null)
@@ -1984,9 +2045,28 @@ namespace QuanLyNhanSu.DAO
             {
                 updateCommand.Parameters.AddWithValue("@OldContractToDate", DBNull.Value);
             }
+
+            if (oldHRM_EMPLOYEE.Photo != null)
+            {
+                updateCommand.Parameters.AddWithValue("@OldPhoto", oldHRM_EMPLOYEE.Photo);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@OldPhoto", DBNull.Value);
+            }
+
+            if (oldHRM_EMPLOYEE.WorkStateCode != null)
+            {
+                updateCommand.Parameters.AddWithValue("@OldWorkStateCode", oldHRM_EMPLOYEE.WorkStateCode);
+            }
+            else
+            {
+                updateCommand.Parameters.AddWithValue("@OldWorkStateCode", DBNull.Value);
+            }
             try
             {
                 connection.Open();
+               
                 string query = updateCommand.CommandText;
 
                 foreach (SqlParameter p in updateCommand.Parameters)
@@ -2085,6 +2165,7 @@ namespace QuanLyNhanSu.DAO
                 + " AND ((@OldContractSignDate IS NULL AND [ContractSignDate] IS NULL) OR [ContractSignDate] = @OldContractSignDate) "
                 + " AND ((@OldContractFromDate IS NULL AND [ContractFromDate] IS NULL) OR [ContractFromDate] = @OldContractFromDate) "
                 + " AND ((@OldContractToDate IS NULL AND [ContractToDate] IS NULL) OR [ContractToDate] = @OldContractToDate) "
+                + " AND ((@OldWorkStateCode IS NULL AND [WorkStateCode] IS NULL) OR [WorkStateCode] = @OldWorkStateCode) "
                 + "";
             SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection);
             deleteCommand.CommandType = CommandType.Text;
@@ -2587,6 +2668,14 @@ namespace QuanLyNhanSu.DAO
             {
                 deleteCommand.Parameters.AddWithValue("@OldContractToDate", DBNull.Value);
             }
+            if (clsHRM_EMPLOYEE.WorkStateCode != null)
+            {
+                deleteCommand.Parameters.AddWithValue("@OldWorkStateCode", clsHRM_EMPLOYEE.WorkStateCode);
+            }
+            else
+            {
+                deleteCommand.Parameters.AddWithValue("@OldWorkStateCode", DBNull.Value);
+            }
             try
             {
                 connection.Open();
@@ -2615,52 +2704,53 @@ namespace QuanLyNhanSu.DAO
 
             String sql = "";
             sql = sql + "SELECT ";
-            sql = sql + "     [EmployeeCode] AS [Mã Nhân Viên]";
-            sql = sql + "     ,[DepartmentCode] AS [Mã Phòng Ban]";
-            sql = sql + "     ,[EnrollNumber] AS [STT Nhân Viên]";
+            sql = sql + "     [DepartmentName] AS [Phòng Ban]";
+            sql = sql + "     ,[EmployeeCode] AS [Mã Nhân Viên]";
+            
+            //sql = sql + "     ,[EnrollNumber] AS [STT Nhân Viên]";
             sql = sql + "     ,[FirstName] AS [Họ Lót]";
             sql = sql + "     ,[LastName] AS [Tên]";
             sql = sql + "     ,[Alias] AS [Tên Thường Gọi]";
             sql = sql + "     ,[Sex] AS [Giới Tính]";
-            sql = sql + "     ,[Marriage] AS [Tình Trạng Hôn Nhân]";
-            sql = sql + "     ,[Birthday] AS [Ngày Sinh]";
-            sql = sql + "     ,[BirthPlace] AS [Nơi Sinh]";
-            sql = sql + "     ,[MainAddress] AS [Đại Chỉ]";
+            //sql = sql + "     ,[Marriage] AS [Tình Trạng Hôn Nhân]";
+            //sql = sql + "     ,[Birthday] AS [Ngày Sinh]";
+            //sql = sql + "     ,[BirthPlace] AS [Nơi Sinh]";
+            sql = sql + "     ,[MainAddress] AS [Địa Chỉ]";
             sql = sql + "     ,[ContactAddress] AS [Thường Trú]";
             sql = sql + "     ,[CellPhone] AS [SĐT]";
             sql = sql + "     ,[Email] AS [Email]";
-            sql = sql + "     ,[Photo] AS [Ảnh]";
-            sql = sql + "     ,[Nationality] AS [Quốc Tịch]";
-            sql = sql + "     ,[Ethnic] AS [Dân Tộc]";
-            sql = sql + "     ,[Religion] AS [Tôn Giáo]";
-            sql = sql + "     ,[Education] AS [Học Vấn]";
-            sql = sql + "     ,[Language] AS [Ngôn Ngữ]";
-            sql = sql + "     ,[Informatic] AS [Tin Học]";
-            sql = sql + "     ,[Professional] AS [Chuyên Môn]";
-            sql = sql + "     ,[School] AS [Trường]";
+            sql = sql + "     ,[WorkStateName] AS [Trạng Thái]";
+            //sql = sql + "     ,[Photo] AS [Ảnh]";
+            //sql = sql + "     ,[Ethnic] AS [Dân Tộc]";
+            //sql = sql + "     ,[Religion] AS [Tôn Giáo]";
+            //sql = sql + "     ,[Education] AS [Học Vấn]";
+            //sql = sql + "     ,[Language] AS [Ngôn Ngữ]";
+            //sql = sql + "     ,[Informatic] AS [Tin Học]";
+            sql = sql + "     ,[ProfessionalName] AS [Chuyên Môn]";
+            sql = sql + "     ,[SchoolName] AS [Trường]";
             sql = sql + "     ,[IDCard] AS [CMND]";
             sql = sql + "     ,[IDCardDate] AS [Ngày Cấp]";
             sql = sql + "     ,[IDCardPlace] AS [Nơi Cấp]";
-            sql = sql + "     ,[BeginDate] AS [Ngày Vào Làm]";
-            sql = sql + "     ,[IsOffWork] AS [Đã Thôi Việc]";
-            sql = sql + "     ,[EndDate] AS [Ngày Thôi Việc]";
-            sql = sql + "     ,[PayForm] AS [Hình Thức Trả Lương]";
-            sql = sql + "     ,[PayMoney] AS [Trả Tiền]";
-            sql = sql + "     ,[MinimumSalary] AS [Lương Tối Thiểu]";
-            sql = sql + "     ,[RankSalary] AS [Ngạch Lương]";
-            sql = sql + "     ,[StepSalary] AS [Bậc Lương]";
-            sql = sql + "     ,[CoefficientSalary] AS [Hệ Số Lương]";
-            sql = sql + "     ,[DateSalary] AS [Ngày Trả Lương]";
-            sql = sql + "     ,[BasicSalary] AS [Lương Cơ Bản]";
-            sql = sql + "     ,[InsuranceSalary] AS [Tiền Bảo Hiểm]";
-            sql = sql + "     ,[Allowance1] AS [Phụ Cấp 1]";
-            sql = sql + "     ,[Allowance2] AS [Phụ Cấp 2]";
-            sql = sql + "     ,[Allowance3] AS [Phụ Cấp 3]";
-            sql = sql + "     ,[Allowance4] AS [Phụ Cấp 4]";
-            sql = sql + "     ,[IsSocialInsurance] AS [BHXH]";
-            sql = sql + "     ,[IsHealthInsurance] AS [BHYT]";
-            sql = sql + "     ,[IsUnemploymentInsurance] AS [Bảo Hiểm Thất Nghiệp]";
-            sql = sql + "     ,[IsUnionMoney] AS [Tiền Công Đoàn]";
+            //sql = sql + "     ,[BeginDate] AS [Ngày Vào Làm]";
+            //sql = sql + "     ,[IsOffWork] AS [Đã Thôi Việc]";
+            //sql = sql + "     ,[EndDate] AS [Ngày Thôi Việc]";
+            //sql = sql + "     ,[PayForm] AS [Hình Thức Trả Lương]";
+            //sql = sql + "     ,[PayMoney] AS [Trả Tiền]";
+            //sql = sql + "     ,[MinimumSalary] AS [Lương Tối Thiểu]";
+            //sql = sql + "     ,[RankSalary] AS [Ngạch Lương]";
+            //sql = sql + "     ,[StepSalary] AS [Bậc Lương]";
+            //sql = sql + "     ,[CoefficientSalary] AS [Hệ Số Lương]";
+            //sql = sql + "     ,[DateSalary] AS [Ngày Trả Lương]";
+            //sql = sql + "     ,[BasicSalary] AS [Lương Cơ Bản]";
+            //sql = sql + "     ,[InsuranceSalary] AS [Tiền Bảo Hiểm]";
+            //sql = sql + "     ,[Allowance1] AS [Phụ Cấp 1]";
+            //sql = sql + "     ,[Allowance2] AS [Phụ Cấp 2]";
+            //sql = sql + "     ,[Allowance3] AS [Phụ Cấp 3]";
+            //sql = sql + "     ,[Allowance4] AS [Phụ Cấp 4]";
+            //sql = sql + "     ,[IsSocialInsurance] AS [BHXH]";
+            //sql = sql + "     ,[IsHealthInsurance] AS [BHYT]";
+            //sql = sql + "     ,[IsUnemploymentInsurance] AS [Bảo Hiểm Thất Nghiệp]";
+            //sql = sql + "     ,[IsUnionMoney] AS [Tiền Công Đoàn]";
             sql = sql + "     ,[IsUnion] AS [Đoàn Viên]";
             sql = sql + "     ,[UnionCode] AS [Mã Đoàn Viên]";
             sql = sql + "     ,[UnionDate] AS [Ngày Vào Đoàn]";
@@ -2679,7 +2769,13 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     ,[ContractSignDate] AS [Ngày Ký]";
             sql = sql + "     ,[ContractFromDate] AS [Kể Từ Ngày]";
             sql = sql + "     ,[ContractToDate] AS [Đến Ngày]";            
-            sql = sql + "FROM HRM_EMPLOYEE";
+            sql = sql + " FROM HRM_EMPLOYEE A, DIC_SCHOOL B, DIC_PROFESSIONAL C, DIC_DEPARTMENT D, DIC_WORK_STATE E";
+            sql = sql + " WHERE A.School = B.SchoolCode ";
+            sql = sql + " AND A.Professional = C.ProfessionalCode ";
+            sql = sql + " AND A.DepartmentCode = D.DepartmentCode ";
+            sql = sql + " AND A.WorkStateCode = E.WorkStateCode";
+            sql = sql + " AND A.WorkStateCode IN ('TT000001','TT000003')";
+          
             return Select_Table(sql);
 
         }

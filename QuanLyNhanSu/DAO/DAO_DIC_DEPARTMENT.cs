@@ -420,11 +420,38 @@ namespace QuanLyNhanSu.DAO
 
         }
 
+        public static DataTable Get_View_Data()
+        {
+            string sql = "";
+            sql = sql + "SELECT";
+            sql = sql + "     [DepartmentCode] AS [Mã Phòng Ban]  ";
+            sql = sql + "    ,[DepartmentName] AS [Tên Phòng Ban] ";
+            sql = sql + "FROM DIC_DEPARTMENT ";
+            sql = sql + "WHERE [Active] = 1 ";
+
+            return Select_Table(sql);
+        }
+
         public static bool Delete(string code)
         {
             return Delete("DIC_DEPARTMENT", "DepartmentCode", code);
         }
-       
+
+        public static void Update_Quanlity(string department_code)
+        {
+            string sql = "";
+            sql = sql + "update DIC_DEPARTMENT ";
+            sql = sql + "set Quantity = (SELECT COUNT(*) FROM HRM_EMPLOYEE WHERE DepartmentCode=@DepartmentCode),  ";
+            sql = sql + "FactQuantity = (SELECT COUNT(*) FROM HRM_EMPLOYEE WHERE DepartmentCode=@DepartmentCode AND WorkStateCode IN('TT000001','TT000003'))  ";
+            sql = sql + "where DepartmentCode = @DepartmentCode ";
+           SqlConnection connection = DAO_BASE.Get_Connection();
+           connection.Open();
+           SqlCommand updateCommand = new SqlCommand(sql,connection);
+           updateCommand.Parameters.AddWithValue("@DepartmentCode", department_code);
+           updateCommand.ExecuteNonQuery();
+           connection.Close();
+        }
+
     }
 
 }

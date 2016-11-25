@@ -88,6 +88,7 @@
     <Compile Include="DAO\DAO_DIC_SALARY_RANK.cs" />
     <Compile Include="DAO\DAO_DIC_SALARY_STEP.cs" />
     <Compile Include="DAO\DAO_DIC_SCHOOL.cs" />
+    <Compile Include="DAO\DAO_DIC_WORK_STATE.cs" />
     <Compile Include="DAO\DAO_HRM_EMPLOYEE.cs" />
     <Compile Include="ENTITY\DIC_DEGREE.cs" />
     <Compile Include="ENTITY\DIC_DEPARTMENT.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="ENTITY\DIC_SALARY_RANK.cs" />
     <Compile Include="ENTITY\DIC_SALARY_STEP.cs" />
     <Compile Include="ENTITY\DIC_SCHOOL.cs" />
+    <Compile Include="ENTITY\DIC_WORK_STATE.cs" />
     <Compile Include="ENTITY\ENT_RETURN.cs" />
     <Compile Include="ENTITY\HRM_EMPLOYEE.cs" />
     <Compile Include="frmTest.cs">
@@ -416,6 +418,7 @@
     <None Include="Resources\SAVE1.png" />
     <None Include="Resources\QUIT.png" />
     <None Include="Resources\PRINT.png" />
+    <None Include="Resources\NO_PHOTO.jpg" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

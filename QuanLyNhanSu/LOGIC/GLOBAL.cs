@@ -29,7 +29,18 @@ namespace QuanLyNhanSu.LOGIC
             {"E017", "Tên tôn giáo không được quá 100 ký tự.!!!\r\n"},
             {"E018", "Tên phòng ban không được rỗng.!!!\r\n"},
             {"E019", "Tên phòng ban không được quá 100 ký tự.!!!\r\n"},
-
+            {"E020", "Họ lót không được rỗng.!!!\r\n"},
+            {"E021", "Tên không được rỗng.!!!\r\n"},
+            {"E022", "Chứng minh nhân dân không được rỗng.!!!\r\n"},
+            {"E023", "Quốc tịch không được rỗng.!!!\r\n"},
+            {"E024", "Tôn giáo không được rỗng.!!!\r\n"},
+            {"E025", "Dân tộc ban không được rỗng.!!!\r\n"},
+            {"E026", "Ngày sing không được rỗng.!!!\r\n"},
+            {"E027", "Nơi sinh không được rỗng.!!!\r\n"},
+            {"E028", "Độ dài CMND không được quá 9 số.!!!\r\n"},
+            {"E030", "Nơi cấp CMND không được rổng.!!!\r\n"},
+            {"E031", "Chuyên môn không được rỗng.!!!\r\n"},
+            {"E032", "Thông tin trường không được rỗng.!!!\r\n"},
         };
     }
 }

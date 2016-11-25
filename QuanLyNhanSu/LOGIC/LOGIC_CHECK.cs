@@ -268,20 +268,59 @@ namespace QuanLyNhanSu.LOGIC
             ENT_RETURN ret = new ENT_RETURN();
             string err_msg = string.Empty;
 
-            //// BEGIN CHECK
-            //if (Is_Empty_String(e.DepartmentName))
-            //{
-            //    err_msg += GLOBAL.err_code["E018"];
-            //}
-            //if (Is_Over_MaxLength(e.DepartmentName, 100))
-            //{
-            //    err_msg += GLOBAL.err_code["E019"];
-            //}
-            //if (Is_Over_MaxLength(e.Description, 200))
-            //{
-            //    err_msg += GLOBAL.err_code["E003"];
-            //}
-            // END CHECK
+            if(Is_Empty_String(new_entity.FirstName))
+            {
+                err_msg+= GLOBAL.err_code["E020"];
+            }
+            if (Is_Empty_String(new_entity.LastName))
+            {
+                err_msg += GLOBAL.err_code["E021"];
+            }
+            if (Is_Empty_String(new_entity.Birthday.ToString()))
+            {
+                err_msg += GLOBAL.err_code["E026"];
+            }
+            if(Is_Empty_String(new_entity.BirthPlace))
+            {
+                err_msg += GLOBAL.err_code["E027"];
+            }
+            if (Is_Empty_String(new_entity.IDCard))
+            {
+                err_msg += GLOBAL.err_code["E022"];
+            }
+            if (Is_Over_MaxLength(new_entity.IDCard, 9) && !Is_Number(new_entity.IDCard))
+            {
+                err_msg += GLOBAL.err_code["E028"];
+            }
+
+          
+            //
+            //
+            if(Is_Empty_String(new_entity.IDCardPlace))
+            {
+                err_msg+=GLOBAL.err_code["E030"];
+            }
+
+            if (Is_Empty_String(new_entity.Nationality))
+            {
+                err_msg += GLOBAL.err_code["E023"];
+            }
+            if(Is_Empty_String(new_entity.Ethnic))
+            {
+                err_msg += GLOBAL.err_code["E025"];
+            }
+            if (Is_Empty_String(new_entity.Religion))
+            {
+                err_msg += GLOBAL.err_code["E024"];
+            }
+            if(Is_Empty_String(new_entity.Professional))
+            {
+                err_msg += GLOBAL.err_code["E031"];
+            }
+            if(Is_Empty_String(new_entity.School))
+            {
+                err_msg += GLOBAL.err_code["E032"];
+            }
             if (err_msg != string.Empty)
             {
                 ret.Message = err_msg;

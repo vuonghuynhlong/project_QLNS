@@ -21,16 +21,21 @@ namespace QuanLyNhanSu
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            //DataTable dt = DAO_DIC_RELIGION.Get_Data();
-           
-            //lookUpEdit1.Properties.DataSource = dt;
-            //lookUpEdit1.Properties.DisplayMember = "Tên Tôn Giáo";
-            //lookUpEdit1.Properties.ValueMember = "Mã Tôn Giáo";
-            //lookUpEdit1.EditValue = "TG000004";
-            //lookUpEdit1.Properties.PopulateColumns();
-            //lookUpEdit1.Properties.Columns["Mô Tả"].Visible = false;
-         //   LOGIC_COMMON.Init_Lookup_Edit_DataSource(lookUpEdit1, DAO_DIC_RELIGION.Get_Data(), "Mã Tôn Giáo", "Tên Tôn Giáo", new String[] { "Mô Tả" });
-        
+            Image img = (Image)QuanLyNhanSu.Properties.Resources.NO_PHOTO;
+            byte[] imgbyte = LOGIC_COMMON.Bitmap_To_Byte(img);
+            HRM_EMPLOYEE entity = new HRM_EMPLOYEE();
+            entity.EmployeeCode = "NV000003";
+            entity = DAO_HRM_EMPLOYEE.Select_Record(entity);
+            byte[] photo = entity.Photo;
+         
+        //    MessageBox.Show("Test");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Image img = pictureEdit1.Image;
+            byte[] abc = LOGIC_COMMON.Bitmap_To_Byte(img);
+            MessageBox.Show("Test");
         }
     }
 }

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using System.Data;
+using System.Drawing;
+using System.IO;
 
 namespace QuanLyNhanSu.LOGIC
 {
@@ -69,15 +71,10 @@ namespace QuanLyNhanSu.LOGIC
             tab_page.Controls.Add(frm);
         }
 
-
-
         public static string Generate_Code(string prefix) {
             string table_name = dict_code[prefix];
             return prefix + DAO_BASE.Generate_Code(table_name);
         }
-
-
-
 
         public static bool Is_Empty_String(String str)
         {
@@ -89,12 +86,44 @@ namespace QuanLyNhanSu.LOGIC
         }
 
 
+        public static bool Is_Number(String str)
+        {
+            try
+            {
+               int.Parse(str);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public static void Init_Lookup_Edit_DataSource(LookUpEdit lookup_edit, DataTable data, String value_member, String display_member) {
             lookup_edit.Properties.DataSource = data;
             lookup_edit.Properties.DisplayMember = display_member;
-            lookup_edit.Properties.ValueMember = value_member;
+            lookup_edit.Properties.ValueMember = value_member;          
+        }
+
+        public static Image Byte_To_Bitmap(byte[] arr){
+            using (var ms = new MemoryStream(arr))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+        public static byte[] Bitmap_To_Byte(Image img)
+        {
+
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
          
-          
+        }
+
+        public static byte[] Get_No_Avatar()
+        {
+            Image img = (Image)QuanLyNhanSu.Properties.Resources.LANGUAGE;
+            byte[] imgbyte = LOGIC_COMMON.Bitmap_To_Byte(img);
+            return imgbyte;
         }
     }
 }

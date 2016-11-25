@@ -88,7 +88,7 @@ namespace QuanLyNhanSu
             //chk_IS_MANAGER.Checked = false;
             
         }
-        private void Insert()
+        private bool Insert()
         {
             new_entity = new DIC_RELIGION();
             new_entity.ReligionCode = txt_RELIGION_CODE.Text;
@@ -106,18 +106,20 @@ namespace QuanLyNhanSu
             else
             {
                 XtraMessageBox.Show(validate.Message, "Lỗi..!!!!");
+                return false;
             }
+            return true;
 
         }
         private void insert_record(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             this.Close();
         }
 
         private void insert_record_continue(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             Init_Data();
 
         }

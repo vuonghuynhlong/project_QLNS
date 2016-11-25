@@ -72,7 +72,8 @@ namespace QuanLyNhanSu.ENTITY
         private Nullable<DateTime> m_ContractSignDate;
         private Nullable<DateTime> m_ContractFromDate;
         private Nullable<DateTime> m_ContractToDate;
-
+        private String m_WorkStateCode;
+        private byte[] m_Photo;
         public HRM_EMPLOYEE() { }
 
         public String EmployeeCode
@@ -361,7 +362,9 @@ namespace QuanLyNhanSu.ENTITY
                 m_IDCard = value;
             }
         }
-     
+
+
+        
 
         public Nullable<DateTime> IDCardDate
         {
@@ -843,6 +846,29 @@ namespace QuanLyNhanSu.ENTITY
             }
         }
 
+        public String WorkStateCode
+        {
+            get
+            {
+                return m_WorkStateCode;
+            }
+            set
+            {
+                m_WorkStateCode = value;
+            }
+        }
+
+        public byte[] Photo
+        {
+            get
+            {
+                return m_Photo;
+            }
+            set
+            {
+                m_Photo = value;
+            }
+        }
     }
 
 }

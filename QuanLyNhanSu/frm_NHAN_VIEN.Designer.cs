@@ -78,9 +78,11 @@
             this.gv_DATA.GridControl = this.dg_DATA;
             this.gv_DATA.Name = "gv_DATA";
             this.gv_DATA.OptionsBehavior.Editable = false;
+            this.gv_DATA.OptionsView.ColumnAutoWidth = false;
             this.gv_DATA.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.SmartTag;
             this.gv_DATA.OptionsView.ShowAutoFilterRow = true;
-            this.gv_DATA.OptionsView.ShowGroupPanel = false;
+            this.gv_DATA.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gv_DATA.CustomDrawGroupRow += new DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventHandler(this.gv_DATA_CustomDrawGroupRow);
             // 
             // layout_CONTROL
             // 

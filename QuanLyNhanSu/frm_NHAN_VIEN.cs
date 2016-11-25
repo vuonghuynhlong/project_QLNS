@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.XtraGrid;
 
 namespace QuanLyNhanSu
 {
@@ -30,7 +34,7 @@ namespace QuanLyNhanSu
             DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();
             if (current_row == null)
                 return;
-            string row_code = current_row.Row.ItemArray[0].ToString();
+            string row_code = current_row.Row.ItemArray[1].ToString();
             //frm_CHUC_VU_EDIT frm_edit = new frm_CHUC_VU_EDIT(row_code);
             frm_NHAN_VIEN_EDIT frm_edit = new frm_NHAN_VIEN_EDIT(row_code);
             if (frm_edit.ShowDialog() == DialogResult.OK)
@@ -39,11 +43,26 @@ namespace QuanLyNhanSu
                 int rowHandle = gv_DATA.LocateByValue(column_code, row_code);
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
                     gv_DATA.FocusedRowHandle = rowHandle;
+                Grid_Process();
             }
+        }
+        void Grid_Process() {
+            GridView gridView = dg_DATA.FocusedView as GridView;
+            gridView.PopulateColumns();
+            gridView.SortInfo.ClearAndAddRange(new GridColumnSortInfo[] { 
+                  new GridColumnSortInfo(gridView.Columns["Phòng Ban"], DevExpress.Data.ColumnSortOrder.Ascending), 
+             }, 2);
+            gridView.BestFitColumns();
+            gridView.Columns[1].Fixed = FixedStyle.Left;
+            gridView.Columns[2].Fixed = FixedStyle.Left;
+            gridView.Columns[3].Fixed = FixedStyle.Left;
+            gridView.ExpandAllGroups();
         }
         void frm_Load(object sender, EventArgs e)
         {
             dg_DATA.DataSource = DAO_HRM_EMPLOYEE.Get_Data();
+            Grid_Process();
+           
         }
 
 
@@ -69,6 +88,22 @@ namespace QuanLyNhanSu
         {
             frm_NHAN_VIEN_EDIT frm_edit = new frm_NHAN_VIEN_EDIT(this, true);
             frm_edit.ShowDialog();
+            Grid_Process();
         }
+
+        private void gv_DATA_CustomDrawGroupRow(object sender, DevExpress.XtraGrid.Views.Base.RowObjectCustomDrawEventArgs e)
+        {
+            GridView view = sender as GridView;
+            GridGroupRowInfo info = e.Info as GridGroupRowInfo;
+            string caption = info.Column.Caption;
+            if (info.Column.Caption == string.Empty)
+                caption = info.Column.ToString();
+            info.GroupText = string.Format("{0} : {1} ({2})", caption, info.GroupValueText, view.GetChildRowCount(e.RowHandle));
+       
+        }
+
+      
+
+       
     }
 }

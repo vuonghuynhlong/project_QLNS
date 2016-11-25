@@ -95,7 +95,7 @@ namespace QuanLyNhanSu
            
             
         }
-        private void Insert()
+        private bool Insert()
         {
             new_entity = new DIC_PROFESSIONAL();
             new_entity.ProfessionalCode = txt_PROFESSIONAL_CODE.Text;
@@ -114,19 +114,21 @@ namespace QuanLyNhanSu
             else
             {
                 XtraMessageBox.Show(validate.Message, "Loi");
+                return false;
             }
+            return true;
            
 
         }
         private void insert_record(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             this.Close();
         }
 
         private void insert_record_continue(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             Init_Data();
 
         }

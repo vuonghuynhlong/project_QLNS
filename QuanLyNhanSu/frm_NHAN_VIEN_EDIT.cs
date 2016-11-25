@@ -30,6 +30,9 @@ namespace QuanLyNhanSu
             LOGIC_COMMON.Init_Lookup_Edit_DataSource(cbo_PROFESSIONAL, DAO_DIC_PROFESSIONAL.Get_View_Data(), "Mã Chuyên Môn", "Tên Chuyên Môn");
             LOGIC_COMMON.Init_Lookup_Edit_DataSource(cbo_SCHOOL, DAO_DIC_SCHOOL.Get_View_Data(), "Mã Trường", "Tên Trường");
             LOGIC_COMMON.Init_Lookup_Edit_DataSource(cbo_EDUCATION, DAO_DIC_EDUCATION.Get_View_Data(), "Mã Học Vấn", "Tên Học Vấn");
+            LOGIC_COMMON.Init_Lookup_Edit_DataSource(cbo_DEPARTMENT, DAO_DIC_DEPARTMENT.Get_View_Data(), "Mã Phòng Ban", "Tên Phòng Ban");
+            LOGIC_COMMON.Init_Lookup_Edit_DataSource(cbo_WORK_STATE, DAO_DIC_WORK_STATE.Get_View_Data(), "Mã Trạng Thái", "Tên Trạng Thái");
+            
         }
         public frm_NHAN_VIEN_EDIT(string code)
         {
@@ -58,7 +61,7 @@ namespace QuanLyNhanSu
             txt_LAST_NAME.Text = old_entity.LastName;
             txt_ALIAS.Text = old_entity.Alias;
             bool sex = (bool) old_entity.Sex;
-
+            cbo_WORK_STATE.EditValue = old_entity.WorkStateCode;
             chk_SEX.Checked = sex;
             date_BIRTHDAY.DateTime =(DateTime) old_entity.Birthday;
             txt_BIRTH_PLACE.Text = old_entity.BirthPlace;
@@ -78,18 +81,12 @@ namespace QuanLyNhanSu
             cbo_LANGUAGE.EditValue = old_entity.Language;
             cbo_INFORMATIC.EditValue = old_entity.Informatic;
             cbo_PROFESSIONAL.EditValue = old_entity.Professional;
-          //  cbo_DEGREE.Text = old_entity.Degree;
+            cbo_DEPARTMENT.EditValue = old_entity.DepartmentCode;
             cbo_SCHOOL.EditValue = old_entity.School;
-            //cbo_TRANG_THAI_NHAN_VIEN.Text = old_entity.
-
-
-
-            //txt_LANGUAGE_CODE.Text = old_entity.EmployeeCode;
-            //txt_LANGUAGE_NAME.Text = old_entity.LanguageName;
-            //txt_DESCRIPTION.Text = old_entity.Description;
-           
+            if (old_entity.Photo!=null) {
+                pic_PHOTO.Image = LOGIC_COMMON.Byte_To_Bitmap(old_entity.Photo);
+            }
         }
-
         private void btn_SAVE_Click(object sender, EventArgs e)
         {
             new_entity = new HRM_EMPLOYEE();
@@ -102,7 +99,8 @@ namespace QuanLyNhanSu
             new_entity.Alias = txt_ALIAS.Text;
             new_entity.Marriage = cbo_MARRIAGE.Text;
             new_entity.IDCard = txt_IDCARD.Text;
-
+            new_entity.DepartmentCode = cbo_DEPARTMENT.EditValue.ToString();
+            new_entity.WorkStateCode = (cbo_WORK_STATE.EditValue == null ? null : cbo_WORK_STATE.EditValue.ToString());
             new_entity.IDCardDate = date_IDCARD.DateTime;
             new_entity.IDCardPlace = txt_IDCARD_PLACE.Text;
             new_entity.MainAddress = txt_MAIN_ADDRESS.Text;
@@ -111,27 +109,28 @@ namespace QuanLyNhanSu
             new_entity.Email = txt_EMAIL.Text;
             new_entity.Nationality = cbo_NATIONALITY.EditValue.ToString();
             new_entity.Religion = (cbo_RELIGION.EditValue == null ?  null : cbo_RELIGION.EditValue.ToString());
-            new_entity.Ethnic = cbo_ETHNIC.EditValue.ToString();
-            new_entity.Education = cbo_EDUCATION.EditValue.ToString();
-            new_entity.Language = cbo_LANGUAGE.EditValue.ToString();
+            new_entity.Ethnic = (cbo_ETHNIC.EditValue == null ? null : cbo_ETHNIC.EditValue.ToString());
+            new_entity.Education = (cbo_EDUCATION.EditValue == null ? null : cbo_EDUCATION.EditValue.ToString());
+            new_entity.Language = (cbo_LANGUAGE.EditValue == null ? null : cbo_LANGUAGE.EditValue.ToString());
             new_entity.Informatic = (cbo_INFORMATIC.EditValue== null ? null : cbo_INFORMATIC.EditValue.ToString());
-            new_entity.Professional = cbo_PROFESSIONAL.EditValue.ToString();
+            new_entity.Professional = (cbo_PROFESSIONAL.EditValue == null ? null : cbo_PROFESSIONAL.EditValue.ToString());
             new_entity.School = (cbo_SCHOOL.EditValue == null ? null : cbo_SCHOOL.EditValue.ToString());
-            //new_entity.EmployeeCode = txt_LANGUAGE_CODE.Text;
-            //new_entity.LanguageName = txt_LANGUAGE_NAME.Text;
-            //new_entity.Description = txt_DESCRIPTION.Text;
-            //new_entity.Active = old_entity.Active;
+            if (pic_PHOTO.Image != null)
+                new_entity.Photo = LOGIC_COMMON.Bitmap_To_Byte(pic_PHOTO.Image);
+           
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if (validate.Status)
             {
                 DAO_HRM_EMPLOYEE.Update(old_entity, new_entity);
+                DAO_DIC_DEPARTMENT.Update_Quanlity(old_entity.DepartmentCode);
+                DAO_DIC_DEPARTMENT.Update_Quanlity(new_entity.DepartmentCode);
                 this.DialogResult = DialogResult.OK;
             }
             else
             {
-                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!"); 
             }
-            this.DialogResult = DialogResult.OK;
+            //this.DialogResult = DialogResult.OK;
         }
         // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
 
@@ -139,9 +138,10 @@ namespace QuanLyNhanSu
         public frm_NHAN_VIEN_EDIT(frm_NHAN_VIEN parent_frm, bool is_insert)
         {
             InitializeComponent();
-
+            Init_Reference_Data();
             Init_Data();
-
+            LayoutControlItem item_save = layout_CONTROL.GetItemByControl(btn_SAVE);
+            item_save.Parent.Remove(item_save);
             this.btn_INSERT_CONTINUE.Click += insert_record_continue;
             this.btn_INSERT.Click += insert_record;
 
@@ -157,38 +157,81 @@ namespace QuanLyNhanSu
            // txt_LANGUAGE_NAME.Text = string.Empty;
            // txt_DESCRIPTION.Text = string.Empty;
            //// chk_IS_MANAGER.Checked = false;
-            
+            txt_EMPLOYEE_CODE.Text = LOGIC_COMMON.Generate_Code("NV");
+            txt_FIRST_NAME.Text = string.Empty;
+            txt_LAST_NAME.Text = string.Empty;
+            chk_SEX.Checked = false;
+            txt_IDCARD.Text = string.Empty;
+            date_IDCARD.DateTime = DateTime.Now;
+            txt_IDCARD_PLACE.Text = string.Empty;
+            date_BIRTHDAY.DateTime = DateTime.Now;
+            txt_BIRTH_PLACE.Text=string.Empty;
+            cbo_MARRIAGE.EditValue=null;            
+            txt_MAIN_ADDRESS.Text = string.Empty;
+            txt_CONTACT_ADDRESS.Text=string.Empty;
+            txt_CELL_PHONE.Text=string.Empty;
+            txt_EMAIL.Text=string.Empty;
+            cbo_LANGUAGE.EditValue=null;
+            cbo_EDUCATION.EditValue=null;
+            cbo_PROFESSIONAL.EditValue=null;
+            cbo_SCHOOL.EditValue=null;
+            cbo_NATIONALITY.EditValue = null;
+            cbo_ETHNIC.EditValue = null;
+            cbo_WORK_STATE.EditValue = null ;
+            cbo_RELIGION.EditValue = "TG000004";
+            pic_PHOTO.Image = QuanLyNhanSu.Properties.Resources.NATION;
         }
-        private void Insert()
+        private bool Insert()
         {
             new_entity = new HRM_EMPLOYEE();
-            //new_entity.EmployeeCode = txt_LANGUAGE_CODE.Text;
-            //new_entity.LanguageName = txt_LANGUAGE_NAME.Text;
-            //new_entity.Description = txt_DESCRIPTION.Text;
-            //new_entity.IsManager = chk_IS_MANAGER.Checked;
-            //new_entity.Active = true;
+            new_entity.EmployeeCode = txt_EMPLOYEE_CODE.Text;
+            new_entity.FirstName = txt_FIRST_NAME.Text;
+            new_entity.LastName = txt_LAST_NAME.Text;
+            new_entity.Sex = chk_SEX.Checked;
+            new_entity.IDCard = txt_IDCARD.Text;
+            new_entity.Birthday = date_BIRTHDAY.DateTime;
+            new_entity.BirthPlace = txt_BIRTH_PLACE.Text;
+            new_entity.Marriage = cbo_MARRIAGE.Text;
+            new_entity.IDCardDate = date_IDCARD.DateTime;
+            new_entity.IDCardPlace = txt_IDCARD_PLACE.Text;
+            new_entity.MainAddress = txt_MAIN_ADDRESS.Text;
+            new_entity.ContactAddress = txt_CONTACT_ADDRESS.Text;
+            new_entity.CellPhone = txt_CELL_PHONE.Text;
+            new_entity.Email = txt_EMAIL.Text;
+            new_entity.Photo = LOGIC_COMMON.Bitmap_To_Byte(pic_PHOTO.Image);
+            new_entity.Language = (cbo_LANGUAGE.EditValue == null ? "" : cbo_LANGUAGE.EditValue.ToString());
+            new_entity.Education = (cbo_EDUCATION.EditValue == null ? "" : cbo_EDUCATION.EditValue.ToString());
+            new_entity.Professional = (cbo_PROFESSIONAL.EditValue == null ? "" : cbo_PROFESSIONAL.EditValue.ToString());
+            new_entity.Nationality = (cbo_NATIONALITY.EditValue == null ? "":cbo_NATIONALITY.EditValue.ToString());
+            new_entity.Ethnic = (cbo_ETHNIC.EditValue == null ? "" : cbo_ETHNIC.EditValue.ToString());
+            new_entity.Religion = (cbo_RELIGION.EditValue == null ? "" : cbo_RELIGION.EditValue.ToString());
+            new_entity.School = (cbo_SCHOOL.EditValue == null ? "" : cbo_SCHOOL.EditValue.ToString());
+            new_entity.WorkStateCode = (cbo_WORK_STATE.EditValue == null ? null : cbo_WORK_STATE.EditValue.ToString());
+            new_entity.DepartmentCode = (cbo_DEPARTMENT.EditValue == null ? null : cbo_DEPARTMENT.EditValue.ToString());
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if(validate.Status)
             {
                 DAO_HRM_EMPLOYEE.Add(new_entity);
-                //parent.dg_DATA.DataSource = DAO_HRM_EMPLOYEE.Get_Data();
+                DAO_DIC_DEPARTMENT.Update_Quanlity(new_entity.DepartmentCode);
+                parent.dg_DATA.DataSource = DAO_HRM_EMPLOYEE.Get_Data();
             }
             else
             {
-                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!"); 
+                return false;
             }
-
+            return true;
         }
         private void insert_record(object sender, EventArgs e)
         {
-            Insert();
-            this.Close();
+            if (Insert())
+                this.Close();
         }
 
         private void insert_record_continue(object sender, EventArgs e)
         {
-            Insert();
-            Init_Data();
+            if(Insert())
+                Init_Data();
 
         }
 
@@ -238,6 +281,13 @@ namespace QuanLyNhanSu
         {
             frm_TIN_HOC_EDIT frm_TH = new frm_TIN_HOC_EDIT(null, true);
             frm_TH.ShowDialog();
+            Init_Reference_Data();
+        }
+
+        private void btn_frm_DEPARTMENT_Click(object sender, EventArgs e)
+        {
+            frm_PHONG_BAN_EDIT frm_PB = new frm_PHONG_BAN_EDIT(null, true);
+            frm_PB.ShowDialog();
             Init_Reference_Data();
         }
        

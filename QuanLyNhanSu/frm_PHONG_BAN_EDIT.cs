@@ -67,7 +67,7 @@ namespace QuanLyNhanSu
             }
             else
             {
-                XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+                XtraMessageBox.Show(validate.Message, "Lỗi.!!!"); 
             }
         }
 
@@ -91,7 +91,7 @@ namespace QuanLyNhanSu
             txt_FACT_QUANLITY.Text = "0";
 
         }
-        private void Insert()
+        private bool Insert()
         {
             new_entity = new DIC_DEPARTMENT();
             new_entity.DepartmentCode = txt_DEPARTMENT_CODE.Text;
@@ -110,16 +110,19 @@ namespace QuanLyNhanSu
             else
             {
                 XtraMessageBox.Show(validate.Message, "Lỗi.!!!");
+
+                return false;
             }
+            return true;
         }
         private void insert_record(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             this.Close();
         }
         private void insert_record_continue(object sender, EventArgs e)
         {
-            Insert();
+            if (Insert())
             Init_Data();
 
         }
