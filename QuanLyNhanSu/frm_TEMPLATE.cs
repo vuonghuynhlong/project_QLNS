@@ -17,7 +17,5 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
         }
-
-     
     }
 }
