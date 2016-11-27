@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.btn_EXPORT = new DevExpress.XtraEditors.SimpleButton();
             this.cb_FILE_TYPE = new System.Windows.Forms.ComboBox();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.btn_EXPORT = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -53,9 +53,20 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(296, 85);
+            this.layoutControl1.Size = new System.Drawing.Size(296, 81);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // btn_EXPORT
+            // 
+            this.btn_EXPORT.Image = global::QuanLyNhanSu.Properties.Resources.EXPORT1;
+            this.btn_EXPORT.Location = new System.Drawing.Point(203, 47);
+            this.btn_EXPORT.Name = "btn_EXPORT";
+            this.btn_EXPORT.Size = new System.Drawing.Size(81, 22);
+            this.btn_EXPORT.StyleController = this.layoutControl1;
+            this.btn_EXPORT.TabIndex = 5;
+            this.btn_EXPORT.Text = "Xuất";
+            this.btn_EXPORT.Click += new System.EventHandler(this.btn_EXPORT_Click);
             // 
             // cb_FILE_TYPE
             // 
@@ -80,7 +91,7 @@
             this.emptySpaceItem2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(296, 85);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(296, 81);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -92,10 +103,19 @@
             this.layoutControlItem1.Text = "Chọn Kiểu Dữ Liệu Xuất";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(112, 13);
             // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.btn_EXPORT;
+            this.layoutControlItem2.Location = new System.Drawing.Point(191, 35);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(85, 26);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 39);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 35);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(191, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -105,44 +125,27 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 25);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(276, 14);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(276, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // btn_EXPORT
-            // 
-            this.btn_EXPORT.Image = global::QuanLyNhanSu.Properties.Resources.EXPORT1;
-            this.btn_EXPORT.Location = new System.Drawing.Point(203, 51);
-            this.btn_EXPORT.Name = "btn_EXPORT";
-            this.btn_EXPORT.Size = new System.Drawing.Size(81, 22);
-            this.btn_EXPORT.StyleController = this.layoutControl1;
-            this.btn_EXPORT.TabIndex = 5;
-            this.btn_EXPORT.Text = "Xuất";
-            this.btn_EXPORT.Click += new System.EventHandler(this.btn_EXPORT_Click);
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.btn_EXPORT;
-            this.layoutControlItem2.Location = new System.Drawing.Point(191, 39);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(85, 26);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // frm_EXPORT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 85);
+            this.ClientSize = new System.Drawing.Size(296, 81);
             this.Controls.Add(this.layoutControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_EXPORT";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XUẤT DỮ LIỆU";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
 
         }

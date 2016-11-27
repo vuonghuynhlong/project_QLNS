@@ -214,6 +214,12 @@
     <Compile Include="frm_PHONG_BAN_EDIT.Designer.cs">
       <DependentUpon>frm_PHONG_BAN_EDIT.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_QUAN_LY_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QUAN_LY_IN.Designer.cs">
+      <DependentUpon>frm_QUAN_LY_IN.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_QUOC_TICH.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -330,6 +336,9 @@
     <EmbeddedResource Include="frm_PHONG_BAN_EDIT.resx">
       <DependentUpon>frm_PHONG_BAN_EDIT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_QUAN_LY_IN.resx">
+      <DependentUpon>frm_QUAN_LY_IN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_QUOC_TICH.resx">
       <DependentUpon>frm_QUOC_TICH.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +438,8 @@
     <None Include="Resources\PRINT.png" />
     <None Include="Resources\NO_PHOTO.jpg" />
     <None Include="Resources\EXPORT1.png" />
+    <None Include="Resources\LOOK.png" />
+    <None Include="Resources\QUIT2.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
