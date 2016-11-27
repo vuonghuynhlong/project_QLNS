@@ -65,7 +65,6 @@ namespace QuanLyNhanSu
 
         void insert_record(object sender, EventArgs e)
         {
-            //frm_DAN_TOC_EDIT frm_edit = new frm_DAN_TOC_EDIT(this, true);
             frm_DAN_TOC_EDIT frm_edit = new frm_DAN_TOC_EDIT(this, true);
             frm_edit.ShowDialog();
         }

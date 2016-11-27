@@ -71,7 +71,7 @@ namespace QuanLyNhanSu
             DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();
             if (current_row == null)
                 return;
-            string row_code = current_row.Row.ItemArray[0].ToString();
+            string row_code = current_row.Row.ItemArray[1].ToString();
             DialogResult dlg = XtraMessageBox.Show("Bạn có chắc xóa mã : " + row_code + "?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (dlg == DialogResult.Yes)
             {
@@ -82,6 +82,7 @@ namespace QuanLyNhanSu
 
                 if (rowHandle != DevExpress.XtraGrid.GridControl.InvalidRowHandle)
                     gv_DATA.FocusedRowHandle = Math.Min(rowHandle, gv_DATA.DataRowCount - 1);
+                Grid_Process();
             }
         }
         void insert_record(object sender, EventArgs e)

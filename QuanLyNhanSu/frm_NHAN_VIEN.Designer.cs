@@ -112,7 +112,7 @@
             this.pic_REFRESH.Size = new System.Drawing.Size(119, 56);
             this.pic_REFRESH.StyleController = this.layout_CONTROL;
             this.pic_REFRESH.TabIndex = 8;
-            this.pic_REFRESH.ToolTip = "Lam moi";
+            this.pic_REFRESH.ToolTip = "Làm mới";
             // 
             // pic_EXPORT
             // 
@@ -125,7 +125,7 @@
             this.pic_EXPORT.Size = new System.Drawing.Size(117, 56);
             this.pic_EXPORT.StyleController = this.layout_CONTROL;
             this.pic_EXPORT.TabIndex = 6;
-            this.pic_EXPORT.ToolTip = "Xuat du lieu";
+            this.pic_EXPORT.ToolTip = "Xuất dữ liệu";
             // 
             // pic_DELETE
             // 
@@ -138,7 +138,7 @@
             this.pic_DELETE.Size = new System.Drawing.Size(120, 56);
             this.pic_DELETE.StyleController = this.layout_CONTROL;
             this.pic_DELETE.TabIndex = 7;
-            this.pic_DELETE.ToolTip = "Xoa";
+            this.pic_DELETE.ToolTip = "Xóa";
             // 
             // pic_UPDATE
             // 
@@ -151,7 +151,7 @@
             this.pic_UPDATE.Size = new System.Drawing.Size(124, 56);
             this.pic_UPDATE.StyleController = this.layout_CONTROL;
             this.pic_UPDATE.TabIndex = 5;
-            this.pic_UPDATE.ToolTip = "Sua";
+            this.pic_UPDATE.ToolTip = "Sửa";
             // 
             // pic_INSERT
             // 
@@ -164,7 +164,7 @@
             this.pic_INSERT.Size = new System.Drawing.Size(117, 56);
             this.pic_INSERT.StyleController = this.layout_CONTROL;
             this.pic_INSERT.TabIndex = 4;
-            this.pic_INSERT.ToolTip = "Them";
+            this.pic_INSERT.ToolTip = "Thêm";
             // 
             // layout_GROUP
             // 

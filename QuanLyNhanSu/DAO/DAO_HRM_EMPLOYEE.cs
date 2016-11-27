@@ -2768,21 +2768,53 @@ namespace QuanLyNhanSu.DAO
             sql = sql + "     ,[ContractType] AS [Kiểu Hợp Đồng]";
             sql = sql + "     ,[ContractSignDate] AS [Ngày Ký]";
             sql = sql + "     ,[ContractFromDate] AS [Kể Từ Ngày]";
-            sql = sql + "     ,[ContractToDate] AS [Đến Ngày]";            
+            sql = sql + "     ,[ContractToDate] AS [Đến Ngày]";
             sql = sql + " FROM HRM_EMPLOYEE A, DIC_SCHOOL B, DIC_PROFESSIONAL C, DIC_DEPARTMENT D, DIC_WORK_STATE E";
             sql = sql + " WHERE A.School = B.SchoolCode ";
             sql = sql + " AND A.Professional = C.ProfessionalCode ";
             sql = sql + " AND A.DepartmentCode = D.DepartmentCode ";
             sql = sql + " AND A.WorkStateCode = E.WorkStateCode";
-            sql = sql + " AND A.WorkStateCode IN ('TT000001','TT000003')";
-          
+            sql = sql + " AND A.WorkStateCode IN ('TT000001','TT000003')";          
             return Select_Table(sql);
 
         }
 
+
+
         public static bool Delete(string code)
         {
-            return Delete("HRM_EMPLOYEE", "EmployeeCode", code);
+            SqlConnection connection = DAO_BASE.Get_Connection();
+            string deleteStatement
+                = "UPDATE"
+                + "  [HRM_EMPLOYEE]"
+                + " SET "
+                + " WorkStateCode ='TT000004'"
+                + "  WHERE [EmployeeCode] = @Code";
+            SqlCommand deleteCommand = new SqlCommand(deleteStatement, connection);
+            deleteCommand.CommandType = CommandType.Text;
+            deleteCommand.Parameters.AddWithValue("@Code", code);
+            try
+            {
+                connection.Open();
+                int count = deleteCommand.ExecuteNonQuery();
+                if (count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 
