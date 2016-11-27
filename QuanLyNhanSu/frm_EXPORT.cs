@@ -25,7 +25,14 @@ namespace QuanLyNhanSu
         {
             SaveFileDialog dlg_save = new SaveFileDialog();
             string file_type = cb_FILE_TYPE.Text;
-            dlg_save.Filter =string.Format("(*.{0})|*.{0}",file_type);
+            string file_extension = file_type;
+            
+            if (file_type == "Excel")
+            {
+                file_extension = "xls";
+            }
+
+            dlg_save.Filter = string.Format("(*.{0})|*.{1}", file_type, file_extension);
             if (dlg_save.ShowDialog() == DialogResult.OK){
                 string file_path = dlg_save.FileName;
              
@@ -33,12 +40,16 @@ namespace QuanLyNhanSu
                 {
                     grid.ExportToXls(file_path);
                 }
+                if (file_type == "PDF")
+                {
+                    grid.ExportToPdf(file_path);
+                }
 
-          
-
+                if (file_type == "HTML")
+                {
+                    grid.ExportToHtml(file_path);
+                }
             }
-            
-            
         }
     }
 }

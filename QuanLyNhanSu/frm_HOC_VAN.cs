@@ -20,10 +20,16 @@ namespace QuanLyNhanSu
             this.gv_DATA.DoubleClick += edit_record;
             this.pic_UPDATE.Click    += edit_record;
             this.pic_DELETE.Click    += delete_record;
-            this.pic_INSERT.Click += insert_record;
+            this.pic_INSERT.Click    += insert_record;
+            this.pic_EXPORT.Click    += export_data;
         }
 
-        
+        private void export_data(object sender, EventArgs e)
+        {
+            frm_EXPORT frm = new frm_EXPORT(gv_DATA);
+            frm.ShowDialog();
+        }
+
         string column_code = "Mã Học Vấn";
 
         void frm_Load(object sender, EventArgs e)

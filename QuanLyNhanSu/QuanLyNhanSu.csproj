@@ -428,6 +428,7 @@
     <None Include="Resources\QUIT.png" />
     <None Include="Resources\PRINT.png" />
     <None Include="Resources\NO_PHOTO.jpg" />
+    <None Include="Resources\EXPORT1.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
