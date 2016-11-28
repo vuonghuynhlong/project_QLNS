@@ -162,7 +162,7 @@
             this.pic_INSERT.Size = new System.Drawing.Size(117, 56);
             this.pic_INSERT.StyleController = this.layout_CONTROL;
             this.pic_INSERT.TabIndex = 4;
-            this.pic_INSERT.ToolTip = "Thêm";
+            this.pic_INSERT.ToolTip = "Thêm mới";
             // 
             // layout_GROUP
             // 

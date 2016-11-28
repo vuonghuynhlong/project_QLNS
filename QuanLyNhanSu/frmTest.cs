@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using QuanLyNhanSu.DAO;
 using QuanLyNhanSu.ENTITY;
 using QuanLyNhanSu.LOGIC;
+using DevExpress.XtraReports.UI;
+using DevExpress.LookAndFeel;
+
 namespace QuanLyNhanSu
 {
     public partial class frmTest : Form
@@ -33,9 +36,7 @@ namespace QuanLyNhanSu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Image img = pictureEdit1.Image;
-            byte[] abc = LOGIC_COMMON.Bitmap_To_Byte(img);
-            MessageBox.Show("Test");
+          
         }
     }
 }

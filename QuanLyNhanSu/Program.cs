@@ -21,8 +21,8 @@ namespace QuanLyNhanSu
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
-            Application.Run(new frm_QUAN_LY_IN());
-           // Application.Run(new frmTest());
+           // Application.Run(new frm_QUAN_LY_IN());
+           Application.Run(new frm_SHOW_PHONG_BAN());
         }
     }
 }
