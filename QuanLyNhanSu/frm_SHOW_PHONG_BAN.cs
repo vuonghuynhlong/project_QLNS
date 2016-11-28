@@ -29,13 +29,13 @@ namespace QuanLyNhanSu
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            ReportPrintTool printTool;
-            REPORT.RPT_NHAN_VIEN_PHONG_BAN rpt = new REPORT.RPT_NHAN_VIEN_PHONG_BAN();
+            //ReportPrintTool printTool;
+            //REPORT.RPT_NHAN_VIEN_PHONG_BAN rpt = new REPORT.RPT_NHAN_VIEN_PHONG_BAN();
 
-            rpt.FilterString = "[DepartmentCode] = '" + lookUpEdit1.EditValue.ToString()+ "'";
-            printTool = new ReportPrintTool(rpt);
-            printTool.ShowPreviewDialog();
-            printTool.ShowPreviewDialog(UserLookAndFeel.Default);
+            //rpt.FilterString = "[DepartmentCode] = '" + lookUpEdit1.EditValue.ToString()+ "'";
+            //printTool = new ReportPrintTool(rpt);
+            //printTool.ShowPreviewDialog();
+            //printTool.ShowPreviewDialog(UserLookAndFeel.Default);
         }
     }
 }

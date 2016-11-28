@@ -30,11 +30,11 @@ namespace QuanLyNhanSu
             string node_text = tree_HS_NHAN_VIEN.SelectedNode.Text;
             if (node_text == "Danh sách nhân viên nghỉ làm")
             {
-                ReportPrintTool printTool;
-                REPORT.RPT_DANH_SACH_NHAN_VIEN rpt = new REPORT.RPT_DANH_SACH_NHAN_VIEN();
-                printTool = new ReportPrintTool(rpt);
-                printTool.ShowPreviewDialog();
-                printTool.ShowPreviewDialog(UserLookAndFeel.Default);
+                //ReportPrintTool printTool;
+                //REPORT.RPT_DANH_SACH_NHAN_VIEN rpt = new REPORT.RPT_DANH_SACH_NHAN_VIEN();
+                //printTool = new ReportPrintTool(rpt);
+                //printTool.ShowPreviewDialog();
+                //printTool.ShowPreviewDialog(UserLookAndFeel.Default);
             }
              if (node_text == "Danh sách nhân viên theo phòng ban")
             {
