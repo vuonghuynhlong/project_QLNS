@@ -350,6 +350,12 @@
     <Compile Include="REPORT\XtraReport5.Designer.cs">
       <DependentUpon>XtraReport5.cs</DependentUpon>
     </Compile>
+    <Compile Include="REPORT\XtraReport6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\XtraReport6.Designer.cs">
+      <DependentUpon>XtraReport6.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REPORT\XtraReport5.resx">
       <DependentUpon>XtraReport5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\XtraReport6.resx">
+      <DependentUpon>XtraReport6.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

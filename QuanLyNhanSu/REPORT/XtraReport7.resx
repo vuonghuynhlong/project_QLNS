@@ -117,16 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ds_EMP_MANAGEMENT1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="dIC_ALLOWANCETableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="diC_DEPARTMENTTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <metadata name="fileSystemWatcher1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkhSTV9FTVBMT1lFRSI+PEZpZWxkIE5hbWU9IkVtcGxveWVlQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXBhcnRtZW50Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaXJzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGFzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2V4IiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJNYXJyaWFnZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCaXJ0aGRheSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik1haW5BZGRyZXNzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNlbGxQaG9uZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFbWFpbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOYXRpb25hbGl0eSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFdGhuaWMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUmVsaWdpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRWR1Y2F0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhbmd1YWdlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkluZm9ybWF0aWMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvZmVzc2lvbmFsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBvc2l0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNjaG9vbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJRENhcmQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udHJhY3RUeXBlIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
 </root>

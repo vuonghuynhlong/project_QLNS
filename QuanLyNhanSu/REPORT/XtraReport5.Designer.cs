@@ -49,9 +49,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression8 = new DevExpress.DataAccess.Sql.ColumnExpression();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReport5));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -67,6 +65,9 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -77,7 +78,6 @@
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
             this.GT = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -104,6 +104,178 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.GT")});
+            this.xrLabel4.Dpi = 100F;
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(118F, 63.00001F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(47.41666F, 18.00001F);
+            this.xrLabel4.Text = "xrLabel4";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Dpi = 100F;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 9.000015F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel1.StyleName = "FieldCaption";
+            this.xrLabel1.Text = "Mã nhân viên:";
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.Dpi = 100F;
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 27.00001F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel2.StyleName = "FieldCaption";
+            this.xrLabel2.Text = "Họ lót:";
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.Dpi = 100F;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 45.00001F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel3.StyleName = "FieldCaption";
+            this.xrLabel3.Text = "Tên:";
+            // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Dpi = 100F;
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 81.00001F);
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel5.StyleName = "FieldCaption";
+            this.xrLabel5.Text = "Ngày sinh:";
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.Dpi = 100F;
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 99.00001F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel6.StyleName = "FieldCaption";
+            this.xrLabel6.Text = "Số điện thoại:";
+            // 
+            // xrLabel7
+            // 
+            this.xrLabel7.Dpi = 100F;
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 117F);
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel7.StyleName = "FieldCaption";
+            this.xrLabel7.Text = "Tại phòng ban:";
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.Dpi = 100F;
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 135F);
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(112F, 18F);
+            this.xrLabel8.StyleName = "FieldCaption";
+            this.xrLabel8.Text = "Địa chỉ:";
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.EmployeeCode")});
+            this.xrLabel9.Dpi = 100F;
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(118F, 9.000015F);
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
+            this.xrLabel9.StyleName = "DataField";
+            this.xrLabel9.Text = "xrLabel9";
+            // 
+            // xrLabel10
+            // 
+            this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.FirstName")});
+            this.xrLabel10.Dpi = 100F;
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(118F, 27.00001F);
+            this.xrLabel10.Name = "xrLabel10";
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
+            this.xrLabel10.StyleName = "DataField";
+            this.xrLabel10.Text = "xrLabel10";
+            // 
+            // xrLabel11
+            // 
+            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.LastName")});
+            this.xrLabel11.Dpi = 100F;
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(118F, 45.00001F);
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
+            this.xrLabel11.StyleName = "DataField";
+            this.xrLabel11.Text = "xrLabel11";
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.Birthday")});
+            this.xrLabel12.Dpi = 100F;
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(118F, 81.00001F);
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(182.8333F, 18F);
+            this.xrLabel12.StyleName = "DataField";
+            this.xrLabel12.Text = "xrLabel12";
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.CellPhone")});
+            this.xrLabel13.Dpi = 100F;
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(118F, 99.00001F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(182.8333F, 18.00002F);
+            this.xrLabel13.StyleName = "DataField";
+            this.xrLabel13.Text = "xrLabel13";
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.DepartmentCode")});
+            this.xrLabel14.Dpi = 100F;
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(118F, 117F);
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(182.8333F, 17.99999F);
+            this.xrLabel14.StyleName = "DataField";
+            this.xrLabel14.Text = "xrLabel14";
+            // 
+            // xrLabel15
+            // 
+            this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.MainAddress")});
+            this.xrLabel15.Dpi = 100F;
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(118F, 135F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(526F, 18F);
+            this.xrLabel15.StyleName = "DataField";
+            this.xrLabel15.Text = "xrLabel15";
+            // 
+            // xrLine1
+            // 
+            this.xrLine1.Dpi = 100F;
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 3F);
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.SizeF = new System.Drawing.SizeF(638F, 2F);
             // 
             // TopMargin
             // 
@@ -165,179 +337,19 @@
             selectQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Dpi = 100F;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 9.000015F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel1.StyleName = "FieldCaption";
-            this.xrLabel1.Text = "Mã nhân viên:";
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Dpi = 100F;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 27.00001F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel2.StyleName = "FieldCaption";
-            this.xrLabel2.Text = "Họ lót:";
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.Dpi = 100F;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 45.00001F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel3.StyleName = "FieldCaption";
-            this.xrLabel3.Text = "Tên:";
-            // 
-            // xrLabel5
-            // 
-            this.xrLabel5.Dpi = 100F;
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 81.00001F);
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel5.StyleName = "FieldCaption";
-            this.xrLabel5.Text = "Ngày sinh:";
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.Dpi = 100F;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 99.00001F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel6.StyleName = "FieldCaption";
-            this.xrLabel6.Text = "Số điện thoại:";
-            // 
-            // xrLabel7
-            // 
-            this.xrLabel7.Dpi = 100F;
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 117F);
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel7.StyleName = "FieldCaption";
-            this.xrLabel7.Text = "Tại phòng ban:";
-            // 
-            // xrLabel8
-            // 
-            this.xrLabel8.Dpi = 100F;
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(6.00001F, 135F);
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(112F, 18F);
-            this.xrLabel8.StyleName = "FieldCaption";
-            this.xrLabel8.Text = "Địa chỉ:";
-            // 
-            // xrLabel9
-            // 
-            this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.EmployeeCode")});
-            this.xrLabel9.Dpi = 100F;
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(118F, 9.000015F);
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
-            this.xrLabel9.StyleName = "DataField";
-            this.xrLabel9.Text = "xrLabel9";
-            // 
-            // xrLabel10
-            // 
-            this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.FirstName")});
-            this.xrLabel10.Dpi = 100F;
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(118F, 27.00001F);
-            this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
-            this.xrLabel10.StyleName = "DataField";
-            this.xrLabel10.Text = "xrLabel10";
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.LastName")});
-            this.xrLabel11.Dpi = 100F;
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(118F, 45.00001F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(182.8333F, 18.00001F);
-            this.xrLabel11.StyleName = "DataField";
-            this.xrLabel11.Text = "xrLabel11";
-            // 
-            // xrLabel12
-            // 
-            this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.Birthday")});
-            this.xrLabel12.Dpi = 100F;
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(118F, 81.00001F);
-            this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(182.8333F, 18F);
-            this.xrLabel12.StyleName = "DataField";
-            this.xrLabel12.Text = "xrLabel12";
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.CellPhone")});
-            this.xrLabel13.Dpi = 100F;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(118F, 99.00001F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(182.8333F, 18.00002F);
-            this.xrLabel13.StyleName = "DataField";
-            this.xrLabel13.Text = "xrLabel13";
-            // 
-            // xrLabel14
-            // 
-            this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.DepartmentCode")});
-            this.xrLabel14.Dpi = 100F;
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(118F, 117F);
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(182.8333F, 17.99999F);
-            this.xrLabel14.StyleName = "DataField";
-            this.xrLabel14.Text = "xrLabel14";
-            // 
-            // xrLabel15
-            // 
-            this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.MainAddress")});
-            this.xrLabel15.Dpi = 100F;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(118F, 135F);
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(526F, 18F);
-            this.xrLabel15.StyleName = "DataField";
-            this.xrLabel15.Text = "xrLabel15";
-            // 
-            // xrLine1
-            // 
-            this.xrLine1.Dpi = 100F;
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 3F);
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(638F, 2F);
-            // 
             // pageFooterBand1
             // 
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPageInfo1,
             this.xrPageInfo2});
             this.pageFooterBand1.Dpi = 100F;
-            this.pageFooterBand1.HeightF = 29F;
+            this.pageFooterBand1.HeightF = 29.00001F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             // 
             // xrPageInfo1
             // 
             this.xrPageInfo1.Dpi = 100F;
+            this.xrPageInfo1.Format = "{0:\'Cần Thơ ngày\' dd \'tháng\' MM \'năm\' yyyy}";
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -349,10 +361,10 @@
             // 
             this.xrPageInfo2.Dpi = 100F;
             this.xrPageInfo2.Format = "Page {0} of {1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(331F, 6F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(329.9583F, 6.00001F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
+            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(310.0417F, 23F);
             this.xrPageInfo2.StyleName = "PageInfo";
             this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -420,17 +432,6 @@
             this.GT.DataMember = "HRM_EMPLOYEE";
             this.GT.Expression = "Iif([Sex]==True,\'Nam\', \'Nữ\')";
             this.GT.Name = "GT";
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "HRM_EMPLOYEE.GT")});
-            this.xrLabel4.Dpi = 100F;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(118F, 63.00001F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(47.41666F, 18.00001F);
-            this.xrLabel4.Text = "xrLabel4";
             // 
             // XtraReport5
             // 
