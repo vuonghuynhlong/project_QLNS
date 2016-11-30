@@ -309,6 +309,12 @@
     <Compile Include="REPORT\CHUC_VU.Designer.cs">
       <DependentUpon>CHUC_VU.cs</DependentUpon>
     </Compile>
+    <Compile Include="REPORT\DANH_SACH_NHAN_VIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\DANH_SACH_NHAN_VIEN.Designer.cs">
+      <DependentUpon>DANH_SACH_NHAN_VIEN.cs</DependentUpon>
+    </Compile>
     <Compile Include="REPORT\ds_EMP_MANAGEMENT.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -456,6 +462,9 @@
     </Compile>
     <EmbeddedResource Include="REPORT\CHUC_VU.resx">
       <DependentUpon>CHUC_VU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\DANH_SACH_NHAN_VIEN.resx">
+      <DependentUpon>DANH_SACH_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORT\HOC_VAN.resx">
       <DependentUpon>HOC_VAN.cs</DependentUpon>
