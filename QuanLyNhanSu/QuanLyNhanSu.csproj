@@ -332,11 +332,17 @@
     <Compile Include="REPORT\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
-    <Compile Include="REPORT\XtraReport2.cs">
+    <Compile Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPORT\XtraReport2.Designer.cs">
-      <DependentUpon>XtraReport2.cs</DependentUpon>
+    <Compile Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.Designer.cs">
+      <DependentUpon>NHAN_VIEN_THEO_PHONG_BAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.Designer.cs">
+      <DependentUpon>DANH_SACH_TUNG_NHAN_VIEN.cs</DependentUpon>
     </Compile>
     <Compile Include="REPORT\XtraReport3.cs">
       <SubType>Component</SubType>
@@ -472,8 +478,11 @@
     <EmbeddedResource Include="REPORT\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORT\XtraReport2.resx">
-      <DependentUpon>XtraReport2.cs</DependentUpon>
+    <EmbeddedResource Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.resx">
+      <DependentUpon>NHAN_VIEN_THEO_PHONG_BAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.resx">
+      <DependentUpon>DANH_SACH_TUNG_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORT\XtraReport3.resx">
       <DependentUpon>XtraReport3.cs</DependentUpon>
