@@ -10,6 +10,7 @@ using QuanLyNhanSu.DAO;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Net.Mail;
 
 namespace QuanLyNhanSu.LOGIC
 {
@@ -97,6 +98,20 @@ namespace QuanLyNhanSu.LOGIC
                 return false;
             }
             return true;
+        }
+
+        public static bool Is_Email(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                 
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
 
         public static void Init_Lookup_Edit_DataSource(LookUpEdit lookup_edit, DataTable data, String value_member, String display_member) {

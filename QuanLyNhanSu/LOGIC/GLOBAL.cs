@@ -41,6 +41,7 @@ namespace QuanLyNhanSu.LOGIC
             {"E030", "Nơi cấp CMND không được rổng.!!!\r\n"},
             {"E031", "Chuyên môn không được rỗng.!!!\r\n"},
             {"E032", "Thông tin trường không được rỗng.!!!\r\n"},
+            {"E033", "Thông tin email không hợp lệ.!!!\r\n"},
         };
     }
 }
