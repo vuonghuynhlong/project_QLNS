@@ -19,6 +19,7 @@ namespace QuanLyNhanSu
         {
             InitializeComponent();
             this.grid = grid;
+
         }
 
         private void btn_EXPORT_Click(object sender, EventArgs e)

@@ -5585,6 +5585,20 @@ namespace QuanLyNhanSu.REPORT {
             
             private global::System.Data.DataColumn columnWorkStateCode;
             
+            private global::System.Data.DataColumn columnPositionName;
+            
+            private global::System.Data.DataColumn columnWorkStateName;
+            
+            private global::System.Data.DataColumn columnDepartmentName;
+            
+            private global::System.Data.DataColumn columnProfessionalName;
+            
+            private global::System.Data.DataColumn columnNationalityName;
+            
+            private global::System.Data.DataColumn columnEthnicName;
+            
+            private global::System.Data.DataColumn columnReligionName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public HRM_EMPLOYEEDataTable() {
@@ -6148,6 +6162,62 @@ namespace QuanLyNhanSu.REPORT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PositionNameColumn {
+                get {
+                    return this.columnPositionName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WorkStateNameColumn {
+                get {
+                    return this.columnWorkStateName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DepartmentNameColumn {
+                get {
+                    return this.columnDepartmentName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProfessionalNameColumn {
+                get {
+                    return this.columnProfessionalName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NationalityNameColumn {
+                get {
+                    return this.columnNationalityName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EthnicNameColumn {
+                get {
+                    return this.columnEthnicName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReligionNameColumn {
+                get {
+                    return this.columnReligionName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6249,7 +6319,14 @@ namespace QuanLyNhanSu.REPORT {
                         System.DateTime ContractSignDate, 
                         System.DateTime ContractFromDate, 
                         System.DateTime ContractToDate, 
-                        string WorkStateCode) {
+                        string WorkStateCode, 
+                        string PositionName, 
+                        string WorkStateName, 
+                        string DepartmentName, 
+                        string ProfessionalName, 
+                        string NationalityName, 
+                        string EthnicName, 
+                        string ReligionName) {
                 HRM_EMPLOYEERow rowHRM_EMPLOYEERow = ((HRM_EMPLOYEERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeCode,
@@ -6317,7 +6394,14 @@ namespace QuanLyNhanSu.REPORT {
                         ContractSignDate,
                         ContractFromDate,
                         ContractToDate,
-                        WorkStateCode};
+                        WorkStateCode,
+                        PositionName,
+                        WorkStateName,
+                        DepartmentName,
+                        ProfessionalName,
+                        NationalityName,
+                        EthnicName,
+                        ReligionName};
                 if ((parentDIC_NATIONALITYRowByFK__HRM_EMPLO__Natio__72C60C4A != null)) {
                     columnValuesArray[15] = parentDIC_NATIONALITYRowByFK__HRM_EMPLO__Natio__72C60C4A[0];
                 }
@@ -6440,6 +6524,13 @@ namespace QuanLyNhanSu.REPORT {
                 this.columnContractFromDate = base.Columns["ContractFromDate"];
                 this.columnContractToDate = base.Columns["ContractToDate"];
                 this.columnWorkStateCode = base.Columns["WorkStateCode"];
+                this.columnPositionName = base.Columns["PositionName"];
+                this.columnWorkStateName = base.Columns["WorkStateName"];
+                this.columnDepartmentName = base.Columns["DepartmentName"];
+                this.columnProfessionalName = base.Columns["ProfessionalName"];
+                this.columnNationalityName = base.Columns["NationalityName"];
+                this.columnEthnicName = base.Columns["EthnicName"];
+                this.columnReligionName = base.Columns["ReligionName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6577,6 +6668,20 @@ namespace QuanLyNhanSu.REPORT {
                 base.Columns.Add(this.columnContractToDate);
                 this.columnWorkStateCode = new global::System.Data.DataColumn("WorkStateCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkStateCode);
+                this.columnPositionName = new global::System.Data.DataColumn("PositionName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPositionName);
+                this.columnWorkStateName = new global::System.Data.DataColumn("WorkStateName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkStateName);
+                this.columnDepartmentName = new global::System.Data.DataColumn("DepartmentName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmentName);
+                this.columnProfessionalName = new global::System.Data.DataColumn("ProfessionalName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProfessionalName);
+                this.columnNationalityName = new global::System.Data.DataColumn("NationalityName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNationalityName);
+                this.columnEthnicName = new global::System.Data.DataColumn("EthnicName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEthnicName);
+                this.columnReligionName = new global::System.Data.DataColumn("ReligionName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReligionName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmployeeCode}, true));
                 this.columnEmployeeCode.AllowDBNull = false;
@@ -6614,6 +6719,14 @@ namespace QuanLyNhanSu.REPORT {
                 this.columnContractCode.MaxLength = 20;
                 this.columnContractType.MaxLength = 255;
                 this.columnWorkStateCode.MaxLength = 50;
+                this.columnPositionName.MaxLength = 100;
+                this.columnWorkStateName.AllowDBNull = false;
+                this.columnWorkStateName.MaxLength = 50;
+                this.columnDepartmentName.MaxLength = 100;
+                this.columnProfessionalName.MaxLength = 100;
+                this.columnNationalityName.MaxLength = 100;
+                this.columnEthnicName.MaxLength = 100;
+                this.columnReligionName.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9602,6 +9715,113 @@ namespace QuanLyNhanSu.REPORT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PositionName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.PositionNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PositionName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.PositionNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string WorkStateName {
+                get {
+                    return ((string)(this[this.tableHRM_EMPLOYEE.WorkStateNameColumn]));
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.WorkStateNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DepartmentName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.DepartmentNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmentName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.DepartmentNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ProfessionalName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.ProfessionalNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProfessionalName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.ProfessionalNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NationalityName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.NationalityNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NationalityName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.NationalityNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EthnicName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.EthnicNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EthnicName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.EthnicNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ReligionName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.ReligionNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ReligionName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRM_EMPLOYEE.ReligionNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DIC_EDUCATIONRow DIC_EDUCATIONRow {
                 get {
                     return ((DIC_EDUCATIONRow)(this.GetParentRow(this.Table.ParentRelations["FK__HRM_EMPLO__Educa__6EF57B66"])));
@@ -10477,6 +10697,78 @@ namespace QuanLyNhanSu.REPORT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetWorkStateCodeNull() {
                 this[this.tableHRM_EMPLOYEE.WorkStateCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPositionNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.PositionNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPositionNameNull() {
+                this[this.tableHRM_EMPLOYEE.PositionNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDepartmentNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.DepartmentNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDepartmentNameNull() {
+                this[this.tableHRM_EMPLOYEE.DepartmentNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProfessionalNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.ProfessionalNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProfessionalNameNull() {
+                this[this.tableHRM_EMPLOYEE.ProfessionalNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNationalityNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.NationalityNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNationalityNameNull() {
+                this[this.tableHRM_EMPLOYEE.NationalityNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEthnicNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.EthnicNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEthnicNameNull() {
+                this[this.tableHRM_EMPLOYEE.EthnicNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsReligionNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.ReligionNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReligionNameNull() {
+                this[this.tableHRM_EMPLOYEE.ReligionNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -17479,642 +17771,14 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
             tableMapping.ColumnMappings.Add("ContractFromDate", "ContractFromDate");
             tableMapping.ColumnMappings.Add("ContractToDate", "ContractToDate");
             tableMapping.ColumnMappings.Add("WorkStateCode", "WorkStateCode");
+            tableMapping.ColumnMappings.Add("PositionName", "PositionName");
+            tableMapping.ColumnMappings.Add("WorkStateName", "WorkStateName");
+            tableMapping.ColumnMappings.Add("DepartmentName", "DepartmentName");
+            tableMapping.ColumnMappings.Add("ProfessionalName", "ProfessionalName");
+            tableMapping.ColumnMappings.Add("NationalityName", "NationalityName");
+            tableMapping.ColumnMappings.Add("EthnicName", "EthnicName");
+            tableMapping.ColumnMappings.Add("ReligionName", "ReligionName");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[HRM_EMPLOYEE] WHERE (([EmployeeCode] = @Original_EmployeeCode)" +
-                " AND ((@IsNull_DepartmentCode = 1 AND [DepartmentCode] IS NULL) OR ([DepartmentC" +
-                "ode] = @Original_DepartmentCode)) AND ((@IsNull_EnrollNumber = 1 AND [EnrollNumb" +
-                "er] IS NULL) OR ([EnrollNumber] = @Original_EnrollNumber)) AND ((@IsNull_FirstNa" +
-                "me = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@I" +
-                "sNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName))" +
-                " AND ((@IsNull_Alias = 1 AND [Alias] IS NULL) OR ([Alias] = @Original_Alias)) AN" +
-                "D ((@IsNull_Sex = 1 AND [Sex] IS NULL) OR ([Sex] = @Original_Sex)) AND ((@IsNull" +
-                "_Marriage = 1 AND [Marriage] IS NULL) OR ([Marriage] = @Original_Marriage)) AND " +
-                "((@IsNull_Birthday = 1 AND [Birthday] IS NULL) OR ([Birthday] = @Original_Birthd" +
-                "ay)) AND ((@IsNull_BirthPlace = 1 AND [BirthPlace] IS NULL) OR ([BirthPlace] = @" +
-                "Original_BirthPlace)) AND ((@IsNull_MainAddress = 1 AND [MainAddress] IS NULL) O" +
-                "R ([MainAddress] = @Original_MainAddress)) AND ((@IsNull_ContactAddress = 1 AND " +
-                "[ContactAddress] IS NULL) OR ([ContactAddress] = @Original_ContactAddress)) AND " +
-                "((@IsNull_CellPhone = 1 AND [CellPhone] IS NULL) OR ([CellPhone] = @Original_Cel" +
-                "lPhone)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Em" +
-                "ail)) AND ((@IsNull_Nationality = 1 AND [Nationality] IS NULL) OR ([Nationality]" +
-                " = @Original_Nationality)) AND ((@IsNull_Ethnic = 1 AND [Ethnic] IS NULL) OR ([E" +
-                "thnic] = @Original_Ethnic)) AND ((@IsNull_Religion = 1 AND [Religion] IS NULL) O" +
-                "R ([Religion] = @Original_Religion)) AND ((@IsNull_Education = 1 AND [Education]" +
-                " IS NULL) OR ([Education] = @Original_Education)) AND ((@IsNull_Language = 1 AND" +
-                " [Language] IS NULL) OR ([Language] = @Original_Language)) AND ((@IsNull_Informa" +
-                "tic = 1 AND [Informatic] IS NULL) OR ([Informatic] = @Original_Informatic)) AND " +
-                "((@IsNull_Professional = 1 AND [Professional] IS NULL) OR ([Professional] = @Ori" +
-                "ginal_Professional)) AND ((@IsNull_Position = 1 AND [Position] IS NULL) OR ([Pos" +
-                "ition] = @Original_Position)) AND ((@IsNull_School = 1 AND [School] IS NULL) OR " +
-                "([School] = @Original_School)) AND ((@IsNull_IDCard = 1 AND [IDCard] IS NULL) OR" +
-                " ([IDCard] = @Original_IDCard)) AND ((@IsNull_IDCardDate = 1 AND [IDCardDate] IS" +
-                " NULL) OR ([IDCardDate] = @Original_IDCardDate)) AND ((@IsNull_IDCardPlace = 1 A" +
-                "ND [IDCardPlace] IS NULL) OR ([IDCardPlace] = @Original_IDCardPlace)) AND ((@IsN" +
-                "ull_BeginDate = 1 AND [BeginDate] IS NULL) OR ([BeginDate] = @Original_BeginDate" +
-                ")) AND ((@IsNull_IsOffWork = 1 AND [IsOffWork] IS NULL) OR ([IsOffWork] = @Origi" +
-                "nal_IsOffWork)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] =" +
-                " @Original_EndDate)) AND ((@IsNull_PayForm = 1 AND [PayForm] IS NULL) OR ([PayFo" +
-                "rm] = @Original_PayForm)) AND ((@IsNull_PayMoney = 1 AND [PayMoney] IS NULL) OR " +
-                "([PayMoney] = @Original_PayMoney)) AND ((@IsNull_MinimumSalary = 1 AND [MinimumS" +
-                "alary] IS NULL) OR ([MinimumSalary] = @Original_MinimumSalary)) AND ((@IsNull_Ra" +
-                "nkSalary = 1 AND [RankSalary] IS NULL) OR ([RankSalary] = @Original_RankSalary))" +
-                " AND ((@IsNull_StepSalary = 1 AND [StepSalary] IS NULL) OR ([StepSalary] = @Orig" +
-                "inal_StepSalary)) AND ((@IsNull_CoefficientSalary = 1 AND [CoefficientSalary] IS" +
-                " NULL) OR ([CoefficientSalary] = @Original_CoefficientSalary)) AND ((@IsNull_Dat" +
-                "eSalary = 1 AND [DateSalary] IS NULL) OR ([DateSalary] = @Original_DateSalary)) " +
-                "AND ((@IsNull_BasicSalary = 1 AND [BasicSalary] IS NULL) OR ([BasicSalary] = @Or" +
-                "iginal_BasicSalary)) AND ((@IsNull_InsuranceSalary = 1 AND [InsuranceSalary] IS " +
-                "NULL) OR ([InsuranceSalary] = @Original_InsuranceSalary)) AND ((@IsNull_Allowanc" +
-                "e1 = 1 AND [Allowance1] IS NULL) OR ([Allowance1] = @Original_Allowance1)) AND (" +
-                "(@IsNull_Allowance2 = 1 AND [Allowance2] IS NULL) OR ([Allowance2] = @Original_A" +
-                "llowance2)) AND ((@IsNull_Allowance3 = 1 AND [Allowance3] IS NULL) OR ([Allowanc" +
-                "e3] = @Original_Allowance3)) AND ((@IsNull_Allowance4 = 1 AND [Allowance4] IS NU" +
-                "LL) OR ([Allowance4] = @Original_Allowance4)) AND ((@IsNull_IsSocialInsurance = " +
-                "1 AND [IsSocialInsurance] IS NULL) OR ([IsSocialInsurance] = @Original_IsSocialI" +
-                "nsurance)) AND ((@IsNull_IsHealthInsurance = 1 AND [IsHealthInsurance] IS NULL) " +
-                "OR ([IsHealthInsurance] = @Original_IsHealthInsurance)) AND ((@IsNull_IsUnemploy" +
-                "mentInsurance = 1 AND [IsUnemploymentInsurance] IS NULL) OR ([IsUnemploymentInsu" +
-                "rance] = @Original_IsUnemploymentInsurance)) AND ((@IsNull_IsUnionMoney = 1 AND " +
-                "[IsUnionMoney] IS NULL) OR ([IsUnionMoney] = @Original_IsUnionMoney)) AND ((@IsN" +
-                "ull_IsUnion = 1 AND [IsUnion] IS NULL) OR ([IsUnion] = @Original_IsUnion)) AND (" +
-                "(@IsNull_UnionCode = 1 AND [UnionCode] IS NULL) OR ([UnionCode] = @Original_Unio" +
-                "nCode)) AND ((@IsNull_UnionDate = 1 AND [UnionDate] IS NULL) OR ([UnionDate] = @" +
-                "Original_UnionDate)) AND ((@IsNull_UnionPlace = 1 AND [UnionPlace] IS NULL) OR (" +
-                "[UnionPlace] = @Original_UnionPlace)) AND ((@IsNull_IsParty = 1 AND [IsParty] IS" +
-                " NULL) OR ([IsParty] = @Original_IsParty)) AND ((@IsNull_PartyCode = 1 AND [Part" +
-                "yCode] IS NULL) OR ([PartyCode] = @Original_PartyCode)) AND ((@IsNull_PartyDate " +
-                "= 1 AND [PartyDate] IS NULL) OR ([PartyDate] = @Original_PartyDate)) AND ((@IsNu" +
-                "ll_PartyPlace = 1 AND [PartyPlace] IS NULL) OR ([PartyPlace] = @Original_PartyPl" +
-                "ace)) AND ((@IsNull_InsuranceCode = 1 AND [InsuranceCode] IS NULL) OR ([Insuranc" +
-                "eCode] = @Original_InsuranceCode)) AND ((@IsNull_InsuranceDate = 1 AND [Insuranc" +
-                "eDate] IS NULL) OR ([InsuranceDate] = @Original_InsuranceDate)) AND ((@IsNull_He" +
-                "althInsuranceCode = 1 AND [HealthInsuranceCode] IS NULL) OR ([HealthInsuranceCod" +
-                "e] = @Original_HealthInsuranceCode)) AND ((@IsNull_HealthInsuranceFromDate = 1 A" +
-                "ND [HealthInsuranceFromDate] IS NULL) OR ([HealthInsuranceFromDate] = @Original_" +
-                "HealthInsuranceFromDate)) AND ((@IsNull_HealthInsuranceToDate = 1 AND [HealthIns" +
-                "uranceToDate] IS NULL) OR ([HealthInsuranceToDate] = @Original_HealthInsuranceTo" +
-                "Date)) AND ((@IsNull_ContractCode = 1 AND [ContractCode] IS NULL) OR ([ContractC" +
-                "ode] = @Original_ContractCode)) AND ((@IsNull_ContractType = 1 AND [ContractType" +
-                "] IS NULL) OR ([ContractType] = @Original_ContractType)) AND ((@IsNull_ContractS" +
-                "ignDate = 1 AND [ContractSignDate] IS NULL) OR ([ContractSignDate] = @Original_C" +
-                "ontractSignDate)) AND ((@IsNull_ContractFromDate = 1 AND [ContractFromDate] IS N" +
-                "ULL) OR ([ContractFromDate] = @Original_ContractFromDate)) AND ((@IsNull_Contrac" +
-                "tToDate = 1 AND [ContractToDate] IS NULL) OR ([ContractToDate] = @Original_Contr" +
-                "actToDate)) AND ((@IsNull_WorkStateCode = 1 AND [WorkStateCode] IS NULL) OR ([Wo" +
-                "rkStateCode] = @Original_WorkStateCode)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LastName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alias", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sex", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sex", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Marriage", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marriage", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Birthday", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BirthPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CellPhone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CellPhone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nationality", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nationality", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ethnic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ethnic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Religion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Religion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Education", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Education", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Language", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Language", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Informatic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Informatic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Professional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Professional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_School", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_School", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCard", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCard", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCardDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCardDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCardPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCardPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BeginDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BeginDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsOffWork", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsOffWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayMoney", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayMoney", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinimumSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinimumSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RankSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RankSalary", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CoefficientSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CoefficientSalary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateSalary", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BasicSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BasicSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance3", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance4", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsSocialInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsSocialInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsHealthInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsHealthInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnemploymentInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnemploymentInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnionMoney", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnionMoney", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnion", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsParty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsParty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceFromDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceToDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractSignDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractSignDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractFromDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractToDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_WorkStateCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkStateCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HRM_EMPLOYEE] ([EmployeeCode], [DepartmentCode], [EnrollNumber" +
-                "], [FirstName], [LastName], [Alias], [Sex], [Marriage], [Birthday], [BirthPlace]" +
-                ", [MainAddress], [ContactAddress], [CellPhone], [Email], [Photo], [Nationality]," +
-                " [Ethnic], [Religion], [Education], [Language], [Informatic], [Professional], [P" +
-                "osition], [School], [IDCard], [IDCardDate], [IDCardPlace], [BeginDate], [IsOffWo" +
-                "rk], [EndDate], [PayForm], [PayMoney], [MinimumSalary], [RankSalary], [StepSalar" +
-                "y], [CoefficientSalary], [DateSalary], [BasicSalary], [InsuranceSalary], [Allowa" +
-                "nce1], [Allowance2], [Allowance3], [Allowance4], [IsSocialInsurance], [IsHealthI" +
-                "nsurance], [IsUnemploymentInsurance], [IsUnionMoney], [IsUnion], [UnionCode], [U" +
-                "nionDate], [UnionPlace], [IsParty], [PartyCode], [PartyDate], [PartyPlace], [Ins" +
-                "uranceCode], [InsuranceDate], [HealthInsuranceCode], [HealthInsuranceFromDate], " +
-                "[HealthInsuranceToDate], [ContractCode], [ContractType], [ContractSignDate], [Co" +
-                "ntractFromDate], [ContractToDate], [WorkStateCode]) VALUES (@EmployeeCode, @Depa" +
-                "rtmentCode, @EnrollNumber, @FirstName, @LastName, @Alias, @Sex, @Marriage, @Birt" +
-                "hday, @BirthPlace, @MainAddress, @ContactAddress, @CellPhone, @Email, @Photo, @N" +
-                "ationality, @Ethnic, @Religion, @Education, @Language, @Informatic, @Professiona" +
-                "l, @Position, @School, @IDCard, @IDCardDate, @IDCardPlace, @BeginDate, @IsOffWor" +
-                "k, @EndDate, @PayForm, @PayMoney, @MinimumSalary, @RankSalary, @StepSalary, @Coe" +
-                "fficientSalary, @DateSalary, @BasicSalary, @InsuranceSalary, @Allowance1, @Allow" +
-                "ance2, @Allowance3, @Allowance4, @IsSocialInsurance, @IsHealthInsurance, @IsUnem" +
-                "ploymentInsurance, @IsUnionMoney, @IsUnion, @UnionCode, @UnionDate, @UnionPlace," +
-                " @IsParty, @PartyCode, @PartyDate, @PartyPlace, @InsuranceCode, @InsuranceDate, " +
-                "@HealthInsuranceCode, @HealthInsuranceFromDate, @HealthInsuranceToDate, @Contrac" +
-                "tCode, @ContractType, @ContractSignDate, @ContractFromDate, @ContractToDate, @Wo" +
-                "rkStateCode);\r\nSELECT EmployeeCode, DepartmentCode, EnrollNumber, FirstName, Las" +
-                "tName, Alias, Sex, Marriage, Birthday, BirthPlace, MainAddress, ContactAddress, " +
-                "CellPhone, Email, Photo, Nationality, Ethnic, Religion, Education, Language, Inf" +
-                "ormatic, Professional, Position, School, IDCard, IDCardDate, IDCardPlace, BeginD" +
-                "ate, IsOffWork, EndDate, PayForm, PayMoney, MinimumSalary, RankSalary, StepSalar" +
-                "y, CoefficientSalary, DateSalary, BasicSalary, InsuranceSalary, Allowance1, Allo" +
-                "wance2, Allowance3, Allowance4, IsSocialInsurance, IsHealthInsurance, IsUnemploy" +
-                "mentInsurance, IsUnionMoney, IsUnion, UnionCode, UnionDate, UnionPlace, IsParty," +
-                " PartyCode, PartyDate, PartyPlace, InsuranceCode, InsuranceDate, HealthInsurance" +
-                "Code, HealthInsuranceFromDate, HealthInsuranceToDate, ContractCode, ContractType" +
-                ", ContractSignDate, ContractFromDate, ContractToDate, WorkStateCode FROM HRM_EMP" +
-                "LOYEE WHERE (EmployeeCode = @EmployeeCode)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alias", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sex", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marriage", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CellPhone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nationality", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ethnic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Religion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Education", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Language", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Informatic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Professional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@School", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCard", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCardDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCardPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BeginDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsOffWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PayMoney", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinimumSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RankSalary", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CoefficientSalary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateSalary", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BasicSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance3", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance4", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsSocialInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsHealthInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnemploymentInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnionMoney", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnion", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsParty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractSignDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkStateCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[HRM_EMPLOYEE] SET [EmployeeCode] = @EmployeeCode, [DepartmentCode] " +
-                "= @DepartmentCode, [EnrollNumber] = @EnrollNumber, [FirstName] = @FirstName, [La" +
-                "stName] = @LastName, [Alias] = @Alias, [Sex] = @Sex, [Marriage] = @Marriage, [Bi" +
-                "rthday] = @Birthday, [BirthPlace] = @BirthPlace, [MainAddress] = @MainAddress, [" +
-                "ContactAddress] = @ContactAddress, [CellPhone] = @CellPhone, [Email] = @Email, [" +
-                "Photo] = @Photo, [Nationality] = @Nationality, [Ethnic] = @Ethnic, [Religion] = " +
-                "@Religion, [Education] = @Education, [Language] = @Language, [Informatic] = @Inf" +
-                "ormatic, [Professional] = @Professional, [Position] = @Position, [School] = @Sch" +
-                "ool, [IDCard] = @IDCard, [IDCardDate] = @IDCardDate, [IDCardPlace] = @IDCardPlac" +
-                "e, [BeginDate] = @BeginDate, [IsOffWork] = @IsOffWork, [EndDate] = @EndDate, [Pa" +
-                "yForm] = @PayForm, [PayMoney] = @PayMoney, [MinimumSalary] = @MinimumSalary, [Ra" +
-                "nkSalary] = @RankSalary, [StepSalary] = @StepSalary, [CoefficientSalary] = @Coef" +
-                "ficientSalary, [DateSalary] = @DateSalary, [BasicSalary] = @BasicSalary, [Insura" +
-                "nceSalary] = @InsuranceSalary, [Allowance1] = @Allowance1, [Allowance2] = @Allow" +
-                "ance2, [Allowance3] = @Allowance3, [Allowance4] = @Allowance4, [IsSocialInsuranc" +
-                "e] = @IsSocialInsurance, [IsHealthInsurance] = @IsHealthInsurance, [IsUnemployme" +
-                "ntInsurance] = @IsUnemploymentInsurance, [IsUnionMoney] = @IsUnionMoney, [IsUnio" +
-                "n] = @IsUnion, [UnionCode] = @UnionCode, [UnionDate] = @UnionDate, [UnionPlace] " +
-                "= @UnionPlace, [IsParty] = @IsParty, [PartyCode] = @PartyCode, [PartyDate] = @Pa" +
-                "rtyDate, [PartyPlace] = @PartyPlace, [InsuranceCode] = @InsuranceCode, [Insuranc" +
-                "eDate] = @InsuranceDate, [HealthInsuranceCode] = @HealthInsuranceCode, [HealthIn" +
-                "suranceFromDate] = @HealthInsuranceFromDate, [HealthInsuranceToDate] = @HealthIn" +
-                "suranceToDate, [ContractCode] = @ContractCode, [ContractType] = @ContractType, [" +
-                "ContractSignDate] = @ContractSignDate, [ContractFromDate] = @ContractFromDate, [" +
-                "ContractToDate] = @ContractToDate, [WorkStateCode] = @WorkStateCode WHERE (([Emp" +
-                "loyeeCode] = @Original_EmployeeCode) AND ((@IsNull_DepartmentCode = 1 AND [Depar" +
-                "tmentCode] IS NULL) OR ([DepartmentCode] = @Original_DepartmentCode)) AND ((@IsN" +
-                "ull_EnrollNumber = 1 AND [EnrollNumber] IS NULL) OR ([EnrollNumber] = @Original_" +
-                "EnrollNumber)) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstNa" +
-                "me] = @Original_FirstName)) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) O" +
-                "R ([LastName] = @Original_LastName)) AND ((@IsNull_Alias = 1 AND [Alias] IS NULL" +
-                ") OR ([Alias] = @Original_Alias)) AND ((@IsNull_Sex = 1 AND [Sex] IS NULL) OR ([" +
-                "Sex] = @Original_Sex)) AND ((@IsNull_Marriage = 1 AND [Marriage] IS NULL) OR ([M" +
-                "arriage] = @Original_Marriage)) AND ((@IsNull_Birthday = 1 AND [Birthday] IS NUL" +
-                "L) OR ([Birthday] = @Original_Birthday)) AND ((@IsNull_BirthPlace = 1 AND [Birth" +
-                "Place] IS NULL) OR ([BirthPlace] = @Original_BirthPlace)) AND ((@IsNull_MainAddr" +
-                "ess = 1 AND [MainAddress] IS NULL) OR ([MainAddress] = @Original_MainAddress)) A" +
-                "ND ((@IsNull_ContactAddress = 1 AND [ContactAddress] IS NULL) OR ([ContactAddres" +
-                "s] = @Original_ContactAddress)) AND ((@IsNull_CellPhone = 1 AND [CellPhone] IS N" +
-                "ULL) OR ([CellPhone] = @Original_CellPhone)) AND ((@IsNull_Email = 1 AND [Email]" +
-                " IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Nationality = 1 AND [Nat" +
-                "ionality] IS NULL) OR ([Nationality] = @Original_Nationality)) AND ((@IsNull_Eth" +
-                "nic = 1 AND [Ethnic] IS NULL) OR ([Ethnic] = @Original_Ethnic)) AND ((@IsNull_Re" +
-                "ligion = 1 AND [Religion] IS NULL) OR ([Religion] = @Original_Religion)) AND ((@" +
-                "IsNull_Education = 1 AND [Education] IS NULL) OR ([Education] = @Original_Educat" +
-                "ion)) AND ((@IsNull_Language = 1 AND [Language] IS NULL) OR ([Language] = @Origi" +
-                "nal_Language)) AND ((@IsNull_Informatic = 1 AND [Informatic] IS NULL) OR ([Infor" +
-                "matic] = @Original_Informatic)) AND ((@IsNull_Professional = 1 AND [Professional" +
-                "] IS NULL) OR ([Professional] = @Original_Professional)) AND ((@IsNull_Position " +
-                "= 1 AND [Position] IS NULL) OR ([Position] = @Original_Position)) AND ((@IsNull_" +
-                "School = 1 AND [School] IS NULL) OR ([School] = @Original_School)) AND ((@IsNull" +
-                "_IDCard = 1 AND [IDCard] IS NULL) OR ([IDCard] = @Original_IDCard)) AND ((@IsNul" +
-                "l_IDCardDate = 1 AND [IDCardDate] IS NULL) OR ([IDCardDate] = @Original_IDCardDa" +
-                "te)) AND ((@IsNull_IDCardPlace = 1 AND [IDCardPlace] IS NULL) OR ([IDCardPlace] " +
-                "= @Original_IDCardPlace)) AND ((@IsNull_BeginDate = 1 AND [BeginDate] IS NULL) O" +
-                "R ([BeginDate] = @Original_BeginDate)) AND ((@IsNull_IsOffWork = 1 AND [IsOffWor" +
-                "k] IS NULL) OR ([IsOffWork] = @Original_IsOffWork)) AND ((@IsNull_EndDate = 1 AN" +
-                "D [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_PayForm =" +
-                " 1 AND [PayForm] IS NULL) OR ([PayForm] = @Original_PayForm)) AND ((@IsNull_PayM" +
-                "oney = 1 AND [PayMoney] IS NULL) OR ([PayMoney] = @Original_PayMoney)) AND ((@Is" +
-                "Null_MinimumSalary = 1 AND [MinimumSalary] IS NULL) OR ([MinimumSalary] = @Origi" +
-                "nal_MinimumSalary)) AND ((@IsNull_RankSalary = 1 AND [RankSalary] IS NULL) OR ([" +
-                "RankSalary] = @Original_RankSalary)) AND ((@IsNull_StepSalary = 1 AND [StepSalar" +
-                "y] IS NULL) OR ([StepSalary] = @Original_StepSalary)) AND ((@IsNull_CoefficientS" +
-                "alary = 1 AND [CoefficientSalary] IS NULL) OR ([CoefficientSalary] = @Original_C" +
-                "oefficientSalary)) AND ((@IsNull_DateSalary = 1 AND [DateSalary] IS NULL) OR ([D" +
-                "ateSalary] = @Original_DateSalary)) AND ((@IsNull_BasicSalary = 1 AND [BasicSala" +
-                "ry] IS NULL) OR ([BasicSalary] = @Original_BasicSalary)) AND ((@IsNull_Insurance" +
-                "Salary = 1 AND [InsuranceSalary] IS NULL) OR ([InsuranceSalary] = @Original_Insu" +
-                "ranceSalary)) AND ((@IsNull_Allowance1 = 1 AND [Allowance1] IS NULL) OR ([Allowa" +
-                "nce1] = @Original_Allowance1)) AND ((@IsNull_Allowance2 = 1 AND [Allowance2] IS " +
-                "NULL) OR ([Allowance2] = @Original_Allowance2)) AND ((@IsNull_Allowance3 = 1 AND" +
-                " [Allowance3] IS NULL) OR ([Allowance3] = @Original_Allowance3)) AND ((@IsNull_A" +
-                "llowance4 = 1 AND [Allowance4] IS NULL) OR ([Allowance4] = @Original_Allowance4)" +
-                ") AND ((@IsNull_IsSocialInsurance = 1 AND [IsSocialInsurance] IS NULL) OR ([IsSo" +
-                "cialInsurance] = @Original_IsSocialInsurance)) AND ((@IsNull_IsHealthInsurance =" +
-                " 1 AND [IsHealthInsurance] IS NULL) OR ([IsHealthInsurance] = @Original_IsHealth" +
-                "Insurance)) AND ((@IsNull_IsUnemploymentInsurance = 1 AND [IsUnemploymentInsuran" +
-                "ce] IS NULL) OR ([IsUnemploymentInsurance] = @Original_IsUnemploymentInsurance))" +
-                " AND ((@IsNull_IsUnionMoney = 1 AND [IsUnionMoney] IS NULL) OR ([IsUnionMoney] =" +
-                " @Original_IsUnionMoney)) AND ((@IsNull_IsUnion = 1 AND [IsUnion] IS NULL) OR ([" +
-                "IsUnion] = @Original_IsUnion)) AND ((@IsNull_UnionCode = 1 AND [UnionCode] IS NU" +
-                "LL) OR ([UnionCode] = @Original_UnionCode)) AND ((@IsNull_UnionDate = 1 AND [Uni" +
-                "onDate] IS NULL) OR ([UnionDate] = @Original_UnionDate)) AND ((@IsNull_UnionPlac" +
-                "e = 1 AND [UnionPlace] IS NULL) OR ([UnionPlace] = @Original_UnionPlace)) AND ((" +
-                "@IsNull_IsParty = 1 AND [IsParty] IS NULL) OR ([IsParty] = @Original_IsParty)) A" +
-                "ND ((@IsNull_PartyCode = 1 AND [PartyCode] IS NULL) OR ([PartyCode] = @Original_" +
-                "PartyCode)) AND ((@IsNull_PartyDate = 1 AND [PartyDate] IS NULL) OR ([PartyDate]" +
-                " = @Original_PartyDate)) AND ((@IsNull_PartyPlace = 1 AND [PartyPlace] IS NULL) " +
-                "OR ([PartyPlace] = @Original_PartyPlace)) AND ((@IsNull_InsuranceCode = 1 AND [I" +
-                "nsuranceCode] IS NULL) OR ([InsuranceCode] = @Original_InsuranceCode)) AND ((@Is" +
-                "Null_InsuranceDate = 1 AND [InsuranceDate] IS NULL) OR ([InsuranceDate] = @Origi" +
-                "nal_InsuranceDate)) AND ((@IsNull_HealthInsuranceCode = 1 AND [HealthInsuranceCo" +
-                "de] IS NULL) OR ([HealthInsuranceCode] = @Original_HealthInsuranceCode)) AND ((@" +
-                "IsNull_HealthInsuranceFromDate = 1 AND [HealthInsuranceFromDate] IS NULL) OR ([H" +
-                "ealthInsuranceFromDate] = @Original_HealthInsuranceFromDate)) AND ((@IsNull_Heal" +
-                "thInsuranceToDate = 1 AND [HealthInsuranceToDate] IS NULL) OR ([HealthInsuranceT" +
-                "oDate] = @Original_HealthInsuranceToDate)) AND ((@IsNull_ContractCode = 1 AND [C" +
-                "ontractCode] IS NULL) OR ([ContractCode] = @Original_ContractCode)) AND ((@IsNul" +
-                "l_ContractType = 1 AND [ContractType] IS NULL) OR ([ContractType] = @Original_Co" +
-                "ntractType)) AND ((@IsNull_ContractSignDate = 1 AND [ContractSignDate] IS NULL) " +
-                "OR ([ContractSignDate] = @Original_ContractSignDate)) AND ((@IsNull_ContractFrom" +
-                "Date = 1 AND [ContractFromDate] IS NULL) OR ([ContractFromDate] = @Original_Cont" +
-                "ractFromDate)) AND ((@IsNull_ContractToDate = 1 AND [ContractToDate] IS NULL) OR" +
-                " ([ContractToDate] = @Original_ContractToDate)) AND ((@IsNull_WorkStateCode = 1 " +
-                "AND [WorkStateCode] IS NULL) OR ([WorkStateCode] = @Original_WorkStateCode)));\r\n" +
-                "SELECT EmployeeCode, DepartmentCode, EnrollNumber, FirstName, LastName, Alias, S" +
-                "ex, Marriage, Birthday, BirthPlace, MainAddress, ContactAddress, CellPhone, Emai" +
-                "l, Photo, Nationality, Ethnic, Religion, Education, Language, Informatic, Profes" +
-                "sional, Position, School, IDCard, IDCardDate, IDCardPlace, BeginDate, IsOffWork," +
-                " EndDate, PayForm, PayMoney, MinimumSalary, RankSalary, StepSalary, CoefficientS" +
-                "alary, DateSalary, BasicSalary, InsuranceSalary, Allowance1, Allowance2, Allowan" +
-                "ce3, Allowance4, IsSocialInsurance, IsHealthInsurance, IsUnemploymentInsurance, " +
-                "IsUnionMoney, IsUnion, UnionCode, UnionDate, UnionPlace, IsParty, PartyCode, Par" +
-                "tyDate, PartyPlace, InsuranceCode, InsuranceDate, HealthInsuranceCode, HealthIns" +
-                "uranceFromDate, HealthInsuranceToDate, ContractCode, ContractType, ContractSignD" +
-                "ate, ContractFromDate, ContractToDate, WorkStateCode FROM HRM_EMPLOYEE WHERE (Em" +
-                "ployeeCode = @EmployeeCode)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EmployeeCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EnrollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alias", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sex", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Marriage", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MainAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContactAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CellPhone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Photo", global::System.Data.SqlDbType.VarBinary, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Photo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nationality", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ethnic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Religion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Education", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Language", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Informatic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Professional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@School", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCard", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCardDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCardPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BeginDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsOffWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PayMoney", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinimumSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RankSalary", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CoefficientSalary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateSalary", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BasicSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance3", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Allowance4", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsSocialInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsHealthInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnemploymentInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnionMoney", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsUnion", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnionPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsParty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PartyPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InsuranceDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthInsuranceToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractSignDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ContractToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WorkStateCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EmployeeCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EmployeeCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmentCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EnrollNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EnrollNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EnrollNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FirstName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LastName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Alias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alias", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sex", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sex", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Marriage", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Marriage", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Marriage", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Birthday", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Birthday", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Birthday", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BirthPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MainAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MainAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MainAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContactAddress", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContactAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContactAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CellPhone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CellPhone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CellPhone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Nationality", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nationality", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nationality", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ethnic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ethnic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ethnic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Religion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Religion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Religion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Education", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Education", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Education", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Language", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Language", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Language", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Informatic", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Informatic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Informatic", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Professional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Professional", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Professional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Position", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Position", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Position", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_School", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_School", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "School", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCard", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCard", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCard", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCardDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCardDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCardPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCardPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCardPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BeginDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BeginDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BeginDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsOffWork", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsOffWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsOffWork", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EndDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EndDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EndDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayForm", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayForm", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayMoney", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayMoney", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayMoney", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinimumSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinimumSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinimumSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RankSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RankSalary", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RankSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StepSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StepSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CoefficientSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CoefficientSalary", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoefficientSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateSalary", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BasicSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BasicSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BasicSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceSalary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceSalary", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceSalary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance1", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance2", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance3", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Allowance4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Allowance4", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Allowance4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsSocialInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsSocialInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsSocialInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsHealthInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsHealthInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsHealthInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnemploymentInsurance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnemploymentInsurance", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnemploymentInsurance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnionMoney", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnionMoney", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnionMoney", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsUnion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsUnion", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsUnion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_UnionPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnionPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnionPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsParty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsParty", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsParty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PartyPlace", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PartyPlace", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PartyPlace", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_InsuranceDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InsuranceDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InsuranceDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceFromDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceFromDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HealthInsuranceToDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HealthInsuranceToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthInsuranceToDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractType", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractSignDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractSignDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractSignDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractFromDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractFromDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractFromDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ContractToDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ContractToDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ContractToDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_WorkStateCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_WorkStateCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "WorkStateCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -18130,7 +17794,44 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT EmployeeCode, DepartmentCode, EnrollNumber, FirstName, LastName, Alias, Sex, Marriage, Birthday, BirthPlace, MainAddress, ContactAddress, CellPhone, Email, Photo, Nationality, Ethnic, Religion, Education, Language, Informatic, Professional, Position, School, IDCard, IDCardDate, IDCardPlace, BeginDate, IsOffWork, EndDate, PayForm, PayMoney, MinimumSalary, RankSalary, StepSalary, CoefficientSalary, DateSalary, BasicSalary, InsuranceSalary, Allowance1, Allowance2, Allowance3, Allowance4, IsSocialInsurance, IsHealthInsurance, IsUnemploymentInsurance, IsUnionMoney, IsUnion, UnionCode, UnionDate, UnionPlace, IsParty, PartyCode, PartyDate, PartyPlace, InsuranceCode, InsuranceDate, HealthInsuranceCode, HealthInsuranceFromDate, HealthInsuranceToDate, ContractCode, ContractType, ContractSignDate, ContractFromDate, ContractToDate, WorkStateCode FROM dbo.HRM_EMPLOYEE";
+            this._commandCollection[0].CommandText = "SELECT        HRM_EMPLOYEE.EmployeeCode, HRM_EMPLOYEE.DepartmentCode, HRM_EMPLOYE" +
+                "E.EnrollNumber, HRM_EMPLOYEE.FirstName, HRM_EMPLOYEE.LastName, HRM_EMPLOYEE.Alia" +
+                "s, \r\n                         HRM_EMPLOYEE.Sex, HRM_EMPLOYEE.Marriage, HRM_EMPLO" +
+                "YEE.Birthday, HRM_EMPLOYEE.BirthPlace, HRM_EMPLOYEE.MainAddress, HRM_EMPLOYEE.Co" +
+                "ntactAddress, HRM_EMPLOYEE.CellPhone, \r\n                         HRM_EMPLOYEE.Em" +
+                "ail, HRM_EMPLOYEE.Photo, HRM_EMPLOYEE.Nationality, HRM_EMPLOYEE.Ethnic, HRM_EMPL" +
+                "OYEE.Religion, HRM_EMPLOYEE.Education, HRM_EMPLOYEE.Language, \r\n                " +
+                "         HRM_EMPLOYEE.Informatic, HRM_EMPLOYEE.Professional, HRM_EMPLOYEE.Positi" +
+                "on, HRM_EMPLOYEE.School, HRM_EMPLOYEE.IDCard, HRM_EMPLOYEE.IDCardDate, HRM_EMPLO" +
+                "YEE.IDCardPlace, \r\n                         HRM_EMPLOYEE.BeginDate, HRM_EMPLOYEE" +
+                ".IsOffWork, HRM_EMPLOYEE.EndDate, HRM_EMPLOYEE.PayForm, HRM_EMPLOYEE.PayMoney, H" +
+                "RM_EMPLOYEE.MinimumSalary, \r\n                         HRM_EMPLOYEE.RankSalary, H" +
+                "RM_EMPLOYEE.StepSalary, HRM_EMPLOYEE.CoefficientSalary, HRM_EMPLOYEE.DateSalary," +
+                " HRM_EMPLOYEE.BasicSalary, HRM_EMPLOYEE.InsuranceSalary, \r\n                     " +
+                "    HRM_EMPLOYEE.Allowance1, HRM_EMPLOYEE.Allowance2, HRM_EMPLOYEE.Allowance3, H" +
+                "RM_EMPLOYEE.Allowance4, HRM_EMPLOYEE.IsSocialInsurance, HRM_EMPLOYEE.IsHealthIns" +
+                "urance, \r\n                         HRM_EMPLOYEE.IsUnemploymentInsurance, HRM_EMP" +
+                "LOYEE.IsUnionMoney, HRM_EMPLOYEE.IsUnion, HRM_EMPLOYEE.UnionCode, HRM_EMPLOYEE.U" +
+                "nionDate, HRM_EMPLOYEE.UnionPlace, \r\n                         HRM_EMPLOYEE.IsPar" +
+                "ty, HRM_EMPLOYEE.PartyCode, HRM_EMPLOYEE.PartyDate, HRM_EMPLOYEE.PartyPlace, HRM" +
+                "_EMPLOYEE.InsuranceCode, HRM_EMPLOYEE.InsuranceDate, \r\n                         " +
+                "HRM_EMPLOYEE.HealthInsuranceCode, HRM_EMPLOYEE.HealthInsuranceFromDate, HRM_EMPL" +
+                "OYEE.HealthInsuranceToDate, HRM_EMPLOYEE.ContractCode, HRM_EMPLOYEE.ContractType" +
+                ", \r\n                         HRM_EMPLOYEE.ContractSignDate, HRM_EMPLOYEE.Contrac" +
+                "tFromDate, HRM_EMPLOYEE.ContractToDate, HRM_EMPLOYEE.WorkStateCode, DIC_POSITION" +
+                ".PositionName, \r\n                         DIC_WORK_STATE.WorkStateName, DIC_DEPA" +
+                "RTMENT.DepartmentName, DIC_PROFESSIONAL.ProfessionalName, DIC_NATIONALITY.Nation" +
+                "alityName, DIC_ETHNIC.EthnicName, \r\n                         DIC_RELIGION.Religi" +
+                "onName\r\nFROM            HRM_EMPLOYEE INNER JOIN\r\n                         DIC_PO" +
+                "SITION ON HRM_EMPLOYEE.Position = DIC_POSITION.PositionCode INNER JOIN\r\n        " +
+                "                 DIC_WORK_STATE ON HRM_EMPLOYEE.WorkStateCode = DIC_WORK_STATE.W" +
+                "orkStateCode INNER JOIN\r\n                         DIC_DEPARTMENT ON HRM_EMPLOYEE" +
+                ".DepartmentCode = DIC_DEPARTMENT.DepartmentCode INNER JOIN\r\n                    " +
+                "     DIC_PROFESSIONAL ON HRM_EMPLOYEE.Professional = DIC_PROFESSIONAL.Profession" +
+                "alCode INNER JOIN\r\n                         DIC_NATIONALITY ON HRM_EMPLOYEE.Nati" +
+                "onality = DIC_NATIONALITY.NationalityCode INNER JOIN\r\n                         D" +
+                "IC_ETHNIC ON HRM_EMPLOYEE.Ethnic = DIC_ETHNIC.EthnicCode INNER JOIN\r\n           " +
+                "              DIC_RELIGION ON HRM_EMPLOYEE.Religion = DIC_RELIGION.ReligionCode";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18156,2326 +17857,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
             ds_EMP_MANAGEMENT.HRM_EMPLOYEEDataTable dataTable = new ds_EMP_MANAGEMENT.HRM_EMPLOYEEDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_EMP_MANAGEMENT.HRM_EMPLOYEEDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_EMP_MANAGEMENT dataSet) {
-            return this.Adapter.Update(dataSet, "HRM_EMPLOYEE");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    string Original_EmployeeCode, 
-                    string Original_DepartmentCode, 
-                    string Original_EnrollNumber, 
-                    string Original_FirstName, 
-                    string Original_LastName, 
-                    string Original_Alias, 
-                    global::System.Nullable<bool> Original_Sex, 
-                    string Original_Marriage, 
-                    global::System.Nullable<global::System.DateTime> Original_Birthday, 
-                    string Original_BirthPlace, 
-                    string Original_MainAddress, 
-                    string Original_ContactAddress, 
-                    string Original_CellPhone, 
-                    string Original_Email, 
-                    string Original_Nationality, 
-                    string Original_Ethnic, 
-                    string Original_Religion, 
-                    string Original_Education, 
-                    string Original_Language, 
-                    string Original_Informatic, 
-                    string Original_Professional, 
-                    string Original_Position, 
-                    string Original_School, 
-                    string Original_IDCard, 
-                    global::System.Nullable<global::System.DateTime> Original_IDCardDate, 
-                    string Original_IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> Original_BeginDate, 
-                    global::System.Nullable<bool> Original_IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> Original_EndDate, 
-                    global::System.Nullable<int> Original_PayForm, 
-                    global::System.Nullable<decimal> Original_PayMoney, 
-                    global::System.Nullable<decimal> Original_MinimumSalary, 
-                    string Original_RankSalary, 
-                    global::System.Nullable<int> Original_StepSalary, 
-                    global::System.Nullable<double> Original_CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> Original_DateSalary, 
-                    global::System.Nullable<decimal> Original_BasicSalary, 
-                    global::System.Nullable<decimal> Original_InsuranceSalary, 
-                    global::System.Nullable<decimal> Original_Allowance1, 
-                    global::System.Nullable<decimal> Original_Allowance2, 
-                    global::System.Nullable<decimal> Original_Allowance3, 
-                    global::System.Nullable<decimal> Original_Allowance4, 
-                    global::System.Nullable<bool> Original_IsSocialInsurance, 
-                    global::System.Nullable<bool> Original_IsHealthInsurance, 
-                    global::System.Nullable<bool> Original_IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> Original_IsUnionMoney, 
-                    global::System.Nullable<bool> Original_IsUnion, 
-                    string Original_UnionCode, 
-                    global::System.Nullable<global::System.DateTime> Original_UnionDate, 
-                    string Original_UnionPlace, 
-                    global::System.Nullable<bool> Original_IsParty, 
-                    string Original_PartyCode, 
-                    global::System.Nullable<global::System.DateTime> Original_PartyDate, 
-                    string Original_PartyPlace, 
-                    string Original_InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_InsuranceDate, 
-                    string Original_HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceToDate, 
-                    string Original_ContractCode, 
-                    string Original_ContractType, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractToDate, 
-                    string Original_WorkStateCode) {
-            if ((Original_EmployeeCode == null)) {
-                throw new global::System.ArgumentNullException("Original_EmployeeCode");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_EmployeeCode));
-            }
-            if ((Original_DepartmentCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DepartmentCode));
-            }
-            if ((Original_EnrollNumber == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_EnrollNumber));
-            }
-            if ((Original_FirstName == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_FirstName));
-            }
-            if ((Original_LastName == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_LastName));
-            }
-            if ((Original_Alias == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Alias));
-            }
-            if ((Original_Sex.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_Sex.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Marriage == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Marriage));
-            }
-            if ((Original_Birthday.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_Birthday.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BirthPlace == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_BirthPlace));
-            }
-            if ((Original_MainAddress == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_MainAddress));
-            }
-            if ((Original_ContactAddress == null)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_ContactAddress));
-            }
-            if ((Original_CellPhone == null)) {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_CellPhone));
-            }
-            if ((Original_Email == null)) {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_Email));
-            }
-            if ((Original_Nationality == null)) {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_Nationality));
-            }
-            if ((Original_Ethnic == null)) {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_Ethnic));
-            }
-            if ((Original_Religion == null)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_Religion));
-            }
-            if ((Original_Education == null)) {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_Education));
-            }
-            if ((Original_Language == null)) {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_Language));
-            }
-            if ((Original_Informatic == null)) {
-                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_Informatic));
-            }
-            if ((Original_Professional == null)) {
-                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((string)(Original_Professional));
-            }
-            if ((Original_Position == null)) {
-                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((string)(Original_Position));
-            }
-            if ((Original_School == null)) {
-                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[43].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((string)(Original_School));
-            }
-            if ((Original_IDCard == null)) {
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((string)(Original_IDCard));
-            }
-            if ((Original_IDCardDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((System.DateTime)(Original_IDCardDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IDCardPlace == null)) {
-                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((string)(Original_IDCardPlace));
-            }
-            if ((Original_BeginDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((System.DateTime)(Original_BeginDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsOffWork.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((bool)(Original_IsOffWork.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            if ((Original_EndDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((System.DateTime)(Original_EndDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[55].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PayForm.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_PayForm.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[57].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[58].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PayMoney.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((decimal)(Original_PayMoney.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[60].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MinimumSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[62].Value = ((decimal)(Original_MinimumSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[61].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[62].Value = global::System.DBNull.Value;
-            }
-            if ((Original_RankSalary == null)) {
-                this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[64].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[64].Value = ((string)(Original_RankSalary));
-            }
-            if ((Original_StepSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[66].Value = ((int)(Original_StepSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[66].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CoefficientSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[68].Value = ((double)(Original_CoefficientSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[68].Value = global::System.DBNull.Value;
-            }
-            if ((Original_DateSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[70].Value = ((System.DateTime)(Original_DateSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[70].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BasicSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[72].Value = ((decimal)(Original_BasicSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[71].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[72].Value = global::System.DBNull.Value;
-            }
-            if ((Original_InsuranceSalary.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[74].Value = ((decimal)(Original_InsuranceSalary.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[74].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance1.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[76].Value = ((decimal)(Original_Allowance1.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[75].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[76].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance2.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[78].Value = ((decimal)(Original_Allowance2.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[77].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[78].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance3.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[80].Value = ((decimal)(Original_Allowance3.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[79].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[80].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance4.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[82].Value = ((decimal)(Original_Allowance4.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[81].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[82].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsSocialInsurance.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[84].Value = ((bool)(Original_IsSocialInsurance.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[83].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[84].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsHealthInsurance.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[85].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[86].Value = ((bool)(Original_IsHealthInsurance.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[85].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[86].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnemploymentInsurance.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[87].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[88].Value = ((bool)(Original_IsUnemploymentInsurance.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[87].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[88].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnionMoney.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[90].Value = ((bool)(Original_IsUnionMoney.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[89].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[90].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnion.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[91].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[92].Value = ((bool)(Original_IsUnion.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[91].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[92].Value = global::System.DBNull.Value;
-            }
-            if ((Original_UnionCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[93].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[94].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[93].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[94].Value = ((string)(Original_UnionCode));
-            }
-            if ((Original_UnionDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[95].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[96].Value = ((System.DateTime)(Original_UnionDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[95].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[96].Value = global::System.DBNull.Value;
-            }
-            if ((Original_UnionPlace == null)) {
-                this.Adapter.DeleteCommand.Parameters[97].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[98].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[97].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[98].Value = ((string)(Original_UnionPlace));
-            }
-            if ((Original_IsParty.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[99].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[100].Value = ((bool)(Original_IsParty.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[99].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[100].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PartyCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[101].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[102].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[101].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[102].Value = ((string)(Original_PartyCode));
-            }
-            if ((Original_PartyDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[103].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[104].Value = ((System.DateTime)(Original_PartyDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[103].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[104].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PartyPlace == null)) {
-                this.Adapter.DeleteCommand.Parameters[105].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[106].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[105].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[106].Value = ((string)(Original_PartyPlace));
-            }
-            if ((Original_InsuranceCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[107].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[108].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[107].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[108].Value = ((string)(Original_InsuranceCode));
-            }
-            if ((Original_InsuranceDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[109].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[110].Value = ((System.DateTime)(Original_InsuranceDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[109].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[110].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HealthInsuranceCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[111].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[112].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[111].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[112].Value = ((string)(Original_HealthInsuranceCode));
-            }
-            if ((Original_HealthInsuranceFromDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[113].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[114].Value = ((System.DateTime)(Original_HealthInsuranceFromDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[113].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[114].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HealthInsuranceToDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[115].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[116].Value = ((System.DateTime)(Original_HealthInsuranceToDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[115].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[116].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[117].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[118].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[117].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[118].Value = ((string)(Original_ContractCode));
-            }
-            if ((Original_ContractType == null)) {
-                this.Adapter.DeleteCommand.Parameters[119].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[120].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[119].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[120].Value = ((string)(Original_ContractType));
-            }
-            if ((Original_ContractSignDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[121].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[122].Value = ((System.DateTime)(Original_ContractSignDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[121].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[122].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractFromDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[123].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[124].Value = ((System.DateTime)(Original_ContractFromDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[123].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[124].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractToDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[125].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[126].Value = ((System.DateTime)(Original_ContractToDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[125].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[126].Value = global::System.DBNull.Value;
-            }
-            if ((Original_WorkStateCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[127].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[128].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[127].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[128].Value = ((string)(Original_WorkStateCode));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(
-                    string EmployeeCode, 
-                    string DepartmentCode, 
-                    string EnrollNumber, 
-                    string FirstName, 
-                    string LastName, 
-                    string Alias, 
-                    global::System.Nullable<bool> Sex, 
-                    string Marriage, 
-                    global::System.Nullable<global::System.DateTime> Birthday, 
-                    string BirthPlace, 
-                    string MainAddress, 
-                    string ContactAddress, 
-                    string CellPhone, 
-                    string Email, 
-                    byte[] Photo, 
-                    string Nationality, 
-                    string Ethnic, 
-                    string Religion, 
-                    string Education, 
-                    string Language, 
-                    string Informatic, 
-                    string Professional, 
-                    string Position, 
-                    string School, 
-                    string IDCard, 
-                    global::System.Nullable<global::System.DateTime> IDCardDate, 
-                    string IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> BeginDate, 
-                    global::System.Nullable<bool> IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> EndDate, 
-                    global::System.Nullable<int> PayForm, 
-                    global::System.Nullable<decimal> PayMoney, 
-                    global::System.Nullable<decimal> MinimumSalary, 
-                    string RankSalary, 
-                    global::System.Nullable<int> StepSalary, 
-                    global::System.Nullable<double> CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> DateSalary, 
-                    global::System.Nullable<decimal> BasicSalary, 
-                    global::System.Nullable<decimal> InsuranceSalary, 
-                    global::System.Nullable<decimal> Allowance1, 
-                    global::System.Nullable<decimal> Allowance2, 
-                    global::System.Nullable<decimal> Allowance3, 
-                    global::System.Nullable<decimal> Allowance4, 
-                    global::System.Nullable<bool> IsSocialInsurance, 
-                    global::System.Nullable<bool> IsHealthInsurance, 
-                    global::System.Nullable<bool> IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> IsUnionMoney, 
-                    global::System.Nullable<bool> IsUnion, 
-                    string UnionCode, 
-                    global::System.Nullable<global::System.DateTime> UnionDate, 
-                    string UnionPlace, 
-                    global::System.Nullable<bool> IsParty, 
-                    string PartyCode, 
-                    global::System.Nullable<global::System.DateTime> PartyDate, 
-                    string PartyPlace, 
-                    string InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> InsuranceDate, 
-                    string HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceToDate, 
-                    string ContractCode, 
-                    string ContractType, 
-                    global::System.Nullable<global::System.DateTime> ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> ContractToDate, 
-                    string WorkStateCode) {
-            if ((EmployeeCode == null)) {
-                throw new global::System.ArgumentNullException("EmployeeCode");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(EmployeeCode));
-            }
-            if ((DepartmentCode == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DepartmentCode));
-            }
-            if ((EnrollNumber == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(EnrollNumber));
-            }
-            if ((FirstName == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(FirstName));
-            }
-            if ((LastName == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(LastName));
-            }
-            if ((Alias == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Alias));
-            }
-            if ((Sex.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(Sex.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Marriage == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Marriage));
-            }
-            if ((Birthday.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(Birthday.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((BirthPlace == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(BirthPlace));
-            }
-            if ((MainAddress == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(MainAddress));
-            }
-            if ((ContactAddress == null)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(ContactAddress));
-            }
-            if ((CellPhone == null)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(CellPhone));
-            }
-            if ((Email == null)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Email));
-            }
-            if ((Photo == null)) {
-                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((byte[])(Photo));
-            }
-            if ((Nationality == null)) {
-                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Nationality));
-            }
-            if ((Ethnic == null)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Ethnic));
-            }
-            if ((Religion == null)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Religion));
-            }
-            if ((Education == null)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Education));
-            }
-            if ((Language == null)) {
-                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Language));
-            }
-            if ((Informatic == null)) {
-                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Informatic));
-            }
-            if ((Professional == null)) {
-                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(Professional));
-            }
-            if ((Position == null)) {
-                this.Adapter.InsertCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[22].Value = ((string)(Position));
-            }
-            if ((School == null)) {
-                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[23].Value = ((string)(School));
-            }
-            if ((IDCard == null)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((string)(IDCard));
-            }
-            if ((IDCardDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((System.DateTime)(IDCardDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((IDCardPlace == null)) {
-                this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(IDCardPlace));
-            }
-            if ((BeginDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((System.DateTime)(BeginDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((IsOffWork.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((bool)(IsOffWork.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((EndDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[29].Value = ((System.DateTime)(EndDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((PayForm.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[30].Value = ((int)(PayForm.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((PayMoney.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[31].Value = ((decimal)(PayMoney.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            if ((MinimumSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[32].Value = ((decimal)(MinimumSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            if ((RankSalary == null)) {
-                this.Adapter.InsertCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[33].Value = ((string)(RankSalary));
-            }
-            if ((StepSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[34].Value = ((int)(StepSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            if ((CoefficientSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[35].Value = ((double)(CoefficientSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            if ((DateSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[36].Value = ((System.DateTime)(DateSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            if ((BasicSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[37].Value = ((decimal)(BasicSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            if ((InsuranceSalary.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[38].Value = ((decimal)(InsuranceSalary.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[39].Value = ((decimal)(Allowance1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[40].Value = ((decimal)(Allowance2.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance3.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[41].Value = ((decimal)(Allowance3.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance4.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[42].Value = ((decimal)(Allowance4.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            if ((IsSocialInsurance.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[43].Value = ((bool)(IsSocialInsurance.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            if ((IsHealthInsurance.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[44].Value = ((bool)(IsHealthInsurance.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnemploymentInsurance.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[45].Value = ((bool)(IsUnemploymentInsurance.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnionMoney.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[46].Value = ((bool)(IsUnionMoney.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[47].Value = ((bool)(IsUnion.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            if ((UnionCode == null)) {
-                this.Adapter.InsertCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[48].Value = ((string)(UnionCode));
-            }
-            if ((UnionDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[49].Value = ((System.DateTime)(UnionDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            if ((UnionPlace == null)) {
-                this.Adapter.InsertCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[50].Value = ((string)(UnionPlace));
-            }
-            if ((IsParty.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[51].Value = ((bool)(IsParty.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            if ((PartyCode == null)) {
-                this.Adapter.InsertCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[52].Value = ((string)(PartyCode));
-            }
-            if ((PartyDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[53].Value = ((System.DateTime)(PartyDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            if ((PartyPlace == null)) {
-                this.Adapter.InsertCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[54].Value = ((string)(PartyPlace));
-            }
-            if ((InsuranceCode == null)) {
-                this.Adapter.InsertCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[55].Value = ((string)(InsuranceCode));
-            }
-            if ((InsuranceDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[56].Value = ((System.DateTime)(InsuranceDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            if ((HealthInsuranceCode == null)) {
-                this.Adapter.InsertCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[57].Value = ((string)(HealthInsuranceCode));
-            }
-            if ((HealthInsuranceFromDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[58].Value = ((System.DateTime)(HealthInsuranceFromDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[58].Value = global::System.DBNull.Value;
-            }
-            if ((HealthInsuranceToDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[59].Value = ((System.DateTime)(HealthInsuranceToDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[59].Value = global::System.DBNull.Value;
-            }
-            if ((ContractCode == null)) {
-                this.Adapter.InsertCommand.Parameters[60].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[60].Value = ((string)(ContractCode));
-            }
-            if ((ContractType == null)) {
-                this.Adapter.InsertCommand.Parameters[61].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[61].Value = ((string)(ContractType));
-            }
-            if ((ContractSignDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[62].Value = ((System.DateTime)(ContractSignDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[62].Value = global::System.DBNull.Value;
-            }
-            if ((ContractFromDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[63].Value = ((System.DateTime)(ContractFromDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[63].Value = global::System.DBNull.Value;
-            }
-            if ((ContractToDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[64].Value = ((System.DateTime)(ContractToDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[64].Value = global::System.DBNull.Value;
-            }
-            if ((WorkStateCode == null)) {
-                this.Adapter.InsertCommand.Parameters[65].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[65].Value = ((string)(WorkStateCode));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string EmployeeCode, 
-                    string DepartmentCode, 
-                    string EnrollNumber, 
-                    string FirstName, 
-                    string LastName, 
-                    string Alias, 
-                    global::System.Nullable<bool> Sex, 
-                    string Marriage, 
-                    global::System.Nullable<global::System.DateTime> Birthday, 
-                    string BirthPlace, 
-                    string MainAddress, 
-                    string ContactAddress, 
-                    string CellPhone, 
-                    string Email, 
-                    byte[] Photo, 
-                    string Nationality, 
-                    string Ethnic, 
-                    string Religion, 
-                    string Education, 
-                    string Language, 
-                    string Informatic, 
-                    string Professional, 
-                    string Position, 
-                    string School, 
-                    string IDCard, 
-                    global::System.Nullable<global::System.DateTime> IDCardDate, 
-                    string IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> BeginDate, 
-                    global::System.Nullable<bool> IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> EndDate, 
-                    global::System.Nullable<int> PayForm, 
-                    global::System.Nullable<decimal> PayMoney, 
-                    global::System.Nullable<decimal> MinimumSalary, 
-                    string RankSalary, 
-                    global::System.Nullable<int> StepSalary, 
-                    global::System.Nullable<double> CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> DateSalary, 
-                    global::System.Nullable<decimal> BasicSalary, 
-                    global::System.Nullable<decimal> InsuranceSalary, 
-                    global::System.Nullable<decimal> Allowance1, 
-                    global::System.Nullable<decimal> Allowance2, 
-                    global::System.Nullable<decimal> Allowance3, 
-                    global::System.Nullable<decimal> Allowance4, 
-                    global::System.Nullable<bool> IsSocialInsurance, 
-                    global::System.Nullable<bool> IsHealthInsurance, 
-                    global::System.Nullable<bool> IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> IsUnionMoney, 
-                    global::System.Nullable<bool> IsUnion, 
-                    string UnionCode, 
-                    global::System.Nullable<global::System.DateTime> UnionDate, 
-                    string UnionPlace, 
-                    global::System.Nullable<bool> IsParty, 
-                    string PartyCode, 
-                    global::System.Nullable<global::System.DateTime> PartyDate, 
-                    string PartyPlace, 
-                    string InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> InsuranceDate, 
-                    string HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceToDate, 
-                    string ContractCode, 
-                    string ContractType, 
-                    global::System.Nullable<global::System.DateTime> ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> ContractToDate, 
-                    string WorkStateCode, 
-                    string Original_EmployeeCode, 
-                    string Original_DepartmentCode, 
-                    string Original_EnrollNumber, 
-                    string Original_FirstName, 
-                    string Original_LastName, 
-                    string Original_Alias, 
-                    global::System.Nullable<bool> Original_Sex, 
-                    string Original_Marriage, 
-                    global::System.Nullable<global::System.DateTime> Original_Birthday, 
-                    string Original_BirthPlace, 
-                    string Original_MainAddress, 
-                    string Original_ContactAddress, 
-                    string Original_CellPhone, 
-                    string Original_Email, 
-                    string Original_Nationality, 
-                    string Original_Ethnic, 
-                    string Original_Religion, 
-                    string Original_Education, 
-                    string Original_Language, 
-                    string Original_Informatic, 
-                    string Original_Professional, 
-                    string Original_Position, 
-                    string Original_School, 
-                    string Original_IDCard, 
-                    global::System.Nullable<global::System.DateTime> Original_IDCardDate, 
-                    string Original_IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> Original_BeginDate, 
-                    global::System.Nullable<bool> Original_IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> Original_EndDate, 
-                    global::System.Nullable<int> Original_PayForm, 
-                    global::System.Nullable<decimal> Original_PayMoney, 
-                    global::System.Nullable<decimal> Original_MinimumSalary, 
-                    string Original_RankSalary, 
-                    global::System.Nullable<int> Original_StepSalary, 
-                    global::System.Nullable<double> Original_CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> Original_DateSalary, 
-                    global::System.Nullable<decimal> Original_BasicSalary, 
-                    global::System.Nullable<decimal> Original_InsuranceSalary, 
-                    global::System.Nullable<decimal> Original_Allowance1, 
-                    global::System.Nullable<decimal> Original_Allowance2, 
-                    global::System.Nullable<decimal> Original_Allowance3, 
-                    global::System.Nullable<decimal> Original_Allowance4, 
-                    global::System.Nullable<bool> Original_IsSocialInsurance, 
-                    global::System.Nullable<bool> Original_IsHealthInsurance, 
-                    global::System.Nullable<bool> Original_IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> Original_IsUnionMoney, 
-                    global::System.Nullable<bool> Original_IsUnion, 
-                    string Original_UnionCode, 
-                    global::System.Nullable<global::System.DateTime> Original_UnionDate, 
-                    string Original_UnionPlace, 
-                    global::System.Nullable<bool> Original_IsParty, 
-                    string Original_PartyCode, 
-                    global::System.Nullable<global::System.DateTime> Original_PartyDate, 
-                    string Original_PartyPlace, 
-                    string Original_InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_InsuranceDate, 
-                    string Original_HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceToDate, 
-                    string Original_ContractCode, 
-                    string Original_ContractType, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractToDate, 
-                    string Original_WorkStateCode) {
-            if ((EmployeeCode == null)) {
-                throw new global::System.ArgumentNullException("EmployeeCode");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(EmployeeCode));
-            }
-            if ((DepartmentCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DepartmentCode));
-            }
-            if ((EnrollNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(EnrollNumber));
-            }
-            if ((FirstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(FirstName));
-            }
-            if ((LastName == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(LastName));
-            }
-            if ((Alias == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Alias));
-            }
-            if ((Sex.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Sex.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Marriage == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Marriage));
-            }
-            if ((Birthday.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Birthday.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((BirthPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(BirthPlace));
-            }
-            if ((MainAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(MainAddress));
-            }
-            if ((ContactAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(ContactAddress));
-            }
-            if ((CellPhone == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(CellPhone));
-            }
-            if ((Email == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Email));
-            }
-            if ((Photo == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((byte[])(Photo));
-            }
-            if ((Nationality == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Nationality));
-            }
-            if ((Ethnic == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Ethnic));
-            }
-            if ((Religion == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Religion));
-            }
-            if ((Education == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Education));
-            }
-            if ((Language == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Language));
-            }
-            if ((Informatic == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Informatic));
-            }
-            if ((Professional == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Professional));
-            }
-            if ((Position == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Position));
-            }
-            if ((School == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(School));
-            }
-            if ((IDCard == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(IDCard));
-            }
-            if ((IDCardDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(IDCardDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((IDCardPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(IDCardPlace));
-            }
-            if ((BeginDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((System.DateTime)(BeginDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((IsOffWork.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((bool)(IsOffWork.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
-            }
-            if ((EndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((System.DateTime)(EndDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((PayForm.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(PayForm.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
-            }
-            if ((PayMoney.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(PayMoney.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            if ((MinimumSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(MinimumSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
-            }
-            if ((RankSalary == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(RankSalary));
-            }
-            if ((StepSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(StepSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
-            }
-            if ((CoefficientSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((double)(CoefficientSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            if ((DateSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(DateSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
-            }
-            if ((BasicSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(BasicSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            if ((InsuranceSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(InsuranceSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Allowance1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Allowance2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((decimal)(Allowance3.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            if ((Allowance4.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Allowance4.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
-            }
-            if ((IsSocialInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((bool)(IsSocialInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            if ((IsHealthInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((bool)(IsHealthInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnemploymentInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((bool)(IsUnemploymentInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnionMoney.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((bool)(IsUnionMoney.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
-            }
-            if ((IsUnion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((bool)(IsUnion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            if ((UnionCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(UnionCode));
-            }
-            if ((UnionDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((System.DateTime)(UnionDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            if ((UnionPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(UnionPlace));
-            }
-            if ((IsParty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(IsParty.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            if ((PartyCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(PartyCode));
-            }
-            if ((PartyDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((System.DateTime)(PartyDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            if ((PartyPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(PartyPlace));
-            }
-            if ((InsuranceCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(InsuranceCode));
-            }
-            if ((InsuranceDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((System.DateTime)(InsuranceDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            if ((HealthInsuranceCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(HealthInsuranceCode));
-            }
-            if ((HealthInsuranceFromDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((System.DateTime)(HealthInsuranceFromDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
-            }
-            if ((HealthInsuranceToDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((System.DateTime)(HealthInsuranceToDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
-            }
-            if ((ContractCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((string)(ContractCode));
-            }
-            if ((ContractType == null)) {
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(ContractType));
-            }
-            if ((ContractSignDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((System.DateTime)(ContractSignDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
-            }
-            if ((ContractFromDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((System.DateTime)(ContractFromDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
-            }
-            if ((ContractToDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((System.DateTime)(ContractToDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
-            }
-            if ((WorkStateCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(WorkStateCode));
-            }
-            if ((Original_EmployeeCode == null)) {
-                throw new global::System.ArgumentNullException("Original_EmployeeCode");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_EmployeeCode));
-            }
-            if ((Original_DepartmentCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_DepartmentCode));
-            }
-            if ((Original_EnrollNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_EnrollNumber));
-            }
-            if ((Original_FirstName == null)) {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_FirstName));
-            }
-            if ((Original_LastName == null)) {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_LastName));
-            }
-            if ((Original_Alias == null)) {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_Alias));
-            }
-            if ((Original_Sex.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((bool)(Original_Sex.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Marriage == null)) {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_Marriage));
-            }
-            if ((Original_Birthday.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((System.DateTime)(Original_Birthday.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BirthPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_BirthPlace));
-            }
-            if ((Original_MainAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((string)(Original_MainAddress));
-            }
-            if ((Original_ContactAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((string)(Original_ContactAddress));
-            }
-            if ((Original_CellPhone == null)) {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((string)(Original_CellPhone));
-            }
-            if ((Original_Email == null)) {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((string)(Original_Email));
-            }
-            if ((Original_Nationality == null)) {
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[94].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((string)(Original_Nationality));
-            }
-            if ((Original_Ethnic == null)) {
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[96].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[96].Value = ((string)(Original_Ethnic));
-            }
-            if ((Original_Religion == null)) {
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[98].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((string)(Original_Religion));
-            }
-            if ((Original_Education == null)) {
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[100].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[100].Value = ((string)(Original_Education));
-            }
-            if ((Original_Language == null)) {
-                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[102].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((string)(Original_Language));
-            }
-            if ((Original_Informatic == null)) {
-                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[104].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[103].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[104].Value = ((string)(Original_Informatic));
-            }
-            if ((Original_Professional == null)) {
-                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[106].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[105].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[106].Value = ((string)(Original_Professional));
-            }
-            if ((Original_Position == null)) {
-                this.Adapter.UpdateCommand.Parameters[107].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[108].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[107].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[108].Value = ((string)(Original_Position));
-            }
-            if ((Original_School == null)) {
-                this.Adapter.UpdateCommand.Parameters[109].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[110].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[109].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[110].Value = ((string)(Original_School));
-            }
-            if ((Original_IDCard == null)) {
-                this.Adapter.UpdateCommand.Parameters[111].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[112].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[111].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[112].Value = ((string)(Original_IDCard));
-            }
-            if ((Original_IDCardDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[113].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[114].Value = ((System.DateTime)(Original_IDCardDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[113].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[114].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IDCardPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[115].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[116].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[115].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[116].Value = ((string)(Original_IDCardPlace));
-            }
-            if ((Original_BeginDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[117].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[118].Value = ((System.DateTime)(Original_BeginDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[117].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[118].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsOffWork.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[119].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[120].Value = ((bool)(Original_IsOffWork.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[119].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[120].Value = global::System.DBNull.Value;
-            }
-            if ((Original_EndDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[121].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[122].Value = ((System.DateTime)(Original_EndDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[121].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[122].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PayForm.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[123].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[124].Value = ((int)(Original_PayForm.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[123].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[124].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PayMoney.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[125].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[126].Value = ((decimal)(Original_PayMoney.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[125].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[126].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MinimumSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[127].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[128].Value = ((decimal)(Original_MinimumSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[127].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[128].Value = global::System.DBNull.Value;
-            }
-            if ((Original_RankSalary == null)) {
-                this.Adapter.UpdateCommand.Parameters[129].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[130].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[129].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[130].Value = ((string)(Original_RankSalary));
-            }
-            if ((Original_StepSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[131].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[132].Value = ((int)(Original_StepSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[131].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[132].Value = global::System.DBNull.Value;
-            }
-            if ((Original_CoefficientSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[133].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[134].Value = ((double)(Original_CoefficientSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[133].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[134].Value = global::System.DBNull.Value;
-            }
-            if ((Original_DateSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[135].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[136].Value = ((System.DateTime)(Original_DateSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[135].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[136].Value = global::System.DBNull.Value;
-            }
-            if ((Original_BasicSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[137].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[138].Value = ((decimal)(Original_BasicSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[137].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[138].Value = global::System.DBNull.Value;
-            }
-            if ((Original_InsuranceSalary.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[139].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[140].Value = ((decimal)(Original_InsuranceSalary.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[139].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[140].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[141].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[142].Value = ((decimal)(Original_Allowance1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[141].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[142].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[143].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[144].Value = ((decimal)(Original_Allowance2.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[143].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[144].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[145].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[146].Value = ((decimal)(Original_Allowance3.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[145].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[146].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Allowance4.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[147].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[148].Value = ((decimal)(Original_Allowance4.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[147].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[148].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsSocialInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[149].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[150].Value = ((bool)(Original_IsSocialInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[149].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[150].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsHealthInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[151].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[152].Value = ((bool)(Original_IsHealthInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[151].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[152].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnemploymentInsurance.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[153].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[154].Value = ((bool)(Original_IsUnemploymentInsurance.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[153].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[154].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnionMoney.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[155].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[156].Value = ((bool)(Original_IsUnionMoney.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[155].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[156].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IsUnion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[157].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[158].Value = ((bool)(Original_IsUnion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[157].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[158].Value = global::System.DBNull.Value;
-            }
-            if ((Original_UnionCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[159].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[160].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[159].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[160].Value = ((string)(Original_UnionCode));
-            }
-            if ((Original_UnionDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[161].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[162].Value = ((System.DateTime)(Original_UnionDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[161].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[162].Value = global::System.DBNull.Value;
-            }
-            if ((Original_UnionPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[163].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[164].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[163].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[164].Value = ((string)(Original_UnionPlace));
-            }
-            if ((Original_IsParty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[165].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[166].Value = ((bool)(Original_IsParty.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[165].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[166].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PartyCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[167].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[168].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[167].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[168].Value = ((string)(Original_PartyCode));
-            }
-            if ((Original_PartyDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[169].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[170].Value = ((System.DateTime)(Original_PartyDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[169].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[170].Value = global::System.DBNull.Value;
-            }
-            if ((Original_PartyPlace == null)) {
-                this.Adapter.UpdateCommand.Parameters[171].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[172].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[171].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[172].Value = ((string)(Original_PartyPlace));
-            }
-            if ((Original_InsuranceCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[173].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[174].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[173].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[174].Value = ((string)(Original_InsuranceCode));
-            }
-            if ((Original_InsuranceDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[175].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[176].Value = ((System.DateTime)(Original_InsuranceDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[175].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[176].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HealthInsuranceCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[177].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[178].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[177].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[178].Value = ((string)(Original_HealthInsuranceCode));
-            }
-            if ((Original_HealthInsuranceFromDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[179].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[180].Value = ((System.DateTime)(Original_HealthInsuranceFromDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[179].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[180].Value = global::System.DBNull.Value;
-            }
-            if ((Original_HealthInsuranceToDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[181].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[182].Value = ((System.DateTime)(Original_HealthInsuranceToDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[181].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[182].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[183].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[184].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[183].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[184].Value = ((string)(Original_ContractCode));
-            }
-            if ((Original_ContractType == null)) {
-                this.Adapter.UpdateCommand.Parameters[185].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[186].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[185].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[186].Value = ((string)(Original_ContractType));
-            }
-            if ((Original_ContractSignDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[187].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[188].Value = ((System.DateTime)(Original_ContractSignDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[187].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[188].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractFromDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[189].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[190].Value = ((System.DateTime)(Original_ContractFromDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[189].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[190].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ContractToDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[191].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[192].Value = ((System.DateTime)(Original_ContractToDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[191].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[192].Value = global::System.DBNull.Value;
-            }
-            if ((Original_WorkStateCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[193].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[194].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[193].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[194].Value = ((string)(Original_WorkStateCode));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string DepartmentCode, 
-                    string EnrollNumber, 
-                    string FirstName, 
-                    string LastName, 
-                    string Alias, 
-                    global::System.Nullable<bool> Sex, 
-                    string Marriage, 
-                    global::System.Nullable<global::System.DateTime> Birthday, 
-                    string BirthPlace, 
-                    string MainAddress, 
-                    string ContactAddress, 
-                    string CellPhone, 
-                    string Email, 
-                    byte[] Photo, 
-                    string Nationality, 
-                    string Ethnic, 
-                    string Religion, 
-                    string Education, 
-                    string Language, 
-                    string Informatic, 
-                    string Professional, 
-                    string Position, 
-                    string School, 
-                    string IDCard, 
-                    global::System.Nullable<global::System.DateTime> IDCardDate, 
-                    string IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> BeginDate, 
-                    global::System.Nullable<bool> IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> EndDate, 
-                    global::System.Nullable<int> PayForm, 
-                    global::System.Nullable<decimal> PayMoney, 
-                    global::System.Nullable<decimal> MinimumSalary, 
-                    string RankSalary, 
-                    global::System.Nullable<int> StepSalary, 
-                    global::System.Nullable<double> CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> DateSalary, 
-                    global::System.Nullable<decimal> BasicSalary, 
-                    global::System.Nullable<decimal> InsuranceSalary, 
-                    global::System.Nullable<decimal> Allowance1, 
-                    global::System.Nullable<decimal> Allowance2, 
-                    global::System.Nullable<decimal> Allowance3, 
-                    global::System.Nullable<decimal> Allowance4, 
-                    global::System.Nullable<bool> IsSocialInsurance, 
-                    global::System.Nullable<bool> IsHealthInsurance, 
-                    global::System.Nullable<bool> IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> IsUnionMoney, 
-                    global::System.Nullable<bool> IsUnion, 
-                    string UnionCode, 
-                    global::System.Nullable<global::System.DateTime> UnionDate, 
-                    string UnionPlace, 
-                    global::System.Nullable<bool> IsParty, 
-                    string PartyCode, 
-                    global::System.Nullable<global::System.DateTime> PartyDate, 
-                    string PartyPlace, 
-                    string InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> InsuranceDate, 
-                    string HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> HealthInsuranceToDate, 
-                    string ContractCode, 
-                    string ContractType, 
-                    global::System.Nullable<global::System.DateTime> ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> ContractToDate, 
-                    string WorkStateCode, 
-                    string Original_EmployeeCode, 
-                    string Original_DepartmentCode, 
-                    string Original_EnrollNumber, 
-                    string Original_FirstName, 
-                    string Original_LastName, 
-                    string Original_Alias, 
-                    global::System.Nullable<bool> Original_Sex, 
-                    string Original_Marriage, 
-                    global::System.Nullable<global::System.DateTime> Original_Birthday, 
-                    string Original_BirthPlace, 
-                    string Original_MainAddress, 
-                    string Original_ContactAddress, 
-                    string Original_CellPhone, 
-                    string Original_Email, 
-                    string Original_Nationality, 
-                    string Original_Ethnic, 
-                    string Original_Religion, 
-                    string Original_Education, 
-                    string Original_Language, 
-                    string Original_Informatic, 
-                    string Original_Professional, 
-                    string Original_Position, 
-                    string Original_School, 
-                    string Original_IDCard, 
-                    global::System.Nullable<global::System.DateTime> Original_IDCardDate, 
-                    string Original_IDCardPlace, 
-                    global::System.Nullable<global::System.DateTime> Original_BeginDate, 
-                    global::System.Nullable<bool> Original_IsOffWork, 
-                    global::System.Nullable<global::System.DateTime> Original_EndDate, 
-                    global::System.Nullable<int> Original_PayForm, 
-                    global::System.Nullable<decimal> Original_PayMoney, 
-                    global::System.Nullable<decimal> Original_MinimumSalary, 
-                    string Original_RankSalary, 
-                    global::System.Nullable<int> Original_StepSalary, 
-                    global::System.Nullable<double> Original_CoefficientSalary, 
-                    global::System.Nullable<global::System.DateTime> Original_DateSalary, 
-                    global::System.Nullable<decimal> Original_BasicSalary, 
-                    global::System.Nullable<decimal> Original_InsuranceSalary, 
-                    global::System.Nullable<decimal> Original_Allowance1, 
-                    global::System.Nullable<decimal> Original_Allowance2, 
-                    global::System.Nullable<decimal> Original_Allowance3, 
-                    global::System.Nullable<decimal> Original_Allowance4, 
-                    global::System.Nullable<bool> Original_IsSocialInsurance, 
-                    global::System.Nullable<bool> Original_IsHealthInsurance, 
-                    global::System.Nullable<bool> Original_IsUnemploymentInsurance, 
-                    global::System.Nullable<bool> Original_IsUnionMoney, 
-                    global::System.Nullable<bool> Original_IsUnion, 
-                    string Original_UnionCode, 
-                    global::System.Nullable<global::System.DateTime> Original_UnionDate, 
-                    string Original_UnionPlace, 
-                    global::System.Nullable<bool> Original_IsParty, 
-                    string Original_PartyCode, 
-                    global::System.Nullable<global::System.DateTime> Original_PartyDate, 
-                    string Original_PartyPlace, 
-                    string Original_InsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_InsuranceDate, 
-                    string Original_HealthInsuranceCode, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_HealthInsuranceToDate, 
-                    string Original_ContractCode, 
-                    string Original_ContractType, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractSignDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractFromDate, 
-                    global::System.Nullable<global::System.DateTime> Original_ContractToDate, 
-                    string Original_WorkStateCode) {
-            return this.Update(Original_EmployeeCode, DepartmentCode, EnrollNumber, FirstName, LastName, Alias, Sex, Marriage, Birthday, BirthPlace, MainAddress, ContactAddress, CellPhone, Email, Photo, Nationality, Ethnic, Religion, Education, Language, Informatic, Professional, Position, School, IDCard, IDCardDate, IDCardPlace, BeginDate, IsOffWork, EndDate, PayForm, PayMoney, MinimumSalary, RankSalary, StepSalary, CoefficientSalary, DateSalary, BasicSalary, InsuranceSalary, Allowance1, Allowance2, Allowance3, Allowance4, IsSocialInsurance, IsHealthInsurance, IsUnemploymentInsurance, IsUnionMoney, IsUnion, UnionCode, UnionDate, UnionPlace, IsParty, PartyCode, PartyDate, PartyPlace, InsuranceCode, InsuranceDate, HealthInsuranceCode, HealthInsuranceFromDate, HealthInsuranceToDate, ContractCode, ContractType, ContractSignDate, ContractFromDate, ContractToDate, WorkStateCode, Original_EmployeeCode, Original_DepartmentCode, Original_EnrollNumber, Original_FirstName, Original_LastName, Original_Alias, Original_Sex, Original_Marriage, Original_Birthday, Original_BirthPlace, Original_MainAddress, Original_ContactAddress, Original_CellPhone, Original_Email, Original_Nationality, Original_Ethnic, Original_Religion, Original_Education, Original_Language, Original_Informatic, Original_Professional, Original_Position, Original_School, Original_IDCard, Original_IDCardDate, Original_IDCardPlace, Original_BeginDate, Original_IsOffWork, Original_EndDate, Original_PayForm, Original_PayMoney, Original_MinimumSalary, Original_RankSalary, Original_StepSalary, Original_CoefficientSalary, Original_DateSalary, Original_BasicSalary, Original_InsuranceSalary, Original_Allowance1, Original_Allowance2, Original_Allowance3, Original_Allowance4, Original_IsSocialInsurance, Original_IsHealthInsurance, Original_IsUnemploymentInsurance, Original_IsUnionMoney, Original_IsUnion, Original_UnionCode, Original_UnionDate, Original_UnionPlace, Original_IsParty, Original_PartyCode, Original_PartyDate, Original_PartyPlace, Original_InsuranceCode, Original_InsuranceDate, Original_HealthInsuranceCode, Original_HealthInsuranceFromDate, Original_HealthInsuranceToDate, Original_ContractCode, Original_ContractType, Original_ContractSignDate, Original_ContractFromDate, Original_ContractToDate, Original_WorkStateCode);
         }
     }
     
@@ -20520,8 +17901,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
         private DIC_SALARY_STEPTableAdapter _dIC_SALARY_STEPTableAdapter;
         
         private DIC_SCHOOLTableAdapter _dIC_SCHOOLTableAdapter;
-        
-        private HRM_EMPLOYEETableAdapter _hRM_EMPLOYEETableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -20750,20 +18129,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public HRM_EMPLOYEETableAdapter HRM_EMPLOYEETableAdapter {
-            get {
-                return this._hRM_EMPLOYEETableAdapter;
-            }
-            set {
-                this._hRM_EMPLOYEETableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -20841,10 +18206,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                             && (this._dIC_SCHOOLTableAdapter.Connection != null))) {
                     return this._dIC_SCHOOLTableAdapter.Connection;
                 }
-                if (((this._hRM_EMPLOYEETableAdapter != null) 
-                            && (this._hRM_EMPLOYEETableAdapter.Connection != null))) {
-                    return this._hRM_EMPLOYEETableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -20901,9 +18262,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                     count = (count + 1);
                 }
                 if ((this._dIC_SCHOOLTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._hRM_EMPLOYEETableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -21052,15 +18410,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._hRM_EMPLOYEETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HRM_EMPLOYEE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._hRM_EMPLOYEETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -21191,14 +18540,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._hRM_EMPLOYEETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HRM_EMPLOYEE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._hRM_EMPLOYEETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -21209,14 +18550,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(ds_EMP_MANAGEMENT dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._hRM_EMPLOYEETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HRM_EMPLOYEE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._hRM_EMPLOYEETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._dIC_SALARY_STEPTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DIC_SALARY_STEP.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -21451,11 +18784,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._hRM_EMPLOYEETableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._hRM_EMPLOYEETableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -21623,15 +18951,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                         adaptersWithAcceptChangesDuringUpdate.Add(this._dIC_SCHOOLTableAdapter.Adapter);
                     }
                 }
-                if ((this._hRM_EMPLOYEETableAdapter != null)) {
-                    revertConnections.Add(this._hRM_EMPLOYEETableAdapter, this._hRM_EMPLOYEETableAdapter.Connection);
-                    this._hRM_EMPLOYEETableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._hRM_EMPLOYEETableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._hRM_EMPLOYEETableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._hRM_EMPLOYEETableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._hRM_EMPLOYEETableAdapter.Adapter);
-                    }
-                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -21749,10 +19068,6 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
                 if ((this._dIC_SCHOOLTableAdapter != null)) {
                     this._dIC_SCHOOLTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dIC_SCHOOLTableAdapter]));
                     this._dIC_SCHOOLTableAdapter.Transaction = null;
-                }
-                if ((this._hRM_EMPLOYEETableAdapter != null)) {
-                    this._hRM_EMPLOYEETableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hRM_EMPLOYEETableAdapter]));
-                    this._hRM_EMPLOYEETableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

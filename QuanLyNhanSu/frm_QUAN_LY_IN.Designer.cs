@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Danh sách tất cả nhân viên");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Danh sách nhân viên theo phòng ban");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Danh sách nhân viên được chọn");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Danh sách nhân viên đang làm");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Danh sách nhân viên nghỉ làm");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Hồ sơ nhân viên", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Danh sách tất cả nhân viên");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Danh sách nhân viên theo phòng ban");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("In nhân viên được chọn");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Danh sách nhân viên đang làm");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Danh sách nhân viên nghỉ làm");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Hồ sơ nhân viên", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btn_PREVIEW = new DevExpress.XtraEditors.SimpleButton();
             this.btn_QUIT = new DevExpress.XtraEditors.SimpleButton();
@@ -95,25 +95,27 @@
             this.btn_QUIT.StyleController = this.layoutControl1;
             this.btn_QUIT.TabIndex = 5;
             this.btn_QUIT.Text = "Đóng";
+            this.btn_QUIT.Click += new System.EventHandler(this.btn_QUIT_Click);
             // 
             // tree_HS_NHAN_VIEN
             // 
+            this.tree_HS_NHAN_VIEN.FullRowSelect = true;
             this.tree_HS_NHAN_VIEN.Location = new System.Drawing.Point(12, 12);
             this.tree_HS_NHAN_VIEN.Name = "tree_HS_NHAN_VIEN";
-            treeNode7.Name = "Node_DS_TAT_CA_NHAN_VIEN";
-            treeNode7.Text = "Danh sách tất cả nhân viên";
-            treeNode8.Name = "Node_DS_NHAN_VIEN_THEO_PHONG_BAN";
-            treeNode8.Text = "Danh sách nhân viên theo phòng ban";
-            treeNode9.Name = "Node_DS_NHAN_VIEN_DUOC_CHON";
-            treeNode9.Text = "Danh sách nhân viên được chọn";
-            treeNode10.Name = "Node_DS_NHAN_VIEN_DANG_LAM";
-            treeNode10.Text = "Danh sách nhân viên đang làm";
-            treeNode11.Name = "Node_DS_NHAN_VIEN_DANG_LAM";
-            treeNode11.Text = "Danh sách nhân viên nghỉ làm";
-            treeNode12.Name = "Node_HS_NHAN_VIEN";
-            treeNode12.Text = "Hồ sơ nhân viên";
+            treeNode1.Name = "Node_DS_TAT_CA_NHAN_VIEN";
+            treeNode1.Text = "Danh sách tất cả nhân viên";
+            treeNode2.Name = "Node_DS_NHAN_VIEN_THEO_PHONG_BAN";
+            treeNode2.Text = "Danh sách nhân viên theo phòng ban";
+            treeNode3.Name = "Node_DS_NHAN_VIEN_DUOC_CHON";
+            treeNode3.Text = "In nhân viên được chọn";
+            treeNode4.Name = "Node_DS_NHAN_VIEN_DANG_LAM";
+            treeNode4.Text = "Danh sách nhân viên đang làm";
+            treeNode5.Name = "Node_DS_NHAN_VIEN_DANG_LAM";
+            treeNode5.Text = "Danh sách nhân viên nghỉ làm";
+            treeNode6.Name = "Node_HS_NHAN_VIEN";
+            treeNode6.Text = "Hồ sơ nhân viên";
             this.tree_HS_NHAN_VIEN.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12});
+            treeNode6});
             this.tree_HS_NHAN_VIEN.Size = new System.Drawing.Size(365, 119);
             this.tree_HS_NHAN_VIEN.TabIndex = 4;
             this.tree_HS_NHAN_VIEN.Click += new System.EventHandler(this.tree_HS_NHAN_VIEN_Click);
@@ -192,7 +194,9 @@
             this.ClientSize = new System.Drawing.Size(389, 179);
             this.Controls.Add(this.layoutControl1);
             this.Name = "frm_QUAN_LY_IN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TÙY CHỌN IN";
+            this.Load += new System.EventHandler(this.frm_QUAN_LY_IN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();

@@ -326,6 +326,12 @@
     <Compile Include="REPORT\HOC_VAN.Designer.cs">
       <DependentUpon>HOC_VAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.Designer.cs">
+      <DependentUpon>NHAN_VIEN_DANG_LAM_VIEC.cs</DependentUpon>
+    </Compile>
     <Compile Include="REPORT\XtraReport1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -475,6 +481,9 @@
     <EmbeddedResource Include="REPORT\HOC_VAN.resx">
       <DependentUpon>HOC_VAN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.resx">
+      <DependentUpon>NHAN_VIEN_DANG_LAM_VIEC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORT\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
@@ -567,6 +576,11 @@
     <None Include="Resources\EXPORT1.png" />
     <None Include="Resources\LOOK.png" />
     <None Include="Resources\QUIT2.png" />
+    <None Include="Resources\PRINT2.png" />
+    <None Include="Resources\PRINTT.png" />
+    <None Include="Resources\PRINTT1.png" />
+    <None Include="Resources\PRINT%40.png" />
+    <None Include="Resources\PRINT%401.png" />
     <Content Include="SQL\SQL_SCRIPT.sql" />
   </ItemGroup>
   <ItemGroup />

@@ -28,6 +28,7 @@ namespace QuanLyNhanSu
             this.pic_DELETE.Click += delete_record;
             this.pic_INSERT.Click += insert_record;
             this.pic_EXPORT.Click += export_data;
+            this.pic_PRINT.Click += pic_PRINT_data;
         }
 
         private void export_data(object sender, EventArgs e)
@@ -109,6 +110,12 @@ namespace QuanLyNhanSu
                 caption = info.Column.ToString();
             info.GroupText = string.Format("{0} : {1} ({2})", caption, info.GroupValueText, view.GetChildRowCount(e.RowHandle));
        
+        }
+
+        private void pic_PRINT_data(object sender, EventArgs e)
+        {
+            frm_QUAN_LY_IN frm_IN = new frm_QUAN_LY_IN(gv_DATA);
+            frm_IN.ShowDialog();
         }
 
       

@@ -31,7 +31,7 @@
             this.dg_DATA = new DevExpress.XtraGrid.GridControl();
             this.gv_DATA = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layout_CONTROL = new DevExpress.XtraLayout.LayoutControl();
-            this.pic_REFRESH = new DevExpress.XtraEditors.PictureEdit();
+            this.pic_PRINT = new DevExpress.XtraEditors.PictureEdit();
             this.pic_EXPORT = new DevExpress.XtraEditors.PictureEdit();
             this.pic_DELETE = new DevExpress.XtraEditors.PictureEdit();
             this.pic_UPDATE = new DevExpress.XtraEditors.PictureEdit();
@@ -48,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).BeginInit();
             this.layout_CONTROL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PRINT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).BeginInit();
@@ -86,7 +86,7 @@
             // 
             // layout_CONTROL
             // 
-            this.layout_CONTROL.Controls.Add(this.pic_REFRESH);
+            this.layout_CONTROL.Controls.Add(this.pic_PRINT);
             this.layout_CONTROL.Controls.Add(this.pic_EXPORT);
             this.layout_CONTROL.Controls.Add(this.pic_DELETE);
             this.layout_CONTROL.Controls.Add(this.pic_UPDATE);
@@ -101,18 +101,19 @@
             this.layout_CONTROL.TabIndex = 1;
             this.layout_CONTROL.Text = "layoutControl1";
             // 
-            // pic_REFRESH
+            // pic_PRINT
             // 
-            this.pic_REFRESH.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pic_REFRESH.EditValue = global::QuanLyNhanSu.Properties.Resources.REFRESH;
-            this.pic_REFRESH.Location = new System.Drawing.Point(506, 12);
-            this.pic_REFRESH.Name = "pic_REFRESH";
-            this.pic_REFRESH.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pic_REFRESH.Properties.ZoomAccelerationFactor = 1D;
-            this.pic_REFRESH.Size = new System.Drawing.Size(119, 56);
-            this.pic_REFRESH.StyleController = this.layout_CONTROL;
-            this.pic_REFRESH.TabIndex = 8;
-            this.pic_REFRESH.ToolTip = "Làm mới";
+            this.pic_PRINT.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pic_PRINT.EditValue = global::QuanLyNhanSu.Properties.Resources.PRINT_1;
+            this.pic_PRINT.Location = new System.Drawing.Point(506, 12);
+            this.pic_PRINT.Name = "pic_PRINT";
+            this.pic_PRINT.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pic_PRINT.Properties.ZoomAccelerationFactor = 1D;
+            this.pic_PRINT.Size = new System.Drawing.Size(119, 56);
+            this.pic_PRINT.StyleController = this.layout_CONTROL;
+            this.pic_PRINT.TabIndex = 8;
+            this.pic_PRINT.ToolTip = "Làm mới";
+            this.pic_PRINT.EditValueChanged += new System.EventHandler(this.pic_PRINT_data);
             // 
             // pic_EXPORT
             // 
@@ -242,7 +243,7 @@
             // 
             // layout_REFRESH
             // 
-            this.layout_REFRESH.Control = this.pic_REFRESH;
+            this.layout_REFRESH.Control = this.pic_PRINT;
             this.layout_REFRESH.Location = new System.Drawing.Point(494, 0);
             this.layout_REFRESH.MaxSize = new System.Drawing.Size(123, 60);
             this.layout_REFRESH.MinSize = new System.Drawing.Size(123, 60);
@@ -271,7 +272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).EndInit();
             this.layout_CONTROL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_PRINT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).EndInit();
@@ -297,7 +298,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layout_INSERT;
         private DevExpress.XtraEditors.PictureEdit pic_UPDATE;
         private DevExpress.XtraLayout.LayoutControlItem layout_UPDATE;
-        private DevExpress.XtraEditors.PictureEdit pic_REFRESH;
+        private DevExpress.XtraEditors.PictureEdit pic_PRINT;
         private DevExpress.XtraEditors.PictureEdit pic_DELETE;
         private DevExpress.XtraEditors.PictureEdit pic_EXPORT;
         private DevExpress.XtraLayout.LayoutControlItem layout_EXPORT;
