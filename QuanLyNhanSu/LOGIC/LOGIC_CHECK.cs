@@ -300,11 +300,16 @@ namespace QuanLyNhanSu.LOGIC
             {
                 err_msg+=GLOBAL.err_code["E030"];
             }
-
-            if (!Is_Email(new_entity.Email))
+            if(!Is_Empty_String(new_entity.Email))
             {
-                err_msg += GLOBAL.err_code["E033"];
+                if (!emailIsValid(new_entity.Email))
+                {
+                    err_msg += GLOBAL.err_code["E033"];
+                }
+                else { }
             }
+
+            
 
             if (Is_Empty_String(new_entity.Nationality))
             {
