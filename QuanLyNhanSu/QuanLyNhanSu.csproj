@@ -314,18 +314,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_EMP_MANAGEMENT.xsd</DependentUpon>
     </Compile>
-    <Compile Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.Designer.cs">
-      <DependentUpon>NHAN_VIEN_DANG_LAM_VIEC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.Designer.cs">
-      <DependentUpon>NHAN_VIEN_THEO_PHONG_BAN.cs</DependentUpon>
-    </Compile>
     <Compile Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -337,12 +325,6 @@
     </Compile>
     <Compile Include="REPORT\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="REPORT\XtraReport3.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="REPORT\XtraReport3.Designer.cs">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
@@ -445,20 +427,11 @@
     <EmbeddedResource Include="REPORT\DANH_SACH_NHAN_VIEN.resx">
       <DependentUpon>DANH_SACH_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORT\NHAN_VIEN_DANG_LAM_VIEC.resx">
-      <DependentUpon>NHAN_VIEN_DANG_LAM_VIEC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="REPORT\NHAN_VIEN_THEO_PHONG_BAN.resx">
-      <DependentUpon>NHAN_VIEN_THEO_PHONG_BAN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.resx">
       <DependentUpon>DANH_SACH_TUNG_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORT\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="REPORT\XtraReport3.resx">
-      <DependentUpon>XtraReport3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

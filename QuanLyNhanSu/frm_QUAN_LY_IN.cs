@@ -111,7 +111,7 @@ namespace QuanLyNhanSu
 
         private void btn_QUIT_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

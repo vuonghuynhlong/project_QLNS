@@ -31,7 +31,6 @@
             this.dg_DATA = new DevExpress.XtraGrid.GridControl();
             this.gv_DATA = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layout_CONTROL = new DevExpress.XtraLayout.LayoutControl();
-            this.pic_REFRESH = new DevExpress.XtraEditors.PictureEdit();
             this.pic_EXPORT = new DevExpress.XtraEditors.PictureEdit();
             this.pic_DELETE = new DevExpress.XtraEditors.PictureEdit();
             this.pic_UPDATE = new DevExpress.XtraEditors.PictureEdit();
@@ -42,13 +41,11 @@
             this.layout_EXPORT = new DevExpress.XtraLayout.LayoutControlItem();
             this.layout_UPDATE = new DevExpress.XtraLayout.LayoutControlItem();
             this.layout_DELETE = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layout_REFRESH = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.dg_DATA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).BeginInit();
             this.layout_CONTROL.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).BeginInit();
@@ -59,7 +56,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_EXPORT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_UPDATE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_DELETE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +80,6 @@
             // 
             // layout_CONTROL
             // 
-            this.layout_CONTROL.Controls.Add(this.pic_REFRESH);
             this.layout_CONTROL.Controls.Add(this.pic_EXPORT);
             this.layout_CONTROL.Controls.Add(this.pic_DELETE);
             this.layout_CONTROL.Controls.Add(this.pic_UPDATE);
@@ -98,19 +93,6 @@
             this.layout_CONTROL.Size = new System.Drawing.Size(684, 461);
             this.layout_CONTROL.TabIndex = 1;
             this.layout_CONTROL.Text = "layoutControl1";
-            // 
-            // pic_REFRESH
-            // 
-            this.pic_REFRESH.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pic_REFRESH.EditValue = global::QuanLyNhanSu.Properties.Resources.REFRESH;
-            this.pic_REFRESH.Location = new System.Drawing.Point(506, 12);
-            this.pic_REFRESH.Name = "pic_REFRESH";
-            this.pic_REFRESH.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pic_REFRESH.Properties.ZoomAccelerationFactor = 1D;
-            this.pic_REFRESH.Size = new System.Drawing.Size(119, 56);
-            this.pic_REFRESH.StyleController = this.layout_CONTROL;
-            this.pic_REFRESH.TabIndex = 8;
-            this.pic_REFRESH.ToolTip = "Làm mới";
             // 
             // pic_EXPORT
             // 
@@ -174,7 +156,6 @@
             this.layout_EXPORT,
             this.layout_UPDATE,
             this.layout_DELETE,
-            this.layout_REFRESH,
             this.emptySpaceItem1});
             this.layout_GROUP.Location = new System.Drawing.Point(0, 0);
             this.layout_GROUP.Name = "Root";
@@ -238,24 +219,12 @@
             this.layout_DELETE.TextSize = new System.Drawing.Size(0, 0);
             this.layout_DELETE.TextVisible = false;
             // 
-            // layout_REFRESH
-            // 
-            this.layout_REFRESH.Control = this.pic_REFRESH;
-            this.layout_REFRESH.Location = new System.Drawing.Point(494, 0);
-            this.layout_REFRESH.MaxSize = new System.Drawing.Size(123, 60);
-            this.layout_REFRESH.MinSize = new System.Drawing.Size(123, 60);
-            this.layout_REFRESH.Name = "layout_REFRESH";
-            this.layout_REFRESH.Size = new System.Drawing.Size(123, 60);
-            this.layout_REFRESH.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layout_REFRESH.TextSize = new System.Drawing.Size(0, 0);
-            this.layout_REFRESH.TextVisible = false;
-            // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(617, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(494, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(47, 60);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(170, 60);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frm_TEMPLATE
@@ -269,7 +238,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gv_DATA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).EndInit();
             this.layout_CONTROL.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).EndInit();
@@ -280,7 +248,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_EXPORT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_UPDATE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_DELETE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
@@ -295,12 +262,10 @@
         protected DevExpress.XtraLayout.LayoutControlItem layout_INSERT;
         protected DevExpress.XtraEditors.PictureEdit pic_UPDATE;
         protected DevExpress.XtraLayout.LayoutControlItem layout_UPDATE;
-        protected DevExpress.XtraEditors.PictureEdit pic_REFRESH;
         protected DevExpress.XtraEditors.PictureEdit pic_DELETE;
         protected DevExpress.XtraEditors.PictureEdit pic_EXPORT;
         protected DevExpress.XtraLayout.LayoutControlItem layout_EXPORT;
         protected DevExpress.XtraLayout.LayoutControlItem layout_DELETE;
-        protected DevExpress.XtraLayout.LayoutControlItem layout_REFRESH;
         protected DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         protected DevExpress.XtraLayout.LayoutControl layout_CONTROL;
         public DevExpress.XtraGrid.GridControl dg_DATA;

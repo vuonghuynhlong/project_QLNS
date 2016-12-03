@@ -105,7 +105,6 @@ namespace QuanLyNhanSu.LOGIC
             try
             {
                 MailAddress m = new MailAddress(emailaddress);
-                 
                 return true;
             }
             catch (FormatException)

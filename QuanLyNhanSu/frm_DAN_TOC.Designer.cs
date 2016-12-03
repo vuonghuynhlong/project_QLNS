@@ -34,12 +34,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_INSERT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_UPDATE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_EXPORT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_DELETE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).BeginInit();
             this.layout_CONTROL.SuspendLayout();
@@ -66,9 +66,9 @@
             // 
             // pic_REFRESH
             // 
-            this.pic_REFRESH.Location = new System.Drawing.Point(205, 12);
-            this.pic_REFRESH.Size = new System.Drawing.Size(20, 56);
-            // 
+            //this.pic_REFRESH.Location = new System.Drawing.Point(205, 12);
+            //this.pic_REFRESH.Size = new System.Drawing.Size(20, 56);
+            //// 
             // pic_DELETE
             // 
             this.pic_DELETE.Location = new System.Drawing.Point(157, 12);
@@ -91,8 +91,8 @@
             // 
             // layout_REFRESH
             // 
-            this.layout_REFRESH.Location = new System.Drawing.Point(193, 0);
-            this.layout_REFRESH.Size = new System.Drawing.Size(24, 60);
+            //this.layout_REFRESH.Location = new System.Drawing.Point(193, 0);
+            //this.layout_REFRESH.Size = new System.Drawing.Size(24, 60);
             // 
             // emptySpaceItem1
             // 
@@ -107,7 +107,7 @@
             this.layout_CONTROL.Controls.SetChildIndex(this.pic_UPDATE, 0);
             this.layout_CONTROL.Controls.SetChildIndex(this.pic_DELETE, 0);
             this.layout_CONTROL.Controls.SetChildIndex(this.pic_EXPORT, 0);
-            this.layout_CONTROL.Controls.SetChildIndex(this.pic_REFRESH, 0);
+            //this.layout_CONTROL.Controls.SetChildIndex(this.pic_REFRESH, 0);
             // 
             // frm_DAN_TOC
             // 
@@ -121,12 +121,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layout_INSERT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_UPDATE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_UPDATE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pic_REFRESH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_DELETE.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_EXPORT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_EXPORT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_DELETE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.layout_REFRESH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layout_CONTROL)).EndInit();
             this.layout_CONTROL.ResumeLayout(false);
