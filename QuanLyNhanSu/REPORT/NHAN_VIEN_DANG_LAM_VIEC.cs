@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace QuanLyNhanSu.REPORT
 {
-    public partial class HOC_VAN : DevExpress.XtraReports.UI.XtraReport
+    public partial class NHAN_VIEN_DANG_LAM_VIEC : DevExpress.XtraReports.UI.XtraReport
     {
-        public HOC_VAN()
+        public NHAN_VIEN_DANG_LAM_VIEC()
         {
             InitializeComponent();
         }

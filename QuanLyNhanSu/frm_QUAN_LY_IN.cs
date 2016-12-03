@@ -91,6 +91,12 @@ namespace QuanLyNhanSu
 
             }
 
+            if (node_text == "Danh sách nhân viên theo phòng ban")
+            {
+                frm_SHOW_PHONG_BAN frm = new frm_SHOW_PHONG_BAN();
+                frm.ShowDialog();
+            }
+
 
           
 

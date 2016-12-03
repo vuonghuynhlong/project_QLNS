@@ -30,7 +30,9 @@
         {
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.button1 = new System.Windows.Forms.Button();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -55,17 +57,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(102, 299);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.TabIndex = 2;
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(516, 442);
+            this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureEdit1);
             this.Name = "frmTest";
             this.Text = "frmTest";
             this.Load += new System.EventHandler(this.frmTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,6 +85,7 @@
 
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
 
     }
 }

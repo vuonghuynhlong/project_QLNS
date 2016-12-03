@@ -35,27 +35,30 @@
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(12, 50);
+            this.lookUpEdit1.Location = new System.Drawing.Point(20, 12);
             this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.NullText = "Chọn một phòng ban";
             this.lookUpEdit1.Size = new System.Drawing.Size(252, 20);
             this.lookUpEdit1.TabIndex = 0;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(111, 94);
+            this.simpleButton1.Image = global::QuanLyNhanSu.Properties.Resources.PRINT_;
+            this.simpleButton1.Location = new System.Drawing.Point(213, 38);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(59, 23);
             this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Text = "In";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // frm_SHOW_PHONG_BAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 75);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.lookUpEdit1);
             this.Name = "frm_SHOW_PHONG_BAN";
