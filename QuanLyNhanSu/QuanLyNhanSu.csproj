@@ -320,11 +320,11 @@
     <Compile Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.Designer.cs">
       <DependentUpon>DANH_SACH_TUNG_NHAN_VIEN.cs</DependentUpon>
     </Compile>
-    <Compile Include="REPORT\XtraReport1.cs">
+    <Compile Include="REPORT\HOP_DONG_LAO_DONG.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="REPORT\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
+    <Compile Include="REPORT\HOP_DONG_LAO_DONG.Designer.cs">
+      <DependentUpon>HOP_DONG_LAO_DONG.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.cs</DependentUpon>
@@ -430,8 +430,8 @@
     <EmbeddedResource Include="REPORT\DANH_SACH_TUNG_NHAN_VIEN.resx">
       <DependentUpon>DANH_SACH_TUNG_NHAN_VIEN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORT\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
+    <EmbeddedResource Include="REPORT\HOP_DONG_LAO_DONG.resx">
+      <DependentUpon>HOP_DONG_LAO_DONG.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -481,6 +481,11 @@
             this.cbo_MARRIAGE.Name = "cbo_MARRIAGE";
             this.cbo_MARRIAGE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbo_MARRIAGE.Properties.Items.AddRange(new object[] {
+            "Đã kết hôn",
+            "Chưa kết hôn",
+            "Đã ly hôn",
+            "Mất chồng/Mất vợ"});
             this.cbo_MARRIAGE.Size = new System.Drawing.Size(97, 20);
             this.cbo_MARRIAGE.StyleController = this.layout_CONTROL;
             this.cbo_MARRIAGE.TabIndex = 8;

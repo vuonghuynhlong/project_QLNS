@@ -27,7 +27,7 @@ namespace QuanLyNhanSu
            lookUpEdit1.Properties.ValueMember = "Mã Phòng Ban";
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btn_PRINT_Click(object sender, EventArgs e)
         {
             if (lookUpEdit1.EditValue == null)
             {

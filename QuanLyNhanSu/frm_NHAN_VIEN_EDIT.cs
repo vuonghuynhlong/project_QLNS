@@ -97,7 +97,7 @@ namespace QuanLyNhanSu
             new_entity.Birthday = date_BIRTHDAY.DateTime;
             new_entity.BirthPlace = txt_BIRTH_PLACE.Text;
             new_entity.Alias = txt_ALIAS.Text;
-            new_entity.Marriage = cbo_MARRIAGE.Text;
+            new_entity.Marriage = (cbo_MARRIAGE.EditValue == null ? "" : cbo_MARRIAGE.EditValue.ToString());
             new_entity.IDCard = txt_IDCARD.Text;
             new_entity.DepartmentCode = cbo_DEPARTMENT.EditValue.ToString();
             new_entity.WorkStateCode = (cbo_WORK_STATE.EditValue == null ? null : cbo_WORK_STATE.EditValue.ToString());
@@ -191,7 +191,7 @@ namespace QuanLyNhanSu
             new_entity.IDCard = txt_IDCARD.Text;
             new_entity.Birthday = date_BIRTHDAY.DateTime;
             new_entity.BirthPlace = txt_BIRTH_PLACE.Text;
-            new_entity.Marriage = cbo_MARRIAGE.Text;
+            new_entity.Marriage = (cbo_MARRIAGE.EditValue == null ? "" : cbo_MARRIAGE.EditValue.ToString());
             new_entity.IDCardDate = date_IDCARD.DateTime;
             new_entity.IDCardPlace = txt_IDCARD_PLACE.Text;
             new_entity.MainAddress = txt_MAIN_ADDRESS.Text;

@@ -6,9 +6,9 @@ using DevExpress.XtraReports.UI;
 
 namespace QuanLyNhanSu.REPORT
 {
-    public partial class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
+    public partial class HOP_DONG_LAO_DONG : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReport1()
+        public HOP_DONG_LAO_DONG()
         {
             InitializeComponent();
         }

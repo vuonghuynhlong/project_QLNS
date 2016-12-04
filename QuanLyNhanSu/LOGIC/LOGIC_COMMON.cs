@@ -101,38 +101,38 @@ namespace QuanLyNhanSu.LOGIC
             return true;
         }
 
-        public static bool emailIsValid(string email)
-        {
-            string expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-        //public static bool Is_Email(string emailaddress)
+        //public static bool emailIsValid(string email)
         //{
-        //    try
+        //    string expresion;
+        //    expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+        //    if (Regex.IsMatch(email, expresion))
         //    {
-        //        MailAddress m = new MailAddress(emailaddress);
-        //        return true;
+        //        if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+        //        {
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            return false;
+        //        }
         //    }
-        //    catch (FormatException)
+        //    else
         //    {
         //        return false;
         //    }
         //}
+        public static bool Is_Email(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
 
         public static void Init_Lookup_Edit_DataSource(LookUpEdit lookup_edit, DataTable data, String value_member, String display_member) {
             lookup_edit.Properties.DataSource = data;

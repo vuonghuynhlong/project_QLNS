@@ -302,7 +302,7 @@ namespace QuanLyNhanSu.LOGIC
             }
             if(!Is_Empty_String(new_entity.Email))
             {
-                if (!emailIsValid(new_entity.Email))
+                if (!Is_Email(new_entity.Email))
                 {
                     err_msg += GLOBAL.err_code["E033"];
                 }
@@ -330,6 +330,14 @@ namespace QuanLyNhanSu.LOGIC
             if(Is_Empty_String(new_entity.School))
             {
                 err_msg += GLOBAL.err_code["E032"];
+            }
+            if(Is_Empty_String(new_entity.WorkStateCode))
+            {
+                err_msg += GLOBAL.err_code["E034"];
+            }
+            if(Is_Empty_String(new_entity.DepartmentCode))
+            {
+                err_msg += GLOBAL.err_code["E035"];
             }
             if (err_msg != string.Empty)
             {
