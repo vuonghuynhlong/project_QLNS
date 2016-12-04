@@ -117,17 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="xrLabel30.Text" xml:space="preserve">
-    <value>Điều 1: Thời hạn và công việc hợp đồng
-1. Loại hợp đồng lao động: Hợp đồng xác định thời hạn từ 28/02/16 đến 28/02/18.
-2. Địa điểm làm việc: Hệ Thống Siêu Thị Điện Máy - Nội Thất Chợ Lớn.
-3. Công việc phải làm: Hoàn thành tốt công việc được giao theo định mức sản lượng, thời gian công nghệ và đạt chất lượng theo quy định và chấp hành tốt nội  quy kỷ luật, chấp hành nghiêm chỉnh quy trình vận hành, quy trình thao tác công nghệ, bảo quản thiết bị quy trình an toàn lao động.
-Điều 2: Chế độ làm việc
-1. Thời gian làm việc: Ca 1 (từ 7:15 đến 11:45 AM); Ca 2 (từ 1:30 PM đến 5:00 PM).
-2. Được cấp phát dụng cụ làm việc theo ngành nghề quy định. Người lao động có nhiệm vụ bảo quản và sử dụng theo đúng quy định. Nếu làm mất hoặc hư hỏng phải bồi thường theo quy định của công ty và luật lao động.
-3. Phương tiện đi lại: Người lao động tự túc.
-Điều 3: Quyền lợi của người lao động
-1. Mức lương chính thức hoặc tiền công: 4.550.400 VNĐ.
+  <data name="xrLabel58.Text" xml:space="preserve">
+    <value>1. Những vấn đề lao động không ghi trong hợp đồng lao động này thì áp dụng quy định của thỏa ước tập thể, trường hợp chưa có thỏa ước tập thể thì áp dụng quy định của pháp luật lao động.
+2. Hợp đồng lao động được làm thành 2 bàn có giá trị ngang nhau, mỗi bên giữ một bản và có hiệu lực từ ngày 28/02/16 đến hết ngày 28/02/18. Khi hai bên ký phụ lục hợp đồng lao động thì nội dung của phụ lục hợp đồng lao động cũng có giá trị như các nội dung của bản hợp đồng lao động này.
+</value>
+  </data>
+  <data name="xrLabel56.Text" xml:space="preserve">
+    <value>1. Điều hành người lao động hoàn thành công việc theo hợp đồng (bố trí, điều chuyển, tạm ngừng việc,…).
+2. Tạm hoãn, chấm dứt hợp đồng lao động, kỷ luật người lao động theo quy định của pháp luật, thỏa ước lao động tập thể (nếu có) và nội quy lao động của doanh nghiệp.
+</value>
+  </data>
+  <data name="xrLabel54.Text" xml:space="preserve">
+    <value>1. Đảm bảo việc làm và thực hiện đầy đủ những điều cam kết trong hợp đồng lao động.
+2. Thanh toán đầy đủ, đúng thời hạn các chế độ và quyền lợi của người lao động theo hợp đồng lao động, thỏa ước lao động tập thể (nếu có).
+</value>
+  </data>
+  <data name="xrLabel52.Text" xml:space="preserve">
+    <value>1. Hoàn thành những công việc đã cam kết trong hợp đồng lao động.
+2. Chấp hành lệnh điều hành sản xuất – kinh doanh, nội quy kỷ luật lao động, an toàn lao động.
+3. Trong trường hợp Bên B đơn phương chấm dứt hợp đồng lao động, Bên B sẽ hoàn trả lại cho Bên A toàn bộ chi phí cho Bên A.
+4. Khi hợp đồng lao động này chấm dứt, Bên B hoàn trả lại Bên A toàn bộ những dụng cụ, công cụ, máy moc, thiết bị lao động được công ty cấp phát để làm việc và giải quyết hết mọi vướng mắc với Bên A bao gồm kể cả mặt công  việc và tài chính trong vòng 7 ngày kể từ khi công bố chấm dứt hợp đồng lao động. Trường hợp không giả quyết hết mọi công nợ đối với Bên A thì Bên A có thể giữ lại một phần hoặc toàn bộ số tiền lương hoặc tiền bồi thường tương đương với số công nợ đó.
+5. Bên B không được phép sử dụng các công cụ lưu trữ và truyền thông của Bên A để lưu trữ, phát tán các tài liệu vị phạm pháp luật. Trong trường hợp công cụ lưu trữ và truyền thông của Bên A do Bên B quản lý bị phát hiện vi phạm thì Bên B phải chịu trách nhiệm hoàn toàn trước pháp luật và bồi thường thiệt hại cho Bên A.
+6. Bên B có trách nhiệm giữ gìn, không tiết lộ các sản phẩm trí tuệ và thông tin của Bên A mà do yêu cầu công việc Bên B biết được cho bất cứ bên nào khác, cả trong và sau khi kết thúc hợp đồng. Bên B cam kết tuân thủ các quy định về bảo mật của Bên A trong thời gian làm việc cho Bên A cũng như sau khi không còn làm việc cho Bên A nữa. Tùy từng mức độ vi phạm, Bên A có thể kiện Bên B ra trước pháp luật nước CHXHCN Việt Nam.
+7. Bên B không được lợi dụng cơ sở vật chất , tên và uy tín của Bên A để làm bất cứ việc gì cho cá nhân mình hoặc làm tổn hại đến tên tuổi hay vật chất của Bên A. Nếu Bên B làm hư hại vật chất, uy tính của Bên A thì phải bồi thường theo quy định  của Bên A và của pháp luật nước CHXHCN Việt Nam.
+</value>
+  </data>
+  <data name="xrLabel50.Text" xml:space="preserve">
+    <value>1. Mức lương chính thức hoặc tiền công: 4.550.400 VNĐ.
 2. Hình thức trả lương: Trả tiền mặt.
 3. Phụ cấp:
 4. Được trả lương vào ngày 10 hàng tháng.
@@ -135,23 +151,18 @@
 6. Được trang bị bảo hộ lao động từng công việc cụ thể.
 7. Chế độ nghỉ ngơi (nghỉ hàng tuần, phép năm, lễ tết): nghỉ phép năm và nghỉ việc riêng theo quy định của luật lao động. Nghỉ lể, nghỉ tết hàng năm theo quy định của nhà nước.
 8. Bảo hiểm xã hội và bảo hiểm y tế: 6% BHXH, 1,5% BHYT, 1% BHTN.
-Điều 4: Nghĩa vụ người lao động
-1. Hoàn thành những công việc đã cam kết trong hợp đồng lao động.
-2. Chấp hành lệnh điều hành sản xuất – kinh doanh, nội quy kỷ luật lao động, an toàn lao động.
-3. Trong trường hợp Bên B đơn phương chấm dứt hợp đồng lao động, Bên B sẽ hoàn trả lại cho Bên A toàn bộ chi phí cho Bên A.
-4. Khi hợp đồng lao động này chấm dứt, Bên B hoàn trả lại Bên A toàn bộ những dụng cụ, công cụ, máy moc, thiết bị lao động được công ty cấp phát để làm việc và giải quyết hết mọi vướng mắc với Bên A bao gồm kể cả mặt công  việc và tài chính trong vòng 7 ngày kể từ khi công bố chấm dứt hợp đồng lao động. Trường hợp không giả quyết hết mọi công nợ đối với Bên A thì Bên A có thể giữ lại một phần hoặc toàn bộ số tiền lương hoặc tiền bồi thường tương đương với số công nợ đó.
-5. Bên B không được phép sử dụng các công cụ lưu trữ và truyền thông của Bên A để lưu trữ, phát tán các tài liệu vị phạm pháp luật. Trong trường hợp công cụ lưu trữ và truyền thông của Bên A do Bên B quản lý bị phát hiện vi phạm thì Bên B phải chịu trách nhiệm hoàn toàn trước pháp luật và bồi thường thiệt hại cho Bên A.
-6. Bên B có trách nhiệm giữ gìn, không tiết lộ các sản phẩm trí tuệ và thông tin của Bên A mà do yêu cầu công việc Bên B biết được cho bất cứ bên nào khác, cả trong và sau khi kết thúc hợp đồng. Bên B cam kết tuân thủ các quy định về bảo mật của Bên A trong thời gian làm việc cho Bên A cũng như sau khi không còn làm việc cho Bên A nữa. Tùy từng mức độ vi phạm, Bên A có thể kiện Bên B ra trước pháp luật nước CHXHCN Việt Nam.
-7. Bên B không được lợi dụng cơ sở vật chất , tên và uy tín của Bên A để làm bất cứ việc gì cho cá nhân mình hoặc làm tổn hại đến tên tuổi hay vật chất của Bên A. Nếu Bên B làm hư hại vật chất, uy tính của Bên A thì phải bồi thường theo quy định  của Bên A và của pháp luật nước CHXHCN Việt Nam.
-Điều 5: Nghĩa vụ của người sử dụng lao động
-1. Đảm bảo việc làm và thực hiện đầy đủ những điều cam kết trong hợp đồng lao động.
-2. Thanh toán đầy đủ, đúng thời hạn các chế độ và quyền lợi của người lao động theo hợp đồng lao động, thỏa ước lao động tập thể (nếu có).
-Điều 6: Quyền hạn của người sử dụng lao động
-1. Điều hành người lao động hoàn thành công việc theo hợp đồng (bố trí, điều chuyển, tạm ngừng việc,…).
-2. Tạm hoãn, chấm dứt hợp đồng lao động, kỷ luật người lao động theo quy định của pháp luật, thỏa ước lao động tập thể (nếu có) và nội quy lao động của doanh nghiệp.
-Điều 7: Điều khoản thi hành
-1. Những vấn đề lao động không ghi trong hợp đồng lao động này thì áp dụng quy định của thỏa ước tập thể, trường hợp chưa có thỏa ước tập thể thì áp dụng quy định của pháp luật lao động.
-2. Hợp đồng lao động được làm thành 2 bàn có giá trị ngang nhau, mỗi bên giữ một bản và có hiệu lực từ ngày 28/02/16 đến hết ngày 28/02/18. Khi hai bên ký phụ lục hợp đồng lao động thì nội dung của phụ lục hợp đồng lao động cũng có giá trị như các nội dung của bản hợp đồng lao động này.
+</value>
+  </data>
+  <data name="xrLabel48.Text" xml:space="preserve">
+    <value>1. Thời gian làm việc: Ca 1 (từ 7:15 đến 11:45 AM); Ca 2 (từ 1:30 PM đến 5:00 PM).
+2. Được cấp phát dụng cụ làm việc theo ngành nghề quy định. Người lao động có nhiệm vụ bảo quản và sử dụng theo đúng quy định. Nếu làm mất hoặc hư hỏng phải bồi thường theo quy định của công ty và luật lao động.
+3. Phương tiện đi lại: Người lao động tự túc.
+</value>
+  </data>
+  <data name="xrLabel45.Text" xml:space="preserve">
+    <value>1.  Loại hợp đồng lao động: Hợp đồng xác định thời hạn từ 28/02/16 đến 28/02/18.
+2.  Địa điểm làm việc: Hệ Thống Siêu Thị Điện Máy - Nội Thất Chợ Lớn.
+3.  Công việc phải làm: Hoàn thành tốt công việc được giao theo định mức sản lượng, thời gian công nghệ và đạt chất lượng theo quy định và chấp hành tốt nội  quy kỷ luật, chấp hành nghiêm chỉnh quy trình vận hành, quy trình thao tác công nghệ, bảo quản thiết bị quy trình an toàn lao động.
 </value>
   </data>
   <metadata name="ds_EMP_MANAGEMENT1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
