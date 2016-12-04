@@ -6720,7 +6720,6 @@ namespace QuanLyNhanSu.REPORT {
                 this.columnContractType.MaxLength = 255;
                 this.columnWorkStateCode.MaxLength = 50;
                 this.columnPositionName.MaxLength = 100;
-                this.columnWorkStateName.AllowDBNull = false;
                 this.columnWorkStateName.MaxLength = 50;
                 this.columnDepartmentName.MaxLength = 100;
                 this.columnProfessionalName.MaxLength = 100;
@@ -9733,7 +9732,12 @@ namespace QuanLyNhanSu.REPORT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string WorkStateName {
                 get {
-                    return ((string)(this[this.tableHRM_EMPLOYEE.WorkStateNameColumn]));
+                    try {
+                        return ((string)(this[this.tableHRM_EMPLOYEE.WorkStateNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WorkStateName\' in table \'HRM_EMPLOYEE\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableHRM_EMPLOYEE.WorkStateNameColumn] = value;
@@ -10709,6 +10713,18 @@ namespace QuanLyNhanSu.REPORT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPositionNameNull() {
                 this[this.tableHRM_EMPLOYEE.PositionNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsWorkStateNameNull() {
+                return this.IsNull(this.tableHRM_EMPLOYEE.WorkStateNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetWorkStateNameNull() {
+                this[this.tableHRM_EMPLOYEE.WorkStateNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17794,44 +17810,48 @@ SELECT SchoolCode, SchoolName, Description, Active FROM DIC_SCHOOL WHERE (School
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        HRM_EMPLOYEE.EmployeeCode, HRM_EMPLOYEE.DepartmentCode, HRM_EMPLOYE" +
-                "E.EnrollNumber, HRM_EMPLOYEE.FirstName, HRM_EMPLOYEE.LastName, HRM_EMPLOYEE.Alia" +
-                "s, \r\n                         HRM_EMPLOYEE.Sex, HRM_EMPLOYEE.Marriage, HRM_EMPLO" +
-                "YEE.Birthday, HRM_EMPLOYEE.BirthPlace, HRM_EMPLOYEE.MainAddress, HRM_EMPLOYEE.Co" +
-                "ntactAddress, HRM_EMPLOYEE.CellPhone, \r\n                         HRM_EMPLOYEE.Em" +
-                "ail, HRM_EMPLOYEE.Photo, HRM_EMPLOYEE.Nationality, HRM_EMPLOYEE.Ethnic, HRM_EMPL" +
-                "OYEE.Religion, HRM_EMPLOYEE.Education, HRM_EMPLOYEE.Language, \r\n                " +
-                "         HRM_EMPLOYEE.Informatic, HRM_EMPLOYEE.Professional, HRM_EMPLOYEE.Positi" +
-                "on, HRM_EMPLOYEE.School, HRM_EMPLOYEE.IDCard, HRM_EMPLOYEE.IDCardDate, HRM_EMPLO" +
-                "YEE.IDCardPlace, \r\n                         HRM_EMPLOYEE.BeginDate, HRM_EMPLOYEE" +
-                ".IsOffWork, HRM_EMPLOYEE.EndDate, HRM_EMPLOYEE.PayForm, HRM_EMPLOYEE.PayMoney, H" +
-                "RM_EMPLOYEE.MinimumSalary, \r\n                         HRM_EMPLOYEE.RankSalary, H" +
-                "RM_EMPLOYEE.StepSalary, HRM_EMPLOYEE.CoefficientSalary, HRM_EMPLOYEE.DateSalary," +
-                " HRM_EMPLOYEE.BasicSalary, HRM_EMPLOYEE.InsuranceSalary, \r\n                     " +
-                "    HRM_EMPLOYEE.Allowance1, HRM_EMPLOYEE.Allowance2, HRM_EMPLOYEE.Allowance3, H" +
-                "RM_EMPLOYEE.Allowance4, HRM_EMPLOYEE.IsSocialInsurance, HRM_EMPLOYEE.IsHealthIns" +
-                "urance, \r\n                         HRM_EMPLOYEE.IsUnemploymentInsurance, HRM_EMP" +
-                "LOYEE.IsUnionMoney, HRM_EMPLOYEE.IsUnion, HRM_EMPLOYEE.UnionCode, HRM_EMPLOYEE.U" +
-                "nionDate, HRM_EMPLOYEE.UnionPlace, \r\n                         HRM_EMPLOYEE.IsPar" +
-                "ty, HRM_EMPLOYEE.PartyCode, HRM_EMPLOYEE.PartyDate, HRM_EMPLOYEE.PartyPlace, HRM" +
-                "_EMPLOYEE.InsuranceCode, HRM_EMPLOYEE.InsuranceDate, \r\n                         " +
-                "HRM_EMPLOYEE.HealthInsuranceCode, HRM_EMPLOYEE.HealthInsuranceFromDate, HRM_EMPL" +
-                "OYEE.HealthInsuranceToDate, HRM_EMPLOYEE.ContractCode, HRM_EMPLOYEE.ContractType" +
-                ", \r\n                         HRM_EMPLOYEE.ContractSignDate, HRM_EMPLOYEE.Contrac" +
-                "tFromDate, HRM_EMPLOYEE.ContractToDate, HRM_EMPLOYEE.WorkStateCode, DIC_POSITION" +
-                ".PositionName, \r\n                         DIC_WORK_STATE.WorkStateName, DIC_DEPA" +
-                "RTMENT.DepartmentName, DIC_PROFESSIONAL.ProfessionalName, DIC_NATIONALITY.Nation" +
-                "alityName, DIC_ETHNIC.EthnicName, \r\n                         DIC_RELIGION.Religi" +
-                "onName\r\nFROM            HRM_EMPLOYEE INNER JOIN\r\n                         DIC_PO" +
-                "SITION ON HRM_EMPLOYEE.Position = DIC_POSITION.PositionCode INNER JOIN\r\n        " +
-                "                 DIC_WORK_STATE ON HRM_EMPLOYEE.WorkStateCode = DIC_WORK_STATE.W" +
-                "orkStateCode INNER JOIN\r\n                         DIC_DEPARTMENT ON HRM_EMPLOYEE" +
-                ".DepartmentCode = DIC_DEPARTMENT.DepartmentCode INNER JOIN\r\n                    " +
-                "     DIC_PROFESSIONAL ON HRM_EMPLOYEE.Professional = DIC_PROFESSIONAL.Profession" +
-                "alCode INNER JOIN\r\n                         DIC_NATIONALITY ON HRM_EMPLOYEE.Nati" +
-                "onality = DIC_NATIONALITY.NationalityCode INNER JOIN\r\n                         D" +
-                "IC_ETHNIC ON HRM_EMPLOYEE.Ethnic = DIC_ETHNIC.EthnicCode INNER JOIN\r\n           " +
-                "              DIC_RELIGION ON HRM_EMPLOYEE.Religion = DIC_RELIGION.ReligionCode";
+            this._commandCollection[0].CommandText = "SELECT                      HRM_EMPLOYEE.EmployeeCode, HRM_EMPLOYEE.DepartmentCod" +
+                "e, HRM_EMPLOYEE.EnrollNumber, HRM_EMPLOYEE.FirstName, HRM_EMPLOYEE.LastName, HRM" +
+                "_EMPLOYEE.Alias, \r\n                                      HRM_EMPLOYEE.Sex, HRM_E" +
+                "MPLOYEE.Marriage, HRM_EMPLOYEE.Birthday, HRM_EMPLOYEE.BirthPlace, HRM_EMPLOYEE.M" +
+                "ainAddress, HRM_EMPLOYEE.ContactAddress, HRM_EMPLOYEE.CellPhone, \r\n             " +
+                "                         HRM_EMPLOYEE.Email, HRM_EMPLOYEE.Photo, HRM_EMPLOYEE.Na" +
+                "tionality, HRM_EMPLOYEE.Ethnic, HRM_EMPLOYEE.Religion, HRM_EMPLOYEE.Education, H" +
+                "RM_EMPLOYEE.Language, \r\n                                      HRM_EMPLOYEE.Infor" +
+                "matic, HRM_EMPLOYEE.Professional, HRM_EMPLOYEE.Position, HRM_EMPLOYEE.School, HR" +
+                "M_EMPLOYEE.IDCard, HRM_EMPLOYEE.IDCardDate, HRM_EMPLOYEE.IDCardPlace, \r\n        " +
+                "                              HRM_EMPLOYEE.BeginDate, HRM_EMPLOYEE.IsOffWork, HR" +
+                "M_EMPLOYEE.EndDate, HRM_EMPLOYEE.PayForm, HRM_EMPLOYEE.PayMoney, HRM_EMPLOYEE.Mi" +
+                "nimumSalary, HRM_EMPLOYEE.RankSalary,\r\n                                       HR" +
+                "M_EMPLOYEE.StepSalary, HRM_EMPLOYEE.CoefficientSalary, HRM_EMPLOYEE.DateSalary, " +
+                "HRM_EMPLOYEE.BasicSalary, HRM_EMPLOYEE.InsuranceSalary, HRM_EMPLOYEE.Allowance1," +
+                " \r\n                                      HRM_EMPLOYEE.Allowance2, HRM_EMPLOYEE.A" +
+                "llowance3, HRM_EMPLOYEE.Allowance4, HRM_EMPLOYEE.IsSocialInsurance, HRM_EMPLOYEE" +
+                ".IsHealthInsurance, \r\n                                      HRM_EMPLOYEE.IsUnemp" +
+                "loymentInsurance, HRM_EMPLOYEE.IsUnionMoney, HRM_EMPLOYEE.IsUnion, HRM_EMPLOYEE." +
+                "UnionCode, HRM_EMPLOYEE.UnionDate, HRM_EMPLOYEE.UnionPlace, \r\n                  " +
+                "                    HRM_EMPLOYEE.IsParty, HRM_EMPLOYEE.PartyCode, HRM_EMPLOYEE.P" +
+                "artyDate, HRM_EMPLOYEE.PartyPlace, HRM_EMPLOYEE.InsuranceCode, HRM_EMPLOYEE.Insu" +
+                "ranceDate, \r\n                                      HRM_EMPLOYEE.HealthInsuranceC" +
+                "ode, HRM_EMPLOYEE.HealthInsuranceFromDate, HRM_EMPLOYEE.HealthInsuranceToDate, H" +
+                "RM_EMPLOYEE.ContractCode, HRM_EMPLOYEE.ContractType, \r\n                         " +
+                "             HRM_EMPLOYEE.ContractSignDate, HRM_EMPLOYEE.ContractFromDate, HRM_E" +
+                "MPLOYEE.ContractToDate, HRM_EMPLOYEE.WorkStateCode, DIC_POSITION.PositionName, \r" +
+                "\n                                      DIC_WORK_STATE.WorkStateName, DIC_DEPARTM" +
+                "ENT.DepartmentName, DIC_PROFESSIONAL.ProfessionalName, DIC_NATIONALITY.Nationali" +
+                "tyName, DIC_ETHNIC.EthnicName, \r\n                                      DIC_RELIG" +
+                "ION.ReligionName\r\nFROM                         HRM_EMPLOYEE LEFT OUTER JOIN\r\n   " +
+                "                                   DIC_ETHNIC ON HRM_EMPLOYEE.Ethnic = DIC_ETHNI" +
+                "C.EthnicCode LEFT OUTER JOIN\r\n                                      DIC_RELIGION" +
+                " ON HRM_EMPLOYEE.Religion = DIC_RELIGION.ReligionCode LEFT OUTER JOIN\r\n         " +
+                "                             DIC_POSITION ON HRM_EMPLOYEE.Position = DIC_POSITIO" +
+                "N.PositionCode LEFT OUTER JOIN\r\n                                      DIC_PROFES" +
+                "SIONAL ON HRM_EMPLOYEE.Professional = DIC_PROFESSIONAL.ProfessionalCode LEFT OUT" +
+                "ER JOIN\r\n                                      DIC_WORK_STATE ON HRM_EMPLOYEE.Wo" +
+                "rkStateCode = DIC_WORK_STATE.WorkStateCode LEFT OUTER JOIN\r\n                    " +
+                "                  DIC_DEPARTMENT ON HRM_EMPLOYEE.DepartmentCode = DIC_DEPARTMENT" +
+                ".DepartmentCode LEFT OUTER JOIN\r\n                                      DIC_NATIO" +
+                "NALITY ON HRM_EMPLOYEE.Nationality = DIC_NATIONALITY.NationalityCode";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
