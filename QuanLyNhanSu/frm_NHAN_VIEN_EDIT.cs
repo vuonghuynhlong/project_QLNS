@@ -115,6 +115,13 @@ namespace QuanLyNhanSu
             new_entity.Informatic = (cbo_INFORMATIC.EditValue== null ? null : cbo_INFORMATIC.EditValue.ToString());
             new_entity.Professional = (cbo_PROFESSIONAL.EditValue == null ? null : cbo_PROFESSIONAL.EditValue.ToString());
             new_entity.School = (cbo_SCHOOL.EditValue == null ? null : cbo_SCHOOL.EditValue.ToString());
+
+            // HOP DONG LAO DONG
+            new_entity.ContractFromDate = old_entity.ContractFromDate;
+            new_entity.ContractSignDate = old_entity.ContractSignDate;
+            new_entity.ContractToDate = old_entity.ContractToDate;
+
+
             if (pic_PHOTO.Image != null)
                 new_entity.Photo = LOGIC_COMMON.Bitmap_To_Byte(pic_PHOTO.Image);
            
@@ -203,6 +210,16 @@ namespace QuanLyNhanSu
             new_entity.School = (cbo_SCHOOL.EditValue == null ? "" : cbo_SCHOOL.EditValue.ToString());
             new_entity.WorkStateCode = (cbo_WORK_STATE.EditValue == null ? null : cbo_WORK_STATE.EditValue.ToString());
             new_entity.DepartmentCode = (cbo_DEPARTMENT.EditValue == null ? null : cbo_DEPARTMENT.EditValue.ToString());
+
+            // HOP DONG LAO DONG
+            DateTime frmDate = DateTime.Now;
+            DateTime endDate = frmDate.AddYears(2);
+            new_entity.ContractFromDate = (DateTime?)frmDate;
+            new_entity.ContractSignDate = (DateTime?)frmDate;
+            new_entity.ContractToDate = (DateTime?)endDate;
+
+
+
             ENT_RETURN validate = LOGIC_CHECK.Check_Data(new_entity);
             if(validate.Status)
             {
