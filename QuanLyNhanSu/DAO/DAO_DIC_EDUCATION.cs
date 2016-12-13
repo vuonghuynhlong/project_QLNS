@@ -288,15 +288,6 @@ namespace QuanLyNhanSu.DAO
            return Delete("DIC_EDUCATION", "EducationCode", code);
         }
 
-
-        public string EducationCode { get; set; }
-
-        public string EducationName { get; set; }
-
-        public string Description { get; set; }
-
-        public bool? Active { get; set; }
-
         public static DataTable Get_Data()
         {
             string sql = "";

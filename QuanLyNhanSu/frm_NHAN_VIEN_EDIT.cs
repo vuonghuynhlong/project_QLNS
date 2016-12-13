@@ -130,7 +130,6 @@ namespace QuanLyNhanSu
             {
                 XtraMessageBox.Show(validate.Message, "Lỗi.!!!"); 
             }
-            //this.DialogResult = DialogResult.OK;
         }
         // BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT BEGIN INSERT 
 
@@ -153,10 +152,6 @@ namespace QuanLyNhanSu
     
         private void Init_Data()
         {
-           // txt_LANGUAGE_CODE.Text = LOGIC_COMMON.Generate_Code("NN");
-           // txt_LANGUAGE_NAME.Text = string.Empty;
-           // txt_DESCRIPTION.Text = string.Empty;
-           //// chk_IS_MANAGER.Checked = false;
             txt_EMPLOYEE_CODE.Text = LOGIC_COMMON.Generate_Code("NV");
             txt_FIRST_NAME.Text = string.Empty;
             txt_LAST_NAME.Text = string.Empty;

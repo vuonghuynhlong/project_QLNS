@@ -31,13 +31,13 @@ namespace QuanLyNhanSu
         private void btn_PREVIEW_Click(object sender, EventArgs e)
         {
             string node_text = tree_HS_NHAN_VIEN.SelectedNode.Text;
+            
             if (node_text == "In nhân viên được chọn")
             {
                 DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();
                 if (current_row == null)
                     return;
                 string row_code = current_row.Row.ItemArray[1].ToString();
-
                 ReportPrintTool printTool;
                 REPORT.DANH_SACH_TUNG_NHAN_VIEN rpt = new REPORT.DANH_SACH_TUNG_NHAN_VIEN();
                 rpt.FilterString = "[EmployeeCode] = '" + row_code + "'";
@@ -45,6 +45,7 @@ namespace QuanLyNhanSu
               
                 printTool.ShowPreviewDialog(UserLookAndFeel.Default);
             }
+
             if (node_text == "Danh sách tất cả nhân viên")
             {
                 DataRowView current_row = (DataRowView)gv_DATA.GetFocusedRow();

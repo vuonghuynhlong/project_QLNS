@@ -44,7 +44,6 @@ namespace QuanLyNhanSu
             if (current_row == null)
                 return;
             string row_code = current_row.Row.ItemArray[1].ToString();
-            //frm_CHUC_VU_EDIT frm_edit = new frm_CHUC_VU_EDIT(row_code);
             frm_NHAN_VIEN_EDIT frm_edit = new frm_NHAN_VIEN_EDIT(row_code);
             if (frm_edit.ShowDialog() == DialogResult.OK)
             {
@@ -116,10 +115,6 @@ namespace QuanLyNhanSu
         {
             frm_QUAN_LY_IN frm_IN = new frm_QUAN_LY_IN(gv_DATA);
             frm_IN.ShowDialog();
-        }
-
-      
-
-       
+        }  
     }
 }

@@ -2703,7 +2703,7 @@ namespace QuanLyNhanSu.DAO
         {
 
             String sql = "";
-            sql = sql + "SELECT ";
+            sql = sql + " SELECT ";
             sql = sql + "     [DepartmentName] AS [Phòng Ban]";
             sql = sql + "     ,[EmployeeCode] AS [Mã Nhân Viên]";
             
@@ -2751,19 +2751,19 @@ namespace QuanLyNhanSu.DAO
             //sql = sql + "     ,[IsHealthInsurance] AS [BHYT]";
             //sql = sql + "     ,[IsUnemploymentInsurance] AS [Bảo Hiểm Thất Nghiệp]";
             //sql = sql + "     ,[IsUnionMoney] AS [Tiền Công Đoàn]";
-            sql = sql + "     ,[IsUnion] AS [Đoàn Viên]";
-            sql = sql + "     ,[UnionCode] AS [Mã Đoàn Viên]";
-            sql = sql + "     ,[UnionDate] AS [Ngày Vào Đoàn]";
-            sql = sql + "     ,[UnionPlace] AS [Nơi Vào Đoàn]";
-            sql = sql + "     ,[IsParty] AS [Đảng Viên]";
-            sql = sql + "     ,[PartyCode] AS [Mã Đảng Viên]";
-            sql = sql + "     ,[PartyDate] AS [Ngày Vào Đảng]";
-            sql = sql + "     ,[PartyPlace] AS [Nơi Vào Đảng]";
-            sql = sql + "     ,[InsuranceCode] AS [Mã Bảo Hiểm]";
-            sql = sql + "     ,[InsuranceDate] AS [Ngày Cấp]";
-            sql = sql + "     ,[HealthInsuranceCode] AS [Mã BHYT]";
-            sql = sql + "     ,[HealthInsuranceFromDate] AS [Ngày Bắt Đầu]";
-            sql = sql + "     ,[HealthInsuranceToDate] AS [Ngày Kết Thúc]";
+            //sql = sql + "     ,[IsUnion] AS [Đoàn Viên]";
+            //sql = sql + "     ,[UnionCode] AS [Mã Đoàn Viên]";
+            //sql = sql + "     ,[UnionDate] AS [Ngày Vào Đoàn]";
+            //sql = sql + "     ,[UnionPlace] AS [Nơi Vào Đoàn]";
+            //sql = sql + "     ,[IsParty] AS [Đảng Viên]";
+            //sql = sql + "     ,[PartyCode] AS [Mã Đảng Viên]";
+            //sql = sql + "     ,[PartyDate] AS [Ngày Vào Đảng]";
+            //sql = sql + "     ,[PartyPlace] AS [Nơi Vào Đảng]";
+            //sql = sql + "     ,[InsuranceCode] AS [Mã Bảo Hiểm]";
+            //sql = sql + "     ,[InsuranceDate] AS [Ngày Cấp]";
+            //sql = sql + "     ,[HealthInsuranceCode] AS [Mã BHYT]";
+            //sql = sql + "     ,[HealthInsuranceFromDate] AS [Ngày Bắt Đầu]";
+            //sql = sql + "     ,[HealthInsuranceToDate] AS [Ngày Kết Thúc]";
             sql = sql + "     ,[ContractCode] AS [Mã Hợp Đồng LĐ]";
             sql = sql + "     ,[ContractType] AS [Kiểu Hợp Đồng]";
             sql = sql + "     ,[ContractSignDate] AS [Ngày Ký]";
@@ -2774,12 +2774,10 @@ namespace QuanLyNhanSu.DAO
             sql = sql + " AND A.Professional = C.ProfessionalCode ";
             sql = sql + " AND A.DepartmentCode = D.DepartmentCode ";
             sql = sql + " AND A.WorkStateCode = E.WorkStateCode";
-            sql = sql + " AND A.WorkStateCode IN ('TT000001','TT000003')";          
+            sql = sql + " AND A.WorkStateCode IN ('TT000001','TT000003')";            
             return Select_Table(sql);
 
         }
-
-
 
         public static bool Delete(string code)
         {

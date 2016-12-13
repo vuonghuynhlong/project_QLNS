@@ -30,10 +30,27 @@ namespace QuanLyNhanSu
             entity.EmployeeCode = "NV000003";
             entity = DAO_HRM_EMPLOYEE.Select_Record(entity);
             byte[] photo = entity.Photo;
-         
+            textEdit1.Text = Get_Day() + "/" + Get_Month() + "/" + Get_Year();
         //    MessageBox.Show("Test");
         }
-
+        public static string Get_Day()
+        {
+            string str = DateTime.Now.ToString().Trim();
+            str = str.Substring(0, 2);
+            return str;
+        }
+        public static string Get_Month()
+        {
+            string str = DateTime.Now.ToString().Trim();
+            str = str.Substring(3, 2);
+            return str;
+        }
+        public static string Get_Year()
+        {
+            string str = DateTime.Now.ToString().Trim();
+            str = str.Substring(6, 4);
+            return str;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
           

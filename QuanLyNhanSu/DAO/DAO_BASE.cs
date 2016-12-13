@@ -107,6 +107,8 @@ namespace QuanLyNhanSu.DAO
                 connection.Close();
             }
         }
+
+       
     }
 
 }
